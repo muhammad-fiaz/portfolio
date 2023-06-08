@@ -49,11 +49,7 @@ const Navbar: React.FC = () => {
                                     Projects
                                 </a>
                             </li>
-                            <li className="nav-item">
-                                <a className="nav-link" href="pricing.html">
-                                    Pricing
-                                </a>
-                            </li>
+
                             <li className="nav-item">
                                 <a className="nav-link" href="contacts.html">
                                     Contacts
@@ -65,9 +61,11 @@ const Navbar: React.FC = () => {
                                 <input type="text" className="search-input" placeholder="Search" />
                                 <FontAwesomeIcon icon={faSearch} className="search-icon" />
                             </div>
-                            <Button size="medium" variant="contained" className="ms-2 rounded-pill">
-                                Signin
-                            </Button>
+                            <div className="text-center mt-3 mt-md-0"> {/* Updated the class */}
+                                <Button size="medium" variant="contained" className="signin ms-2 rounded-pill">
+                                    Signin
+                                </Button>
+                            </div>
                         </div>
                     </div>
                 </div>
