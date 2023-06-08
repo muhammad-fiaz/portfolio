@@ -1,0 +1,33 @@
+.loading-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffffff; /* Pure white background */
+}
+
+
+.loading-animation {
+    width: 800px;
+    height: 800px;
+}
+
+.loading-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    animation: typing-animation 1s infinite;
+}
+
+@keyframes typing-animation {
+    0% {
+        opacity: 0.5;
+    }
+    50% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0.5;
+    }
+}
