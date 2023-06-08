@@ -1,19 +1,19 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Fiaz",
+  "name": "Muhammad Fiaz",
   "icons": [
     {
-      "src": "favicon.ico",
+      "src": "fiaz192.jpeg",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "fiaz192.png",
+      "src": "fiaz192.jpeg",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "fiaz512.png",
+      "src": "fiaz512.jpeg",
       "type": "image/png",
       "sizes": "512x512"
     }
