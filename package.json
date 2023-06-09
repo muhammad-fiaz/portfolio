@@ -25,6 +25,7 @@
     "express-path": "^0.3.8",
     "lottie-react": "^2.4.0",
     "mui-utils": "^0.0.4",
+    "path": "^0.12.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-is": "^18.2.0",
