@@ -30,7 +30,6 @@ const App: React.FC = () => {
                 <LoadingScreen />
             ) : (
                 <div>
-                    <BrowserRouter>
 
                     <Router>
                         <Routes>
@@ -42,7 +41,6 @@ const App: React.FC = () => {
                             <Route path="*" element={<Navigate to="/404" />} />
                         </Routes>
                     </Router>
-                        </BrowserRouter>
 
                 </div>
             )}

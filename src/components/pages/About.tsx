@@ -5,6 +5,7 @@ const About: React.FC = () => {
     return (
         <div>
             <Navbar />
+            <h3>About</h3>
             <Notice />
         </div>
     );

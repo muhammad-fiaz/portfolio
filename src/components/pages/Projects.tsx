@@ -6,6 +6,7 @@ const Projects: React.FC = () => {
     return (
         <div>
             <Navbar/>
+            <h3>Projects</h3>
 <Notice/>
         </div>
     );

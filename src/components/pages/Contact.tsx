@@ -7,6 +7,7 @@ const Contacts: React.FC = () => {
     return (
         <div>
             <Navbar/>
+            <h3>Contact</h3>
 <Notice/>
         </div>
     );

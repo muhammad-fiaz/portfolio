@@ -7,6 +7,7 @@ const Services: React.FC = () => {
     return (
         <div>
             <Navbar/>
+            <h3>Services</h3>
             <Notice/>
         </div>
     );
