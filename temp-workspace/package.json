@@ -1,0 +1,16 @@
+{
+  "name": "@temp-workspace/source",
+  "version": "0.0.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {},
+  "devDependencies": {
+    "@nx/cypress": "16.3.2",
+    "@nx/react": "16.3.2",
+    "@nx/vite": "16.3.2",
+    "@nx/workspace": "16.3.2",
+    "nx": "16.3.2",
+    "nx-cloud": "latest"
+  }
+}
