@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from 'react';
+import React, { useEffect, useState } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './components/home/Home';
 import About from './components/pages/About';
@@ -8,6 +8,7 @@ import Contact from './components/pages/Contact';
 import LoadingScreen from "./components/splash/splash";
 import Navbar from "./components/home/Navbar";
 import Notice from "./components/dev/status"; // Corrected import statement
+
 const App: React.FC = () => {
     const [isLoading, setIsLoading] = useState(true);
     const [isInitialLoad, setIsInitialLoad] = useState(true);
@@ -47,19 +48,20 @@ const App: React.FC = () => {
                 <div>
                     {isLoading && <LoadingScreen />}
                     <Router>
+                        <Navbar />
+                        <Notice />
                         <Routes>
                             <Route path="/" element={<Home />} />
                             <Route path="/about" element={<About />} />
                             <Route path="/services" element={<Services />} />
                             <Route path="/projects" element={<Projects />} />
-                            <Route path="/contacts" element={<Contact />} /> {/* Updated component name */}
+                            <Route path="/contact" element={<Contact />} /> {/* Updated component name */}
                         </Routes>
                     </Router>
                 </div>
             )}
         </div>
-
     );
-}
+};
 
 export default App;
