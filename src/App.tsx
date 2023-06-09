@@ -41,6 +41,7 @@ function App() {
                 <LoadingScreen />
             ) : (
                 <div>
+                    {isLoading && <LoadingScreen />}
                     <Navbar />
                     <Notice />
                 </div>
