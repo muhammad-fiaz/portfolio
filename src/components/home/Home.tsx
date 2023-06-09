@@ -1,7 +1,6 @@
-import React, { useState, useEffect } from 'react';
+import React from 'react';
 import Notice from './../dev/status';
 import Navbar from './../home/Navbar';
-import LoadingScreen from './../splash/splash';
 import './../../assets/css/splash.css';
 
 function Home() {

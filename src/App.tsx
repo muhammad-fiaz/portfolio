@@ -17,10 +17,10 @@ const App: React.FC = () => {
             }, 3000);
         };
 
-        window.addEventListener('load', handleLoad);
+        handleLoad(); // Call the handleLoad function immediately
 
         return () => {
-            window.removeEventListener('load', handleLoad);
+            // Clean up any event listeners or timers if needed
         };
     }, []);
 
@@ -30,10 +30,10 @@ const App: React.FC = () => {
                 <LoadingScreen />
             ) : (
                 <div>
-
                     <Router>
                         <Routes>
                             <Route path="/" element={<Home />} />
+                            <Route path="home" element={<Home />} />
                             <Route path="about" element={<About />} />
                             <Route path="services" element={<Services />} />
                             <Route path="projects" element={<Projects />} />
@@ -41,7 +41,6 @@ const App: React.FC = () => {
                             <Route path="*" element={<Navigate to="/404" />} />
                         </Routes>
                     </Router>
-
                 </div>
             )}
         </div>
