@@ -12,7 +12,9 @@ const App: React.FC = () => {
 
     useEffect(() => {
         const handleLoad = () => {
-            setIsLoading(false);
+            setTimeout(() => {
+                setIsLoading(false);
+            }, 3000);
         };
 
         window.addEventListener('load', handleLoad);
@@ -28,16 +30,20 @@ const App: React.FC = () => {
                 <LoadingScreen />
             ) : (
                 <div>
+                    <BrowserRouter>
+
                     <Router>
                         <Routes>
                             <Route path="/" element={<Home />} />
-                            <Route path="/about" element={<About />} />
-                            <Route path="/services" element={<Services />} />
-                            <Route path="/projects" element={<Projects />} />
-                            <Route path="/contact" element={<Contact />} />
+                            <Route path="about" element={<About />} />
+                            <Route path="services" element={<Services />} />
+                            <Route path="projects" element={<Projects />} />
+                            <Route path="contact" element={<Contact />} />
                             <Route path="*" element={<Navigate to="/404" />} />
                         </Routes>
                     </Router>
+                        </BrowserRouter>
+
                 </div>
             )}
         </div>

@@ -13,6 +13,5 @@
     <orderEntry type="library" name="bootstrap" level="application" />
     <orderEntry type="library" name="font-awesome" level="application" />
     <orderEntry type="library" name="@lottiefiles/lottie-player" level="application" />
-    <orderEntry type="library" name="@lottiefiles/lottie-player" level="application" />
   </component>
 </module>
