@@ -5,15 +5,16 @@ import './../../assets/css/navbar.css'; // Import the custom CSS file
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 const Navbar: React.FC = () => {
     return (
         <div>
             <nav className="navbar navbar-light navbar-expand-md sticky-top navbar-shrink py-3" id="mainNav">
                 <div className="container">
-                    <a className="navbar-brand" href="/">
-                        <span>Muhammad Fiaz</span>
-                    </a>
+                    <Link className="navbar-brand" to="/">
+                        <span>𝑀𝓊𝒽𝒶𝓂𝓂𝒶𝒹 𝐹𝒾𝒶𝓏</span>
+                    </Link>
 
                     <button
                         className="navbar-toggler"
@@ -30,30 +31,30 @@ const Navbar: React.FC = () => {
                     <div className="collapse navbar-collapse" id="navcol-1"> {/* Remove the center class */}
                         <ul className="navbar-nav ms-auto">
                             <li className="nav-item">
-                                <a className="nav-link active" href="index.html">
+                                <Link className="nav-link active" to="/">
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="about.html">
+                                <Link className="nav-link" to="/about">
                                     About
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="services.html">
+                                <Link className="nav-link" to="/services">
                                     Services
-                                </a>
+                                </Link>
                             </li>
                             <li className="nav-item">
-                                <a className="nav-link" href="projects.html">
+                                <Link className="nav-link" to="/projects">
                                     Projects
-                                </a>
+                                </Link>
                             </li>
 
                             <li className="nav-item">
-                                <a className="nav-link" href="contacts.html">
+                                <Link className="nav-link" to="/contacts">
                                     Contacts
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                         <div className="d-md-flex align-items-center mt-3 mt-md-0"> {/* Updated the class */}

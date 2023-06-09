@@ -1,7 +1,7 @@
 import React, {useEffect, useState} from "react";
 import {Player} from "@lottiefiles/react-lottie-player";
 import rocketlauncher from "../../rocketlauncher.json";
-import "./../.././App.css";
+import "./../../assets/css/splash.css";
 function LoadingScreen() {
     const [loadingText, setLoadingText] = useState('Launching');
 
