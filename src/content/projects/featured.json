@@ -1,0 +1,54 @@
+[
+	{
+		"project": "NeuroLink",
+		"url": "https://github.com/muhammad-fiaz/neurolink",
+		"repo": "Private",
+		"descriptionTitle": "NeuroLink is a package",
+		"description": "that aims to provide various AI capabilities, including a chatbot, image processing, audio processing, Django support, and more. It utilizes TensorFlow and other related technologies for natural language processing and AI tasks.",
+		"imageOptions": [
+		],
+		"images": [
+			{ "key": "mock-stack",	"hover": "right", 	"h": "500", "w": "700", "url": "/img/neurolink.png" }
+
+		],
+		"stack": [
+			{ "key": "python", "name": "Python", "type": "devicon" },
+			{ "key": "tensorflow", "name": "TensorFlow", "type": "devicon" },
+			{ "key": "javascript", "name": "JavaScript", "type": "devicon" },
+			{ "key": "git", "name": "Git", "type": "devicon" },
+			{ "key": "numpy", "name": "NumPy", "type": "devicon" },
+			{ "key": "scikit", "name": "scikit-learn", "type": "devicon" },
+			{ "key": "pytorch", "name": "PyTorch", "type": "devicon" },
+			{ "key": "keras", "name": "Keras", "type": "devicon" },
+			{ "key": "js", "name": "JavaScript", "type": "devicon" },
+			{ "key": "typescript", "name": "TypeScript", "type": "devicon" },
+			{ "key": "c", "name": "C", "type": "devicon" },
+			{ "key": "cpp", "name": "C++", "type": "devicon" }
+		]
+
+	},
+	{
+		"project": "muhammadfiaz.com",
+		"url": "https://github.com/muhammad-fiaz/muhammadfiaz.com",
+		"repo": "Private",
+		"descriptionTitle": "An open source portfolio",
+		"description": "built on Next.js and React. A fast and agile MERN stack single page application.",
+		"imageOptions": [
+			{ "key": "size", 		"value": "large" }
+		],
+		"images": [
+			{ "key": "portfolio", "hover": "left", "h": "1000", "w": "550",  "url": "/img/img-mock.png" }
+		],
+		"stack": [
+			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
+			{ "key": "react", 		"name": "React", 		"type": "devicon" },
+			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" },
+			{ "key": "mongodb", 	"name": "MongoDB", 		"type": "devicon" },
+			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
+			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
+			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
+			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
+			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" }
+		]
+	}
+]

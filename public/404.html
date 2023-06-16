@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="description" content="Muhammad Fiaz - Designer and Developer | Portfolio, Skills, Projects, Blog" />
+    <meta name="author" content="Muhammad Fiaz" />
+    <meta name="keywords" content="Muhammad Fiaz, designer, developer, portfolio, skills, projects, blog, fiaz" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow" />
+    <meta http-equiv="Content-Language" content="en" />
+
+
+    <title>404 - Muhammad Fiaz</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: Arial, sans-serif;
+        }
+
+        body {
+            overflow: hidden;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        lottie-player {
+            width: 100%;
+            max-width: 400px;
+            height: auto;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            text-align: center;
+        }
+
+        .action-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .action-list li {
+            margin-bottom: 10px;
+        }
+
+        .action-list li::before {
+            content: "🔹";
+            margin-right: 5px;
+        }
+
+        .text-link {
+            color: #0000FF;
+            text-decoration: underline;
+            cursor: pointer;
+        }
+
+        .home-button {
+            margin-top: 20px;
+            display: inline-block;
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        @media screen and (max-width: 480px) {
+            lottie-player {
+                max-width: 200px;
+                margin-bottom: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <lottie-player src="404.json" background="transparent" speed="1" loop autoplay></lottie-player>
+
+    <div class="description">
+        <p>The URL you requested is either broken or not found.</p>
+        <p>If you believe this is a mistake, please check the link or try one of the following:</p>
+        <ul class="action-list">
+            <li><span class="text-link" onclick="startGoogleSearch()">Search</span> for what you were looking for</li>
+            <li>Go back to the <a href="#" onclick="goBack()"><span class="text-link">previous page</span></a></li>
+            <li>Report the link to fix? <a href="https://www.muhammadfiaz.com/"><span class="text-link">click here</span></a></li>
+        </ul>
+        <a class="home-button" href="https://www.muhammadfiaz.com/">Home</a>
+    </div>
+</div>
+
+<script>
+    function startGoogleSearch() {
+        var query = "";
+        window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+</script>
+
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+</body>
+</html>
