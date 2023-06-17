@@ -3,29 +3,17 @@
   "name": "Muhammad Fiaz",
   "icons": [
     {
-<<<<<<< HEAD
-      "src": "fiaz192.jpeg",
-=======
       "src": "favicon/favicon.ico",
->>>>>>> dev
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-<<<<<<< HEAD
-      "src": "fiaz192.jpeg",
-=======
       "src": "favicon/favicon.jpg",
->>>>>>> dev
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-<<<<<<< HEAD
-      "src": "fiaz512.jpeg",
-=======
       "src": "favicon/favicon.jpg",
->>>>>>> dev
       "type": "image/png",
       "sizes": "512x512"
     }
@@ -34,8 +22,4 @@
   "display": "standalone",
   "theme_color": "#000000",
   "background_color": "#ffffff"
-<<<<<<< HEAD
 }
-=======
-}
->>>>>>> dev
