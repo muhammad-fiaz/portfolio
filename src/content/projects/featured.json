@@ -31,8 +31,8 @@
 		"project": "muhammadfiaz.com",
 		"url": "https://github.com/muhammad-fiaz/muhammadfiaz.com",
 		"repo": "Private",
-		"descriptionTitle": "An open source portfolio",
-		"description": "built on Next.js and React. A fast and agile MERN stack single page application.",
+		"descriptionTitle": "An open source personal website",
+		"description": "built on Next.js and React. A fast and responsive single page application.",
 		"imageOptions": [
 			{ "key": "size", 		"value": "large" }
 		],
@@ -48,7 +48,8 @@
 			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
 			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
 			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
-			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" }
+			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" },
+			{"key": "python", "name": "Python", "type": "devicon"}
 		]
 	}
 ]

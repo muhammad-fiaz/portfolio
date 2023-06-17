@@ -14,10 +14,6 @@
 	{
 		"url": "/projects",
 		"title": "Projects"
-	},
-	{
-		"url": "/Signin",
-		"title": "Signin"
-
 	}
+
 ]

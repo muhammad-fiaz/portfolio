@@ -23,9 +23,21 @@ export default function Document() {
 				<link rel="mask-icon" href="/favicon/safari-pinned-tab.svg" color="#5bbad5" />
 				<meta name="msapplication-TileColor" content="#da532c" />
 				<meta name="theme-color" content="#ffffff" />
-				<link rel="manifest" href="%PUBLIC_URL%/manifest.json"/>
+				<link rel="manifest" href="/manifest.json"/>
 
 			</Head>
+			{/* Google Analytics */}
+			<script async src="https://www.googletagmanager.com/gtag/js?id=G-SDJ0K1Y70X"></script>
+			<script>
+				{`
+            window.dataLayer = window.dataLayer || [];
+            function gtag() {
+              dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+            gtag('config', 'G-SDJ0K1Y70X');
+          `}
+			</script>
 			<body>
 				<Main />
 				<NextScript />

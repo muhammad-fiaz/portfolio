@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import Router from 'next/router';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
@@ -17,7 +17,11 @@ import "@fontsource/inter/800.css"
 import '../node_modules/devicon/devicon.min.css'
 import '../assets/styles/css/variables.css'
 import '../assets/styles/css/global.css'
+// Google Analytics
 import * as gtag from '../src/components/analytics/gtag';
+// splash screen
+import LoadingScreen from "../src/components/intro/splash";
+import "../assets/styles/css/splash.css";
 
 // NProgress configuration
 NProgress.configure({ showSpinner: false });
@@ -38,6 +42,8 @@ Router.events.on('routeChangeError', () => {
 });
 
 export default function MyApp({ Component, pageProps }) {
+	const [isLoading, setIsLoading] = useState(true);
+
 	useEffect(() => {
 		const handleRouteChange = (url) => {
 			gtag.pageview(url);
@@ -50,14 +56,26 @@ export default function MyApp({ Component, pageProps }) {
 		};
 	}, []);
 
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setIsLoading(false);
+		}, 4000);
+
+		return () => clearTimeout(timer);
+	}, []);
+
 	return (
 		<>
-			<LazyMotion features={domAnimation}>
-				<Layout>
-					<Component {...pageProps} />
-					<SetGridGap />
-				</Layout>
-			</LazyMotion>
+			{isLoading ? (
+				<LoadingScreen />
+			) : (
+				<LazyMotion features={domAnimation}>
+					<Layout>
+						<Component {...pageProps} />
+						<SetGridGap />
+					</Layout>
+				</LazyMotion>
+			)}
 		</>
 	);
 }
