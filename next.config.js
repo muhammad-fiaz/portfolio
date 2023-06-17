@@ -14,7 +14,7 @@ module.exports = {
 			{
 				protocol: 'https',
 				hostname: '**.vercel.app',
-				pathname: '?app=muhammadfiaz-ntsgukz6c-muhammadfiaz.vercel.app'
+				pathname: '?app=muhammadfiaz-com-git-main-muhammadfiaz.vercel.app'
 			},
 			{
 				protocol: 'https',

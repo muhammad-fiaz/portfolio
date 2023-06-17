@@ -8,6 +8,7 @@
 		"export": "next export"
 	},
 	"dependencies": {
+		"@analytics/google-analytics": "^1.0.7",
 		"@fontsource/fira-code": "^4.5.12",
 		"@fontsource/inter": "^4.5.14",
 		"@fortawesome/fontawesome-svg-core": "^6.2.1",
@@ -24,6 +25,7 @@
 		"@lottiefiles/react-lottie-player": "^3.5.3",
 		"@uiw/react-markdown-preview": "^4.1.7",
 		"@vercel/analytics": "^0.1.6",
+		"analytics": "^0.8.9",
 		"autoprefixer": "^10.4.14",
 		"babel-plugin-macros": "^3.1.0",
 		"bootstrap": "^5.3.0",

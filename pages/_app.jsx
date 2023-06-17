@@ -22,6 +22,7 @@ import * as gtag from '../src/components/analytics/gtag';
 // splash screen
 import LoadingScreen from "../src/components/intro/splash";
 import "../assets/styles/css/splash.css";
+import DevelopmentNotice from "../src/components/dev/status";
 
 // NProgress configuration
 NProgress.configure({ showSpinner: false });
@@ -71,11 +72,14 @@ export default function MyApp({ Component, pageProps }) {
 			) : (
 				<LazyMotion features={domAnimation}>
 					<Layout>
+						<DevelopmentNotice />
+
 						<Component {...pageProps} />
 						<SetGridGap />
 					</Layout>
 				</LazyMotion>
-			)}
+
+				)}
 		</>
 	);
 }

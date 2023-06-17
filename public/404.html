@@ -5,13 +5,21 @@
     <meta name="viewport"
           content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <meta name="description" content="Muhammad Fiaz - Designer and Developer | Portfolio, Skills, Projects, Blog" />
+    <meta
+            name="description"
+            content="With a deep-rooted fascination for programming and computers from an early age, I have nurtured a lifelong passion in this field. Continuously driven by a thirst for knowledge and growth, my relentless pursuit of excellence empowers me to create innovative solutions and cultivate visionary ideas. Through my unwavering commitment to technological advancement, I aspire to make a profound impact and shape the future with transformative contributions."
+    />
     <meta name="author" content="Muhammad Fiaz" />
-    <meta name="keywords" content="Muhammad Fiaz, designer, developer, portfolio, skills, projects, blog, fiaz" />
+    <meta
+            name="keywords"
+            content="Muhammad Fiaz, designer, developer,full stack developer,ux designer,programmer, portfolio, skills, projects, blog, fiaz"
+    />
     <meta name="robots" content="index, follow" />
     <meta name="googlebot" content="index, follow" />
     <meta http-equiv="Content-Language" content="en" />
+    <link rel="manifest" href="manifest.json" />
 
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon.ico" />
 
     <title>404 - Muhammad Fiaz</title>
     <style>
@@ -22,6 +30,7 @@
             align-items: center;
             justify-content: center;
             font-family: Arial, sans-serif;
+            background-color: black; /* Set background color to black */
         }
 
         body {
@@ -37,50 +46,38 @@
 
         lottie-player {
             width: 100%;
-            max-width: 400px;
+            max-width: 600px; /* Increase the max-width to make the image bigger */
             height: auto;
             margin-bottom: 20px;
         }
 
-        .description {
-            text-align: center;
-        }
-
-        .action-list {
-            list-style: none;
-            padding: 0;
-            margin: 0;
-        }
-
-        .action-list li {
-            margin-bottom: 10px;
-        }
-
-        .action-list li::before {
-            content: "🔹";
-            margin-right: 5px;
-        }
-
-        .text-link {
-            color: #0000FF;
-            text-decoration: underline;
-            cursor: pointer;
+        .lottie-small {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 80px; /* Adjust the size of the small lottie animation */
         }
 
         .home-button {
             margin-top: 20px;
             display: inline-block;
             padding: 10px 20px;
-            background-color: #007BFF;
+            background: linear-gradient(to right, #a909a9, #6003a1); /* Set button background gradient */
             color: white;
             text-decoration: none;
             border-radius: 5px;
             font-weight: bold;
         }
 
+        .text-message {
+            color: white;
+            font-size: 24px; /* Increase font size to make the text bigger */
+            margin-bottom: 10px;
+        }
+
         @media screen and (max-width: 480px) {
             lottie-player {
-                max-width: 200px;
+                max-width: 300px; /* Increase the max-width for mobile devices */
                 margin-bottom: 10px;
             }
         }
@@ -88,30 +85,14 @@
 </head>
 <body>
 <div class="container">
-    <lottie-player src="404.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    <lottie-player src="lap.json" background="transparent" speed="1" loop autoplay></lottie-player>
+    <h1 class="text-message">404 - Page Not Found</h1>
+    <h2 class="text-message">It looks like you got lost or the URL page doesn't exist.</h2>
 
-    <div class="description">
-        <p>The URL you requested is either broken or not found.</p>
-        <p>If you believe this is a mistake, please check the link or try one of the following:</p>
-        <ul class="action-list">
-            <li><span class="text-link" onclick="startGoogleSearch()">Search</span> for what you were looking for</li>
-            <li>Go back to the <a href="#" onclick="goBack()"><span class="text-link">previous page</span></a></li>
-            <li>Report the link to fix? <a href="https://www.muhammadfiaz.com/"><span class="text-link">click here</span></a></li>
-        </ul>
-        <a class="home-button" href="https://www.muhammadfiaz.com/">Home</a>
-    </div>
+    <a class="home-button" href="https://www.muhammadfiaz.com/">Home</a>
+
+    <lottie-player class="lottie-small" src="ghost.json" background="transparent" speed="1" loop autoplay></lottie-player>
 </div>
-
-<script>
-    function startGoogleSearch() {
-        var query = "";
-        window.location.href = "https://www.google.com/search?q=" + encodeURIComponent(query);
-    }
-
-    function goBack() {
-        window.history.back();
-    }
-</script>
 
 <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
 </body>
