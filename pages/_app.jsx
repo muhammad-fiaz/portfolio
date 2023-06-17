@@ -75,6 +75,8 @@ export default function MyApp({ Component, pageProps }) {
 						<DevelopmentNotice />
 
 						<Component {...pageProps} />
+						<Analytics />
+
 						<SetGridGap />
 					</Layout>
 				</LazyMotion>
