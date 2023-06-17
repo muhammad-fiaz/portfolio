@@ -1,0 +1,64 @@
+{
+	"Websites": [
+		{
+			"person": "muhammadfiaz.com",
+			"link": "https://muhammadfiaz.dev/",
+			"note": ""
+		},
+		{
+			"person": "muhammadfiaz.dev",
+			"link": "https://muhammadfiaz.dev/",
+			"note": ""
+		},
+		{
+			"person": "fiaz.dev",
+			"link": "https://fiaz.dev/",
+			"note": ""
+		}
+	],
+
+	"links": [
+		{
+			"person": "Home",
+			"link": "https://muhammadfiaz.com/",
+			"note": ""
+		},
+		{ 
+			"person": "Blog",
+			"link": "https://muhammadfiaz.com/blog",
+			"note": ""
+		},
+
+		{
+			"person": "Projects",
+			"link": "https://muhammadfiaz.com/projects",
+			"note": ""
+		},
+		{
+			"person": "Contact",
+			"link": "https://muhammadfiaz.com/contact",
+			"note": ""
+		}
+
+
+	],
+
+	"social": [
+		{
+			"url": "https://medium.com/@muhammad-fiaz",
+			"icon": "medium"
+		},
+		{
+			"url": "https://dev.to/muhammadfiaz",
+			"icon": "dev"
+		},
+		{
+			"url": "https://www.linkedin.com/in/muhammad-fiaz-/",
+			"icon": "linkedin"
+		},
+		{
+			"url": "https://github.com/muhammad-fiaz",
+			"icon": "github"
+		}
+	]
+}

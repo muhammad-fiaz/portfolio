@@ -2,7 +2,11 @@
 <project version="4">
   <component name="DBNavigator.Project.DataEditorManager">
     <record-view-column-sorting-type value="BY_INDEX" />
+<<<<<<< HEAD
     <value-preview-text-wrapping value="true" />
+=======
+    <value-preview-text-wrapping value="false" />
+>>>>>>> dev
     <value-preview-pinned value="false" />
   </component>
   <component name="DBNavigator.Project.DatabaseEditorStateManager">
