@@ -1,9 +1,11 @@
 import React, { useState, useEffect } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import image from '../../../assets/codingdev.json';
+import HCaptcha from '@hcaptcha/react-hcaptcha';
 
-const DevelopmentNotice = () => {
-    const [showPopup, setShowPopup] = useState(false);
+const DevelopmentNotice: React.FC = () => {
+    const [showPopup, setShowPopup] = useState<boolean>(false);
+    const [isVerified, setIsVerified] = useState<boolean>(false);
 
     useEffect(() => {
         const hasSeenNotice = localStorage.getItem('developmentNotice');
@@ -16,6 +18,13 @@ const DevelopmentNotice = () => {
     const handleHidePopup = () => {
         localStorage.setItem('developmentNotice', 'true');
         setShowPopup(false);
+    };
+
+    const handleVerify = (token: string) => {
+        // Verification logic here
+        if (token) {
+            setIsVerified(true);
+        }
     };
 
     if (!showPopup) {
@@ -58,10 +67,23 @@ const DevelopmentNotice = () => {
                     This site is still in Active development.
                 </p>
                 <p style={{ fontSize: '14px', marginBottom: '30px' }}>
-                    If you encounter any issues or bugs, please report them <a href="https://github.com/muhammadfiaz.com/">@ muhammad-fiaz</a>
+                    If you encounter any issues or bugs, please report them{' '}
+                    <a href="https://github.com/muhammadfiaz.com/">@muhammad-fiaz</a>
                 </p>
+                {!isVerified ? (
+                    <>
+                        <HCaptcha
+                            sitekey="d27bf471-6339-4603-b63f-5ab5fdd96ace"
+                            onVerify={handleVerify}
+                        />
+                        <p style={{ fontSize: '12px', color: 'red', marginBottom: '10px' }}>
+                            Please complete the verification.
+                        </p>
+                    </>
+                ) : null}
                 <button
                     onClick={handleHidePopup}
+                    disabled={!isVerified}
                     style={{
                         background: 'linear-gradient(to right, #7b68ee, #b22cff)',
                         color: '#ffffff',
@@ -69,6 +91,7 @@ const DevelopmentNotice = () => {
                         padding: '10px 20px',
                         borderRadius: '5px',
                         cursor: 'pointer',
+                        marginTop: '10px',
                     }}
                 >
                     I understand
