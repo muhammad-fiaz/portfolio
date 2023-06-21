@@ -3,6 +3,8 @@ import { Player } from '@lottiefiles/react-lottie-player';
 import image from '../../../assets/codingdev.json';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 
+
+{/* notice */}
 const DevelopmentNotice: React.FC = () => {
     const [showPopup, setShowPopup] = useState<boolean>(false);
     const [isVerified, setIsVerified] = useState<boolean>(false);

@@ -10,7 +10,7 @@ import SectionTitle from '../../blocks/section.title'
 
 import css 			from '../../../../assets/styles/sections/projects/featured.module.scss'
 import content 		from '../../../content/projects/featured.json'
-
+{/* Featured Projects */}
 export default function FeaturedProjects() {
 
 	return (

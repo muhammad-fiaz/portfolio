@@ -1,5 +1,7 @@
 import css from '../../../assets/styles/utils/page.colors.module.scss'
 
+
+{/* Page Colors */}
 export default function ColorOverrides({ colors }) {
 	return (
 		<>	

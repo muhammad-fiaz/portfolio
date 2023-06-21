@@ -10,7 +10,6 @@ import css from '../../../assets/styles/structure/container.module.scss';
  * Section / Container / Componenents / Blocks / Utils
  *          ¯¯¯¯¯¯¯¯¯¯¯
 
- * @returns {jsx}	<Container />
  */
 export default function Container({ classProp, spacing, children }) {
 

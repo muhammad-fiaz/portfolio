@@ -5,6 +5,8 @@ import Script from 'next/script'
 
 import css from '../../../assets/styles/utils/theme.module.scss'
 
+
+{/* theme settings */}
 export default function SetTheme() {
 
 	const router = useRouter()

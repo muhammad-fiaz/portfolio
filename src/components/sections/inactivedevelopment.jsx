@@ -3,7 +3,7 @@ import Container 	from '../structure/container';
 
 import css 			from '../../../assets/styles/sections/projects/featured.module.scss'
 
-{/* Coming Soon */}
+{/* in active development */}
 export default function Inactivedevelopment() {
 	return (
 		<Section classProp={css.hasBg}>	

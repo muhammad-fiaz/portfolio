@@ -6,7 +6,6 @@ import sections from '../../../assets/styles/structure/section.module.scss';
  * 
  * Section / Container / Componenents / Blocks / Utils
 
- * @returns {jsx}	<Section />
  */
 export default function Section({ classProp, children }) {
 

@@ -4,6 +4,10 @@ export default function Document() {
 	return (
 		<Html lang="en">
 			<Head>
+				{/*Author: Muhammad Fiaz
+                 GitHub: Visit the GitHub repository at https://github.com/muhammad-fiaz/muhammadfiaz.com/ for more details.
+                 license: MIT License
+ */}
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta name="theme-color" content="#000000" />

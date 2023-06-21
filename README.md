@@ -29,9 +29,15 @@ You will also see any lint errors in the console.
 
 ### `npm run build`
 
-Builds the app for production to the `build` folder.\
+Builds the app for production to the `.next` folder.\
 It correctly bundles Next.js and optimizes the build for the best performance.
+
+### `next export`
+
+Exports the app to static HTML, which can be run without a Node.js server.\
+The exported app will be in the `out` folder.
+
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/muhammad-fiaz/muhammadfiaz.com/blob/main/LICENSE.txt) file for details.

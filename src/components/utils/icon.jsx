@@ -11,11 +11,11 @@ import { fad } from '@fortawesome/pro-duotone-svg-icons'
 import { far } from '@fortawesome/pro-regular-svg-icons'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 
-// Load icons into
+{/* icons */}
 library.add(fat, fal, fas, fad, far, fab)
 
 /**
-
+ check out this site for more info on how to use this component
  * * https://github.com/FortAwesome/Font-Awesome/issues/19348
 
 
