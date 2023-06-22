@@ -3,6 +3,8 @@ module.exports = {
 	env: {
 		dir: '/',
 	},
+	swcMinify: true,
+
 	images: {
 		unoptimized: true,
 		remotePatterns: [
@@ -44,9 +46,6 @@ module.exports = {
 			'/': { page: '/' },
 		};
 	},
-	output: {
-		// Configure your export settings here
-		// For example, if you want to export to the "out" directory:
-		directory: 'out',
-	},
+	output: 'standalone',
+
 }
