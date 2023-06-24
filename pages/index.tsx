@@ -8,20 +8,21 @@ import FeaturedProjects	from '../src/components/sections/projects/featured'
 import Color 		from '../src/components/utils/page.colors'
 
 import colors 		from '../src/content/index/_colors.json'
+import QnA from "../src/components/sections/index/qna";
 // index.tsx
 export default function HomePage() {
 
 	return (
 		<>
 			<Color colors={colors} />
-
 			<Hero />
 		<Looking />
+
 			<FeaturedProjects />
 			<About />
 			<Technical />
 			<Career />
-
+			<QnA/>
 		</>
 	);
 }

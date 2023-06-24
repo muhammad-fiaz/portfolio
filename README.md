@@ -2,7 +2,7 @@
 
 This project is built with Next.js and React, showcasing [Muhammad Fiaz](https://github.com/muhammad-fiaz/)'s personal website.
 
-**Note: This project is currently under Active development.**
+**Note: This project is currently under Active development. so the Documentation for this project is not ready yet if available it will be notified in a repository.**
 
 if you have any suggestions or feedback, feel free to open an issue or a pull request.
 
@@ -37,6 +37,12 @@ It correctly bundles Next.js and optimizes the build for the best performance.
 Exports the app to static HTML, which can be run without a Node.js server.\
 The exported app will be in the `out` folder.
 
+## Support Me
+
+Enjoying my work? Consider supporting me by buying me a cup of coffee or becoming a patron.
+
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Donate-orange?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/muhammadfiaz)
+[![Patreon](https://img.shields.io/badge/Patreon-Support-red?logo=patreon)](https://www.patreon.com/muhammad_fiaz)
 
 ## License
 

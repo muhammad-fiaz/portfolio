@@ -24,7 +24,8 @@ import LoadingScreen from "../src/components/intro/splash";
 import "../assets/styles/css/splash.css";
 import DevelopmentNotice from "../src/components/dev/status";
 import BackToTop from "../src/components/utils/backtotop";
-
+import Chatbot from "../src/components/sections/index/chatbot";
+import "../assets/styles/css/chatbot.css";
 // NProgress configuration
 NProgress.configure({ showSpinner: false });
 
@@ -73,8 +74,8 @@ export default function MyApp({ Component, pageProps }) {
 			) : (
 				<LazyMotion features={domAnimation}>
 					<Layout>
-							<DevelopmentNotice />
-
+						{/*	<DevelopmentNotice /> */}
+<Chatbot/>
 						<Component {...pageProps} />
 						<Analytics />
 
