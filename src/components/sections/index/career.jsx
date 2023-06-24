@@ -26,7 +26,6 @@ export default function Career() {
 					subTitle="I am a semi-professional Full Stack Developer, currently working in the project development field. My primary goal is to enhance my skills and expand my knowledge to gain valuable experience in complex project development. I am dedicated to continuously improving and staying updated with the latest advancements in the industry."
 				/>
 				<section className={career.area}>
-					<article className={career.company}>
 						<div className={career.position}>
 
 						<div className={career.companyContent}>
@@ -42,7 +41,6 @@ export default function Career() {
 
 						<Badges list={fullStack} block="stack" fullContainer="fullContainer"/>
 						</div>
-					</article>
 
 					{/*	<article className={career.companyPositions}>
 

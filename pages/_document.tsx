@@ -1,13 +1,19 @@
 import { Html, Head, Main, NextScript } from 'next/document'
+import Script from 'next/script';
 
 export default function Document() {
 	return (
 		<Html lang="en">
+
 			<Head>
-				{/*Author: Muhammad Fiaz
+				{/*
+				Author: Muhammad Fiaz
                  GitHub: Visit the GitHub repository at https://github.com/muhammad-fiaz/muhammadfiaz.com/ for more details.
                  license: MIT License
- */}
+                  */}
+
+				<title>Muhammad Fiaz</title>
+
 				<meta charSet="utf-8" />
 				<meta name="viewport" content="width=device-width, initial-scale=1" />
 				<meta name="theme-color" content="#000000" />
@@ -32,10 +38,9 @@ export default function Document() {
 				<meta name="msapplication-TileColor" content="#da532c" />
 				<meta name="theme-color" content="#ffffff" />
 				<link rel="manifest" href="/manifest.json" />
-				<title>Muhammad Fiaz</title>
 
 				{/* Google Analytics */}
-				<script async src="https://www.googletagmanager.com/gtag/js?id=G-SDJ0K1Y70X"></script>
+				<Script async src="https://www.googletagmanager.com/gtag/js?id=G-SDJ0K1Y70X"></Script>
 				<script
 					dangerouslySetInnerHTML={{
 						__html: `

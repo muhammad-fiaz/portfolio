@@ -23,6 +23,7 @@ import * as gtag from '../src/components/analytics/gtag';
 import LoadingScreen from "../src/components/intro/splash";
 import "../assets/styles/css/splash.css";
 import DevelopmentNotice from "../src/components/dev/status";
+import BackToTop from "../src/components/utils/backtotop";
 
 // NProgress configuration
 NProgress.configure({ showSpinner: false });
@@ -72,13 +73,15 @@ export default function MyApp({ Component, pageProps }) {
 			) : (
 				<LazyMotion features={domAnimation}>
 					<Layout>
-						<DevelopmentNotice />
+							<DevelopmentNotice />
 
 						<Component {...pageProps} />
 						<Analytics />
 
 						<SetGridGap />
 					</Layout>
+					<BackToTop />
+
 				</LazyMotion>
 
 				)}
