@@ -75,8 +75,9 @@ export default function MyApp({ Component, pageProps }) {
 				<LazyMotion features={domAnimation}>
 					<Layout>
 						<DevelopmentNotice />
-<Chatbot/>
 						<Component {...pageProps} />
+						<Chatbot/>
+
 						<Analytics />
 
 						<SetGridGap />

@@ -6,10 +6,12 @@
 }
 
 .chatbot-button {
-    position: relative;
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
     width: 60px;
     height: 60px;
-    background-color: #333;
+    background-color: #2858fa;
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -26,41 +28,69 @@
 }
 
 .chatbot-container {
-    position: absolute;
-    top: -400px; /* Adjust the height to show the chat container */
-    right: 60px;
+    position: fixed;
+    bottom: 130px; /* Adjust the height to show the chat container */
+    right: 50px;
     width: 300px;
     height: 400px;
-    background-color: #fff;
-    border-radius: 5px;
+    background: linear-gradient(135deg, #ffffff, #ffffff);
+    backdrop-filter: blur(10px); /* Add blur effect */
+    border-radius: 10px;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
-    transition: top 0.3s ease-in-out;
-    z-index: 99999; /* Increase the z-index to appear above the chat button */
+    transition: bottom 0.3s ease-in-out;
+    z-index: 99999;
     display: flex;
     flex-direction: column;
+    padding: 10px;
+    margin: 0 10px; /* Add margin space on both sides */
 }
 
 .chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 10px;
     background-color: #f5f5f5;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
 }
 
 .chat-header h3 {
     margin: 0;
     font-size: 16px;
-    color: #333;
+    color: #000000;
+}
+
+.close-icon {
+    cursor: pointer;
 }
 
 .chat-body {
     flex-grow: 1;
     padding: 10px;
     overflow-y: auto;
+    scrollbar-width: thin; /* Add scrollbar width for Firefox */
+}
+
+.chat-body::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+    background-color: #ccc; /* Set the color of the scrollbar thumb */
+    border-radius: 5px; /* Set the border radius of the scrollbar thumb */
+}
+
+.chat-body::-webkit-scrollbar-track {
+    background-color: #f5f5f5; /* Set the color of the scrollbar track */
+    border-radius: 5px; /* Set the border radius of the scrollbar track */
 }
 
 .message {
     display: flex;
     flex-direction: column;
     margin-bottom: 10px;
+    animation: fadeIn 0.3s ease-in;
 }
 
 .message-content {
@@ -69,15 +99,19 @@
     padding: 8px 12px;
     border-radius: 15px;
     background-color: #e0e0e0;
+    transition: transform 0.3s ease-in;
+    word-wrap: break-word; /* Add word-wrap property to wrap long messages */
 }
 
 .message.bot {
     align-self: flex-start;
+    animation: slideInLeft 0.3s ease-in;
 }
 
 .message.user {
     align-self: flex-end;
     align-items: flex-end;
+    animation: slideInRight 0.3s ease-in;
 }
 
 .sender-info {
@@ -110,27 +144,52 @@
     align-items: center;
     padding: 10px;
     background-color: #f5f5f5;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+
 }
 
 .chat-footer input {
     flex-grow: 1;
     padding: 8px;
     border: none;
-    border-radius: 4px;
-    margin-right: 10px;
+    border-radius: 15px; /* Rounded border */
+    margin-right: 5px;
 }
 
 .send-icon {
-    color: #333;
     cursor: pointer;
 }
 
-/* Responsive styles for mobile devices */
-@media only screen and (max-width: 767px) {
-    .chatbot {
-        position: fixed;
-        bottom: 50px;
-        right: 10px;
-        z-index: 9999;
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
     }
 }

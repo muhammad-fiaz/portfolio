@@ -1,32 +1,41 @@
-import { useState, useEffect } from 'react';
+import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCommentAlt, faPaperPlane } from '@fortawesome/free-solid-svg-icons';
-import Image from 'next/image'
-
-{/*Chatbot -> this is still in development. It will be available soon,
-
-TODO add a backend to chatbot and make it work.
-TODO make it responsive.
-
-
-*/}
+import { faCommentAlt, faPaperPlane, faTimes } from '@fortawesome/free-solid-svg-icons';
+import Cookies from 'js-cookie';
 
 const Chatbot = () => {
-    {/*ChatBot it will pop up the chatbot container */}
     const [isChatVisible, setIsChatVisible] = useState(false);
     const [message, setMessage] = useState('');
     const [chatMessages, setChatMessages] = useState([]);
+    const [userId, setUserId] = useState('');
 
     useEffect(() => {
-        // Display initial welcome message
         const welcomeMessage = {
             text: 'Hi there! I am your Chat Assistant.',
             sender: 'bot',
             senderName: 'Chat Assistant',
-            senderImage: '/img/logo.jpg', // Replace with the actual bot image path
+            senderImage: '/img/logo.jpg',
         };
         setChatMessages([welcomeMessage]);
+
+        const storedUserId = Cookies.get('userId');
+        if (storedUserId) {
+            setUserId(storedUserId);
+            const storedMessages = Cookies.get(`chatMessages_${storedUserId}`);
+            if (storedMessages) {
+                setChatMessages(JSON.parse(storedMessages));
+            }
+        } else {
+            const newUserId = generateUserId();
+            setUserId(newUserId);
+            Cookies.set('userId', newUserId);
+            Cookies.remove('chatMessages');
+        }
     }, []);
+
+    useEffect(() => {
+        Cookies.set(`chatMessages_${userId}`, JSON.stringify(chatMessages));
+    }, [chatMessages, userId]);
 
     const toggleChat = () => {
         setIsChatVisible(!isChatVisible);
@@ -42,11 +51,61 @@ const Chatbot = () => {
                 text: message,
                 sender: 'user',
                 senderName: 'User',
-                senderImage: '/img/user.jpg', // Replace with the actual user image path
+                senderImage: '/img/user.jpg',
             };
             setChatMessages([...chatMessages, newMessage]);
             setMessage('');
+
+            sendMessageToServer(message, userId)
+                .then((response) => {
+                    const botResponse = {
+                        text: response,
+                        sender: 'bot',
+                        senderName: 'Chat Assistant',
+                        senderImage: '/img/logo.jpg',
+                    };
+                    setChatMessages((prevMessages) => [...prevMessages, botResponse]);
+                })
+                .catch((error) => {
+                    const errorMessage = {
+                        text: "Hey "+ userId +'\n An error occurred. Please try again later.',
+                        sender: 'bot',
+                        senderName: 'Chat Assistant',
+                        senderImage: '/img/logo.jpg',
+                    };
+                    setChatMessages((prevMessages) => [...prevMessages, errorMessage]);
+                });
         }
+    };
+
+    const handleChatClose = () => {
+        setIsChatVisible(false);
+    };
+
+    const sendMessageToServer = (message, userId) => {
+        return fetch('http://localhost:8000/api/chat', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify({ message, userId }),
+        })
+            .then((response) => {
+                if (!response.ok) {
+                    throw new Error('Server error');
+                }
+                return response.json();
+            })
+            .then((data) => {
+                return data.response;
+            });
+    };
+
+    const generateUserId = () => {
+        // Generate a unique user ID (you can modify this logic as per your requirement)
+        const timestamp = new Date().getTime();
+        const random = Math.floor(Math.random() * 1000);
+        return `user_${timestamp}_${random}`;
     };
 
     return (
@@ -55,30 +114,20 @@ const Chatbot = () => {
                 <div className="chatbot-container">
                     <div className="chat-header">
                         <h3>Chat Assistant</h3>
+                        {/*     <FontAwesomeIcon icon={faTimes} className="close-icon" onClick={handleChatClose} /> */}
                     </div>
                     <div className="chat-body">
                         {chatMessages.map((chatMessage, index) => (
-                            <div
-                                key={index}
-                                className={`message ${chatMessage.sender === 'bot' ? 'bot' : 'user'}`}
-                            >
+                            <div key={index} className={`message ${chatMessage.sender === 'bot' ? 'bot' : 'user'}`}>
                                 {chatMessage.sender === 'bot' && (
                                     <div className="sender-info">
-                                        <img
-                                            className="sender-image"
-                                            src={chatMessage.senderImage}
-                                            alt="Sender"
-                                        />
+                                        <img className="sender-image" src={chatMessage.senderImage} alt="Sender" />
                                         <span className="sender-name">{chatMessage.senderName}</span>
                                     </div>
                                 )}
                                 {chatMessage.sender === 'user' && (
                                     <div className="sender-info user-sender">
-                                        <img
-                                            className="sender-image"
-                                            src={chatMessage.senderImage}
-                                            alt="Sender"
-                                        />
+                                        <img className="sender-image" src={chatMessage.senderImage} alt="Sender" />
                                         <span className="sender-name">{chatMessage.senderName}</span>
                                     </div>
                                 )}
@@ -93,18 +142,13 @@ const Chatbot = () => {
                             value={message}
                             onChange={handleInputChange}
                         />
-                        <FontAwesomeIcon
-                            icon={faPaperPlane}
-                            className="send-icon"
-                            onClick={handleSendMessage}
-                        />
+                        <FontAwesomeIcon icon={faPaperPlane} className="send-icon" onClick={handleSendMessage} />
                     </div>
                 </div>
             )}
             <div className={`chatbot-button ${isChatVisible ? 'active' : ''}`} onClick={toggleChat}>
-                <FontAwesomeIcon icon={faCommentAlt} />
+                {isChatVisible ? <FontAwesomeIcon icon={faTimes} className="close-icon" /> : <FontAwesomeIcon icon={faCommentAlt} />}
             </div>
-
 
         </div>
     );
