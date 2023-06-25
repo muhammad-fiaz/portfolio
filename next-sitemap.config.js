@@ -12,6 +12,18 @@ module.exports = {
         return {
             loc: `${config.siteUrl}${path}`,
             lastmod: new Date().toISOString(),
+            changefreq: 'daily',
+            priority: 0.7,
         };
+    },
+
+    robotsTxtOptions: {
+        policies: [
+            {
+                userAgent: '*',
+                allow: '/',
+            },
+        ],
+        additionalSitemaps: [`${siteUrl}/sitemap.xml`],
     },
 };
