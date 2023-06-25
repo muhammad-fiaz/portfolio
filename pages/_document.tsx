@@ -55,9 +55,9 @@ export default function Document() {
 				/>
 
 				{/* Google Adsense */}
-				<Script async
+				<script async
 						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2040560600290490"
-						crossOrigin="anonymous"></Script>  {/* use your own adsense id or else remove this line */}
+						crossOrigin="anonymous"></script>  {/* use your own adsense id or else remove this line */}
 
 				{/* Clarity Analytics */}
 				<script
