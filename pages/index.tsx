@@ -9,7 +9,7 @@ import Color 		from '../src/components/utils/page.colors'
 
 import colors 		from '../src/content/index/_colors.json'
 import QnA from "../src/components/sections/index/qna";
-// index.tsx
+// index.jsx
 export default function HomePage() {
 
 	return (

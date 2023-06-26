@@ -146,6 +146,7 @@
     background-color: #f5f5f5;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
+    justify-content: center;
 
 }
 
@@ -154,11 +155,18 @@
     padding: 8px;
     border: none;
     border-radius: 15px; /* Rounded border */
-    margin-right: 5px;
+    margin-right: 10px;
 }
 
 .send-icon {
+    margin-right: 20px;
     cursor: pointer;
+}
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+    .chatbot-button {
+        right: 20px; /* Adjust the right position for mobile screens */
+    }
 }
 
 @keyframes fadeIn {

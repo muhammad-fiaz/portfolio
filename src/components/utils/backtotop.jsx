@@ -41,7 +41,7 @@ const BackToTop = () => {
             <style jsx>{`
         .back-to-top {
           position: fixed;
-          bottom: 120px;
+          top: 30px;
           right: 50px;
           width: 50px;
           height: 50px;

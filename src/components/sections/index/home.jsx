@@ -25,7 +25,7 @@ export default function Home() {
 				/>
 				<section className={about.content}>
 					<div className={about.image}>
-						<img src="/img/fiaz-org.jpeg" alt="Muhammad Fiaz"/>
+						<Image src="/img/fiaz-org.jpeg" width={600} height={800} alt="Muhammad Fiaz"/>
 						{/* <Image src="/img/fiaz-org.jpeg" width={600} height={800}/> */}
 					</div>
 					<div className={about.copy}>
@@ -65,7 +65,7 @@ export default function Home() {
 
 
 						<BadgesBlock
-							title="Reasearch and planning"
+							title="Research and planning"
 							containerClass={about.container}
 							list={methods}
 							fullContainer="fullContainer"
