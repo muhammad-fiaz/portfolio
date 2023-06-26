@@ -1,6 +1,5 @@
-const withOffline = require('next-offline');
 
-module.exports = withOffline({
+module.exports = {
 	reactStrictMode: true,
 	env: {
 		dir: '/',
@@ -47,19 +46,5 @@ module.exports = withOffline({
 		};
 	},
 	output: 'standalone',
-	workboxOpts: {
-		swDest: 'static/service-worker.js',
-		runtimeCaching: [
-			{
-				urlPattern: /^https?.*/,
-				handler: 'NetworkFirst',
-				options: {
-					cacheName: 'offlineCache',
-					expiration: {
-						maxEntries: 200,
-					},
-				},
-			},
-		],
-	},
-});
+
+}
