@@ -8,7 +8,7 @@ const Chatbot = () => {
     const [message, setMessage] = useState('');
     const [chatMessages, setChatMessages] = useState([]);
     const [userId, setUserId] = useState('');
-
+    const server_port = 'http://localhost:8000/api/chat'; // change this to your server port
     useEffect(() => {
         const welcomeMessage = {
             text: 'Hi there! I am your Chat Assistant.',
@@ -18,11 +18,11 @@ const Chatbot = () => {
         };
         setChatMessages([welcomeMessage]);
 
-        const storedUserId = Cookies.get('userId');
-        if (storedUserId) {
+        const storedUserId = Cookies.get('userId'); // get the user ID from cookies
+        if (storedUserId) { // if user ID is found in cookies
             setUserId(storedUserId);
             const storedMessages = Cookies.get(`chatMessages_${storedUserId}`);
-            if (storedMessages) {
+            if (storedMessages) { // if chat messages are found in cookies
                 setChatMessages(JSON.parse(storedMessages));
             }
         } else {
@@ -83,7 +83,7 @@ const Chatbot = () => {
     };
 
     const sendMessageToServer = (message, userId) => {
-        return fetch('http://localhost:8000/api/chat', {
+        return fetch(server_port , {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',

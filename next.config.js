@@ -1,44 +1,44 @@
-module.exports = {
+const withOffline = require('next-offline');
+
+module.exports = withOffline({
 	reactStrictMode: true,
 	env: {
 		dir: '/',
 	},
 	swcMinify: true,
-
 	images: {
 		unoptimized: true,
 		remotePatterns: [
 			{
 				protocol: 'https',
 				hostname: '**.vercel.app',
-				pathname: '/api/**'
+				pathname: '/api/**',
 			},
 			{
 				protocol: 'https',
 				hostname: '**.vercel.app',
-				pathname: '?app=muhammadfiaz-com-git-main-muhammadfiaz.vercel.app'
+				pathname: '?app=muhammadfiaz-com-git-main-muhammadfiaz.vercel.app',
 			},
 			{
 				protocol: 'https',
 				hostname: '**.shields.io',
-				pathname: '/badge/**'
+				pathname: '/badge/**',
 			},
 			{
 				protocol: 'https',
 				hostname: '**.shields.io',
-				pathname: '/github/**'
+				pathname: '/github/**',
 			},
 			{
 				protocol: 'https',
 				hostname: '**.githubusercontent.com',
-				pathname: '/**'
+				pathname: '/**',
 			},
 			{
 				protocol: 'https',
 				hostname: '**.medium.com',
-				pathname: '/**'
+				pathname: '/**',
 			},
-
 		],
 	},
 	exportPathMap: async function () {
@@ -47,5 +47,19 @@ module.exports = {
 		};
 	},
 	output: 'standalone',
-
-}
+	workboxOpts: {
+		swDest: 'static/service-worker.js',
+		runtimeCaching: [
+			{
+				urlPattern: /^https?.*/,
+				handler: 'NetworkFirst',
+				options: {
+					cacheName: 'offlineCache',
+					expiration: {
+						maxEntries: 200,
+					},
+				},
+			},
+		],
+	},
+});
