@@ -41,8 +41,10 @@ The exported app will be in the `out` folder.
 
 Enjoying my work? Consider supporting me by buying me a cup of coffee or becoming a patron.
 
-[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Donate-orange?logo=buy-me-a-coffee)](https://www.buymeacoffee.com/muhammadfiaz)
-[![Patreon](https://img.shields.io/badge/Patreon-Support-red?logo=patreon)](https://www.patreon.com/muhammad_fiaz)
+[![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Donate-orange?logo=buy-me-a-coffee&s=20)](https://www.buymeacoffee.com/muhammadfiaz)
+[![Patreon](https://img.shields.io/badge/Patreon-Support-red?logo=patreon&s=20)](https://www.patreon.com/muhammad_fiaz)
+<a href="https://ko-fi.com/muhammadfiaz"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Ko-fi" height="20"></a>
+
 
 ## License
 
