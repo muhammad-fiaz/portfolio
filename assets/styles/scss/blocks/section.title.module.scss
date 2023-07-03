@@ -1,0 +1,12 @@
+.title {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	text-align: center;
+	gap: var(--size-1x);
+	padding: 0 var(--size-1x);
+
+	h2 {
+		color: var(--primary);
+	}
+}

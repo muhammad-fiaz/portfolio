@@ -3,9 +3,9 @@ import { useState, useEffect } from 'react'
 import Container from '../structure/container'
 import Icon from '../utils/icon'
 
-import css from '../../../assets/styles/structure/footer.module.scss'
+import css from '../../../assets/styles/scss/structure/footer.module.scss'
 
-import content from '../../content/footer.json'
+import content from '../../content/section/footer.json'
 import settings from '../../content/_settings.json'
 
 export default function Footer() {

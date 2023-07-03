@@ -6,7 +6,7 @@ import ThemeMode from '../utils/theme'
 
 import settings from '../../content/_settings.json'
 import content  from '../../content/navbar.json'
-import css from '../../../assets/styles/structure/navbar.module.scss'
+import css from '../../../assets/styles/scss/structure/navbar.module.scss'
 
 export default function Navbar() {
 

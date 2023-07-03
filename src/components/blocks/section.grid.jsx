@@ -1,4 +1,4 @@
-import grid from '../../../assets/styles/blocks/section.grid.module.scss'
+import grid from '../../../assets/styles/scss/blocks/section.grid.module.scss'
 
 export default function sectionGridBG({ gridSize = 4 }) {
 	return (

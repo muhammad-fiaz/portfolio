@@ -6,7 +6,7 @@ import SectionTitle from '../../blocks/section.title'
 
 import Icon from '../../utils/icon'
 
-import css from '../../../../assets/styles/sections/articles/recent.module.scss'
+import css from '../../../../assets/styles/scss/sections/articles/recent.module.scss'
 
 export default function Recent({ mediumArticles }) {
 

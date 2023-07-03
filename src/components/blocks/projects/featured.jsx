@@ -7,7 +7,7 @@ import { useInView } from 'react-intersection-observer'
 import Badges 		from '../../utils/badge.list'
 import Icon 		from '../../utils/icon'
 
-import css 			from '../../../../assets/styles/sections/projects/featured.module.scss'
+import css 			from '../../../../assets/styles/scss/sections/projects/featured.module.scss'
 import content 		from '../../../content/projects/featured.json'
 
 export default function FeaturedProject({ content }, index) {

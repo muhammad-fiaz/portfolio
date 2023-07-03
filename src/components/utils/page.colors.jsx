@@ -1,4 +1,4 @@
-import css from '../../../assets/styles/utils/page.colors.module.scss'
+import css from '../../../assets/styles/scss/utils/page.colors.module.scss'
 
 
 {/* Page Colors */}

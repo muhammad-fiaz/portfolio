@@ -1,5 +1,5 @@
 // Utility scss
-import spaces from '../../../assets/styles/utils/spacing.module.scss';
+import spaces from '../../../assets/styles/scss/utils/spacing.module.scss';
 
 
 export default function Spacing( spacing ) {

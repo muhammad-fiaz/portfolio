@@ -10,8 +10,8 @@ import SectionGridBg from '../../blocks/section.grid'
 import SectionTitle from '../../blocks/section.title'
 
 // Section scss
-import looking 		from '../../../../assets/styles/sections/index/looking.module.scss';
-import section 		from '../../../../assets/styles/blocks/section.title.module.scss'
+import looking 		from '../../../../assets/styles/scss/sections/index/looking.module.scss';
+import section 		from '../../../../assets/styles/scss/blocks/section.title.module.scss'
 
 export default function Looking() {
 	return (

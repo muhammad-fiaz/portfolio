@@ -3,7 +3,7 @@ import { useRouter } from 'next/router';
 
 import Script from 'next/script'
 
-import css from '../../../assets/styles/utils/theme.module.scss'
+import css from '../../../assets/styles/scss/utils/theme.module.scss'
 
 
 {/* theme settings */}

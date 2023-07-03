@@ -2,7 +2,7 @@
 import Spacing from '../utils/spacing';
 
 // Structure scss
-import css from '../../../assets/styles/structure/container.module.scss';
+import css from '../../../assets/styles/scss/structure/container.module.scss';
 
 /**
  * Structural Component
