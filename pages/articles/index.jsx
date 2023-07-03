@@ -7,8 +7,9 @@ import Color 	from '../../src/components/utils/page.colors'
 import colors 		from '../../src/content/articles/_colors.json'
 import settings 	from '../../src/content/_settings.json'
 
-//
+//this is the articles page
 export default function Articles({ mediumArticles }) {
+	{/*this will return the article page content from medium using api req*/}
 	return (
 		<>
 			<Color colors={colors} />
@@ -17,8 +18,9 @@ export default function Articles({ mediumArticles }) {
 	)
 }
 
-// This gets called on every request
+
 export async function getServerSideProps({ res }) {
+	{/*This gets called on every request*/}
 
 	res.setHeader(
 		'Cache-Control',
