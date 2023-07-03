@@ -10,8 +10,8 @@ import Icon 		from '../../utils/icon'
 
 import HeroBg		from '../../blocks/hero.bg/bg-color-1';
 
-import hero 		from '../../../../assets/styles/sections/index/hero.module.scss';
-import button 		from '../../../../assets/styles/blocks/button.module.scss';
+import hero 		from '../../../../assets/styles/scss/sections/index/hero.module.scss';
+import button 		from '../../../../assets/styles/scss/blocks/button.module.scss';
 
 import content		from '../../../content/index/hero.json'
 

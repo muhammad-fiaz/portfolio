@@ -1,4 +1,4 @@
-import css from '../../../assets/styles/utils/page.colors.module.scss'
+import css from '../../../assets/styles/scss/utils/page.colors.module.scss'
 
 
 {/* Page Colors */}
@@ -21,6 +21,7 @@ export default function ColorOverrides({ colors }) {
 }
 
 function Dark({colors}) {
+	// dark theme settings
 	const children = Object.keys(colors).length
 	if ( children !== 0 ) {
 		return (	
@@ -38,6 +39,7 @@ function Dark({colors}) {
 	}
 }
 function Unicorn({colors}) {
+	// unicorn theme settings
 	const children = Object.keys(colors).length
 	if ( children !== 0 ) {
 		return (
@@ -56,6 +58,7 @@ function Unicorn({colors}) {
 }
 
 function Light({colors}) {
+	// light theme settings
 	const children = Object.keys(colors).length
 	if ( children !== 0 ) {
 		return (

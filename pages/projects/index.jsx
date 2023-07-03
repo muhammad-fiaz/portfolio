@@ -7,7 +7,7 @@ import Color  from '../../src/components/utils/page.colors'
 import settings from '../../src/content/_settings.json'
 import colors from '../../src/content/projects/_colors.json'
 
-//
+// this is the project page
 export default function Projects({ user, repos }) {
 	return (
 		<>
@@ -18,9 +18,8 @@ export default function Projects({ user, repos }) {
 	)
 }
 
-// This gets called on every request
 export async function getServerSideProps({ res }) {
-
+	{/*This gets called on every request*/}
 	res.setHeader(
 		'Cache-Control',
 		'public, s-maxage=600, stale-while-revalidate=59'

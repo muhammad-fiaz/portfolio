@@ -12,7 +12,7 @@ import SectionTitle from '../../blocks/section.title'
 import SectionGridBg from '../../blocks/section.grid'
 
 // Career scss
-import career from '../../../../assets/styles/sections/index/career.module.scss'
+import career from '../../../../assets/styles/scss/sections/index/career.module.scss'
 
 
 export default function Education() {

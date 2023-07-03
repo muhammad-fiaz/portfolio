@@ -14,7 +14,7 @@ import BadgesBlock from '../../blocks/about.badges'
 import CopyBlock from '../../blocks/about.copy'
 
 // Section scss
-import about from '../../../../assets/styles/sections/index/about.module.scss'
+import about from '../../../../assets/styles/scss/sections/index/about.module.scss'
 
 
 export default function Technical() {

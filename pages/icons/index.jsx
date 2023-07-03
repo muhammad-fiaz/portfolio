@@ -5,7 +5,7 @@ import Icon from '../../src/components/utils/icon.jsx'
 import Section from '../../src/components/structure/section';
 import Container from '../../src/components/structure/container';
 
-import css from '../../assets/styles/sections/icons/iconForm.module.scss'
+import css from '../../assets/styles/scss/sections/icons/iconForm.module.scss'
 import { prefix } from '@fortawesome/pro-solid-svg-icons';
 
 export default function PageWithJSbasedForm() {

@@ -2,7 +2,7 @@
 import Container from '../structure/container';
 
 // Section scss
-import section from '../../../assets/styles/blocks/section.title.module.scss'
+import section from '../../../assets/styles/scss/blocks/section.title.module.scss'
 
 /**
  * Section header component

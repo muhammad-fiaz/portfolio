@@ -48,4 +48,4 @@ Enjoying my work? Consider supporting me by buying me a cup of coffee or becomin
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/muhammad-fiaz/muhammadfiaz.com/blob/main/LICENSE.txt) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/muhammad-fiaz/muhammadfiaz.com/blob/main/LICENSE.md) file for details.
