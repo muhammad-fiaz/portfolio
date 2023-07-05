@@ -2,20 +2,33 @@
 
 ## Supported Versions
 
-Use this section to tell people about which versions of your project are
-currently being supported with security updates.
+Use this section to know about the versions of your project that are currently supported with security updates.
 
 | Version | Supported          |
 | ------- | ------------------ |
 | 5.1.x   | :white_check_mark: |
-| 5.0.x   | :x:                |
+| 5.0.x   | :white_check_mark:                |
 | 4.0.x   | :white_check_mark: |
 | < 4.0   | :x:                |
 
 ## Reporting a Vulnerability
 
-Use this section to tell people how to report a vulnerability.
+To report a vulnerability in the repository, please follow these steps:
 
-Tell them where to go, how often they can expect to get an update on a
-reported vulnerability, what to expect if the vulnerability is accepted or
-declined, etc.
+1. Go to the [Issues](https://github.com/muhammadfiaz.com/repository/issues) section of the repository.
+
+2. Click on the "New Issue" button.
+
+3. Select the "Vulnerability Report" issue template.
+
+4. Provide a descriptive title and fill in the template with all the necessary details, including:
+
+   - A clear description of the vulnerability.
+   - Steps to reproduce the vulnerability (if applicable).
+   - Any additional information or context that can help understand and address the vulnerability.
+
+5. Submit the issue.
+
+Once a vulnerability report is submitted, we will review it as soon as possible. We strive to provide timely updates on the progress and resolution of reported vulnerabilities.
+
+Please note that the acceptance or declination of a vulnerability report will be communicated through the issue thread. We appreciate your contribution to the security of our project and will work collaboratively to address any identified vulnerabilities.
