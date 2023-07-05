@@ -70,13 +70,12 @@
 	.topicsContainer {
 		position: relative;
 		display: flex;
-		flex-direction: row;
-		margin-left: -1rem;
-		margin-right: -1rem;
-		margin-bottom: -1rem;
-		padding: 1rem;
-		gap: .5rem;
+		flex-wrap: wrap;
+		justify-content: flex-start;
+		gap: 0.5rem;
 		background: var(--background-dim);
+		padding: 1rem;
+		border-top: 1px solid var(--primary-dark);
 
 		&:before {
 			content: '';
@@ -86,14 +85,8 @@
 			left: 0;
 			right: 0;
 		}
-
 		.topics {
-			margin: auto 0;
-			display: flex;
-			flex-direction: row;
-			gap: 0.35rem;
-			align-items: center;
-			max-width: fit-content;
+			margin: 0.25rem 0;
 			font-size: 0.7rem;
 			font-weight: 400;
 			font-family: var(--font-accent);
@@ -104,6 +97,7 @@
 			background: var(--primary-dark);
 		}
 	}
+
 
 	.descriptionContainer {
 		display: flex;

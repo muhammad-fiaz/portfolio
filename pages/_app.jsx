@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
+// this is the next.js router
 import Router from 'next/router';
+// this shows a loading progress bar on the top of the page
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
 
@@ -21,11 +23,18 @@ import '../assets/styles/css/global.css'
 import * as gtag from '../src/components/analytics/gtag';
 // splash screen
 import LoadingScreen from "../src/components/intro/splash";
-import "../assets/styles/css/splash.css";
+// development notice
 import DevelopmentNotice from "../src/components/dev/status";
+// back to top
 import BackToTop from "../src/components/utils/backtotop";
+// chatbot
 import Chatbot from "../src/components/sections/index/chatbot";
-import "../assets/styles/css/chatbot.css";
+
+// Global CSS
+import "../assets/styles/css/utils/splash.css";
+import "../assets/styles/css/utils/chatbot.css";
+import "../assets/styles/css/utils/backtotop.css";
+
 // NProgress configuration
 NProgress.configure({ showSpinner: false });
 
@@ -69,6 +78,7 @@ export default function MyApp({ Component, pageProps }) {
 
 	return (
 		<>
+
 			{isLoading ? (
 				<LoadingScreen />
 			) : (

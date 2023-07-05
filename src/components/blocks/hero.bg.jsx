@@ -1,7 +1,7 @@
 /**
  * Loads and returns the background based on selected design theme
 
- * @returns 
+ * @returns the background based on selected design theme
  */
 export default function HeroBg({ theme }) {
 	return (

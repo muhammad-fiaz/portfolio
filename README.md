@@ -37,6 +37,18 @@ It correctly bundles Next.js and optimizes the build for the best performance.
 Exports the app to static HTML, which can be run without a Node.js server.\
 The exported app will be in the `out` folder.
 
+## Icons Information
+
+💖 Icons are from [Font Awesome](https://fontawesome.com/), [Devicon](https://devicon.dev/),
+and also [Google Fonts](https://fonts.google.com/icons).
+
+
+## More Information
+
+Please Read the [Next.js Documentation](https://nextjs.org/docs/getting-started).
+Also, Read the [React.js Documentation](https://reactjs.org/docs/getting-started.html).
+
+
 ## Support Me
 
 Enjoying my work? Consider supporting me by buying me a cup of coffee or becoming a patron.

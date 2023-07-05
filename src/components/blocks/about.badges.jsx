@@ -1,5 +1,5 @@
 
-import Icon from '../utils/icon.jsx'
+import Icon from '../utils/icon.tsx'
 import Badges 	from '../utils/badge.list'
 
 import badges 	from '../../../assets/styles/scss/blocks/badges.module.scss';
