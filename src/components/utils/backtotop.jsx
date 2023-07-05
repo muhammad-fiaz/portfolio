@@ -38,25 +38,7 @@ const BackToTop = () => {
                 </button>
             )}
 
-            <style jsx>{`
-        .back-to-top {
-          position: fixed;
-          top: 30px;
-          right: 50px;
-          width: 50px;
-          height: 50px;
-          padding: 0;
-          background-color: #333;
-          border: none;
-          border-radius: 50%;
-          cursor: pointer;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          color: #fff;
-          font-size: 20px;
-        }
-      `}</style>
+
         </>
     );
 };

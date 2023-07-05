@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react'
 
-import Icon from '../../src/components/utils/icon.jsx'
+import Icon from '../../src/components/utils/icon.tsx'
 
 import Section from '../../src/components/structure/section';
 import Container from '../../src/components/structure/container';

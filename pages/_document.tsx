@@ -1,10 +1,11 @@
 import { Html, Head, Main, NextScript } from 'next/document'
 import Script from 'next/script';
+import React from "react";
 
 export default function Document() {
 	return (
 		<Html lang="en">
-
+			<title>Muhammad Fiaz</title>
 			<Head>
 				{/*
 				Author: Muhammad Fiaz
@@ -12,24 +13,26 @@ export default function Document() {
                  license: MIT License
                   */}
 
-				<title>Muhammad Fiaz</title>
-
 				<meta charSet="utf-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1" />
+				<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+
 				<meta name="theme-color" content="#000000" />
+				<meta name="title" content="Muhammad Fiaz"/>
+				<meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
+				<meta name="language" content="English"/>
+				<meta name="revisit-after" content="1 days"/>
+
 				<meta name="author" content="Muhammad Fiaz" />
 				<meta
 					name="keywords"
-					content="Muhammad Fiaz, designer, developer,full stack developer,ux designer,programmer, portfolio, skills, projects, blog, fiaz"
-				/>
+					content="Muhammad Fiaz,muhammadfiaz,muhammad fiaz,muhammad,fiaz, designer, developer,full stack developer,ux designer,programmer, portfolio, skills, projects, blog"/>
 				<meta name="robots" content="index, follow" />
 				<meta name="googlebot" content="index, follow" />
 				<meta name="bingbot" content="index, follow" />
-				<meta http-equiv="Content-Language" content="en" />
 
 				<meta
 					name="description"
-					content="With a deep-rooted fascination for programming and computers from an early age, I have nurtured a lifelong passion in this field. Continuously driven by a thirst for knowledge and growth, my relentless pursuit of excellence empowers me to create innovative solutions and cultivate visionary ideas. Through my unwavering commitment to technological advancement, I aspire to make a profound impact and shape the future with transformative contributions."
+					content="Muhammad Fiaz is a designer, developer, and full stack developer with a deep-rooted fascination for programming and computers from an early age. Continuously driven by a thirst for knowledge and growth, his relentless pursuit of excellence empowers him to create innovative solutions and cultivate visionary ideas. Through his unwavering commitment to technological advancement, he aspires to make a profound impact and shape the future with transformative contributions."
 				/>
 				<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.jpg" />
 				<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon.ico" />
@@ -39,6 +42,13 @@ export default function Document() {
 				<meta name="theme-color" content="#ffffff" />
 				<link rel="manifest" href="/manifest.json" />
 
+				<Script id="theme.util.jsx" strategy="beforeInteractive" >
+					{`
+				let themeLocalStorage = localStorage.getItem('theme')
+				let themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+				document.querySelector(':root').dataset.theme = themeLocalStorage ?? themeSystem
+				`}
+				</Script>
 				{/* Google Analytics */}
 				<Script async src="https://www.googletagmanager.com/gtag/js?id=G-SDJ0K1Y70X"></Script>
 				<script

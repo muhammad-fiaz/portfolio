@@ -28,10 +28,10 @@ function Dark({colors}) {
 			<style>
 				{`
 				:root[data-theme=dark] {
-					--mesh-color-1: ${colors.mesh__secondaryDark};
-					--mesh-color-2: ${colors.mesh__secondaryLight};
-					--mesh-color-3: ${colors.mesh__primaryDark};
-					--mesh-color-4: ${colors.mesh__primaryLight};
+					--mesh-color-1: ${colors.secondaryDark};
+					--mesh-color-2: ${colors.secondaryLight};
+					--mesh-color-3: ${colors.primaryDark};
+					--mesh-color-4: ${colors.primaryLight};
 				}
 				`}
 			</style>
@@ -46,10 +46,10 @@ function Unicorn({colors}) {
 			<style>
 				{`
 				:root[data-theme=unicorn] {
-					--mesh-color-1: ${colors.mesh__secondaryDark};
-					--mesh-color-2: ${colors.mesh__secondaryLight};
-					--mesh-color-3: ${colors.mesh__primaryDark};
-					--mesh-color-4: ${colors.mesh__primaryLight};
+					--mesh-color-1: ${colors.secondaryDark};
+					--mesh-color-2: ${colors.secondaryLight};
+					--mesh-color-3: ${colors.primaryDark};
+					--mesh-color-4: ${colors.primaryLight};
 				}
 				`}
 			</style>
@@ -65,10 +65,10 @@ function Light({colors}) {
 			<style>
 				{`
 				:root[data-theme=light] {
-					--mesh-color-1: ${colors.mesh__secondaryDark};
-					--mesh-color-2: ${colors.mesh__secondaryLight};
-					--mesh-color-3: ${colors.mesh__primaryDark};
-					--mesh-color-4: ${colors.mesh__primaryLight};
+					--mesh-color-1: ${colors.secondaryDark};
+					--mesh-color-2: ${colors.secondaryLight};
+					--mesh-color-3: ${colors.primaryDark};
+					--mesh-color-4: ${colors.primaryLight};
 				}
 				`}
 			</style>

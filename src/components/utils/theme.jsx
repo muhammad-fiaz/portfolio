@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react"
 import { useRouter } from 'next/router';
 
-import Script from 'next/script'
 
 import css from '../../../assets/styles/scss/utils/theme.module.scss'
 
@@ -104,13 +103,7 @@ export default function SetTheme() {
 	
 	return (
 		<>
-			<Script id="theme.util.jsx" strategy="beforeInteractive" >
-				{`
-				let themeLocalStorage = localStorage.getItem('theme')
-				let themeSystem       = window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
-				document.querySelector(':root').dataset.theme = themeLocalStorage ?? themeSystem
-				`}
-			</Script>
+
 			<button key="themeToggle" onClick={toggleTheme} data-theme={theme} className={css.toggle}>{buttonIcon(theme)}</button>
 		</>
 	)

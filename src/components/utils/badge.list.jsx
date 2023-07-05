@@ -3,7 +3,7 @@ import { m, useAnimation } from "framer-motion"
 import { useInView } from 'react-intersection-observer'
 
 // Utility components
-import Icon from './icon.jsx'
+import Icon from './icon.tsx'
 
 
 import badges from '../../../assets/styles/scss/blocks/badges.module.scss';
