@@ -6,6 +6,8 @@ export default function Document() {
 	return (
 		<Html lang="en">
 			<title>Muhammad Fiaz</title>
+			<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+			<meta name="application-name" content="Muhammad Fiaz" />
 			<Head>
 				{/*
 				Author: Muhammad Fiaz
@@ -14,8 +16,7 @@ export default function Document() {
                   */}
 
 				<meta charSet="utf-8" />
-				<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-
+	<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 				<meta name="theme-color" content="#000000" />
 				<meta name="title" content="Muhammad Fiaz"/>
 				<meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>

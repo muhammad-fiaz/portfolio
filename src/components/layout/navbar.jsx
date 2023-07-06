@@ -134,7 +134,7 @@ export default function Navbar() {
 		<nav id="Navbar" className={css.container}>
 			<ul className={css.menu}>
 				<li className={css.menuHeader}>
-					<Link className={css.logo} href="/"  >
+					<Link className={css.logo} href="/">
 						{settings.name}
 					</Link>
 					<button onClick={toggleMenu} className={css.mobileToggle} data-open={menuState}>
@@ -146,21 +146,25 @@ export default function Navbar() {
 				</li>
 				<li data-open={menuState} className={css.menuContent}>
 					<ul>
-						{
-						content.map( ({ url, title }, index) => {
+						{content.map(({ url, title }, index) => {
 							return (
 								<li key={index}>
 									<Link href={url}>{title}</Link>
 								</li>
-							)
-						})	
-						}
+							);
+						})}
 						<li>
 							<ThemeMode />
+						</li>
+						<li>
+							<button className={css.signInButton}>
+								<Link href="/signin">Sign In</Link>
+							</button>
 						</li>
 					</ul>
 				</li>
 			</ul>
+
 			<span onClick={toggleMenu} className={css.menuBlackout} data-open={menuState}></span>
 		</nav>
 	)

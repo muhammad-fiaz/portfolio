@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 // this is the next.js router
-import Router from 'next/router';
+import { Router } from 'next/router';
+
 // this shows a loading progress bar on the top of the page
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
