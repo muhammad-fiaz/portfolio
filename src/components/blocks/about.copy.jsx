@@ -7,9 +7,10 @@ import space from '../utils/spacing';
 /**
  * About section component block that contains the written copy
 
- * @returns {jsx} <CopyBlock />
+ * @returns <CopyBlock />
  */
 export default function CopyBlock({ containerClass, iconClass, icon, title, copy }) {
+	// return the copy block component
 	return (
 		<>
 		<div className={containerClass}>

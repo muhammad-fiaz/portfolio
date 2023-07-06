@@ -1,5 +1,6 @@
 @import '../mixins';
 
+
 .container {
 	position: fixed;
 	z-index: 10;
@@ -48,15 +49,14 @@
 		border-radius: 1rem;
 		position: relative;
 		backdrop-filter: blur(10px);
-		border-radius: 1rem;
 
 		a {
 			font-family: var(--font-accent);
 			font-weight: 700;
-			color: var(--primary);
+			color: var(--primary-bright);
 
 			&:hover {
-				color: var(--primary-bright);
+				color: var(--primary-dim);
 			}
 		}
 		
@@ -194,7 +194,7 @@
 		}
 		.menuContent {
 			transition: transform, cubic-bezier(0.4, 0, 0.2, 1), 300ms;
-			max-height: 0vh;
+			max-height: 0;
 			overflow: hidden;
 			
 			&[data-open="true"] {
@@ -210,5 +210,22 @@
 			}
 		}
 	}
+
 }
 
+
+.signInButton {
+	background-color: var(--neon-2-1);
+	border: none;
+	border-radius: 10px;
+	padding: 6px 12px;
+	margin-right: 20px;
+	cursor: pointer;
+	font-size: 14px;
+}
+
+.signInButton::after {
+	content: "";
+	display: inline-block;
+	width: 8px;
+}

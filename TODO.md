@@ -1,10 +1,21 @@
 
 ## Todo List
 
+### General
+- [X] add a Splash Screen
+- [X] Add a chatbot to the website
+- [X] Add a navigation menu to the website
+- [X] Add a footer to the website
+- [X] Add a favicon to the website
+- [X] Add a 404 page to the website
+- [X] Add a 500 page to the website
+- [ ] Add a 403 page to the website
+- [X] Add a Signin page to the website
+
 ### Home Content 
 
 - [X] Add a hero section to the home page
-- [ ] Add a section for featured blog posts
+- [X] Add a section for featured Docs posts
 - [X] Add a section for featured projects
 - [X] Add a section for tech stack
 - [X] Add a section for a call to action
@@ -20,7 +31,7 @@
 - [X] Create a landing page for the website
 - [X] Design and develop a responsive navigation menu
 - [X] Improve website performance and optimize loading times
-- [ ] Implement search functionality for blog posts
+- [ ] Implement search functionality for Docs posts
 - [X] Explore and implement SEO techniques for better visibility
 
 ### BACKEND 
@@ -28,6 +39,8 @@
 - [ ] Search Functionality
 - [ ] Improve Website Performance
 - [ ] Optimize Loading Times
+- [ ] Signin Functionality
+- [ ] Cookie Functionality
 - [X] SEO Techniques
 - [ ] Chat bot Backend Functionality
 - [X] Chat bot Frontend
