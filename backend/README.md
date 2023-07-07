@@ -4,7 +4,7 @@
 
 ## Description
 
-It is responsible for handling API requests, managing the database, and implementing data logic.
+It is responsible for handling API requests, managing the database, and implementing data logic and other backend functionality
 
 ## Tech Stack
 
