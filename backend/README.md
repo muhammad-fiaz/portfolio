@@ -1,6 +1,9 @@
 # Django Backend for muhammadfiaz.com
 
 **Currently, This backend is in active Development**
+**Also, This Project uses Neurolink for the Chatbot Functionality. This Python Package is Currently in Active Development, so
+the latest version of neurolink may or may not work correctly with the older version that is used in this project.
+Check out the Repository for Latest Development Updates or else you can use any other package according to your needs 😄.**
 
 ## Description
 
@@ -10,8 +13,8 @@ It is responsible for handling API requests, managing the database, and implemen
 
 The backend is built using the following technologies:
 
-- Django: A high-level Python web framework that follows the model-view-controller (MVC) architectural pattern.
-- Django REST Framework: A powerful and flexible toolkit for building Web APIs.
+- [Django](https://www.djangoproject.com/): A high-level Python web framework that follows the model-view-controller (MVC) architectural pattern.
+- [Django REST Framework](https://www.django-rest-framework.org/): A powerful and flexible toolkit for building Web APIs.
 - MySQL or SQLITE: A popular open-source relational database.
 
 ## Getting Started

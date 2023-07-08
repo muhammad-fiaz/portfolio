@@ -8,7 +8,7 @@ const Chatbot = () => {
     const [message, setMessage] = useState('');
     const [chatMessages, setChatMessages] = useState([]);
     const [userId, setUserId] = useState('');
-    const server_port = 'http://localhost:8000/api/chat'; // change this to your server port
+    const server_port = 'http://localhost:8000/api/chat/'; // change this to your server port
     useEffect(() => {
         const welcomeMessage = {
             text: 'Hi there! I am your Chat Assistant.',

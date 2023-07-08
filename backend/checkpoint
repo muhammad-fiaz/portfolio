@@ -1,0 +1,2 @@
+model_checkpoint_path: "D:\\PythonProjects\\ademsprojects\\data\\models\\model.tflearn"
+all_model_checkpoint_paths: "D:\\PythonProjects\\ademsprojects\\data\\models\\model.tflearn"
