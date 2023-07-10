@@ -7,12 +7,36 @@ import ThemeMode from '../utils/theme'
 import settings from '../../content/_settings.json'
 import content  from '../../content/navbar.json'
 import css from '../../../assets/styles/scss/structure/navbar.module.scss'
+import Cookies from 'js-cookie';
+import Image from 'next/image';
 
 export default function Navbar() {
 
 	const router = useRouter()
 
 	const [ menuState, menuToggle ] = useState()
+	const email = Cookies.get('email');
+	const password = Cookies.get('password');
+
+	let signInContent;
+
+	if (email && password) {
+		// If email and password cookies exist, show the small circled image
+		signInContent = (
+			<div className={css.circleImage}>
+				<Image src="/img/user.jpg" width={34} height={34} alt="Profile Image" />
+
+			</div>
+		);
+	} else {
+		// If email and password cookies do not exist, show the sign-in button
+		signInContent = (
+			<button className={css.signInButton}>
+				<Link href="/signin">Sign In</Link>
+			</button>
+		);
+	}
+
 
 	useEffect( () => {
 		menuToggle(false)
@@ -23,7 +47,7 @@ export default function Navbar() {
 
 			constructor() {
 				console.log(
-					'%c☰  Navigation Router Events Loaded', 
+					'%c☰  Navigation Router Events Loaded',
 					'background: #060708; color: #fff; padding: .125rem .75rem; border-radius: 5px; font-weight: 900; '
 				)
 				this.addEventListeners()
@@ -55,7 +79,7 @@ export default function Navbar() {
 
 			constructor() {
 				console.log(
-					'%c▼  Navigation Scroll Events Loaded', 
+					'%c▼  Navigation Scroll Events Loaded',
 					'background: #060708; color: #fff; padding: .125rem .75rem; border-radius: 5px; font-weight: 900; '
 				)
 
@@ -90,14 +114,14 @@ export default function Navbar() {
 				} else {
 					offset = e.getBoundingClientRect().bottom + document.documentElement.scrollTop - window.sticky.nav.at
 					return offset
-				}	
+				}
 			}
 
 			maybeHideNav() {
 
 				/**
 				 * If scrolling down, else if scrolling up
-				 * 
+				 *
 				 * Add or remove hidden class from filter menu
 				 */
 				const nC 		= window.sticky.nav.classList
@@ -157,9 +181,8 @@ export default function Navbar() {
 							<ThemeMode />
 						</li>
 						<li>
-							<button className={css.signInButton}>
-								<Link href="/signin">Sign In</Link>
-							</button>
+							{signInContent}
+
 						</li>
 					</ul>
 				</li>

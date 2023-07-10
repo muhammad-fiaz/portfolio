@@ -6,3 +6,4 @@ djangorestframework==3.14.0
 
 Django~=4.2.3
 django-cors-headers
+pycryptodome
