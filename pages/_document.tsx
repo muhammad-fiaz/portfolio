@@ -8,6 +8,7 @@ export default function Document() {
 			<title>Muhammad Fiaz</title>
 			<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 			<meta name="application-name" content="Muhammad Fiaz" />
+
 			<Head>
 				{/*
 				Author: Muhammad Fiaz
@@ -16,24 +17,28 @@ export default function Document() {
                   */}
 
 				<meta charSet="utf-8" />
-	<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+	            <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 				<meta name="theme-color" content="#000000" />
 				<meta name="title" content="Muhammad Fiaz"/>
 				<meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
 				<meta name="language" content="English"/>
 				<meta name="revisit-after" content="1 days"/>
+				<link rel="canonical" href="https://www.muhammadfiaz.com" />
+				<meta name="license" content="MIT License" />
 
 				<meta name="author" content="Muhammad Fiaz" />
 				<meta
-					name="keywords"
-					content="Muhammad Fiaz,muhammadfiaz,muhammad fiaz,muhammad,fiaz, designer, developer,full stack developer,ux designer,programmer, portfolio, skills, projects, blog"/>
+					name="description"
+					content="Muhammad Fiaz - Designer, Developer, Full Stack. Passionate about programming, innovation, and shaping the future."
+				/>
+
 				<meta name="robots" content="index, follow" />
 				<meta name="googlebot" content="index, follow" />
 				<meta name="bingbot" content="index, follow" />
 
 				<meta
 					name="description"
-					content="Muhammad Fiaz is a designer, developer, and full stack developer with a deep-rooted fascination for programming and computers from an early age. Continuously driven by a thirst for knowledge and growth, his relentless pursuit of excellence empowers him to create innovative solutions and cultivate visionary ideas. Through his unwavering commitment to technological advancement, he aspires to make a profound impact and shape the future with transformative contributions."
+					content="Muhammad Fiaz - Full Stack Developer specializing in Cloud, DevOps, ML/AI, and Design. Passionate about programming, innovation, and shaping the future."
 				/>
 				<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.jpg" />
 				<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon.ico" />
@@ -42,6 +47,38 @@ export default function Document() {
 				<meta name="msapplication-TileColor" content="#da532c" />
 				<meta name="theme-color" content="#ffffff" />
 				<link rel="manifest" href="/manifest.json" />
+				<meta property="og:title" content="Muhammad Fiaz" />
+				<meta property="og:description" content="Muhammad Fiaz - Full Stack Developer specializing in Cloud, DevOps, ML/AI, and Design. Passionate about programming, innovation, and shaping the future." />
+				<meta property="og:image" content="https://www.muhammadfiaz.com/img/fiaz-org.jpeg" />
+				<meta property="og:url" content="https://www.muhammadfiaz.com" />
+				<meta property="og:type" content="website" />
+				<meta property="og:profile" content="https://github.com/muhammad-fiaz" />
+				<meta property="og:site_name" content="Muhammad Fiaz" />
+				<meta name="twitter:card" content="summary" />
+				<meta name="twitter:site" content="@muhammadfiaz_" />
+				<meta name="twitter:title" content="Muhammad Fiaz" />
+				<meta name="twitter:description" content="Muhammad Fiaz - Designer, Developer, Full Stack. Passionate about programming, innovation, and shaping the future." />
+				<meta name="twitter:image" content="https://www.muhammadfiaz.com/img/fiaz-org.jpeg" />
+                				<meta name="twitter:creator" content="@muhammadfiaz_" />
+				<meta name="twitter:domain" content="https://www.muhammadfiaz.com" />
+				<script type="application/ld+json">
+										{`
+					{
+					  "@context": "https://schema.org",
+					  "@type": "Person",
+					  "name": "Muhammad Fiaz",
+					  "url": "https://www.muhammadfiaz.com",
+					  "sameAs": [
+						"https://github.com/muhammad-fiaz",
+						"https://www.linkedin.com/in/muhammad-fiaz-"
+					  ]
+					}
+					`}
+				</script>
+
+
+
+
 
 				<Script id="theme.util.jsx" strategy="beforeInteractive" >
 					{`
@@ -85,6 +122,7 @@ export default function Document() {
 			</Head>
 
 			<body>
+			<h1></h1>
 			<Main />
 			<NextScript />
 			</body>

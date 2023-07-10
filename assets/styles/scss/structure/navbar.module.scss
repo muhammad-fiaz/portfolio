@@ -212,6 +212,23 @@
 	}
 
 }
+.circleImage {
+	border: none;
+	border-radius: 50%;
+	padding: 6px;
+	margin-right: 20px;
+	cursor: pointer;
+	overflow: hidden;
+}
+
+.circleImage img {
+	display: block;
+	max-width: 100%;
+	height: auto;
+	border-radius: 50%;
+}
+
+
 
 
 .signInButton {
