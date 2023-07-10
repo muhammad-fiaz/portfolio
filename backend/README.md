@@ -7,7 +7,7 @@ Check out the Repository for Latest Development Updates or else you can use any 
 
 ## Description
 
-It is responsible for handling API requests, managing the database, and implementing data logic.
+It is responsible for handling API requests, managing the database, and implementing data logic and other backend functionality
 
 ## Tech Stack
 
