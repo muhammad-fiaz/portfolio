@@ -4,6 +4,8 @@ This project is built with Next.js and React, showcasing [Muhammad Fiaz](https:/
 
 **Note: This project is currently under Active development. so the Documentation for this project is not ready yet if available it will be notified in a repository.**
 
+**This Project Also Supports [Vercel](https://vercel.com/dashboard) and comes with [(Vercel Analytics pre-enabled in it)](https://vercel.com/analytics) you can Host it there if you like it**
+
 🧑‍💻 Check out dev branch for new development changes and Lastest Patch updates:- [https://github.com/muhammad-fiaz/muhammadfiaz.com/tree/dev](https://github.com/muhammad-fiaz/muhammadfiaz.com/tree/dev)
                                                    
 
