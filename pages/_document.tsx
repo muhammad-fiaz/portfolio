@@ -25,6 +25,7 @@ export default function Document() {
 				<meta name="revisit-after" content="1 days"/>
 				<link rel="canonical" href="https://www.muhammadfiaz.com" />
 				<meta name="license" content="MIT License" />
+				<meta httpEquiv="content-language" content="en-us" />
 
 				<meta name="author" content="Muhammad Fiaz" />
 				<meta
@@ -61,25 +62,156 @@ export default function Document() {
 				<meta name="twitter:image" content="https://www.muhammadfiaz.com/img/fiaz-org.jpeg" />
                 				<meta name="twitter:creator" content="@muhammadfiaz_" />
 				<meta name="twitter:domain" content="https://www.muhammadfiaz.com" />
-				<script type="application/ld+json">
-										{`
-					{
-					  "@context": "https://schema.org",
-					  "@type": "Person",
-					  "name": "Muhammad Fiaz",
-					  "url": "https://www.muhammadfiaz.com",
-					  "sameAs": [
-						"https://github.com/muhammad-fiaz",
-						"https://www.linkedin.com/in/muhammad-fiaz-"
-					  ]
-					}
-					`}
-				</script>
+				<script
+					type="application/ld+json"
+					dangerouslySetInnerHTML={{
+						__html: `{
+          "@context": "https://schema.org",
+          "@type": "Person",
+          "name": "Muhammad Fiaz",
+          "url": "https://www.muhammadfiaz.com",
+          "sameAs": [
+            "https://github.com/muhammad-fiaz",
+            "https://www.linkedin.com/in/muhammad-fiaz-"
+          ]
+        }`
+					}}
+				/>
+				{/*Edit this to your accordingly for site-links*/}
 
+				<script type="application/ld+json" dangerouslySetInnerHTML={{
+					__html: `
+          {
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "url": "https://muhammadfiaz.com/",
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": "https://muhammadfiaz.com/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          }
+        `,
+				}} />
 
-
-
-
+				{/*Edit this to your according FAQ */}
+				<script type="application/ld+json" dangerouslySetInnerHTML={{
+					__html: `
+          {
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "Have you worked on any projects?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, in addition to my personal projects and hobbies, I have worked on several projects, both individually and in teams. These projects have allowed me to apply theoretical knowledge to real-world scenarios, honing my practical skills in software development, web technologies, and computer networks."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Can we recruit you?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, I am currently looking for jobs and I have also done several open-source projects as well."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Who is Muhammad Fiaz?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Muhammad Fiaz is a Full Stack Developer specializing in Cloud, DevOps, ML/AI, and Design. He is passionate about programming, innovation, and shaping the future. With expertise in various technologies and a strong background in software development, Muhammad Fiaz strives to create innovative solutions and contribute to the advancement of technology. His skill set includes proficiency in cloud computing, DevOps practices, machine learning/artificial intelligence, and design principles. Muhammad Fiaz is dedicated to staying up-to-date with the latest industry trends and leveraging his knowledge to drive impactful and transformative projects."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Where is Muhammad Fiaz from?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Muhammad Fiaz is from Madurai, Tamil Nadu, India."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What does Muhammad Fiaz do?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Muhammad Fiaz leverages Cloud, DevOps, ML/AI, Design, and web/mobile apps to benefit people with optimized operations and user-friendly experiences."
+                }
+              }
+            ]
+          }
+        `,
+				}} />
+				{/*Edit this to your according to your website*/}
+				<script type="application/ld+json" dangerouslySetInnerHTML={{
+					__html: `
+          {
+            "@context": "https://schema.org/",
+            "@type": "Person",
+            "name": "Muhammad Fiaz",
+            "url": "https://muhammadfiaz.com",
+            "image": "https://www.muhammadfiaz.com/img/fiaz-org.jpeg",
+            "sameAs": [
+              "https://github.com/muhammad-fiaz/",
+              "https://muhammadfiaz.com",
+              "https://www.linkedin.com/in/muhammad-fiaz-/"
+            ]
+          }
+        `
+				}} />
+				{/*Edit this to your according to your website*/}
+				<script type="application/ld+json" dangerouslySetInnerHTML={{
+					__html: `
+          {
+            "@context": "https://schema.org/",
+            "@type": "BreadcrumbList",
+            "itemListElement": [{
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Home",
+              "item": "https://www.muhammadfiaz.com/"
+            },{
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Docs",
+              "item": "https://www.muhammadfiaz.com/docs"
+            },{
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Articles",
+              "item": "https://www.muhammadfiaz.com/articles"
+            },{
+              "@type": "ListItem",
+              "position": 4,
+              "name": "Projects",
+              "item": "https://www.muhammadfiaz.com/projects"
+            },{
+              "@type": "ListItem",
+              "position": 5,
+              "name": "Sign In",
+              "item": "https://www.muhammadfiaz.com/signin"
+            }]
+          }
+        `
+				}} />
+				{/*Edit this to your according to your website*/}
+				<script type="application/ld+json" dangerouslySetInnerHTML={{
+					__html: `
+          {
+            "@context": "https://schema.org",
+            "@type": "ResearchProject",
+            "name": "muhammadfiaz",
+            "alternateName": "fiaz",
+            "url": "https://www.muhammadfiaz.com/",
+            "logo": "https://www.muhammadfiaz.com/img/fiaz-org.jpeg",
+            "sameAs": "https://www.linkedin.com/in/muhammad-fiaz-/"
+          }
+        `
+				}} />
+				{/*theme*/}
 				<Script id="theme.util.jsx" strategy="beforeInteractive" >
 					{`
 				let themeLocalStorage = localStorage.getItem('theme')
