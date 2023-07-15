@@ -5,6 +5,10 @@
 the latest version of neurolink may or may not work correctly with the older version that is used in this project.
 Check out the Repository for Latest Development Updates or else you can use any other package according to your needs 😄.**
 
+Note: You can use any other database of your choice.
+Just change the database settings in settings.py file, 
+And for auth you can use firebase or any other auth service of your choice or else use your own it's up to you. 
+
 ## Description
 
 It is responsible for handling API requests, managing the database, and implementing data logic and other backend functionality
@@ -16,6 +20,7 @@ The backend is built using the following technologies:
 - [Django](https://www.djangoproject.com/): A high-level Python web framework that follows the model-view-controller (MVC) architectural pattern.
 - [Django REST Framework](https://www.django-rest-framework.org/): A powerful and flexible toolkit for building Web APIs.
 - MySQL or SQLITE: A popular open-source relational database.
+
 
 ## Getting Started
 
