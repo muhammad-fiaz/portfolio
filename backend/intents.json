@@ -156,19 +156,6 @@
       "responses": [
         "I was made by Muhammad Fiaz."
       ]
-    },
-    {
-      "tag": "insult",
-      "patterns": [
-
-        "you are dumb",
-
-        "shut up",
-        "idiot"
-      ],
-      "responses": [
-        "Well that hurts :("
-      ]
     }
 
 

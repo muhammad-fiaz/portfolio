@@ -2,12 +2,14 @@
 import Section 		from '../../structure/section';
 import Container 	from '../../structure/container';
 
-// Specing util
-import Spacing 		from '../../utils/spacing';
 
 // Section general blocks
 import SectionGridBg from '../../blocks/section.grid'
 import SectionTitle from '../../blocks/section.title'
+
+// Spacing util
+import Spacing 		from '../../utils/spacing';
+
 
 // Section scss
 import looking 		from '../../../../assets/styles/scss/sections/index/looking.module.scss';

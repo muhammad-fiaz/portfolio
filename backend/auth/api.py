@@ -2,6 +2,7 @@ from rest_framework.views import APIView
 from rest_framework.response import Response
 from rest_framework import status
 
+
 class AuthAPIView(APIView):
     def post(self, request):
         email = request.data.get('email')
@@ -9,7 +10,7 @@ class AuthAPIView(APIView):
 
         # Perform authentication logic here (e.g., check credentials)
         # Replace the example logic with your actual authentication implementation
-  # this email and password is the Sample Demo Purpose Only you can change it according to your requirement
+        # this email and password is the Sample Demo Purpose Only you can change it according to your requirement
         if email == 'example@gmail.com' and password == 'password':
             # Authentication successful
             response = Response({'message': 'Authentication successful'})
