@@ -18,30 +18,7 @@
 			position: relative;
 			color: var(--primary);
 
-			// &:before {
-			// 	content: '';
-			// 	position: absolute;
-			// 	left: calc( $padding * -1 );
-			// 	width: 18px;
-			// 	aspect-ratio: 1/1;
-			// 	background-color: var(--primary-bright);
-			// 	border-radius: 99rem;
-			// 	border: 3px solid var(--background);
-			// 	top: 50%;
-			// 	transform: translate(-50%, -50%);
-			// }
 
-			// &:after {
-			// 	content: '';
-			// 	position: absolute;
-			// 	left: calc( $padding * -1 );
-			// 	width: 9px;
-			// 	aspect-ratio: 1/1;
-			// 	background-color: var(--background);
-			// 	border-radius: 99rem;
-			// 	top: 50%;
-			// 	transform: translate(-50%, -50%);
-			// }
 		}
 
 		.container {
@@ -153,5 +130,68 @@
 				padding: 0;
 			}
 		}
+	}
+}
+
+/* New styles for the inlineContainer */
+.inlineContainer {
+	display: flex;
+	flex-direction: column; /* Stack elements in a column on smaller screens */
+	margin-bottom: 1rem;
+}
+
+/* New styles for the label */
+.label {
+	font-weight: bold;
+	margin-right: 0.5rem;
+	margin-top: 5px;
+}
+.themelabel{
+	margin-top: 5px;
+}
+/* New styles for the email container */
+.emailContainer {
+	display: flex;
+	flex-direction: row; /* Align email and input in a row */
+	align-items: center; /* Vertically center the elements */
+}
+
+/* New styles for the email */
+.email {
+	padding: 0.2rem 0.5rem;
+	border: 2px solid transparent;
+	border-radius: 4px;
+	margin-left: 0.5rem; /* Add margin to the left of email to center it */
+}
+/* New styles for the defaultTheme container */
+.defaultTheme {
+	align-items: center;
+}
+
+
+/* New styles for the email input */
+.emailInput {
+	padding: 0.2rem 0.5rem;
+	border: 2px solid #007bff;
+	border-radius: 4px;
+	margin-left: 0.5rem; /* Add margin to the left of email input to center it */
+}
+
+/* New styles for the edit button */
+.editButton {
+	cursor: pointer;
+	padding: 0.2rem 0.5rem;
+	border: none;
+	background-color: #007bff;
+	color: #fff;
+	border-radius: 4px;
+	margin-left: 0.5rem; /* Add margin to the left of the edit button to center it */
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+	.inlineContainer {
+		flex-direction: column;
+		align-items: flex-start;
 	}
 }

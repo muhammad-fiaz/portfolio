@@ -23,10 +23,13 @@ export default function Navbar() {
 	if (email && password) {
 		// If email and password cookies exist, show the small circled image
 		signInContent = (
-			<div className={css.circleImage}>
-				<Image src="/img/user.jpg" width={34} height={34} alt="Profile Image" />
-
-			</div>
+			<Link href="/settings">
+				<a>
+					<div className={css.circleImage}>
+						<Image src="/img/user.jpg" width={34} height={34} alt="Profile Image" />
+					</div>
+				</a>
+			</Link>
 		);
 	} else {
 		// If email and password cookies do not exist, show the sign-in button

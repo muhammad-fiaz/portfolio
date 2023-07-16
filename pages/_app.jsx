@@ -26,7 +26,7 @@ import * as gtag from '../src/components/analytics/gtag';
 import LoadingScreen from "../src/components/intro/splash";
 // development notice
 import DevelopmentNotice from "../src/components/dev/status";
-// back to top
+// back to the top
 import BackToTop from "../src/components/utils/backtotop";
 // chatbot
 import Chatbot from "../src/components/sections/index/chatbot";

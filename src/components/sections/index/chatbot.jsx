@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentAlt, faPaperPlane, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Cookies from 'js-cookie';
+import Image from 'next/image';
 
 const Chatbot = () => {
     const [isChatVisible, setIsChatVisible] = useState(false);
@@ -121,13 +122,13 @@ const Chatbot = () => {
                             <div key={index} className={`message ${chatMessage.sender === 'bot' ? 'bot' : 'user'}`}>
                                 {chatMessage.sender === 'bot' && (
                                     <div className="sender-info">
-                                        <img className="sender-image" src={chatMessage.senderImage} alt="Sender" />
+                                        <Image className="sender-image" height={16} width={16} src={chatMessage.senderImage} alt="Sender" />
                                         <span className="sender-name">{chatMessage.senderName}</span>
                                     </div>
                                 )}
                                 {chatMessage.sender === 'user' && (
                                     <div className="sender-info user-sender">
-                                        <img className="sender-image" src={chatMessage.senderImage} alt="Sender" />
+                                        <Image className="sender-image"  height={16} width={16} src={chatMessage.senderImage} alt="Sender" />
                                         <span className="sender-name">{chatMessage.senderName}</span>
                                     </div>
                                 )}

@@ -14,26 +14,26 @@ import BadgesBlock from '../../blocks/about.badges'
 import CopyBlock from '../../blocks/about.copy'
 
 // Section scss
-import about from '../../../../assets/styles/scss/sections/index/about.module.scss'
+import technical from '../../../../assets/styles/scss/sections/index/about.module.scss'
 
 
 export default function Technical() {
 	return (
-		<Section classProp={`${about.section} borderBottom`}>	
+		<Section classProp={`${technical.section} borderBottom`}>
 			<Container spacing={['verticalXXXLrg']}>
 				<SectionTitle
 					title="Technical"
 					preTitle="Hard Skills"
 					subTitle="As a creative technologist, I craft intuitive digital experiences using a diverse set of tools and languages."
 				/>
-				<section className={`${about.content} ${about.container}`}>
-					<div className={about.copy}>
+				<section className={`${technical.content} ${technical.container}`}>
+					<div className={technical.copy}>
 						<CopyBlock
 							title="Logical Thinking"
 							icon={['fas', 'chart-network']}
 							copy="With a strong foundation in both design and development, I leverage logical thinking to approach every project. I bring a unique perspective, constantly seeking innovative solutions and staying up-to-date with the latest industry trends."
-							iconClass={about.icon}
-							containerClass={about.container}
+							iconClass={technical.icon}
+							containerClass={technical.container}
 						/>
 
 						<BadgesBlock
@@ -43,8 +43,8 @@ export default function Technical() {
 							block="software"
 							fullContainer="fullContainer"
 							icon="grid-2-plus"
-							containerClass={about.container}
-							headerIcon={about.icon}
+							containerClass={technical.container}
+							headerIcon={technical.icon}
 						/>
 
 						<BadgesBlock
@@ -54,13 +54,13 @@ export default function Technical() {
 							block="tech"
 							fullContainer="fullContainer"
 							icon="laptop-code"
-							containerClass={about.container}
-							headerIcon={about.icon}
+							containerClass={technical.container}
+							headerIcon={technical.icon}
 						/>
 
 					</div>
-					<div className={`${about.image} ${about.technicalSvg}`}>
-						<Image src="/img/dataism-24.svg" width={477} height={1111} alt="data string background" />
+					<div className={`${technical.image} ${technical.technicalSvg}`}>
+						<Image src="/img/dataism-24.svg" width={477} height={1111} alt="data string background" priority={true} />
 					</div>
 				</section>	
 			</Container>

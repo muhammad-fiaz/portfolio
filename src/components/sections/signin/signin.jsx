@@ -2,13 +2,13 @@ import React, { useState } from 'react';
 import Image from 'next/image';
 import Section from '../../structure/section';
 import Container from '../../structure/container';
-import about from '../../../../assets/styles/scss/sections/index/about.module.scss';
+import signin from '../../../../assets/styles/scss/sections/index/about.module.scss';
 import { useRouter } from 'next/router';
 import Cookies from 'js-cookie'; // Import the js-cookie library
 import axios from 'axios'; // Import axios
 
 export default function Auth() {
-    const serverURL = 'http://localhost:8000/api/auth/';
+    const serverURL = 'http://localhost:8000/api/auth/'; // replace with your server URL
 
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
@@ -43,12 +43,12 @@ export default function Auth() {
     };
 
     return (
-        <Section classProp={`${about.section} borderBottom`}>
+        <Section classProp={`${signin.section} borderBottom`}>
             <Container spacing={['verticalXXXLrg']}>
-                <section className={`${about.content} ${about.container}`}>
-                    <div className={about.copy}>
+                <section className={`${signin.content} ${signin.container}`}>
+                    <div className={signin.copy}>
                         <div
-                            className={about.container}
+                            className={signin.container}
                             style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}
                         >
                             <form
@@ -183,7 +183,7 @@ export default function Auth() {
                     </div>
                     {/* Data string background image */}
                     <div
-                        className={`${about.image} ${about.technicalSvg}`}
+                        className={`${signin.image} ${signin.technicalSvg}`}
                         style={{ display: 'flex', justifyContent: 'center' }}
                     >
                         <Image
@@ -191,6 +191,7 @@ export default function Auth() {
                             width={477}
                             height={1111}
                             alt='data string background'
+                            priority={true}
                         />
                     </div>
                 </section>

@@ -1,7 +1,8 @@
 import Color 	from '../../src/components/utils/page.colors'
-import Inactivedevelopment from '../../src/components/dev/inactivedevelopment'
 
 import colors 		from '../../src/content/settings/_colors.json'
+
+import Settings 	from '../../src/components/sections/settings/settings'
 
 // Settings page
 export default function settings({}) {
@@ -9,7 +10,7 @@ export default function settings({}) {
     return (
         <>
             <Color colors={colors} />
-            <Inactivedevelopment/>
+            <Settings/>
         </>
     )
 }
