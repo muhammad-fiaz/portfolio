@@ -70,7 +70,11 @@ Enjoying my work? Consider supporting me by buying me a cup of coffee or becomin
 
 This project is licensed under the MIT License. See the [LICENSE](https://github.com/muhammad-fiaz/muhammadfiaz.com/blob/main/LICENSE.md) file for details.
 
+## Deploy on Vercel
 
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
                                                                                                      
                                                                                                      
                                                                                                      
