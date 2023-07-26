@@ -1,5 +1,7 @@
 # [muhammadfiaz.com](https://muhammadfiaz.com/)
 
+[![muhammad-fiaz](./public/muhammad-fiaz.jpg)](https://www.muhammadfiaz.com/)
+
 This project is built with Next.js and React, showcasing [Muhammad Fiaz](https://github.com/muhammad-fiaz/)'s personal website.
 
 **Note: This project is currently under Active development. so the Documentation for this project is not ready yet if available it will be notified in a repository.**
