@@ -26,7 +26,7 @@
 		"@fortawesome/sharp-solid-svg-icons": "^6.2.1",
 		"@hcaptcha/react-hcaptcha": "^1.8.1",
 		"@lottiefiles/react-lottie-player": "^3.5.3",
-		"@react-three/drei": "^9.80.0",
+		"@react-three/drei": "^9.80.1",
 		"@react-three/fiber": "^8.13.3",
 		"@uiw/react-markdown-preview": "^4.1.7",
 		"@vercel/analytics": "^1.0.1",
