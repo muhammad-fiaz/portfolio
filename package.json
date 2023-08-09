@@ -28,7 +28,7 @@
 		"@lottiefiles/react-lottie-player": "^3.5.3",
 		"@react-three/drei": "^9.80.1",
 		"@react-three/fiber": "^8.13.3",
-		"@uiw/react-markdown-preview": "^4.1.7",
+		"@uiw/react-markdown-preview": "^4.1.15",
 		"@vercel/analytics": "^1.0.1",
 		"analytics": "^0.8.9",
 		"autoprefixer": "^10.4.14",
