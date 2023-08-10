@@ -30,7 +30,7 @@ export default function Document() {
 
 				<link rel="preconnect" href="https://muhammadfiaz.com" />
 
-				<link rel="dns-prefetch" href="https://muhammadfiaz.com" />.
+				<link rel="dns-prefetch" href="https://muhammadfiaz.com" />
 
 				<meta name="author" content="Muhammad Fiaz" />
 
