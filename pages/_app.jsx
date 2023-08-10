@@ -81,7 +81,10 @@ export default function MyApp({ Component, pageProps }) {
 		<>
 
 			{isLoading ? (
+				<LazyMotion features={domAnimation}>
+
 				<LoadingScreen />
+				</LazyMotion>
 			) : (
 				<LazyMotion features={domAnimation}>
 					<Layout>

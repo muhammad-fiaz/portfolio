@@ -26,7 +26,8 @@ export default function Navbar() {
 			<Link href="/settings">
 				<a>
 					<div className={css.circleImage}>
-						<Image src="/img/user.jpg" width={34} height={34} alt="Profile Image" />
+						<Image src="/img/user.jpg" width={34} height={34} alt="Profile Image"   loading="eager"
+						/>
 					</div>
 				</a>
 			</Link>

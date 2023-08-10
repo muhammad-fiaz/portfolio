@@ -191,7 +191,7 @@ export default function Auth() {
                             width={477}
                             height={1111}
                             alt='data string background'
-                            priority={true}
+                            loading="eager"
                         />
                     </div>
                 </section>

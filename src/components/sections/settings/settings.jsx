@@ -110,7 +110,8 @@ export default function Settings() {
                         className={`${settings.image} ${settings.technicalSvg}`}
                         style={{ display: 'flex', justifyContent: 'center' }}
                     >
-                        <Image src='/img/dataism-24.svg' width={500} height={500} alt='data string background' priority={true} />
+                        <Image src='/img/dataism-24.svg' width={500} height={500} alt='data string background' loading="eager"
+                        />
                     </div>
                 </section>
             </Container>

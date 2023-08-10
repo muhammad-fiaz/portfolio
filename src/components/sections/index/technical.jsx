@@ -60,7 +60,7 @@ export default function Technical() {
 
 					</div>
 					<div className={`${technical.image} ${technical.technicalSvg}`}>
-						<Image src="/img/dataism-24.svg" width={477} height={1111} alt="data string background" priority={true} />
+						<Image src="/img/dataism-24.svg" width={477} height={1111} alt="data string background"   loading="eager" />
 					</div>
 				</section>	
 			</Container>

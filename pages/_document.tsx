@@ -5,9 +5,7 @@ import React from "react";
 export default function Document() {
 	return (
 		<Html lang="en">
-			<title>Muhammad Fiaz</title>
-			<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-			<meta name="application-name" content="Muhammad Fiaz" />
+				<title>Muhammad Fiaz</title>
 
 			<Head>
 				{/*
@@ -15,32 +13,35 @@ export default function Document() {
                  GitHub: Visit the GitHub repository at https://github.com/muhammad-fiaz/muhammadfiaz.com/ for more details.
                  license: MIT License
                   */}
-
 				<meta charSet="utf-8" />
-	            <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+				<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+				<meta name="application-name" content="Muhammad Fiaz" />
+
+
 				<meta name="theme-color" content="#000000" />
 				<meta name="title" content="Muhammad Fiaz"/>
 				<meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
 				<meta name="language" content="English"/>
 				<meta name="revisit-after" content="1 days"/>
-				<link rel="canonical" href="https://www.muhammadfiaz.com" />
+				<link rel="canonical" href="https://muhammadfiaz.com" />
 				<meta name="license" content="MIT License" />
 				<meta httpEquiv="content-language" content="en-us" />
 
+				<link rel="preconnect" href="https://muhammadfiaz.com" />
+
+				<link rel="dns-prefetch" href="https://muhammadfiaz.com" />.
+
 				<meta name="author" content="Muhammad Fiaz" />
-				<meta
-					name="description"
-					content="Muhammad Fiaz - Designer, Developer, Full Stack. Passionate about programming, innovation, and shaping the future."
-				/>
+
+				<link rel="alternate" hrefLang="en" href="https://muhammadfiaz.com" />
 
 				<meta name="robots" content="index, follow" />
 				<meta name="googlebot" content="index, follow" />
 				<meta name="bingbot" content="index, follow" />
 
-				<meta
-					name="description"
-					content="Muhammad Fiaz - Full Stack Developer specializing in Cloud, DevOps, ML/AI, and Design. Passionate about programming, innovation, and shaping the future."
-				/>
+				<meta name="description" content="Muhammad Fiaz - A dedicated Full Stack Developer, proficient in Cloud, DevOps, ML/AI, and Design. Join me in my journey of passionate programming, innovation, and shaping the future of technology." />
+
 				<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.jpg" />
 				<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon.ico" />
 				<link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon.jpg" />
@@ -49,19 +50,19 @@ export default function Document() {
 				<meta name="theme-color" content="#ffffff" />
 				<link rel="manifest" href="/manifest.json" />
 				<meta property="og:title" content="Muhammad Fiaz" />
-				<meta property="og:description" content="Muhammad Fiaz - Full Stack Developer specializing in Cloud, DevOps, ML/AI, and Design. Passionate about programming, innovation, and shaping the future." />
-				<meta property="og:image" content="https://www.muhammadfiaz.com/img/fiaz-org.jpeg" />
-				<meta property="og:url" content="https://www.muhammadfiaz.com" />
+				<meta property="og:description" content="I am Muhammad Fiaz, a dedicated Full Stack Developer with expertise in Cloud Computing, DevOps methodologies, Machine Learning, Artificial Intelligence, and Design principles. With a profound passion for programming, I embark on a relentless journey of innovation, continuously shaping the future of technology. Join me as we explore the intricate intersections of creativity, precision, and visionary problem-solving, and together, we navigate the ever-evolving landscape of digital possibilities." />
+				<meta property="og:image" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
+				<meta property="og:url" content="https://muhammadfiaz.com" />
 				<meta property="og:type" content="website" />
 				<meta property="og:profile" content="https://github.com/muhammad-fiaz" />
 				<meta property="og:site_name" content="Muhammad Fiaz" />
 				<meta name="twitter:card" content="summary" />
 				<meta name="twitter:site" content="@muhammadfiaz_" />
 				<meta name="twitter:title" content="Muhammad Fiaz" />
-				<meta name="twitter:description" content="Muhammad Fiaz - Designer, Developer, Full Stack. Passionate about programming, innovation, and shaping the future." />
-				<meta name="twitter:image" content="https://www.muhammadfiaz.com/img/fiaz-org.jpeg" />
+				<meta name="twitter:description" content="I am Muhammad Fiaz, a dedicated Full Stack Developer with expertise in Cloud Computing, DevOps methodologies, Machine Learning, Artificial Intelligence, and Design principles. With a profound passion for programming, I embark on a relentless journey of innovation, continuously shaping the future of technology. Join me as we explore the intricate intersections of creativity, precision, and visionary problem-solving, and together, we navigate the ever-evolving landscape of digital possibilities." />
+				<meta name="twitter:image" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
                 				<meta name="twitter:creator" content="@muhammadfiaz_" />
-				<meta name="twitter:domain" content="https://www.muhammadfiaz.com" />
+				<meta name="twitter:domain" content="https://muhammadfiaz.com" />
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
@@ -69,30 +70,18 @@ export default function Document() {
           "@context": "https://schema.org",
           "@type": "Person",
           "name": "Muhammad Fiaz",
-          "url": "https://www.muhammadfiaz.com",
+          "url": "https://muhammadfiaz.com",
           "sameAs": [
             "https://github.com/muhammad-fiaz",
-            "https://www.linkedin.com/in/muhammad-fiaz-"
+            "https://www.linkedin.com/in/muhammad-fiaz-",
+            "https://medium.com/@muhammad-fiaz",
+            "https://twitter.com/muhammadfiaz_",
+            "https://dev.to/muhammadfiaz"
           ]
         }`
 					}}
 				/>
-				{/*Edit this to your accordingly for site-links*/}
 
-				<script type="application/ld+json" dangerouslySetInnerHTML={{
-					__html: `
-          {
-            "@context": "https://schema.org",
-            "@type": "WebSite",
-            "url": "https://muhammadfiaz.com/",
-            "potentialAction": {
-              "@type": "SearchAction",
-              "target": "https://muhammadfiaz.com/search?q={search_term_string}",
-              "query-input": "required name=search_term_string"
-            }
-          }
-        `,
-				}} />
 
 				{/*Edit this to your according FAQ */}
 				<script type="application/ld+json" dangerouslySetInnerHTML={{
@@ -145,23 +134,7 @@ export default function Document() {
           }
         `,
 				}} />
-				{/*Edit this to your according to your website*/}
-				<script type="application/ld+json" dangerouslySetInnerHTML={{
-					__html: `
-          {
-            "@context": "https://schema.org/",
-            "@type": "Person",
-            "name": "Muhammad Fiaz",
-            "url": "https://muhammadfiaz.com",
-            "image": "https://www.muhammadfiaz.com/img/fiaz-org.jpeg",
-            "sameAs": [
-              "https://github.com/muhammad-fiaz/",
-              "https://muhammadfiaz.com",
-              "https://www.linkedin.com/in/muhammad-fiaz-/"
-            ]
-          }
-        `
-				}} />
+
 				{/*Edit this to your according to your website*/}
 				<script type="application/ld+json" dangerouslySetInnerHTML={{
 					__html: `
@@ -172,27 +145,27 @@ export default function Document() {
               "@type": "ListItem",
               "position": 1,
               "name": "Home",
-              "item": "https://www.muhammadfiaz.com/"
+              "item": "https://muhammadfiaz.com/"
             },{
               "@type": "ListItem",
               "position": 2,
               "name": "Docs",
-              "item": "https://www.muhammadfiaz.com/docs"
+              "item": "https://muhammadfiaz.com/docs"
             },{
               "@type": "ListItem",
               "position": 3,
               "name": "Articles",
-              "item": "https://www.muhammadfiaz.com/articles"
+              "item": "https://muhammadfiaz.com/articles"
             },{
               "@type": "ListItem",
               "position": 4,
               "name": "Projects",
-              "item": "https://www.muhammadfiaz.com/projects"
+              "item": "https://muhammadfiaz.com/projects"
             },{
               "@type": "ListItem",
               "position": 5,
               "name": "Sign In",
-              "item": "https://www.muhammadfiaz.com/signin"
+              "item": "https://muhammadfiaz.com/signin"
             }]
           }
         `
@@ -203,14 +176,15 @@ export default function Document() {
           {
             "@context": "https://schema.org",
             "@type": "ResearchProject",
-            "name": "muhammadfiaz",
+            "name": "Muhammad Fiaz",
             "alternateName": "fiaz",
-            "url": "https://www.muhammadfiaz.com/",
-            "logo": "https://www.muhammadfiaz.com/img/fiaz-org.jpeg",
+            "url": "https://muhammadfiaz.com",
+            "logo": "https://muhammadfiaz.com/img/fiaz-org.jpeg",
             "sameAs": "https://www.linkedin.com/in/muhammad-fiaz-/"
           }
         `
 				}} />
+
 				{/*theme*/}
 				<Script id="theme.util.jsx" strategy="beforeInteractive" >
 					{`
@@ -219,6 +193,7 @@ export default function Document() {
 				document.querySelector(':root').dataset.theme = themeLocalStorage ?? themeSystem
 				`}
 				</Script>
+
 				{/* Google Analytics */}
 				<Script async src="https://www.googletagmanager.com/gtag/js?id=G-SDJ0K1Y70X"></Script>
 				<script
@@ -234,10 +209,6 @@ export default function Document() {
 					}}
 				/>
 
-				{/* Google Adsense */}
-				<script async
-						src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2040560600290490"
-						crossOrigin="anonymous"></script>  {/* use your own adsense id or else remove this line */}
 
 				{/* Clarity Analytics */}
 				<script
@@ -254,7 +225,6 @@ export default function Document() {
 			</Head>
 
 			<body>
-			<h1></h1>
 			<Main />
 			<NextScript />
 			</body>

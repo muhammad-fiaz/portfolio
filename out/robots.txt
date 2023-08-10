@@ -4,10 +4,6 @@ Allow: /
 
 # Host
 Host: https://muhammadfiaz.com
-Host: https://www.muhammadfiaz.com
-Host: http://muhammadfiaz.com
-Host: http://www.muhammadfiaz.com
 
 # Sitemaps
 Sitemap: https://muhammadfiaz.com/sitemap.xml
-Sitemap: https://muhammadfiaz.com/sitemap-0.xml
