@@ -5,7 +5,6 @@ import React from "react";
 export default function Document() {
 	return (
 		<Html lang="en">
-				<title>Muhammad Fiaz</title>
 
 			<Head>
 				{/*
@@ -13,6 +12,8 @@ export default function Document() {
                  GitHub: Visit the GitHub repository at https://github.com/muhammad-fiaz/muhammadfiaz.com/ for more details.
                  license: MIT License
                   */}
+				<title>Muhammad Fiaz</title>
+
 				<meta charSet="utf-8" />
 				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
 				<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
