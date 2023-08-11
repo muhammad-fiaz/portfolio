@@ -43,7 +43,7 @@
 		"react-loader-spinner": "^5.3.4",
 		"react-redux": "^8.0.7",
 		"react-transition-group": "^4.4.5",
-		"react-type-animation": "^2.1.2",
+		"react-type-animation": "^3.1.0",
 		"sharp": "^0.32.4",
 		"tailwindcss": "^3.3.3",
 		"the-new-css-reset": "^1.9.0",
