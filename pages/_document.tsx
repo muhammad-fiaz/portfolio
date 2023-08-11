@@ -12,7 +12,9 @@ export default function Document() {
                  GitHub: Visit the GitHub repository at https://github.com/muhammad-fiaz/muhammadfiaz.com/ for more details.
                  license: MIT License
                   */}
-				<title>Muhammad Fiaz</title>
+
+				{/* eslint-disable-next-line @next/next/no-title-in-document-head */}
+				<title>Muhammad Fiaz - Full Stack Developer & Software Engineer | Portfolio</title>
 
 				<meta charSet="utf-8" />
 				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -21,7 +23,7 @@ export default function Document() {
 
 
 				<meta name="theme-color" content="#000000" />
-				<meta name="title" content="Muhammad Fiaz"/>
+				<meta name="title" content="Muhammad Fiaz - Full Stack Developer & Software Engineer | Portfolio"/>
 				<meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
 				<meta name="language" content="English"/>
 				<meta name="revisit-after" content="1 days"/>
@@ -50,7 +52,7 @@ export default function Document() {
 				<meta name="msapplication-TileColor" content="#da532c" />
 				<meta name="theme-color" content="#ffffff" />
 				<link rel="manifest" href="/manifest.json" />
-				<meta property="og:title" content="Muhammad Fiaz" />
+				<meta property="og:title" content="Muhammad Fiaz - Full Stack Developer & Software Engineer | Portfolio" key="title" />
 				<meta property="og:description" content="I am Muhammad Fiaz, a dedicated Full Stack Developer with expertise in Cloud Computing, DevOps methodologies, Machine Learning, Artificial Intelligence, and Design principles. With a profound passion for programming, I embark on a relentless journey of innovation, continuously shaping the future of technology. Join me as we explore the intricate intersections of creativity, precision, and visionary problem-solving, and together, we navigate the ever-evolving landscape of digital possibilities." />
 				<meta property="og:image" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
 				<meta property="og:url" content="https://muhammadfiaz.com" />
@@ -58,11 +60,11 @@ export default function Document() {
 				<meta property="og:profile" content="https://github.com/muhammad-fiaz" />
 				<meta property="og:site_name" content="Muhammad Fiaz" />
 				<meta name="twitter:card" content="summary" />
-				<meta name="twitter:site" content="@muhammadfiaz_" />
+				<meta name="twitter:site" content="https://twitter.com/muhammadfiaz_" />
 				<meta name="twitter:title" content="Muhammad Fiaz" />
 				<meta name="twitter:description" content="I am Muhammad Fiaz, a dedicated Full Stack Developer with expertise in Cloud Computing, DevOps methodologies, Machine Learning, Artificial Intelligence, and Design principles. With a profound passion for programming, I embark on a relentless journey of innovation, continuously shaping the future of technology. Join me as we explore the intricate intersections of creativity, precision, and visionary problem-solving, and together, we navigate the ever-evolving landscape of digital possibilities." />
 				<meta name="twitter:image" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
-                				<meta name="twitter:creator" content="@muhammadfiaz_" />
+				<meta name="twitter:creator" content="https://twitter.com/muhammadfiaz_" />
 				<meta name="twitter:domain" content="https://muhammadfiaz.com" />
 				<script
 					type="application/ld+json"
@@ -224,7 +226,6 @@ export default function Document() {
 					}}
 				/>
 			</Head>
-
 			<body>
 			<Main />
 			<NextScript />

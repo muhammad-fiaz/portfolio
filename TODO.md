@@ -37,8 +37,8 @@
 ### BACKEND 
 
 - [ ] Search Functionality
-- [ ] Improve Website Performance
-- [ ] Optimize Loading Times
+- [X] Improve Website Performance
+- [X] Optimize Loading Times
 - [ ] Signin Functionality
 - [ ] Cookie Functionality
 - [X] SEO Techniques
