@@ -9,7 +9,7 @@
 		"sitemap": "next-sitemap --config next-sitemap.config.js"
 	},
 	"dependencies": {
-		"@fontsource/fira-code": "^4.5.13",
+		"@fontsource/fira-code": "^5.0.8",
 		"@fontsource/inter": "^5.0.8",
 		"@fortawesome/fontawesome-svg-core": "^6.4.2",
 		"@fortawesome/free-brands-svg-icons": "6.4.2",
