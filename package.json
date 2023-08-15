@@ -50,7 +50,7 @@
 		"yarn": "^1.22.19"
 	},
 	"devDependencies": {
-		"@testing-library/jest-dom": "^5.17.0",
+		"@testing-library/jest-dom": "^6.0.0",
 		"@testing-library/react": "^14.0.0",
 		"@types/node": "^20.4.10",
 		"@types/nprogress": "^0.2.0",
