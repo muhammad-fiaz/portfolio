@@ -1,6 +1,6 @@
-# [muhammadfiaz.com](https://muhammadfiaz.com/)
+# [portfolio](https://muhammadfiaz.com/)
 
-[![muhammad-fiaz](https://github.com/muhammad-fiaz/muhammadfiaz.com/assets/75434191/56e128cc-6486-4dc4-9387-7735070d3aa0)](https://muhammadfiaz.com/)
+[![muhammad-fiaz](https://github.com/muhammad-fiaz/portfolio/assets/75434191/56e128cc-6486-4dc4-9387-7735070d3aa0)](https://portfolio/)
 
 This project is built with Next.js and React, showcasing [Muhammad Fiaz](https://github.com/muhammad-fiaz/)'s personal website.
 
@@ -8,20 +8,20 @@ This project is built with Next.js and React, showcasing [Muhammad Fiaz](https:/
 
 **This Project Also Supports [Vercel](https://vercel.com/dashboard) and comes with [(Vercel Analytics pre-enabled in it)](https://vercel.com/analytics) you can Host it there if you like it**
 
-🧑‍💻 Check out the dev branch for new development changes and the Lastest Patch updates:- [https://github.com/muhammad-fiaz/muhammadfiaz.com/tree/dev](https://github.com/muhammad-fiaz/muhammadfiaz.com/tree/dev)
+🧑‍💻 Check out the dev branch for new development changes and the Lastest Patch updates:- [https://github.com/muhammad-fiaz/portfolio/tree/dev](https://github.com/muhammad-fiaz/portfolio/tree/dev)
                                                    
 
 ✅ Also Check out the latest release version for production use:-
-[https://github.com/muhammad-fiaz/muhammadfiaz.com](https://github.com/muhammad-fiaz/muhammadfiaz.com)
+[https://github.com/muhammad-fiaz/portfolio](https://github.com/muhammad-fiaz/portfolio)
 
-if you have any suggestions or feedback, feel free to open an [issue](https://github.com/muhammad-fiaz/muhammadfiaz.com/issues) or a [pull request](https://github.com/muhammad-fiaz/muhammadfiaz.com/pulls).
+if you have any suggestions or feedback, feel free to open an [issue](https://github.com/muhammad-fiaz/portfolio/issues) or a [pull request](https://github.com/muhammad-fiaz/portfolio/pulls).
 
 ## Getting Started
 
 To run the project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/muhammad-fiaz/muhammadfiaz.com.git`
-2. Navigate to the project directory: `cd muhammadfiaz.com`
+1. Clone the repository: `git clone https://github.com/muhammad-fiaz/portfolio.git`
+2. Navigate to the project directory: `cd portfolio`
 3. Install the dependencies: `npm install`
 4. Start the development server: `npm run dev`
 5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the website.
@@ -70,7 +70,7 @@ Enjoying my work? Consider supporting me by buying me a cup of coffee or becomin
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/muhammad-fiaz/muhammadfiaz.com/blob/main/LICENSE.md) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/muhammad-fiaz/portfolio/blob/main/LICENSE.md) file for details.
 
 ## Contributing
 

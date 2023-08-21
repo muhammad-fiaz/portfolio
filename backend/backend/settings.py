@@ -39,7 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'muhammadfiaz.apps.MuhammadfiazConfig',
+    'portfolio.apps.MuhammadfiazConfig',
     'rest_framework',
     'corsheaders',  # Added for CORS support
 

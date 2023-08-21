@@ -1,4 +1,4 @@
-name: muhammadfiaz.com
+name: portfolio
 
 on:
   # Runs on pushes targeting the default branch
@@ -103,7 +103,7 @@ jobs:
       - name: Deploy to GitHub Pages
         run: |
           git clone https://github.com/${{ github.repository }}.git
-          cd muhammadfiaz.com
+          cd portfolio
           git checkout gh-pages
           cp -R ../out/* ./
           git add .

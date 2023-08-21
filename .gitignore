@@ -108,3 +108,4 @@ dist
 .tern-port
 # Sentry Auth Token
 .sentryclirc
+/backend/bin/
