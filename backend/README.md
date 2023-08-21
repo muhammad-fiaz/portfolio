@@ -1,4 +1,4 @@
-# Django Backend for muhammadfiaz.com
+# Django Backend for portfolio
 
 **Currently, This backend is in active Development**
 **Also, This Project uses Neurolink for the Chatbot Functionality. This Python Package is Currently in Active Development, so
@@ -26,8 +26,8 @@ The backend is built using the following technologies:
 
 To run the project locally, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/muhammad-fiaz/muhammadfiaz.com.git`
-2. Navigate to the project directory: `cd muhammadfiaz.com/backend`
+1. Clone the repository: `git clone https://github.com/muhammad-fiaz/portfolio.git`
+2. Navigate to the project directory: `cd portfolio/backend`
 3. Install the dependencies: `pip install -r requirements.txt`
 4. make migrations: `python manage.py makemigrations`
 5. migrate: `python manage.py migrate`
@@ -47,4 +47,4 @@ Enjoying my work? Consider supporting me by buying me a cup of coffee or becomin
 
 ## License
 
-This project is licensed under the MIT License. See the [LICENSE](https://github.com/muhammad-fiaz/muhammadfiaz.com/blob/main/backend/LICENSE.md) file for details.
+This project is licensed under the MIT License. See the [LICENSE](https://github.com/muhammad-fiaz/portfolio/blob/main/backend/LICENSE.md) file for details.

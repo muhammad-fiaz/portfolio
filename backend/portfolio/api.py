@@ -1,7 +1,7 @@
 from rest_framework.views import APIView
 from rest_framework.response import Response
 
-from muhammadfiaz.views import Chatbot
+from portfolio.views import Chatbot
 
 
 # This is the view that will handle the chatbot API requests use can also modify this according to your needs.
