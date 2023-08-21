@@ -30,7 +30,7 @@
 		"axios": "^1.4.0",
 		"babel-plugin-macros": "^3.1.0",
 		"devicon": "^2.15.1",
-		"framer-motion": "^10.15.1",
+		"framer-motion": "^10.16.0",
 		"js-cookie": "^3.0.5",
 		"next": "^12.3",
 		"next-compose-plugins": "^2.2.1",
