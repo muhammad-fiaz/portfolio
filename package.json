@@ -68,7 +68,7 @@
 		"sass": "^1.65.1",
 		"typescript": "^5.1.6"
 	},
-	"name": "muhammadfiaz.com",
+	"name": "portfolio",
 	"version": "1.0.0",
 	"main": "pages/index.tsx",
 	"repository": "https://github.com/muhammad-fiaz/muhammadfiaz.com.git",
