@@ -1,8 +1,6 @@
-import Color 	from '../../src/components/utils/page.colors'
-import Inactivedevelopment from '../../src/components/dev/inactivedevelopment'
+import Color from '../../src/components/utils/page.colors'
 
-import colors 		from '../../src/content/signin/_colors.json'
-import settings 	from '../../src/content/_settings.json'
+import colors from '../../src/content/signin/_colors.json'
 import Auth from "../../src/components/sections/signin/signin";
 
 // signin page

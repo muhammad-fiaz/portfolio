@@ -1,15 +1,10 @@
 // Core packages
-import Image from 'next/image'
-
-import Badges 		from '../../utils/badge.list'
-
 // Section structure
 import Section from '../../structure/section';
 import Container from '../../structure/container';
 
 // Section general blocks
 import SectionTitle from '../../blocks/section.title'
-import SectionGridBg from '../../blocks/section.grid'
 
 // Career scss
 import career from '../../../../assets/styles/scss/sections/index/career.module.scss'

@@ -7,7 +7,6 @@ import Container from '../../structure/container';
 
 // Section general blocks
 import SectionTitle from '../../blocks/section.title'
-import SectionGridBg from '../../blocks/section.grid'
 
 // Section specific blocks
 import BadgesBlock from '../../blocks/about.badges'

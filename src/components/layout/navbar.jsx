@@ -1,11 +1,10 @@
-import { useEffect, useState } from 'react'
-import { useCallback } from 'react'
+import {useEffect, useState} from 'react'
 import {useRouter} from 'next/router';
 import Link from 'next/link'
 import ThemeMode from '../utils/theme'
 
 import settings from '../../content/_settings.json'
-import content  from '../../content/navbar.json'
+import content from '../../content/navbar.json'
 import css from '../../../assets/styles/scss/structure/navbar.module.scss'
 import Cookies from 'js-cookie';
 import Image from 'next/image';

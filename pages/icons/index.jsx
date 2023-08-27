@@ -1,12 +1,12 @@
-import { useState, useEffect } from 'react'
+import {useEffect, useState} from 'react'
 
-import Icon from '../../src/components/utils/icon.tsx'
+const Icon = dynamic(() => import('../../src/components/utils/icon.tsx'));
 
 import Section from '../../src/components/structure/section';
 import Container from '../../src/components/structure/container';
 
-import css from '../../assets/styles/scss/sections/icons/iconForm.module.scss'
-import { prefix } from '@fortawesome/pro-solid-svg-icons';
+const css  = dynamic(import('../../assets/styles/scss/sections/icons/iconForm.module.scss'));
+import dynamic from "next/dynamic";
 
 export default function PageWithJSbasedForm() {
 	// Handles the submit event on form submit.

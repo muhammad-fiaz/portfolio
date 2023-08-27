@@ -1,8 +1,8 @@
-import Color 	from '../../src/components/utils/page.colors'
+import Color from '../../src/components/utils/page.colors'
 
-import colors 		from '../../src/content/settings/_colors.json'
+import colors from '../../src/content/settings/_colors.json'
 
-import Settings 	from '../../src/components/sections/settings/settings'
+import Settings from '../../src/components/sections/settings/settings'
 
 // Settings page
 export default function settings({}) {

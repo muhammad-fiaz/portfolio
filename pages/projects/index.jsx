@@ -2,7 +2,7 @@
 import GitRecentProjects from '../../src/components/sections/projects/recent'
 import FeaturedProjects from '../../src/components/sections/projects/featured'
 
-import Color  from '../../src/components/utils/page.colors'
+import Color from '../../src/components/utils/page.colors'
 
 import settings from '../../src/content/_settings.json'
 import colors from '../../src/content/projects/_colors.json'

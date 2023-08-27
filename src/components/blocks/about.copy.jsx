@@ -2,7 +2,6 @@
 import Icon from '../utils/icon'
 
 // Utility packages
-import space from '../utils/spacing';
 
 /**
  * About section component block that contains the written copy

@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react'
+import {render, screen} from '@testing-library/react'
 import Hero from '../../../src/components/sections/index/hero'
 import '@testing-library/jest-dom'
 

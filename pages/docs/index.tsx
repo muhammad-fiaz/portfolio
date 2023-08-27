@@ -1,8 +1,6 @@
-import Color 	from '../../src/components/utils/page.colors'
-import Inactivedevelopment from '../../src/components/dev/inactivedevelopment'
+import Color from '../../src/components/utils/page.colors'
 
-import colors 		from '../../src/content/docs/_colors.json'
-import settings 	from '../../src/content/_settings.json'
+import colors from '../../src/content/docs/_colors.json'
 import FeaturedDocs from "../../src/components/sections/docs/featured";
 
 // documentation page - under development

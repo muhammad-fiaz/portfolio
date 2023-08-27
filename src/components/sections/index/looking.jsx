@@ -1,19 +1,16 @@
 // Section structure
-import Section 		from '../../structure/section';
-import Container 	from '../../structure/container';
+import Section from '../../structure/section';
+import Container from '../../structure/container';
 
 
 // Section general blocks
-import SectionGridBg from '../../blocks/section.grid'
-import SectionTitle from '../../blocks/section.title'
 
 // Spacing util
-import Spacing 		from '../../utils/spacing';
 
 
 // Section scss
-import looking 		from '../../../../assets/styles/scss/sections/index/looking.module.scss';
-import section 		from '../../../../assets/styles/scss/blocks/section.title.module.scss'
+import looking from '../../../../assets/styles/scss/sections/index/looking.module.scss';
+import section from '../../../../assets/styles/scss/blocks/section.title.module.scss'
 
 export default function Looking() {
 	return (
