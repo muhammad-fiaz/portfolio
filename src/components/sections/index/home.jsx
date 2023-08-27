@@ -6,7 +6,6 @@ import Section from '../../structure/section';
 import Container from '../../structure/container';
 
 import SectionTitle from '../../blocks/section.title'
-import SectionGridBg from '../../blocks/section.grid'
 
 import BadgesBlock from '../../blocks/about.badges'
 import CopyBlock from '../../blocks/about.copy'
@@ -25,8 +24,7 @@ export default function Home() {
 				/>
 				<section className={about.content}>
 					<div className={about.image}>
-						<Image src="/img/fiaz-org.jpeg" width={600} height={800} alt="Muhammad Fiaz"   loading="eager"
-						/>
+						<Image src="/img/fiaz-org.jpeg" width={600} height={800} alt="Muhammad Fiaz"   loading="eager"/>
 					</div>
 					<div className={about.copy}>
 						<CopyBlock

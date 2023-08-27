@@ -1,4 +1,4 @@
-import { Html, Head, Main, NextScript } from 'next/document'
+import {Head, Html, Main, NextScript} from 'next/document'
 import Script from 'next/script';
 import React from "react";
 
@@ -21,7 +21,39 @@ export default function Document() {
 				<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 				<meta name="application-name" content="Muhammad Fiaz" />
 
-
+				<meta name="keywords" content="
+    Muhammad Fiaz, software engineer, full stack developer, software developer,
+    full stack,muhammad,fiaz , full stack software developer, stack developer, full stack engineers,
+    portfolio developer, developer engineer, software developer portfolio,
+    software stack, full stack software engineer, full stack developer portfolio,
+    about full stack developer, software engineer software, full stack dev,
+    full stack software development, full engineer, software engineer portfolio,
+    software developer software, software engineer developer, full stack software,
+    software full stack developer, engineer software engineer,
+    portfolio of software developer, portfolio for full stack developer,
+    software portfolio, portfolio for software engineer, a full stack developer,
+    full stack developer software, full stack developer is a software engineer,
+    full stack developer about, software engineer software engineer,
+    portfolio of full stack developer, software software engineer,
+    software full, full developer, full stack developer what is it,
+    stack software developer, full stack developer and software developer,
+    the full stack developer, portfolio of software engineer,
+    stack software development, portfolio of developer, software engineer engineer,
+    full stack portfolio, full stack developer software engineer,
+    portfolio full stack, it full stack developer, full stack developer engineer,
+    software engineer and full stack developer, software engineer stack,
+    software engineer full stack developer, software engineer and developer,
+    stack in software development, software development full stack,
+    software developer stack, from full stack developer to software engineer,
+    full stack developer is, full developer stack, full stack engineer portfolio,
+    full stack developer stack, full stack developer and software engineer,
+    portfolio of a software developer, stack in software engineering,
+    full software stack, software engineer a developer,
+    software developer and full stack developer, portfolio full stack dev,
+    be a full stack developer, portfolio in software engineering,
+    as a full stack developer, portfolio in software,
+    full stack software development engineer
+  " />
 				<meta name="theme-color" content="#000000" />
 				<meta name="title" content="Muhammad Fiaz - Full Stack Developer & Software Engineer | Portfolio"/>
 				<meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -55,6 +87,13 @@ export default function Document() {
 				<meta property="og:title" content="Muhammad Fiaz - Full Stack Developer & Software Engineer | Portfolio" key="title" />
 				<meta property="og:description" content="I am Muhammad Fiaz, a dedicated Full Stack Developer with expertise in Cloud Computing, DevOps methodologies, Machine Learning, Artificial Intelligence, and Design principles. With a profound passion for programming, I embark on a relentless journey of innovation, continuously shaping the future of technology. Join me as we explore the intricate intersections of creativity, precision, and visionary problem-solving, and together, we navigate the ever-evolving landscape of digital possibilities." />
 				<meta property="og:image" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
+				<meta property="og:image" content="https://muhammadfiaz.com/img/fiaz_roundedImage.png" />
+				<meta property="og:image:secure_url" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
+				<meta property="og:image:type" content="image/jpeg" />
+				<meta property="og:image:alt" content="Muhammad Fiaz" />
+				<meta property="og:image:width" content="300" />
+				<meta property="og:image:height" content="300" />
+
 				<meta property="og:url" content="https://muhammadfiaz.com" />
 				<meta property="og:type" content="website" />
 				<meta property="og:profile" content="https://github.com/muhammad-fiaz" />
@@ -66,6 +105,7 @@ export default function Document() {
 				<meta name="twitter:image" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
 				<meta name="twitter:creator" content="https://twitter.com/muhammadfiaz_" />
 				<meta name="twitter:domain" content="https://muhammadfiaz.com" />
+
 				<script
 					type="application/ld+json"
 					dangerouslySetInnerHTML={{
@@ -183,8 +223,9 @@ export default function Document() {
             "alternateName": "fiaz",
             "url": "https://muhammadfiaz.com",
             "logo": "https://muhammadfiaz.com/img/fiaz-org.jpeg",
-            "sameAs": "https://www.linkedin.com/in/muhammad-fiaz-/"
-          }
+ "sameAs": [
+            "https://www.linkedin.com/in/muhammad-fiaz-/"
+        ]          }
         `
 				}} />
 

@@ -1,27 +1,26 @@
-import Hero 		from '../src/components/sections/index/hero'
-import Looking 		from '../src/components/sections/index/looking'
-import About 		from '../src/components/sections/index/home'
-import Technical 	from '../src/components/sections/index/technical'
-import Career 		from '../src/components/sections/index/career'
-import FeaturedProjects	from '../src/components/sections/projects/featured'
+import dynamic from 'next/dynamic';
+import colors from '../src/content/index/_colors.json';
 
-import Color 		from '../src/components/utils/page.colors'
+const Hero = dynamic(() => import('../src/components/sections/index/hero'));
+const Looking = dynamic(() => import('../src/components/sections/index/looking'));
+const About = dynamic(() => import('../src/components/sections/index/home'));
+const Technical = dynamic(() => import('../src/components/sections/index/technical'));
+const Career = dynamic(() => import('../src/components/sections/index/career'));
+const FeaturedProjects = dynamic(() => import('../src/components/sections/projects/featured'));
+const QnA = dynamic(() => import('../src/components/sections/index/qna'));
+const Color = dynamic(() => import('../src/components/utils/page.colors'));
 
-import colors 		from '../src/content/index/_colors.json'
-import QnA from "../src/components/sections/index/qna";
-// index.tsx is the home page of the website
 export default function HomePage() {
-
 	return (
 		<>
 			<Color colors={colors} />
 			<Hero />
-		<Looking />
+			<Looking />
 			<About />
 			<FeaturedProjects />
 			<Technical />
 			<Career />
-			<QnA/>
+			<QnA />
 		</>
 	);
 }

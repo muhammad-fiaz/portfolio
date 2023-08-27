@@ -1,4 +1,4 @@
-import { useEffect } from 'react';
+import {useEffect} from 'react';
 import Section from '../structure/section';
 import Container from '../structure/container';
 

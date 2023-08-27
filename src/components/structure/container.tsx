@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React, {ReactNode} from 'react';
 import Spacing from '../utils/spacing';
 import styles from '../../../assets/styles/scss/structure/container.module.scss';
 

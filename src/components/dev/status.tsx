@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { Player } from '@lottiefiles/react-lottie-player';
+import React, {useEffect, useState} from 'react';
+import {Player} from '@lottiefiles/react-lottie-player';
 import image from '../../../assets/codingdev.json';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 

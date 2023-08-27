@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, {useEffect, useState} from 'react';
 import Image from 'next/image';
 import Cookies from 'js-cookie';
 import Section from '../../structure/section';

@@ -1,5 +1,5 @@
 import React from "react";
-import { Player } from "@lottiefiles/react-lottie-player";
+import {Player} from "@lottiefiles/react-lottie-player";
 import image1 from "../../../assets/laptop.json";
 import image2 from "../../../assets/loadcode.json";
 

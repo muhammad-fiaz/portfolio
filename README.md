@@ -1,6 +1,5 @@
-# [portfolio](https://muhammadfiaz.com/)
-
-[![muhammad-fiaz](https://github.com/muhammad-fiaz/portfolio/assets/75434191/56e128cc-6486-4dc4-9387-7735070d3aa0)](https://portfolio/)
+[![muhammad-fiaz](./public/muhammad-fiaz.jpg)](https://muhammadfiaz.com)
+# [Portfolio](https://muhammadfiaz.com/)
 
 This project is built with Next.js and React, showcasing [Muhammad Fiaz](https://github.com/muhammad-fiaz/)'s personal website.
 
@@ -13,6 +12,8 @@ This project is built with Next.js and React, showcasing [Muhammad Fiaz](https:/
 
 ✅ Also Check out the latest release version for production use:-
 [https://github.com/muhammad-fiaz/portfolio](https://github.com/muhammad-fiaz/portfolio)
+
+**Note: if you want to use [export](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports) as static site, then disable the [image optimization](https://nextjs.org/docs/pages/building-your-application/optimizing/images) in [`next.config.js`](./next.config.js)**
 
 if you have any suggestions or feedback, feel free to open an [issue](https://github.com/muhammad-fiaz/portfolio/issues) or a [pull request](https://github.com/muhammad-fiaz/portfolio/pulls).
 
@@ -42,6 +43,12 @@ You will also see any lint errors in the console.
 Builds the app for production to the `.next` folder.\
 It correctly bundles Next.js and optimizes the build for the best performance.
 
+
+### `npm start`
+
+Starts the production server to serve the built app.\
+Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
 ### `next export`
 
 Exports the app to static HTML, which can be run without a Node.js server.\
@@ -66,6 +73,7 @@ Enjoying my work? Consider supporting me by buying me a cup of coffee or becomin
 [![Buy Me a Coffee](https://img.shields.io/badge/Buy%20Me%20a%20Coffee-Donate-orange?logo=buy-me-a-coffee&s=20)](https://www.buymeacoffee.com/muhammadfiaz)
 [![Patreon](https://img.shields.io/badge/Patreon-Support-red?logo=patreon&s=20)](https://www.patreon.com/muhammad_fiaz)
 <a href="https://ko-fi.com/muhammadfiaz"><img src="https://ko-fi.com/img/githubbutton_sm.svg" alt="Ko-fi" height="20"></a>
+[![Sponsor muhammad-fiaz](https://img.shields.io/badge/Sponsor-muhammad--fiaz-brightgreen?logo=github)](https://github.com/sponsors/muhammad-fiaz)
 
 
 ## License

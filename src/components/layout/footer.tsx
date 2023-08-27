@@ -1,4 +1,4 @@
-import { useState, useEffect } from 'react';
+import {useEffect, useState} from 'react';
 
 import Container from '../structure/container';
 import Icon from '../utils/icon';

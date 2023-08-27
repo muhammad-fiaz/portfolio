@@ -1,6 +1,3 @@
-
-import Container from '../structure/container';
-
 // Section scss
 import section from '../../../assets/styles/scss/blocks/section.title.module.scss'
 

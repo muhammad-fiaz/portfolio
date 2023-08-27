@@ -1,7 +1,4 @@
 // Core packages
-import Image from 'next/image'
-
-
 import hero from '../../../../assets/styles/scss/sections/index/hero.module.scss';
 
 export default function sectionBgColor() {

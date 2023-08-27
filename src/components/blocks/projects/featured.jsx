@@ -1,14 +1,13 @@
 import Image from 'next/image'
 
-import { useEffect } from 'react'
-import { m, useAnimation } from "framer-motion"
-import { useInView } from 'react-intersection-observer'
+import {useEffect} from 'react'
+import {m, useAnimation} from "framer-motion"
+import {useInView} from 'react-intersection-observer'
 
-import Badges 		from '../../utils/badge.list'
-import Icon 		from '../../utils/icon'
+import Badges from '../../utils/badge.list'
+import Icon from '../../utils/icon'
 
-import css 			from '../../../../assets/styles/scss/sections/projects/featured.module.scss'
-import content 		from '../../../content/projects/featured.json'
+import css from '../../../../assets/styles/scss/sections/projects/featured.module.scss'
 
 export default function FeaturedProject({ content }, index) {
 

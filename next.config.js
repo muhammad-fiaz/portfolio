@@ -1,4 +1,11 @@
 module.exports = {
+	webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+		// Add your custom Webpack configurations here
+
+		// Return the updated config
+		return config;
+	},
+	optimize: true, // disable if you want to export
 	reactStrictMode: true,
 	env: {
 		dir: '/',
