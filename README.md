@@ -1,4 +1,4 @@
-[![muhammad-fiaz](https://github.com/muhammad-fiaz/portfolio/raw/main/assets/75434191/56e128cc-6486-4dc4-9387-7735070d3aa0.png)](https://muhammadfiaz.com)
+[![muhammad-fiaz](./public/muhammad-fiaz.jpg)](https://muhammadfiaz.com)
 # [Portfolio](https://muhammadfiaz.com/)
 
 This project is built with Next.js and React, showcasing [Muhammad Fiaz](https://github.com/muhammad-fiaz/)'s personal website.
