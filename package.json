@@ -35,7 +35,7 @@
 		"framer-motion": "^10.16.1",
 
 		"js-cookie": "^3.0.5",
-		"next": "^12.3",
+		"next": "^13.4",
 		"next-compose-plugins": "^2.2.1",
 		"nprogress": "^0.2.0",
 		"postcss": "^8.4.28",
