@@ -55,7 +55,7 @@ export default function Document() {
     full stack software development engineer
   " />
 				<meta name="theme-color" content="#000000" />
-				<meta name="title" content="Muhammad Fiaz - Full Stack Developer & Software Engineer | Portfolio"/>
+				<meta name="title" content="Muhammad Fiaz - Full Stack Developer & Software Engineer"/>
 				<meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
 				<meta name="language" content="English"/>
 				<meta name="revisit-after" content="1 days"/>
