@@ -9,12 +9,12 @@ export default function Document() {
 			<Head>
 				{/*
 				Author: Muhammad Fiaz
-                 GitHub: Visit the GitHub repository at https://github.com/muhammad-fiaz/muhammadfiaz.com/ for more details.
+                 GitHub: Visit the GitHub repository at https://github.com/muhammad-fiaz/portfolio/ for more details.
                  license: MIT License
                   */}
 
 				{/* eslint-disable-next-line @next/next/no-title-in-document-head */}
-				<title>Muhammad Fiaz - Full Stack Developer & Software Engineer | Portfolio</title>
+				<title>Muhammad Fiaz - Full Stack Developer & Software Engineer</title>
 
 				<meta charSet="utf-8" />
 				<meta httpEquiv="X-UA-Compatible" content="IE=edge" />
@@ -24,7 +24,7 @@ export default function Document() {
 				<meta name="keywords" content="
     Muhammad Fiaz, software engineer, full stack developer, software developer,
     full stack,muhammad,fiaz , full stack software developer, stack developer, full stack engineers,
-    portfolio developer, developer engineer, software developer portfolio,
+    portfolio developer,portfolio,portfolio website, developer engineer, software developer portfolio,
     software stack, full stack software engineer, full stack developer portfolio,
     about full stack developer, software engineer software, full stack dev,
     full stack software development, full engineer, software engineer portfolio,
@@ -75,7 +75,7 @@ export default function Document() {
 				<meta name="googlebot" content="index, follow" />
 				<meta name="bingbot" content="index, follow" />
 
-				<meta name="description" content="Muhammad Fiaz - A dedicated Full Stack Developer, proficient in Cloud, DevOps, ML/AI, and Design. Join me in my journey of passionate programming, innovation, and shaping the future of technology." />
+				<meta name="description" content="Muhammad Fiaz - A dedicated Full Stack Developer proficient in App/Web, Cloud, DevOps, AL/ML, and Design. Join my journey." />
 
 				<link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.jpg" />
 				<link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon.ico" />
@@ -84,8 +84,8 @@ export default function Document() {
 				<meta name="msapplication-TileColor" content="#da532c" />
 				<meta name="theme-color" content="#ffffff" />
 				<link rel="manifest" href="/manifest.json" />
-				<meta property="og:title" content="Muhammad Fiaz - Full Stack Developer & Software Engineer | Portfolio" key="title" />
-				<meta property="og:description" content="I am Muhammad Fiaz, a dedicated Full Stack Developer with expertise in Cloud Computing, DevOps methodologies, Machine Learning, Artificial Intelligence, and Design principles. With a profound passion for programming, I embark on a relentless journey of innovation, continuously shaping the future of technology. Join me as we explore the intricate intersections of creativity, precision, and visionary problem-solving, and together, we navigate the ever-evolving landscape of digital possibilities." />
+				<meta property="og:title" content="Muhammad Fiaz - Full Stack Developer & Software Engineer" key="title" />
+				<meta property="og:description" content="Muhammad Fiaz - A dedicated Full Stack Developer proficient in App/Web, Cloud, DevOps, AI/ML, and Design. Join my journey." />
 				<meta property="og:image" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
 				<meta property="og:image" content="https://muhammadfiaz.com/img/fiaz_roundedImage.png" />
 				<meta property="og:image:secure_url" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
@@ -101,7 +101,7 @@ export default function Document() {
 				<meta name="twitter:card" content="summary" />
 				<meta name="twitter:site" content="https://twitter.com/muhammadfiaz_" />
 				<meta name="twitter:title" content="Muhammad Fiaz" />
-				<meta name="twitter:description" content="I am Muhammad Fiaz, a dedicated Full Stack Developer with expertise in Cloud Computing, DevOps methodologies, Machine Learning, Artificial Intelligence, and Design principles. With a profound passion for programming, I embark on a relentless journey of innovation, continuously shaping the future of technology. Join me as we explore the intricate intersections of creativity, precision, and visionary problem-solving, and together, we navigate the ever-evolving landscape of digital possibilities." />
+				<meta name="twitter:description" content="Muhammad Fiaz - A dedicated Full Stack Developer proficient in App/Web, Cloud, DevOps, AI/ML, and Design. Join my journey." />
 				<meta name="twitter:image" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
 				<meta name="twitter:creator" content="https://twitter.com/muhammadfiaz_" />
 				<meta name="twitter:domain" content="https://muhammadfiaz.com" />
