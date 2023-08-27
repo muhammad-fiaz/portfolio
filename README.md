@@ -7,13 +7,16 @@ This project is built with Next.js and React, showcasing [Muhammad Fiaz](https:/
 
 **This Project Also Supports [Vercel](https://vercel.com/dashboard) and comes with [(Vercel Analytics pre-enabled in it)](https://vercel.com/analytics) you can Host it there if you like it**
 
-🧑‍💻 Check out the dev branch for new development changes and the Lastest Patch updates:- [https://github.com/muhammad-fiaz/portfolio/tree/dev](https://github.com/muhammad-fiaz/portfolio/tree/dev)
+🧑‍💻 Check out the dev branch for new development changes and the Latest Patch updates:- [https://github.com/muhammad-fiaz/portfolio/tree/dev](https://github.com/muhammad-fiaz/portfolio/tree/dev)
                                                    
 
 ✅ Also Check out the latest release version for production use:-
 [https://github.com/muhammad-fiaz/portfolio](https://github.com/muhammad-fiaz/portfolio)
 
-**Note: if you want to use [export](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports) as static site, then disable the [image optimization](https://nextjs.org/docs/pages/building-your-application/optimizing/images) in [`next.config.js`](./next.config.js)**
+### Release Notes:-
+
+Checkout at [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
+
 
 if you have any suggestions or feedback, feel free to open an [issue](https://github.com/muhammad-fiaz/portfolio/issues) or a [pull request](https://github.com/muhammad-fiaz/portfolio/pulls).
 
@@ -53,6 +56,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
 Exports the app to static HTML, which can be run without a Node.js server.\
 The exported app will be in the `out` folder.
+
+**Note: if you want to use [export](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports) as static site, then disable the [image optimization](https://nextjs.org/docs/pages/building-your-application/optimizing/images) in [`next.config.js`](./next.config.js)**
 
 ## Icons Information
 
