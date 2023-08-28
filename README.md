@@ -1,4 +1,5 @@
 [![muhammad-fiaz](./public/muhammad-fiaz.jpg)](https://muhammadfiaz.com)
+
 # [Portfolio](https://muhammadfiaz.com/)
 
 This project is built with Next.js and React, showcasing [Muhammad Fiaz](https://github.com/muhammad-fiaz/)'s personal website.
@@ -13,11 +14,11 @@ This project is built with Next.js and React, showcasing [Muhammad Fiaz](https:/
 ✅ Also Check out the latest release version for production use:-
 [https://github.com/muhammad-fiaz/portfolio](https://github.com/muhammad-fiaz/portfolio)
 
-### Release Notes:-
+### Release Notes
 
-Checkout at [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
+For a detailed list of releases and changes, please visit the [GitHub Releases page](https://github.com/muhammad-fiaz/portfolio/releases).
 
-
+You can also refer to the [CHANGELOG.md](./CHANGELOG.md) file for comprehensive information about each release.
 
 if you have any suggestions or feedback, feel free to open an [issue](https://github.com/muhammad-fiaz/portfolio/issues) or a [pull request](https://github.com/muhammad-fiaz/portfolio/pulls).
 
@@ -44,9 +45,15 @@ You will also see any lint errors in the console.
 
 ### `npm run build`
 
-Builds the app for production to the `.next` folder.\
+Builds the app for production to the `.next` folder using default Next.js build config.\
 It correctly bundles Next.js and optimizes the build for the best performance.
 
+or 
+
+
+### `npm run build-webpack`
+Build the app for production to the `.next` folder using webpack.\
+This is useful if you want to use [webpack plugins](https://nextjs.org/docs/app/api-reference/next-config-js/webpack) to optimize the build.(**Optional**)
 
 ### `npm start`
 
@@ -99,4 +106,6 @@ The easiest way to deploy your Next.js app is to use the [Vercel Platform](https
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
                                                                                                      
                                                                                                      
-                                                                                                     
+Stay tuned for updates and new features!
+
+Happy Coding! 😊

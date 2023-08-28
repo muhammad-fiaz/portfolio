@@ -16,7 +16,7 @@
 
 		h3 {
 			position: relative;
-			color: var(--primary);
+			color: var(--primary-bright);
 
 
 		}
@@ -76,6 +76,7 @@
 			flex-grow: 1;
 			flex-shrink: 1;
 			position: relative;
+			z-index: -10;
 
 			img {
 				height: 100%;
@@ -90,10 +91,10 @@
 					position: relative !important;
 					overflow: visible !important;
 					height: 100% !important;
-					z-index: -1;	
+					z-index: -1;
 				}
 				img {    
-					overflow: visible;		
+					overflow: visible;
 					filter: brightness(100%);
 				}
 			}
