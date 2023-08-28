@@ -1,4 +1,5 @@
 [![muhammad-fiaz](./public/muhammad-fiaz.jpg)](https://muhammadfiaz.com)
+
 # [Portfolio](https://muhammadfiaz.com/)
 
 This project is built with Next.js and React, showcasing [Muhammad Fiaz](https://github.com/muhammad-fiaz/)'s personal website.
@@ -108,4 +109,3 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/deploym
 Stay tuned for updates and new features!
 
 Happy Coding! 😊
-                                                              
