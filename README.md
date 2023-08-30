@@ -9,7 +9,7 @@ This project is built with Next.js and React, showcasing [Muhammad Fiaz](https:/
 **This Project Also Supports [Vercel](https://vercel.com/dashboard) and comes with [(Vercel Analytics pre-enabled in it)](https://vercel.com/analytics) you can Host it there if you like it**
 
 🧑‍💻 Check out the dev branch for new development changes and the Latest Patch updates:- [https://github.com/muhammad-fiaz/portfolio/tree/dev](https://github.com/muhammad-fiaz/portfolio/tree/dev)
-                                                   
+
 
 ✅ Also Check out the latest release version for production use:-
 [https://github.com/muhammad-fiaz/portfolio](https://github.com/muhammad-fiaz/portfolio)
@@ -48,7 +48,7 @@ You will also see any lint errors in the console.
 Builds the app for production to the `.next` folder using default Next.js build config.\
 It correctly bundles Next.js and optimizes the build for the best performance.
 
-or 
+or
 
 
 ### `npm run build-webpack`
@@ -123,5 +123,6 @@ By following these steps, you'll be sure to stay connected with the latest devel
 If you have any questions or feedback, please don't hesitate to reach out.
                                                                                              
 Don't forget to Stay tuned for updates and new features!
+
 
 Happy Coding! 😊
