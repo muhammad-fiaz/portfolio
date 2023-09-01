@@ -2,6 +2,11 @@ import {Head, Html, Main, NextScript} from 'next/document'
 import Script from 'next/script';
 import React from "react";
 import TitleDocument from "./title.document";
+{/*
+				Author: Muhammad Fiaz
+                 GitHub: Visit the GitHub repository at https://github.com/muhammad-fiaz/portfolio/ for more details.
+                 license: MIT License
+                  */}
 
 export default function Document() {
 	return (
