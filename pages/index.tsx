@@ -1,5 +1,6 @@
 import dynamic from 'next/dynamic';
 import colors from '../src/content/index/_colors.json';
+import TitleIndex from "./title.index";
 
 const Hero = dynamic(() => import('../src/components/sections/index/hero'));
 const Looking = dynamic(() => import('../src/components/sections/index/looking'));
@@ -13,6 +14,7 @@ const Color = dynamic(() => import('../src/components/utils/page.colors'));
 export default function HomePage() {
 	return (
 		<>
+			<TitleIndex/>
 			<Color colors={colors} />
 			<Hero />
 			<Looking />

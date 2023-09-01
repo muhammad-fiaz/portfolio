@@ -4,12 +4,14 @@ import Color from '../../src/components/utils/page.colors'
 
 import colors from '../../src/content/articles/_colors.json'
 import settings from '../../src/content/_settings.json'
+import TitleArticles from "./title.articles";
 
 //this is the articles page
 export default function Articles({ mediumArticles }) {
 	{/*this will return the article page content from medium using api req*/}
 	return (
 		<>
+			<TitleArticles/>
 			<Color colors={colors} />
 			<Recent mediumArticles={mediumArticles}/>
 		</>

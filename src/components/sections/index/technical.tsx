@@ -43,8 +43,7 @@ export default function Technical() {
 							fullContainer="fullContainer"
 							icon="grid-2-plus"
 							containerClass={technical.container}
-							headerIcon={technical.icon}
-						/>
+							headerIcon={technical.icon} invertedColor={undefined}						/>
 
 						<BadgesBlock
 							title="Technologies I love to build with"
@@ -54,8 +53,7 @@ export default function Technical() {
 							fullContainer="fullContainer"
 							icon="laptop-code"
 							containerClass={technical.container}
-							headerIcon={technical.icon}
-						/>
+							headerIcon={technical.icon} invertedColor={undefined}						/>
 
 					</div>
 					<div className={`${technical.image} ${technical.technicalSvg}`}>
@@ -67,7 +65,7 @@ export default function Technical() {
 		</Section>
 	)
 }
-
+{/*Badge Block*/}
 const software = [
 	{ key: 'photoshop', 	name: 'Photoshop', 			type: 'devicon' },
 	{ key: 'figma', 		name: 'Figma', 				type: 'devicon' },
