@@ -6,11 +6,13 @@ import Color from '../../src/components/utils/page.colors'
 
 import settings from '../../src/content/_settings.json'
 import colors from '../../src/content/projects/_colors.json'
+import TitleProjects from "./title.projects";
 
 // this is the project page
 export default function Projects({ user, repos }) {
 	return (
 		<>
+			<TitleProjects/>
 		<Color colors={colors} />
 		<FeaturedProjects />
 		<GitRecentProjects user={user} repos={repos} />
