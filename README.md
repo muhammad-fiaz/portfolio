@@ -1,11 +1,17 @@
 [![muhammad-fiaz](./public/muhammad-fiaz.jpg)](https://muhammadfiaz.com)
 
+<div align="center">
+  <h1><a href="https://muhammadfiaz.com/">muhammadfiaz.com</a> | portfolio</h1>
+
+![Stability](https://img.shields.io/badge/stability-beta-blue.svg) ![MIT License](https://img.shields.io/badge/license-MIT-green)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/muhammad-fiaz/portfolio)
 [![Build Passing](https://badge.buildkite.com/sample.svg?status=passing)](https://github.com/muhammad-fiaz/portfolio)
+
+
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
-# [Portfolio](https://muhammadfiaz.com/)
+</div>
 
 This project is built with Next.js and React, showcasing [Muhammad Fiaz](https://github.com/muhammad-fiaz/)'s personal website.
 
