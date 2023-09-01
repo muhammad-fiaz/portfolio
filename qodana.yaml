@@ -9,6 +9,7 @@ profile:
 #Enable inspections
 #include:
 #  - name: <SomeEnabledInspectionId>
+
 #Disable inspections
 #exclude:
 #  - name: <SomeDisabledInspectionId>
@@ -19,5 +20,6 @@ profile:
 #Install IDE plugins before Qodana execution (Applied in CI/CD pipeline)
 #plugins:
 #  - id: <plugin.id> #(plugin id can be found at https://plugins.jetbrains.com)
+
 #Specify Qodana linter for analysis (Applied in CI/CD pipeline)
 linter: jetbrains/qodana-js:latest
