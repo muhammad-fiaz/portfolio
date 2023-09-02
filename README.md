@@ -1,4 +1,4 @@
-[![muhammad-fiaz](./public/muhammad-fiaz.jpg)](https://muhammadfiaz.com)
+[![muhammad-fiaz](./public/portfolio.jpg)](https://muhammadfiaz.com)
 
 <div align="center">
   <h1><a href="https://muhammadfiaz.com/">muhammadfiaz.com</a> | portfolio</h1>
