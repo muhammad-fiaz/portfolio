@@ -13,29 +13,7 @@ export default function TitleIndex() {
             <meta name="description" content="Muhammad Fiaz - A dedicated Full Stack Developer proficient in App/Web, Cloud, DevOps, AL/ML, and Design. Join my journey." />
             <meta name="title" content="Muhammad Fiaz"/>
 
-            <meta property="og:title" content="Muhammad Fiaz" key="title" />
-            <meta property="og:description" content="Muhammad Fiaz - A dedicated Full Stack Developer proficient in App/Web, Cloud, DevOps, AI/ML, and Design. Join my journey." />
-            <meta property="og:image" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
-            <meta property="og:image" content="https://muhammadfiaz.com/img/fiaz_roundedImage.png" />
-            <meta property="og:image:secure_url" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
-            <meta property="og:image:type" content="image/jpeg" />
-            <meta property="og:image:alt" content="Muhammad Fiaz" />
-            <meta property="og:image:width" content="300" />
-            <meta property="og:image:height" content="300" />
-            <meta property="og:url" content="https://muhammadfiaz.com" />
-            <meta property="og:type" content="website" />
-            <meta property="og:profile" content="https://github.com/muhammad-fiaz" />
-            <meta property="og:site_name" content="Muhammad Fiaz" />
-
-
-            <meta name="twitter:card" content="summary" />
-            <meta name="twitter:site" content="https://twitter.com/muhammadfiaz_" />
-            <meta name="twitter:title" content="Muhammad Fiaz" />
-            <meta name="twitter:description" content="Muhammad Fiaz - A dedicated Full Stack Developer proficient in App/Web, Cloud, DevOps, AI/ML, and Design. Join my journey." />
-            <meta name="twitter:image" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
-            <meta name="twitter:creator" content="https://twitter.com/muhammadfiaz_" />
-            <meta name="twitter:domain" content="https://muhammadfiaz.com" />
-
+          
 
             {/*These are the Keywords that will Boost your SEO in Ranking, so Make Sure to include and Update it up to your preference or don't mind this! 😴*/}
             <meta name="keywords" content="
