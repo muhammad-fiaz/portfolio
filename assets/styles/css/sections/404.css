@@ -18,7 +18,7 @@
 }
 
 .not-found-title404 {
-  color: white;
+  color: var(--primary-bright);
   font-size: 36px;
   margin-top: 10px;
   white-space: nowrap; /* Prevent text from wrapping initially */
@@ -27,7 +27,7 @@
 }
 
 .not-found-text404 {
-  color: white;
+  color: var(--primary);
   font-size: 24px;
   margin-top: 10px;
   white-space: nowrap; /* Prevent text from wrapping initially */
@@ -38,7 +38,7 @@
 .go-back-button404 {
   margin-top: 20px;
   padding: 10px 20px;
-  background: linear-gradient(to right, #a909a9, #6003a1);
+  background: var(--secondary);
   color: white;
   border: none;
   border-radius: 5px;
@@ -121,7 +121,7 @@
   list-style: none;
   width: 20px;
   height: 20px;
-  background: rgba(255, 255, 255, 0.2);
+  background: var(--primary);
   animation: animate 25s linear infinite;
   bottom: -150px;
 

@@ -11,7 +11,7 @@
     right: 50px;
     width: 60px;
     height: 60px;
-    background-color: #2858fa;
+    background-color: var(--secondary);
     border: none;
     border-radius: 50%;
     cursor: pointer;
@@ -24,7 +24,7 @@
 }
 
 .chatbot-button.active {
-    background-color: #555;
+    background-color: var(--secondary);
 }
 
 .chatbot-container {
@@ -33,10 +33,10 @@
     right: 50px;
     width: 300px;
     height: 400px;
-    background: linear-gradient(135deg, #ffffff, #ffffff);
+    background: transparent;
     backdrop-filter: blur(10px); /* Add blur effect */
     border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 2px 5px var(--primary);
     transition: bottom 0.3s ease-in-out;
     z-index: 99999;
     display: flex;
@@ -50,15 +50,18 @@
     justify-content: space-between;
     align-items: center;
     padding: 10px;
-    background-color: #f5f5f5;
+    margin-bottom: auto;
+    background-color: transparent;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
+ /*   border-bottom: 1px solid var(--primary-bright);*/ /* Add your desired border style here */
+
 }
 
 .chat-header h3 {
     margin: 0;
     font-size: 16px;
-    color: #000000;
+    color: var(--primary-bright);
 }
 
 .close-icon {
@@ -77,12 +80,12 @@
 }
 
 .chat-body::-webkit-scrollbar-thumb {
-    background-color: #ccc; /* Set the color of the scrollbar thumb */
+    background-color:var(--primary-dim); /* Set the color of the scrollbar thumb */
     border-radius: 5px; /* Set the border radius of the scrollbar thumb */
 }
 
 .chat-body::-webkit-scrollbar-track {
-    background-color: #f5f5f5; /* Set the color of the scrollbar track */
+    background-color: var(--primary-dark); /* Set the color of the scrollbar track */
     border-radius: 5px; /* Set the border radius of the scrollbar track */
 }
 
@@ -92,16 +95,16 @@
     margin-bottom: 10px;
     animation: fadeIn 0.3s ease-in;
 }
-
 .message-content {
     max-width: 80%;
     margin-top: 5px;
     padding: 8px 12px;
     border-radius: 15px;
-    background-color: #e0e0e0;
+    background-color: var(--primary-dark); /* Transparent background color (adjust the alpha value as needed) */
     transition: transform 0.3s ease-in;
     word-wrap: break-word; /* Add word-wrap property to wrap long messages */
 }
+
 
 .message.bot {
     align-self: flex-start;
@@ -143,11 +146,11 @@
     display: flex;
     align-items: center;
     padding: 10px;
-    background-color: #f5f5f5;
+    background-color: transparent;
     border-bottom-left-radius: 10px;
     border-bottom-right-radius: 10px;
     justify-content: center;
-
+  /* border-top: 1px solid var(--primary-bright); */
 }
 
 .chat-footer input {
