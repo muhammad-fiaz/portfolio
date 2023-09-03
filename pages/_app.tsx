@@ -7,7 +7,8 @@ import {domAnimation, LazyMotion} from "framer-motion"
 import SetGridGap from '../src/components/utils/set.grid'
 import Layout from '../src/components/layout/layout'
 import LoadingScreen from "../src/components/intro/splash";
-const DevelopmentNotice  = dynamic(() => import( "../src/components/dev/status"));
+
+const DevelopmentNotice = dynamic(() => import( "../src/components/dev/status"));
 const BackToTop = dynamic(() => import("../src/components/utils/backtotop"));
 const Chatbot = dynamic(() => import("../src/components/sections/index/chatbot"));
 // Global CSS
@@ -24,61 +25,66 @@ import "../assets/styles/css/utils/splash.css";
 import "../assets/styles/css/utils/chatbot.css";
 import "../assets/styles/css/utils/backtotop.css";
 import dynamic from "next/dynamic";
+import "../assets/styles/css/sections/404.css";
+
+
 // NProgress configuration
 
-NProgress.configure({ showSpinner: false });
+NProgress.configure({showSpinner: false});
 // NProgress start on route change
 
 Router.events.on('routeChangeStart', () => {
-	NProgress.start();
+    NProgress.start();
 });
 // NProgress stop on route change
 
 Router.events.on('routeChangeComplete', () => {
-	NProgress.done();
+    NProgress.done();
 });
 // NProgress stop on route change error
 
 Router.events.on('routeChangeError', () => {
-	NProgress.done();
+    NProgress.done();
 });
 
 interface MyAppProps {
-	Component: React.FC;
-	pageProps: any;
+    Component: React.FC;
+    pageProps: any;
 }
 
-const MyApp: React.FC<MyAppProps> = ({ Component, pageProps }) => {
-	const [isLoading, setIsLoading] = useState(true);
+const MyApp: React.FC<MyAppProps> = ({Component, pageProps}) => {
+    const [isLoading, setIsLoading] = useState(true);
 
-	useEffect(() => {
-		const timer = setTimeout(() => {
-			setIsLoading(false);
-		}, 4000);
+    useEffect(() => {
+        const timer = setTimeout(() => {
+            setIsLoading(false);
+        }, 4000);
 
-		return () => clearTimeout(timer);
-	}, []);
+        return () => clearTimeout(timer);
+    }, []);
 
-	return (
-		<>
-			{isLoading ? (
-				<LazyMotion features={domAnimation}>
-					<LoadingScreen />
-				</LazyMotion>
-			) : (
-				<LazyMotion features={domAnimation}>
-					<Layout>
-						<Component {...pageProps} />
-						<DevelopmentNotice />
-						<Chatbot />
-						<Analytics />
-						<SetGridGap />
-					</Layout>
-					<BackToTop />
-				</LazyMotion>
-			)}
-		</>
-	);
+    return (
+        <>
+
+            {isLoading ? (
+                <LazyMotion features={domAnimation}>
+                    <LoadingScreen/>
+                </LazyMotion>
+            ) : (
+                <LazyMotion features={domAnimation}>
+                    <Layout>
+
+                            <Component {...pageProps} />
+                        <DevelopmentNotice/>
+                        <Chatbot/>
+                        <Analytics/>
+                        <SetGridGap/>
+                    </Layout>
+                    <BackToTop/>
+                </LazyMotion>
+            )}
+        </>
+    );
 };
 
 export default MyApp;

@@ -56,9 +56,9 @@ module.exports = {
 		// For example, if you want to export to the "out" directory:
 		directory: 'out',
 	},
-	/*
+
 	// https://nextjs.org/docs/messages/swc-disabled
 	experimental: {
 		forceSwcTransforms: true,
-	},*/
+	},
 }

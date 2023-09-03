@@ -11,8 +11,8 @@ export default function TitleDocument() {
                  GitHub: Visit the GitHub repository at https://github.com/muhammad-fiaz/portfolio/ for more details.
                  license: MIT License
                   */}
-
-
+            <title>Muhammad Fiaz</title>
+       <meta name="description" content="Muhammad Fiaz - A dedicated Full Stack Developer proficient in App/Web, Cloud, DevOps, AL/ML, and Design. Join my journey." />
 
 
             <meta name="theme-color" content="#000000" />
