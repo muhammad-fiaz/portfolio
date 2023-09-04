@@ -6,7 +6,8 @@ export default function TitleDocument() {
     return (
         <Head>
 
-            
+
+  
         </Head>
     );
 }
