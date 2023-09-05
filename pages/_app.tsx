@@ -67,9 +67,7 @@ const MyApp: React.FC<MyAppProps> = ({Component, pageProps}) => {
         <>
 
             {isLoading ? (
-                <LazyMotion features={domAnimation}>
                     <LoadingScreen/>
-                </LazyMotion>
             ) : (
                 <LazyMotion features={domAnimation}>
                     <Layout>
