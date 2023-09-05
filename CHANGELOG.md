@@ -1,5 +1,10 @@
 # Portfolio Changelog - Release Notes
 
+## v1.0.3 (coming soon)
+- improved UI
+- improvement in performance
+- fixed some bugs
+
 ## v1.0.2
 - Upgraded to Next.js 13
 - Added PostCSS Support
