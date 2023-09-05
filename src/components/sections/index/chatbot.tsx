@@ -1,17 +1,26 @@
-import React, {useEffect, useState} from 'react';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
-import {faCommentAlt, faPaperPlane, faTimes} from '@fortawesome/free-solid-svg-icons';
+import React, { useEffect, useState } from 'react';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faCommentAlt, faPaperPlane, faTimes } from '@fortawesome/free-solid-svg-icons';
 import Cookies from 'js-cookie';
 import Image from 'next/image';
 
-const Chatbot = () => {
+const server_port = 'http://localhost:8000/api/chat/'; // change this to your server port
+
+interface ChatMessage {
+    text: string;
+    sender: 'user' | 'bot';
+    senderName: string;
+    senderImage: string;
+}
+
+const Chatbot: React.FC = () => {
     const [isChatVisible, setIsChatVisible] = useState(false);
     const [message, setMessage] = useState('');
-    const [chatMessages, setChatMessages] = useState([]);
-    const [userId, setUserId] = useState('');
-    const server_port = 'http://localhost:8000/api/chat/'; // change this to your server port
+    const [chatMessages, setChatMessages] = useState<ChatMessage[]>([]);
+    const [userId, setUserId] = useState<string>('');
+
     useEffect(() => {
-        const welcomeMessage = {
+        const welcomeMessage: ChatMessage = {
             text: 'Hi there! I am your Chat Assistant.',
             sender: 'bot',
             senderName: 'Chat Assistant',
@@ -20,10 +29,10 @@ const Chatbot = () => {
         setChatMessages([welcomeMessage]);
 
         const storedUserId = Cookies.get('userId'); // get the user ID from cookies
-        if (storedUserId) { // if user ID is found in cookies
+        if (storedUserId) {
             setUserId(storedUserId);
             const storedMessages = Cookies.get(`chatMessages_${storedUserId}`);
-            if (storedMessages) { // if chat messages are found in cookies
+            if (storedMessages) {
                 setChatMessages(JSON.parse(storedMessages));
             }
         } else {
@@ -42,13 +51,13 @@ const Chatbot = () => {
         setIsChatVisible(!isChatVisible);
     };
 
-    const handleInputChange = (event) => {
+    const handleInputChange = (event: React.ChangeEvent<HTMLInputElement>) => {
         setMessage(event.target.value);
     };
 
     const handleSendMessage = () => {
         if (message.trim() !== '') {
-            const newMessage = {
+            const newMessage: ChatMessage = {
                 text: message,
                 sender: 'user',
                 senderName: 'User',
@@ -59,7 +68,7 @@ const Chatbot = () => {
 
             sendMessageToServer(message, userId)
                 .then((response) => {
-                    const botResponse = {
+                    const botResponse: ChatMessage = {
                         text: response,
                         sender: 'bot',
                         senderName: 'Chat Assistant',
@@ -67,9 +76,9 @@ const Chatbot = () => {
                     };
                     setChatMessages((prevMessages) => [...prevMessages, botResponse]);
                 })
-                .catch((error) => {
-                    const errorMessage = {
-                        text: "Hey "+ userId +'\n An error occurred. Please try again later.',
+                .catch(() => {
+                    const errorMessage: ChatMessage = {
+                        text: `Hey ${userId}\n An error occurred. Please try again later.`,
                         sender: 'bot',
                         senderName: 'Chat Assistant',
                         senderImage: '/img/logo.jpg',
@@ -83,8 +92,8 @@ const Chatbot = () => {
         setIsChatVisible(false);
     };
 
-    const sendMessageToServer = (message, userId) => {
-        return fetch(server_port , {
+    const sendMessageToServer = (message: string, userId: string) => {
+        return fetch(server_port, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
@@ -115,20 +124,19 @@ const Chatbot = () => {
                 <div className="chatbot-container">
                     <div className="chat-header">
                         <h3>Chat Assistant</h3>
-                        {/*     <FontAwesomeIcon icon={faTimes} className="close-icon" onClick={handleChatClose} /> */}
                     </div>
                     <div className="chat-body">
                         {chatMessages.map((chatMessage, index) => (
                             <div key={index} className={`message ${chatMessage.sender === 'bot' ? 'bot' : 'user'}`}>
                                 {chatMessage.sender === 'bot' && (
                                     <div className="sender-info">
-                                        <Image className="sender-image" height={16} width={16} src={chatMessage.senderImage} alt="Sender" loading="eager"/>
+                                        <Image className="sender-image" height={16} width={16} src={chatMessage.senderImage} alt="Sender" loading="eager" />
                                         <span className="sender-name">{chatMessage.senderName}</span>
                                     </div>
                                 )}
                                 {chatMessage.sender === 'user' && (
                                     <div className="sender-info user-sender">
-                                        <Image className="sender-image"  height={16} width={16} src={chatMessage.senderImage} alt="Sender" loading="eager"/>
+                                        <Image className="sender-image" height={16} width={16} src={chatMessage.senderImage} alt="Sender" loading="eager" />
                                         <span className="sender-name">{chatMessage.senderName}</span>
                                     </div>
                                 )}
@@ -150,7 +158,6 @@ const Chatbot = () => {
             <div className={`chatbot-button ${isChatVisible ? 'active' : ''}`} onClick={toggleChat}>
                 {isChatVisible ? <FontAwesomeIcon icon={faTimes} className="close-icon" /> : <FontAwesomeIcon icon={faCommentAlt} />}
             </div>
-
         </div>
     );
 };
