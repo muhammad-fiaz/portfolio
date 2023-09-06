@@ -7,10 +7,6 @@ import {domAnimation, LazyMotion} from "framer-motion"
 import SetGridGap from '../src/components/utils/set.grid'
 import Layout from '../src/components/layout/layout'
 import LoadingScreen from "../src/components/intro/splash";
-
-const DevelopmentNotice = dynamic(() => import( "../src/components/dev/status"));
-const BackToTop = dynamic(() => import("../src/components/utils/backtotop"));
-const Chatbot = dynamic(() => import("../src/components/sections/index/chatbot"));
 // Global CSS
 import "../node_modules/the-new-css-reset/css/reset.css"
 import "@fontsource/fira-code/400.css"
@@ -26,6 +22,10 @@ import "../assets/styles/css/utils/chatbot.css";
 import "../assets/styles/css/utils/backtotop.css";
 import dynamic from "next/dynamic";
 import "../assets/styles/css/sections/404.css";
+import "../assets/styles/css/utils/anim.css";
+const DevelopmentNotice = dynamic(() => import( "../src/components/dev/status"));
+const BackToTop = dynamic(() => import("../src/components/utils/backtotop"));
+const Chatbot = dynamic(() => import("../src/components/sections/index/chatbot"));
 
 
 // NProgress configuration

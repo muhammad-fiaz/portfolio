@@ -1,5 +1,5 @@
 module.exports = {
-	webpack: (config, { buildId, dev, isServer, defaultLoaders, webpack }) => {
+	webpack: (config) => {
 		// Add your custom Webpack configurations here
 
 		// Return the updated config
@@ -11,6 +11,11 @@ module.exports = {
 		dir: '/',
 	},
 	swcMinify: true,
+	/*
+Don't remove these this use the protocol that are need to function properly
+* https://nextjs.org/docs/pages/building-your-application/optimizing/images#adding-structured-data
+
+ */
 	images: {
 		remotePatterns: [
 			{
@@ -61,4 +66,6 @@ module.exports = {
 	experimental: {
 		forceSwcTransforms: true,
 	},
+
+
 }

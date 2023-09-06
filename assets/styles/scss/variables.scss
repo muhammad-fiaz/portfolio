@@ -1,5 +1,5 @@
 @import "../scss/mixins";
-
+// Config the Color Scheme that you need based on your needs
 // Fonts
 :root {
 	--font-sans: "Inter",-apple-system,BlinkMacSystemFont,"Segoe UI","Roboto","Oxygen","Ubuntu","Cantarell","Fira Sans","Droid Sans","Helvetica Neue",sans-serif;
@@ -73,7 +73,7 @@
 	--primary-dim:		#888889;
 	--primary-dim2:		#262627;
 	--primary-dark:		#141415;
-	
+	--primary-splash:	#000000;
 	--secondary: 		#7feaff;
 	--secondary-bright: #5f8cff;
 	
@@ -107,7 +107,7 @@
 	--primary-dim:		#3a3a3a;
 	--primary-dim2:		#585858;
 	--primary-dark:		#dfdfdf;
-
+    --primary-splash:	#ffffff;
 	--secondary: 		#002aff;
 	--secondary-bright:	#4800ff;
 
@@ -135,6 +135,7 @@
 	--primary-dim:		#464646;
 	--primary-dim2:		#585858;
 	--primary-dark:		#dfdfdf;
+	--primary-splash:	#ffffff;
 
 	--secondary: 		#ff00bb;
 	--secondary-bright:	#feff00;

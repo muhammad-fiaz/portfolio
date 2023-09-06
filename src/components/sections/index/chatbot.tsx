@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faCommentAlt, faPaperPlane, faTimes } from '@fortawesome/free-solid-svg-icons';
+import React, {useEffect, useState} from 'react';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faCommentAlt, faPaperPlane, faTimes} from '@fortawesome/free-solid-svg-icons';
 import Cookies from 'js-cookie';
 import Image from 'next/image';
 
@@ -88,10 +88,10 @@ const Chatbot: React.FC = () => {
         }
     };
 
-    const handleChatClose = () => {
+  /*  const handleChatClose = () => {
         setIsChatVisible(false);
     };
-
+*/
     const sendMessageToServer = (message: string, userId: string) => {
         return fetch(server_port, {
             method: 'POST',
@@ -130,13 +130,13 @@ const Chatbot: React.FC = () => {
                             <div key={index} className={`message ${chatMessage.sender === 'bot' ? 'bot' : 'user'}`}>
                                 {chatMessage.sender === 'bot' && (
                                     <div className="sender-info">
-                                        <Image className="sender-image" height={16} width={16} src={chatMessage.senderImage} alt="Sender" loading="eager" />
+                                        <Image className="sender-image" height={16} width={16} src={chatMessage.senderImage} alt="bot image" loading="eager" />
                                         <span className="sender-name">{chatMessage.senderName}</span>
                                     </div>
                                 )}
                                 {chatMessage.sender === 'user' && (
                                     <div className="sender-info user-sender">
-                                        <Image className="sender-image" height={16} width={16} src={chatMessage.senderImage} alt="Sender" loading="eager" />
+                                        <Image className="sender-image" height={16} width={16} src={chatMessage.senderImage} alt="Sender image" loading="eager" />
                                         <span className="sender-name">{chatMessage.senderName}</span>
                                     </div>
                                 )}

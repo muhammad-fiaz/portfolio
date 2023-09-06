@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { useRouter } from 'next/router';
+import React, {useEffect, useState} from 'react';
+import {useRouter} from 'next/router';
 import Link from 'next/link';
 import ThemeMode from '../utils/theme';
 
@@ -12,8 +12,7 @@ import Image from 'next/image';
 interface NavbarProps {}
 
 const Navbar: React.FC<NavbarProps> = () => {
-	const router = useRouter();
-
+	useRouter();
 	const [menuState, setMenuState] = useState(false);
 	const email = Cookies.get('email');
 	const password = Cookies.get('password');

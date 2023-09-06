@@ -4,10 +4,7 @@ import Container from '../../structure/container';
 
 
 // Section general blocks
-
 // Spacing util
-
-
 // Section scss
 import looking from '../../../../assets/styles/scss/sections/index/looking.module.scss';
 import section from '../../../../assets/styles/scss/blocks/section.title.module.scss'

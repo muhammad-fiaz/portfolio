@@ -1,13 +1,8 @@
 // Util packages
 import Icon from '../utils/icon'
 
-// Utility packages
 
-/**
- * About section component block that contains the written copy
-
- * @returns <CopyBlock />
- */
+// this will return the copy block component
 export default function CopyBlock({ containerClass, iconClass, icon, title, copy }) {
 	// return the copy block component
 	return (

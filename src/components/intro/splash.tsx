@@ -1,7 +1,7 @@
 import React from "react";
 import {Player} from "@lottiefiles/react-lottie-player";
-import image1 from "../../../assets/laptop.json";
-import image2 from "../../../assets/loadcode.json";
+import image1 from "../../../assets/lottie/laptop.json";
+import image2 from "../../../assets/lottie/loadcode.json";
 
 function LoadingScreen() {
     return (

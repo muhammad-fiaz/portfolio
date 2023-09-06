@@ -4,7 +4,7 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
-    background-color: black;
+    background-color: var(--primary-splash);
 }
 
 .loading-animation {

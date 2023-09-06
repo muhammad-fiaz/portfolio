@@ -42,7 +42,7 @@
 - [ ] Signin Functionality
 - [ ] Cookie Functionality
 - [X] SEO Techniques
-- [ ] Chat bot Backend Functionality
-- [X] Chat bot Frontend
+- [ ] Chatbot Backend Functionality
+- [X] Chatbot Frontend
 - [ ] Other
 
