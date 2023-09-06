@@ -1,9 +1,10 @@
 # Portfolio Changelog - Release Notes
 
 ## v1.0.3 (coming soon)
-- improved UI
-- improvement in performance
-- fixed some bugs
+- improved UI and Functionality❤️
+- improvement in performance✨
+- fixed some bugs✌🏻
+- Full Changelog: [v1.0.2...v1.0.3](https://github.com/muhammad-fiaz/portfolio/compare/v1.0.2...v1.0.3)
 
 ## v1.0.2
 - Upgraded to Next.js 13
@@ -11,14 +12,14 @@
 - Some UI Improvements and Changes
 - Full Changelog: [v1.0.1...v1.0.2](https://github.com/muhammad-fiaz/portfolio/compare/v1.0.1...v1.0.2)
 
-## v1.0.1 
+## v1.0.1
 
 - Added Webpack Support
 - Some Improvements and Changes
 - Merged updates by @muhammad-fiaz in [#106](https://github.com/muhammad-fiaz/portfolio/pull/106)
 - Full Changelog: [v1.0.0...v1.0.1](https://github.com/muhammad-fiaz/portfolio/compare/v1.0.0...v1.0.1)
 
-## v1.0.0 
+## v1.0.0
 
 🚀🎉 Exciting News! Introducing Portfolio 1.0.0 Release! 🎉🚀
 
