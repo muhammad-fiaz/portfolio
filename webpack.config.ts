@@ -8,7 +8,7 @@ module.exports = {
     entry: './pages/index.tsx',
     output: {
         path: path.resolve(__dirname, 'dist'),
-        filename: 'bundle.js',
+        // filename: 'bundle.js',
     },
     module: {
         rules: [
@@ -46,6 +46,8 @@ module.exports = {
     optimization: {
         splitChunks: {
             chunks: 'all',
+            name: 'vendor',
+
         },
         minimizer: [
             new CssMinimizerPlugin(), // Add CssMinimizerPlugin to minimizer array
@@ -71,6 +73,6 @@ module.exports = {
 
     ],
     performance: {
-        maxAssetSize: 10000000000,
+      //  maxAssetSize: 1000000000000,
     },
 };

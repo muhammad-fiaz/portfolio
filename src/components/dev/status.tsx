@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 import {Player} from '@lottiefiles/react-lottie-player';
-import image from '../../../assets/codingdev.json';
+import image from '../../../assets/lottie/codingdev.json';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 

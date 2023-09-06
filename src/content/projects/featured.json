@@ -8,7 +8,7 @@
 		"imageOptions": [
 		],
 		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "500", "w": "700", "url": "/img/neurolink.png" }
+			{ "key": "mock-stack",	"hover": "right", 	"h": "300", "w": "700", "url": "/img/neurolink.png" }
 
 		],
 		"stack": [
@@ -37,7 +37,7 @@
 			{ "key": "size", 		"value": "large" }
 		],
 		"images": [
-			{ "key": "portfolio", "hover": "left", "h": "1000", "w": "550",  "url": "/img/img-mock.png" }
+			{ "key": "portfolio", "hover": "left", "h": "550", "w": "330",  "url": "/img/img-mock.png" }
 		],
 		"stack": [
 			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
@@ -49,7 +49,9 @@
 			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
 			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
 			{ "key": "git",			"name": "Git(Hub)", 	"type": "devicon" },
-			{"key": "python", "name": "Python", "type": "devicon"}
+			{"key": "python", "name": "Python", "type": "devicon"},
+			{"key": "django", "name": "Django", "type": "devicon"}
+
 		]
 	}
 ]

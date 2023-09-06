@@ -1,7 +1,11 @@
-import dynamic from 'next/dynamic';
+import React, { useState, useEffect } from 'react';
 import colors from '../src/content/index/_colors.json';
-import TitleIndex from "./title.index";
+import TitleIndex from './title.index';
 
+// Import your components with dynamic import
+import dynamic from 'next/dynamic';
+import LoadingAnim from "../src/components/intro/loadinganim";
+import Inactivedevelopment from "../src/components/dev/inactivedevelopment";
 const Hero = dynamic(() => import('../src/components/sections/index/hero'));
 const Looking = dynamic(() => import('../src/components/sections/index/looking'));
 const About = dynamic(() => import('../src/components/sections/index/home'));
@@ -11,18 +15,43 @@ const FeaturedProjects = dynamic(() => import('../src/components/sections/projec
 const QnA = dynamic(() => import('../src/components/sections/index/qna'));
 const Color = dynamic(() => import('../src/components/utils/page.colors'));
 
-export default function HomePage() {
+interface HomePageProps {
+	spacing: string[]
+}
+
+export default function HomePage({spacing}: HomePageProps) {
+	// Use a state variable to track whether components are loaded
+	const [componentsLoaded, setComponentsLoaded] = useState(false);
+
+	// Simulate a loading delay
+	useEffect(() => {
+		const timer = setTimeout(() => {
+			setComponentsLoaded(true);
+		}, 2000);
+
+		return () => clearTimeout(timer);
+	}, []);
+
 	return (
 		<>
-			<TitleIndex/>
+			<TitleIndex />
 			<Color colors={colors} />
-			<Hero />
-			<Looking />
-			<About />
-			<FeaturedProjects />
-			<Technical />
-			<Career />
-			<QnA />
+
+			{/* Conditionally render components or loading message */}
+			{componentsLoaded ? (
+				<>
+					<Hero />
+					<Looking />
+					<About />
+					<FeaturedProjects />
+					<Technical />
+					<Career />
+					<QnA />
+				</>
+			) : (
+	<LoadingAnim/>
+			)}
+
 		</>
 	);
 }

@@ -1,9 +1,9 @@
 import React from "react";
-import { useRouter } from "next/router";
-import { Player } from "@lottiefiles/react-lottie-player";
-import image1 from "../../../../assets/boysearching.json";
-import image2 from "../../../../assets/ghost.json";
-import image3 from "../../../../assets/ufo.json";
+import {useRouter} from "next/router";
+import {Player} from "@lottiefiles/react-lottie-player";
+import image1 from "../../../../assets/lottie/boysearching.json";
+import image2 from "../../../../assets/lottie/ghost.json";
+import image3 from "../../../../assets/lottie/ufo.json";
 
 function Custom404() {
     const router = useRouter();

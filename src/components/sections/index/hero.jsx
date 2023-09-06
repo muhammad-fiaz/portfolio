@@ -16,7 +16,7 @@ import content from '../../../content/index/hero.json'
 
 export default function Hero() {
 
-	const [typingStatus, setTypingStatus] = useState('Initializing');
+	const [, setTypingStatus] = useState('Initializing');
 
 	return (
 		<Section classProp={`${hero.section}`}>

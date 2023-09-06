@@ -3,7 +3,6 @@ import Script from 'next/script';
 import React from "react";
 
 
-
 export default function Document() {
 	return (
 		<Html lang="en">
@@ -53,7 +52,7 @@ export default function Document() {
 
 
 
-  <meta property="og:title" content="Muhammad Fiaz" key="title" />
+            <meta property="og:title" content="Muhammad Fiaz" key="title" />
             <meta property="og:description" content="Muhammad Fiaz - A dedicated Full Stack Developer proficient in App/Web, Cloud, DevOps, AI/ML, and Design. Join my journey." />
             <meta property="og:image" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
             <meta property="og:image" content="https://muhammadfiaz.com/img/fiaz_roundedImage.png" />
@@ -66,6 +65,7 @@ export default function Document() {
             <meta property="og:type" content="website" />
             <meta property="og:profile" content="https://github.com/muhammad-fiaz" />
             <meta property="og:site_name" content="Muhammad Fiaz" />
+             <meta property="og:locale" content="en_US" />
 
 
             <meta name="twitter:card" content="summary" />
@@ -244,20 +244,22 @@ export default function Document() {
 				`}
 	</Script>
 
-	{/* Google Analytics */}
-	<Script async src="https://www.googletagmanager.com/gtag/js?id=G-SDJ0K1Y70X"></Script>
-	<script
-		dangerouslySetInnerHTML={{
-			__html: `
-                            window.dataLayer = window.dataLayer || [];
-                            function gtag() {
-                                dataLayer.push(arguments);
-                            }
-                            gtag('js', new Date());
-                            gtag('config', 'G-SDJ0K1Y70X');
-                        `
-		}}
-	/>
+    {/* Google Analytics */}
+    <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-SDJ0K1Y70X"/>
+    <Script
+        id='google-analytics'
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+            __html: `
+          window.dataLayer = window.dataLayer || [];
+          function gtag(){dataLayer.push(arguments);}
+          gtag('js', new Date());
+          gtag('config', 'G-SDJ0K1Y70X', {
+            page_path: window.location.pathname,
+          });
+        `,
+        }}
+    />
 </Head>
 
 			<body>

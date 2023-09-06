@@ -15,11 +15,11 @@
 
 This project is built with Next.js and React, showcasing [Muhammad Fiaz](https://github.com/muhammad-fiaz/)'s personal website.
 
-**Note: This project is currently under Active development. so the Documentation for this project will be available on this website [muhammadfiaz.dev](https://muhammadfiaz.dev/), also this website is still being developed**
+**Note: This project is currently under Active development. so the Documentation for this project will be available soon**
 
 **This Project Also Supports [Vercel](https://vercel.com/dashboard) and comes with [(Vercel Analytics pre-enabled in it)](https://vercel.com/analytics) you can Host it there if you like it**
 
-🧑‍💻 Check out the dev branch for new development changes and the Latest Patch updates:- [https://github.com/muhammad-fiaz/portfolio/tree/dev](https://github.com/muhammad-fiaz/portfolio/tree/dev)
+🧑‍💻 Check out the dev branch for new development changes and the Latest Patch updates:—[https://github.com/muhammad-fiaz/portfolio/tree/dev](https://github.com/muhammad-fiaz/portfolio/tree/dev)
 
 
 ✅ Also Check out the latest release version for production use:-
@@ -83,6 +83,9 @@ The exported app will be in the `out` folder.
 💖 Icons are from [Font Awesome](https://fontawesome.com/), [Devicon](https://devicon.dev/),
 and also [Google Fonts](https://fonts.google.com/icons).
 
+##  Vector Graphics Animations
+
+✨ Vector Graphics Animations are from [LottieFiles](https://lottiefiles.com/).
 
 ## More Information
 
@@ -106,7 +109,10 @@ This project is licensed under the MIT License. See the [LICENSE](https://github
 
 ## Contributing
 
-Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request. and make sure to follow the [project guidelines](CODE_OF_CONDUCT.md)
+Contributions are welcome!
+
+If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
+And make sure to follow the [project guidelines](CODE_OF_CONDUCT.md)
 
 
 
