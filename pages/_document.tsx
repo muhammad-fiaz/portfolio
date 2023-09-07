@@ -13,9 +13,20 @@ export default function Document() {
                  GitHub: Visit the GitHub repository at https://github.com/muhammad-fiaz/portfolio/ for more details.
                  license: MIT License
                   */}
-            <title>Muhammad Fiaz</title>
+    <meta charSet="utf-8" />
+    <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+    {/* eslint-disable-next-line @next/next/no-title-in-document-head */}
+    <title>Muhammad Fiaz</title>
        <meta name="description" content="Muhammad Fiaz - A dedicated Full Stack Developer proficient in App/Web, Cloud, DevOps, AL/ML, and Design. Join my journey." />
 
+    {/*These are need for PWA*/}
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <meta name="apple-mobile-web-app-title" content="Muhammad Fiaz" />
+    <meta name="format-detection" content="telephone=no" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="msapplication-config" content="/favicon/browserconfig.xml" />
+    <meta name="msapplication-tap-highlight" content="no" />
 
             <meta name="theme-color" content="#000000" />
             <meta httpEquiv="Content-Type" content="text/html; charset=utf-8"/>
@@ -37,7 +48,9 @@ export default function Document() {
             <meta name="googlebot" content="index, follow" />
             <meta name="bingbot" content="index, follow" />
 
-            <link rel="apple-touch-icon" sizes="180x180" href="/favicon/favicon.jpg" />
+            <link rel="apple-touch-icon" href="/img/logo_rounded.png" />
+
+            <link rel="apple-touch-icon" sizes="180x180" href="/img/logo_rounded.png" />
             <link rel="icon" type="image/png" sizes="32x32" href="/favicon/favicon.ico" />
             <link rel="icon" type="image/png" sizes="16x16" href="/favicon/favicon.jpg" />
              <link rel="icon" href="/favicon/favicon-org.ico" type="image/x-icon"></link>
@@ -54,9 +67,8 @@ export default function Document() {
 
             <meta property="og:title" content="Muhammad Fiaz" key="title" />
             <meta property="og:description" content="Muhammad Fiaz - A dedicated Full Stack Developer proficient in App/Web, Cloud, DevOps, AI/ML, and Design. Join my journey." />
-            <meta property="og:image" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
-            <meta property="og:image" content="https://muhammadfiaz.com/img/fiaz_roundedImage.png" />
-            <meta property="og:image:secure_url" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
+            <meta property="og:image" content="https://muhammadfiaz.com/img/muhammadfiaz.jpeg" />
+            <meta property="og:image:secure_url" content="https://muhammadfiaz.com/img/muhammadfiaz.jpeg" />
             <meta property="og:image:type" content="image/jpeg" />
             <meta property="og:image:alt" content="Muhammad Fiaz" />
             <meta property="og:image:width" content="300" />
@@ -72,9 +84,18 @@ export default function Document() {
             <meta name="twitter:site" content="https://twitter.com/muhammadfiaz_" />
             <meta name="twitter:title" content="Muhammad Fiaz" />
             <meta name="twitter:description" content="Muhammad Fiaz - A dedicated Full Stack Developer proficient in App/Web, Cloud, DevOps, AI/ML, and Design. Join my journey." />
-            <meta name="twitter:image" content="https://muhammadfiaz.com/img/fiaz-org.jpeg" />
+            <meta name="twitter:image" content="https://muhammadfiaz.com/img/muhammadfiaz.jpeg" />
             <meta name="twitter:creator" content="https://twitter.com/muhammadfiaz_" />
             <meta name="twitter:domain" content="https://muhammadfiaz.com" />
+
+
+    <link rel='apple-touch-startup-image' href='/img/logo_rounded.png' sizes='2048x2732' />
+    <link rel='apple-touch-startup-image' href='/img/logo_rounded.png' sizes='1668x2224' />
+    <link rel='apple-touch-startup-image' href='/img/logo_rounded.png' sizes='1536x2048' />
+    <link rel='apple-touch-startup-image' href='/img/logo_rounded.png' sizes='1125x2436' />
+    <link rel='apple-touch-startup-image' href='/img/logo_rounded.png' sizes='1242x2208' />
+    <link rel='apple-touch-startup-image' href='/img/logo_rounded.png' sizes='750x1334' />
+    <link rel='apple-touch-startup-image' href='/img/logo_rounded.png' sizes='640x1136' />
 
             {/*These are the Keywords that will Boost your SEO in Ranking, so Make Sure to include and Update it up to your preference or don't mind this! 😴*/}
             <meta name="keywords" content="
@@ -229,7 +250,7 @@ export default function Document() {
             "name": "Muhammad Fiaz",
             "alternateName": "fiaz",
             "url": "https://muhammadfiaz.com",
-            "logo": "https://muhammadfiaz.com/img/fiaz-org.jpeg",
+            "logo": "https://muhammadfiaz.com/img/muhammadfiaz.jpeg",
  "sameAs": [
             "https://www.linkedin.com/in/muhammad-fiaz-/"
         ]          }

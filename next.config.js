@@ -1,4 +1,13 @@
-module.exports = {
+const withPWA = require('next-pwa')({
+	dest: 'public',
+	scope: '/',
+	sw: 'service-worker.js', // Service worker file name
+	register: true, // Register service worker
+
+})
+
+module.exports =  withPWA({
+
 	webpack: (config) => {
 		// Add your custom Webpack configurations here
 
@@ -12,7 +21,7 @@ module.exports = {
 	},
 	swcMinify: true,
 	/*
-Don't remove these this use the protocol that are need to function properly
+Don't remove these this uses the protocol that are need to function properly
 * https://nextjs.org/docs/pages/building-your-application/optimizing/images#adding-structured-data
 
  */
@@ -57,15 +66,15 @@ Don't remove these this use the protocol that are need to function properly
 		};
 	},
 	output: {
-		// Configure your export settings here
+		// Configure your export settings here,
 		// For example, if you want to export to the "out" directory:
 		directory: 'out',
 	},
-
+/*
 	// https://nextjs.org/docs/messages/swc-disabled
 	experimental: {
 		forceSwcTransforms: true,
 	},
 
-
-}
+*/
+});

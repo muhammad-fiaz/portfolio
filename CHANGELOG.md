@@ -1,9 +1,10 @@
 # Portfolio Changelog - Release Notes
 
-## v1.0.3 (coming soon)
-- improved UI
-- improvement in performance
-- fixed some bugs
+## v1.0.3
+- Added Custom 500 and 404 Error Pages👻
+- improved UI and Functionality❤️
+- fixed some bugs✌🏻
+- Full Changelog: [v1.0.2...v1.0.3](https://github.com/muhammad-fiaz/portfolio/compare/v1.0.2...v1.0.3)
 
 ## v1.0.2
 - Upgraded to Next.js 13
