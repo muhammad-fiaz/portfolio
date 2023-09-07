@@ -1,8 +1,8 @@
 # Portfolio Changelog - Release Notes
 
-## v1.0.3 (coming soon)
+## v1.0.3
+- Added Custom 500 and 404 Error Pages👻
 - improved UI and Functionality❤️
-- improvement in performance✨
 - fixed some bugs✌🏻
 - Full Changelog: [v1.0.2...v1.0.3](https://github.com/muhammad-fiaz/portfolio/compare/v1.0.2...v1.0.3)
 
