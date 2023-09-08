@@ -21,6 +21,7 @@ The backend is built using the following technologies:
 - [Django REST Framework](https://www.django-rest-framework.org/): A powerful and flexible toolkit for building Web APIs.
 - MySQL or SQLITE: A popular open-source relational database.
 
+Make Sure to [Fork](https://github.com/muhammad-fiaz/portfolio/fork) This Repository to your GitHub Account and [Star⭐ it](https://github.com/muhammad-fiaz/portfolio/stargazers).
 
 ## Getting Started
 
