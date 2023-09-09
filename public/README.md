@@ -1,17 +1,17 @@
-# src Folder 
+# Public Folder
 
 ## Overview
 
-The "src" folder is the heart of Next.js project, where we can organize and manage source code of sections. It contains two essential subfolders: "components" and "contents." These folders play distinct roles in shaping the portfolio website.
-
+The "public" folder is a crucial part of your Next.js project structure. It serves as the repository for static assets such as images, fonts, and other files that are publicly accessible on your portfolio website. These assets can be used across your web pages and components.
 
 ## Usage
 
-- **Components Folder**: The "components" folder contains reusable components that you can import and use throughout your portfolio website. These components help maintain consistency and simplify development.
+The assets stored in the "public" folder are designed to be publicly available, meaning they can be loaded directly by browsers. This makes it an ideal location for storing resources like images that need to be displayed on your website. To use these assets in your Next.js project, you can reference them using their relative paths.
 
-- **Contents Folder**: The "contents" folder stores JSON files containing the content and data used on your website. You can fetch and display this data dynamically within your pages and components.
+For example, if you have an image named "my-image.jpg" in the "public/images" directory, you can include it in your web page like this:
 
-Feel free to customize, extend, or create new components and content files to tailor your portfolio to your specific needs. This structure promotes organization and separation of concerns, making your project more maintainable and scalable.
+
+Feel free to customize, extend to tailor your portfolio to your specific needs. 
 
 Make Sure to [Fork](https://github.com/muhammad-fiaz/portfolio/fork) This Repository to your GitHub Account and [Star⭐ it](https://github.com/muhammad-fiaz/portfolio/stargazers).
 
