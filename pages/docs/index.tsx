@@ -1,8 +1,9 @@
 import Color from '../../src/components/utils/page.colors'
 
 import colors from '../../src/content/docs/_colors.json'
-import FeaturedDocs from "../../src/components/sections/docs/featured";
+const FeaturedDocs   = dynamic(import ( "../../src/components/sections/docs/featured"));
 import TitleDocs from "./title.docs";
+import dynamic from "next/dynamic";
 
 // documentation page - under development
 export default function docs({}) {

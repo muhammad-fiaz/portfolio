@@ -8,15 +8,16 @@ export default function LoadingAnim() {
     // Use a state variable to track whether components are loaded
     const [componentsLoaded, setComponentsLoaded] = useState(false);
 
-    // Simulate a loading delay
     useEffect(() => {
-        const timer = setTimeout(() => {
+        // Simulate loading the component by using a timeout
+        const timeout = setTimeout(() => {
+            // Set componentsLoaded to true after the timeout
             setComponentsLoaded(true);
-        }, 2000);
+        }, 0); // Change the delay to 0 to simulate component loading
 
-        return () => clearTimeout(timer);
+        // Clean up the timeout if the component unmounts
+        return () => clearTimeout(timeout);
     }, []);
-
     return (
 
                 <div

@@ -1,4 +1,6 @@
-import Recent from '../../src/components/sections/articles/recent'
+import dynamic from "next/dynamic";
+
+const Recent   = dynamic(import ('../../src/components/sections/articles/recent'));
 
 import Color from '../../src/components/utils/page.colors'
 

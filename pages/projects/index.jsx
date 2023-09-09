@@ -1,6 +1,7 @@
 // Sections
-import GitRecentProjects from '../../src/components/sections/projects/recent'
-import FeaturedProjects from '../../src/components/sections/projects/featured'
+const GitRecentProjects   = dynamic(import ('../../src/components/sections/projects/recent'));
+const FeaturedProjects  = dynamic(import ( '../../src/components/sections/projects/featured'));
+import dynamic from "next/dynamic";
 
 import Color from '../../src/components/utils/page.colors'
 

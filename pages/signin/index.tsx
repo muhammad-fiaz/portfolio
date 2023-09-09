@@ -1,8 +1,9 @@
 import Color from '../../src/components/utils/page.colors'
 
 import colors from '../../src/content/signin/_colors.json'
-import Auth from "../../src/components/sections/signin/signin";
+const Auth  = dynamic(import ("../../src/components/sections/signin/signin"));
 import TitleSignin from "./title.signin";
+import dynamic from "next/dynamic";
 
 // signin page
 export default function Signin({}) {
