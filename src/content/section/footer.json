@@ -4,17 +4,8 @@
 			"person": "muhammadfiaz.com",
 			"link": "https://muhammadfiaz.com/",
 			"note": ""
-		},
-		{
-			"person": "muhammadfiaz.dev",
-			"link": "https://muhammadfiaz.dev/",
-			"note": ""
-		},
-		{
-			"person": "fiaz.dev",
-			"link": "https://fiaz.dev/",
-			"note": ""
 		}
+
 	],
 
 	"links": [
@@ -26,6 +17,10 @@
 		{ 
 			"person": "Documentations",
 			"link": "https://muhammadfiaz.com/docs",
+			"note": ""
+		},	{
+			"person": "Articles",
+			"link": "https://muhammadfiaz.com/articles",
 			"note": ""
 		},
 

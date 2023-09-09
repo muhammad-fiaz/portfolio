@@ -24,4 +24,4 @@ If you find this project helpful and enjoy my work, consider supporting me:
 
 ## License
 
-This project follows the MIT License. See the [LICENSE](LICENSE.md) file for details.
+This project follows the MIT License. See the [LICENSE](../LICENSE.md) file for details.
