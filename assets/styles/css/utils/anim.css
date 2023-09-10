@@ -4,7 +4,8 @@
 
 }
 .loading-text-resp{
-    color: var(--primary-dark);
+    color: var(--primary-bright);
+
     position: absolute;
 top: 80%;
 left: 50%;
