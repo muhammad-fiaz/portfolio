@@ -108,7 +108,8 @@
   "include": [
     "next-env.d.ts",
     "**/*.ts",
-    "**/*.tsx"
+    "**/*.tsx",
+    "**/*.mdx"
   ],
   "exclude": [
     "node_modules"

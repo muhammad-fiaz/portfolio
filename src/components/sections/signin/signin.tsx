@@ -182,19 +182,7 @@ export default function Auth() {
                             </div>
                         </div>
                     </div>
-                    {/* Data string background image */}
-                    <div
-                        className={`${signin.image} ${signin.technicalSvg}`}
-                        style={{ display: 'flex', justifyContent: 'center' }}
-                    >
-                        <Image
-                            src='/img/dataism-24.svg'
-                            width={477}
-                            height={1111}
-                            alt='data string background'
-                            loading="eager"
-                        />
-                    </div>
+
                 </section>
             </Container>
         </Section>

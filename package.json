@@ -91,7 +91,7 @@
 		"webpack-cli": "^5.1.4"
 	},
 	"name": "portfolio",
-	"version": "1.0.3",
+	"version": "1.0.4",
 	"main": "pages/index.tsx",
 	"repository": "https://github.com/muhammad-fiaz/portfolio.git",
 	"author": "muhammad-fiaz <s.muhammadfiaz2003@gmail.com>",
