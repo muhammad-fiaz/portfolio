@@ -7,6 +7,8 @@ import Icon from './icon.tsx'
 
 
 import badges from '../../../assets/styles/scss/blocks/badges.module.scss';
+import BadgesBlockProps from "../blocks/about.badges";
+
 
 
 export default function Badges({ list, block, color, fullContainer }) {
@@ -23,7 +25,7 @@ export default function Badges({ list, block, color, fullContainer }) {
 	}, [ controls, inView ] );
 
 	const container = {
-		hidden: { 
+		hidden: {
 			opacity: 1,
 			transition: {
 				delayChildren: 0.25,
@@ -38,11 +40,11 @@ export default function Badges({ list, block, color, fullContainer }) {
 			}
 		}
 	}
-	
+
 	const item = {
-		hidden: { 
-			y: 20, 
-			opacity: -0.5 
+		hidden: {
+			y: 20,
+			opacity: -0.5
 		},
 		visible: {
 			y: 0,
@@ -62,17 +64,17 @@ export default function Badges({ list, block, color, fullContainer }) {
 		>
 		{
 		list.map( ({ key, name, type }) => {
-			return ( 
-				<m.li 
-					key={name} 
+			return (
+				<m.li
+					key={name}
 					className={`${badges.item} ${key}`}
 					//Animations
 					variants={item} >
 					<IconModule iconKey={key} iconType={type} color={color}/>
 					<span className={badges.title}>{name}</span>
-				</m.li> 
+				</m.li>
 				)
-			}) 
+			})
 		}
 		</m.ul>
 	)
@@ -94,5 +96,4 @@ function IconModule({ iconKey, iconType, color }) {
 			return ( '' )
 	}
 }
-		
-		
+

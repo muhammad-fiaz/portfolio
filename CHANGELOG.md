@@ -1,23 +1,30 @@
 # Portfolio Changelog - Release Notes
 
+## v1.0.4 (upcoming soon)
+
+- improved ui and performance
+- fixed bugs
+- added new features
+- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
+
 ## v1.0.3
 - Added Custom 500 and 404 Error Pages👻
 - improved UI and Functionality❤️
 - fixed some bugs✌🏻
-- Full Changelog: [v1.0.2...v1.0.3](https://github.com/muhammad-fiaz/portfolio/compare/v1.0.2...v1.0.3)
+- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
 
 ## v1.0.2
 - Upgraded to Next.js 13
 - Added PostCSS Support
 - Some UI Improvements and Changes
-- Full Changelog: [v1.0.1...v1.0.2](https://github.com/muhammad-fiaz/portfolio/compare/v1.0.1...v1.0.2)
+- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
 
 ## v1.0.1
 
 - Added Webpack Support
 - Some Improvements and Changes
 - Merged updates by @muhammad-fiaz in [#106](https://github.com/muhammad-fiaz/portfolio/pull/106)
-- Full Changelog: [v1.0.0...v1.0.1](https://github.com/muhammad-fiaz/portfolio/compare/v1.0.0...v1.0.1)
+- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
 
 ## v1.0.0
 
@@ -31,6 +38,7 @@ I am thrilled to unveil Portfolio 1.0.0 – a major leap forward in my project's
 - 📞 **Seamless Contact Integration:** Forge connections effortlessly. Integrated contact forms and social media links pave the way for smooth interactions, allowing others to reach out with ease.
 - ⚡ **Performance at its Best:** I fine-tuned every aspect to guarantee swift loading times and seamless interactions, regardless of the scale of my portfolio.
 - 🐞 **Bug Buster:** Numerous bugs and glitches have been diligently squashed, fostering a stable and dependable user experience.
-
+- 
 👻 For more information about this release, please check out the repository [muhammad-fiaz](https://github.com/muhammad-fiaz/portfolio).
+
 

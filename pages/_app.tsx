@@ -65,7 +65,6 @@ const MyApp: React.FC<MyAppProps> = ({Component, pageProps}) => {
 
     return (
         <>
-
             {isLoading ? (
                     <LoadingScreen/>
             ) : (
@@ -74,6 +73,7 @@ const MyApp: React.FC<MyAppProps> = ({Component, pageProps}) => {
 
                             <Component {...pageProps} />
                         <DevelopmentNotice/>
+
                         <Chatbot/>
                         <Analytics/>
                         <SetGridGap/>
