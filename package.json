@@ -51,7 +51,7 @@
 		"yarn": "^1.22.19"
 	},
 	"devDependencies": {
-		"@babel/core": "^7.22.17",
+		"@babel/core": "^7.22.19",
 		"@babel/preset-env": "^7.22.15",
 		"@babel/preset-react": "^7.22.15",
 		"@babel/preset-typescript": "^7.22.15",
@@ -59,7 +59,7 @@
 		"@testing-library/react": "^14.0.0",
 		"@types/jest": "^29.5.4",
 		"@types/js-cookie": "^3.0.3",
-		"@types/node": "^20.6.0",
+		"@types/node": "^20.6.2",
 		"@types/nprogress": "^0.2.0",
 		"@types/react": "^18.2.21",
 		"@typescript-eslint/eslint-plugin": "^6.7.0",
@@ -81,7 +81,9 @@
 		"node-sass": "^9.0.0",
 		"postcss": "^8.4.29",
 		"purgecss": "^5.0.0",
-		"sass": "^1.66.1",
+
+		"sass": "^1.67.0",
+
 		"sass-loader": "^13.3.2",
 		"style-loader": "^3.3.3",
 		"tailwindcss": "^3.3.3",
