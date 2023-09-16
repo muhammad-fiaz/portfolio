@@ -73,11 +73,14 @@ body:
     attributes:
       label: Actual Results
       description: What actually happened?
-  - type: file
+  - type: input
     id: screenshots
     attributes:
-      label: Screenshots
-      description: If applicable, attach screenshots that illustrate the issue.
+      label: Screenshots (Optional)
+      description: If applicable, provide a link to any screenshots or attachments illustrating the issue.
+      placeholder: "Link to screenshot or attachment"
+    validations:
+      required: false
   - type: checkboxes
     id: terms
     attributes:
