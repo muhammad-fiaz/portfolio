@@ -1,91 +1,48 @@
-name: Bug
-description: File a bug report
-body:
-  - type: markdown
-    attributes:
-      value: |
-        Before opening a bug report, please search for the behavior in the existing issues. 
+name: Bug Report
+about: Report a bug or issue
 
-        ---
+on:
+  issue:
+    types:
+      - opened
+      - edited
 
-        Thank you for taking the time to file a bug report. To address this bug as fast as possible, we need some information.
-  - type: input
-    id: email
-    attributes:
-      label: Email (Optional)
-      description: "If you'd like to be contacted regarding this issue, please provide your email."
-      placeholder: "email@example.com"
-    validations:
-      required: false
-  - type: input
-    id: os
-    attributes:
-      label: Operating System
-      description: "Which operating system do you use? Please provide the version as well."
-      placeholder: "macOS Big Sur 11.5.2"
-    validations:
-      required: true  
-  - type: input
-    id: node-version
-    attributes:
-      label: Node.js Version
-      description: "Please provide the version of Node.js used in your project."
-      placeholder: "v14.17.6"
-    validations:
-      required: true
-  - type: input
-    id: next-js-version
-    attributes:
-      label: Next.js Version
-      description: "Please provide the version of Next.js used in your project."
-      placeholder: "v12.0.7"
-    validations:
-      required: true
-  - type: input
-    id: browser
-    attributes:
-      label: Browser
-      description: "Which browser are you using when you encountered the bug?"
-      placeholder: "Google Chrome 98.0.4758.102"
-    validations:
-      required: true
-  - type: textarea
-    id: bug-description
-    attributes:
-      label: Bug Description
-      description: What happened? Please describe the issue.
-    validations:
-      required: true
-  - type: textarea
-    id: steps
-    attributes:
-      label: Steps to Reproduce
-      description: Provide step-by-step instructions to reproduce the bug.
-    validations:
-      required: true
-  - type: textarea
-    id: expected-results
-    attributes:
-      label: Expected Results
-      description: What did you expect to happen?
-  - type: textarea
-    id: actual-results
-    attributes:
-      label: Actual Results
-      description: What actually happened?
-  - type: input
-    id: screenshots
-    attributes:
-      label: Screenshots (Optional)
-      description: If applicable, provide a link to any screenshots or attachments illustrating the issue.
-      placeholder: "Link to screenshot or attachment"
-    validations:
-      required: false
-  - type: checkboxes
-    id: terms
-    attributes:
-      label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://example.com).
-      options:
-        - label: I agree to follow this project's Code of Conduct
-          required: true
+jobs:
+  bug-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Comment with Bug Report Template
+        uses: actions/github-script@v7
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            var body = `**Describe the bug**
+
+A clear and concise description of what the bug is.
+
+**To Reproduce**
+
+Steps to reproduce the behavior:
+
+1. Go to '...'
+2. Click on '....'
+3. Scroll down to '....'
+4. See error
+
+**Expected behavior**
+
+A clear and concise description of what you expected to happen.
+
+**Screenshots**
+
+If applicable, add screenshots to help explain your problem.
+
+**Additional context**
+
+Add any other context about the problem here.`;
+            github.issues.createComment({
+              issue_number: context.issue.number,
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              body: body,
+            });
