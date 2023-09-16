@@ -1,13 +1,10 @@
-# Django Backend for portfolio
+# Django Backend for portfolio (Optional)
 
 **Currently, This backend is in active Development**
-**Also, This Project uses Neurolink for the Chatbot Functionality. This Python Package is Currently in Active Development, so
-the latest version of neurolink may or may not work correctly with the older version that is used in this project.
-Check out the Repository for Latest Development Updates or else you can use any other package according to your needs 😄.**
 
 Note: You can use any other database of your choice.
-Just change the database settings in settings.py file, 
-And for auth you can use firebase or any other auth service of your choice or else use your own it's up to you. 
+Just change the database settings in the settings.py file, 
+And for auth you can use Firebase or any other auth service of your choice or else use your own it's up to you. 
 
 ## Description
 
