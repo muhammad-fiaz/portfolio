@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./public/portfolio.jpg" width="1000"  alt="Muhammad Fiaz's Portfolio"/>
+  <img src="https://github.com/muhammad-fiaz/portfolio/assets/75434191/4b7d5fe2-16c7-4451-802d-851638b2df9f"  alt="Muhammad Fiaz's Portfolio"/>
 </p>
 
 <div align="center">
