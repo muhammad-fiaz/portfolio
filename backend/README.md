@@ -3,6 +3,7 @@
 **Currently, This backend is in active Development**
 
 Note: You can use any other database of your choice.
+
 Just change the database settings in the settings.py file, 
 And for auth you can use Firebase or any other auth service of your choice or else use your own it's up to you. 
 
