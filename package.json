@@ -69,7 +69,7 @@
 		"css-loader": "^6.8.1",
 		"css-minimizer-webpack-plugin": "^5.0.1",
 		"eslint": "^8.49.0",
-		"eslint-config-next": "^13.4.19",
+		"eslint-config-next": "^13.5.1",
 		"eslint-config-prettier": "^9.0.0",
 		"file-loader": "^6.2.0",
 		"image-webpack-loader": "^8.1.0",
