@@ -1,30 +1,34 @@
 # Portfolio Changelog - Release Notes
 
-## v1.0.4 (upcoming soon)
+## v1.0.4
 
-- improved ui and performance
+- improved ui and performance #178
 - fixed bugs
-- added new features
-- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
+- added new features and removed or make some as optional
+- Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
+- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/commits/main](https://github.com/muhammad-fiaz/portfolio/commits/main)
 
 ## v1.0.3
 - Added Custom 500 and 404 Error Pages👻
 - improved UI and Functionality❤️
 - fixed some bugs✌🏻
-- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
+- Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
+- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/commits/main](https://github.com/muhammad-fiaz/portfolio/commits/main)
 
 ## v1.0.2
 - Upgraded to Next.js 13
 - Added PostCSS Support
 - Some UI Improvements and Changes
-- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
+- Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
+- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/commits/main](https://github.com/muhammad-fiaz/portfolio/commits/main)
 
 ## v1.0.1
 
 - Added Webpack Support
 - Some Improvements and Changes
 - Merged updates by @muhammad-fiaz in [#106](https://github.com/muhammad-fiaz/portfolio/pull/106)
-- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
+- Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
+- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/commits/main](https://github.com/muhammad-fiaz/portfolio/commits/main)
 
 ## v1.0.0
 

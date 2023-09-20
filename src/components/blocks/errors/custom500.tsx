@@ -1,9 +1,6 @@
 import React from "react";
 import {useRouter} from "next/router";
 import {Player} from "@lottiefiles/react-lottie-player";
-import image1 from "../../../../assets/lottie/looking.json";
-import image2 from "../../../../assets/lottie/ghost.json";
-import image3 from "../../../../assets/lottie/ufo.json";
 
 function Custom500() {
     const router = useRouter();
@@ -34,7 +31,7 @@ function Custom500() {
                 <Player
                     autoplay
                     loop
-                    src={image1}
+                    src="/lottie/looking.json"
                     style={{
                         width: "50%",
                         height: "50%",
@@ -61,7 +58,7 @@ function Custom500() {
                     <Player
                         autoplay
                         loop
-                        src={image3}
+                        src="/lottie/ufo.json"
                         style={{
                             width: "80px",
                             height: "80px",
@@ -72,7 +69,7 @@ function Custom500() {
                     <Player
                         autoplay
                         loop
-                        src={image2}
+                        src="/lottie/ghost.json"
                         style={{
                             width: "80px",
                             height: "80px",

@@ -1,8 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
 import { Player } from "@lottiefiles/react-lottie-player";
-import serverboot from "../../../assets/lottie/serverboot.json";
-import image2 from "../../../assets/lottie/loadcode.json";
 
 export default function LoadingAnim() {
     // Use a state variable to track whether components are loaded
@@ -34,7 +32,7 @@ export default function LoadingAnim() {
                         className="loading-anim-player"
                         autoplay
                         loop
-                        src={serverboot}
+                        src="/lottie/serverboot.json"
                         style={{
                             width: "80%", // Increase width
                             height: "80%", // Increase height
@@ -46,7 +44,7 @@ export default function LoadingAnim() {
                         <Player
                             autoplay
                             loop
-                            src={image2}
+                            src="/lottie/loadcode.json"
                             style={{
                                 width: "80px",
                                 height: "80px",

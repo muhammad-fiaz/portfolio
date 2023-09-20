@@ -1,7 +1,6 @@
 import Section from '../structure/section';
 import Container from '../structure/container';
 import { Player } from "@lottiefiles/react-lottie-player";
-import construction from "../../../assets/lottie/constuction.json";
 
 import css from '../../../assets/styles/scss/sections/projects/featured.module.scss';
 import React from "react";
@@ -26,7 +25,7 @@ export default function Inactivedevelopment({ spacing }: InactivedevelopmentProp
 								className="construction-anim-player"
 								autoplay
 								loop
-								src={construction}
+								src="/lottie/constuction.json"
 								style={{
 									width: "60%",
 									height: "60%",

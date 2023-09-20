@@ -2,7 +2,7 @@
 
 ## Overview
 
-This folder serves as a central repository for assets essential to your portfolio website. It is organized into subfolders to manage styles (CSS and SCSS), images (img), and Lottie animations efficiently. These assets play a pivotal role in shaping the visual and interactive elements of your website.
+This folder serves as a central repository for assets essential to your portfolio website. It is organized into subfolders to manage styles (CSS and SCSS), images (img) efficiently. These assets play a pivotal role in shaping the visual and interactive elements of your website.
 
 ## Folder Contents
 
@@ -10,14 +10,12 @@ This folder serves as a central repository for assets essential to your portfoli
     - **styles/**
         - **css/**: The main CSS file for styling your website.
         - **scss/**: The SCSS source file for advanced styling.
-    - **img/**: Contains images for your portfolio.
-    - **lottie/**: Contains Lottie animations for your portfolio.
+    - **img/**: Contains images for your portfolio. (Optional)
 
 ## Usage
 
 The assets within this folder are integral to your portfolio website's design and functionality. The `styles` subfolder houses stylesheets that define the visual aesthetics of your site, while the `img` subfolder contains images that enhance the user experience.
 
-Lottie animations, located in the `lottie` subfolder, provide dynamic and engaging visual elements. You can easily incorporate these animations into your website to create eye-catching interactions and visuals.
 
 Feel free to import and apply these assets as needed throughout your website. They serve as the foundation for achieving a visually appealing and well-structured portfolio without the need for extensive custom coding.
 
