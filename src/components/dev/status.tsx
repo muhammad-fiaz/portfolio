@@ -1,6 +1,5 @@
 import React, {useEffect, useState} from 'react';
 import {Player} from '@lottiefiles/react-lottie-player';
-import image from '../../../assets/lottie/codingdev.json';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
 
 
@@ -62,7 +61,7 @@ const DevelopmentNotice: React.FC = () => {
                 <Player
                     autoplay
                     loop
-                    src={image}
+                    src="/lottie/codingdev.json"
                     style={{ marginBottom: '20px', width: '300px', height: '300px' }}
                 />
                 <p style={{ fontSize: '18px', marginBottom: '20px' }}>

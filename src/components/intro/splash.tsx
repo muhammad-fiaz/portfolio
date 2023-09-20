@@ -1,7 +1,5 @@
 import React from "react";
 import {Player} from "@lottiefiles/react-lottie-player";
-import image1 from "../../../assets/lottie/laptop.json";
-import image2 from "../../../assets/lottie/loadcode.json";
 
 function LoadingScreen() {
     return (
@@ -10,7 +8,7 @@ function LoadingScreen() {
                 <Player
                     autoplay
                     loop
-                    src={image1}
+                    src="/lottie/laptop.json"
                     style={{
                         width: "80%",
                         height: "80%",
@@ -23,7 +21,7 @@ function LoadingScreen() {
                 <Player
                     autoplay
                     loop
-                    src={image2}
+                    src="/lottie/loadcode.json"
                     style={{
                         width: "80px",
                         height: "80px",

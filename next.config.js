@@ -94,11 +94,11 @@ Don't remove these this uses the protocol that are need to function properly
 		// For example, if you want to export to the "out" directory:
 		directory: 'out',
 	},
-/*
+
 	// https://nextjs.org/docs/messages/swc-disabled
 	experimental: {
 		forceSwcTransforms: true,
 	},
 
-*/
+
 });
