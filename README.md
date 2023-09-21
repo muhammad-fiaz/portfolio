@@ -8,7 +8,9 @@
 ![Stability](https://img.shields.io/badge/stability-beta-blue.svg) ![MIT License](https://img.shields.io/badge/license-MIT-green)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/muhammad-fiaz/portfolio)
 [![Build Passing](https://badge.buildkite.com/sample.svg?status=passing)](https://github.com/muhammad-fiaz/portfolio)
-
+[![Continuous Integration](https://github.com/muhammad-fiaz/portfolio/actions/workflows/prettier.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/prettier.yml)
+[![CodeQL](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codeql.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codeql.yml)
+[![CodeSee](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codesee-arch-diagram.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codesee-arch-diagram.yml)
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
