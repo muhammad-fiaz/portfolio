@@ -33,7 +33,7 @@
 		"devicon": "^2.15.1",
 		"framer-motion": "^10.16.4",
 		"js-cookie": "^3.0.5",
-		"next": "^13.5.1",
+		"next": "^13.5.2",
 		"next-compose-plugins": "^2.2.1",
 		"next-pwa": "^5.6.0",
 		"nprogress": "^0.2.0",
