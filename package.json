@@ -82,7 +82,7 @@
 		"postcss": "^8.4.30",
 		"purgecss": "^5.0.0",
 
-		"sass": "^1.67.0",
+		"sass": "^1.68.0",
 
 		"sass-loader": "^13.3.2",
 		"style-loader": "^3.3.3",
