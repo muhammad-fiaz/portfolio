@@ -1,3 +1,4 @@
+
 .back-to-top {
     position: fixed;
     top: 70px;
@@ -5,14 +6,14 @@
     width: 50px;
     height: 50px;
     padding: 0;
-    background-color: #333;
+    background-color: var(--primary-bright);
     border: none;
     border-radius: 50%;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
+    color: var(--primary-dark);
     font-size: 20px;
     z-index: 9999; /* Set a higher z-index value */
 
@@ -22,4 +23,5 @@
     .back-to-top {
         right: 20px;
     }
+
 }
