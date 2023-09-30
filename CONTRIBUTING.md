@@ -17,7 +17,7 @@ We welcome contributions in the form of bug reports, feature requests, code impr
    
                     git clone https://github.com/yourusername/portfolio.git
    
-4. Follow the remaining Steps mentioned in [README.md](,/README.md) to run the Portfolio
+3. Follow the remaining Steps mentioned in [README.md](,/README.md) to run the Portfolio
  
 ## Reporting Issues 🐞
 

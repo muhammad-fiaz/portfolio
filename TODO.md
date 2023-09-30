@@ -49,7 +49,8 @@
 - [X] Explore and implement SEO techniques for better visibility
 - [X] Design and develop a responsive navigation menu
 - [X] Create a landing page for the website
-
+- [ ] AMP Support
+- 
 ## Notice
 
 **Please note that this checklist is dynamic, and the listed tasks may change or be refined as the project progresses. It's essential to remain flexible and adapt to evolving requirements. For the most up-to-date list, refer to [this link](https://github.com/muhammad-fiaz/portfolio/blob/main/TODO.md).**
