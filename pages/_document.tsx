@@ -288,7 +288,7 @@ export default function Document() {
 				`}
 	</Script>
 
-    {/* Google Analytics */}
+    {/* Google Analytics -> make sure to change the analytics key with yours here */}
     <Script strategy="afterInteractive" src="https://www.googletagmanager.com/gtag/js?id=G-SDJ0K1Y70X"/>
     <Script
         id='google-analytics'

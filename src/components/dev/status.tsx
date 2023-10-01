@@ -22,7 +22,7 @@
 import React, { useEffect, useState } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
-import ConfettiComponent from './../intro/confetti'; // Import your ConfettiComponent here
+import ConfettiComponent from './../intro/confetti';
 
 const DevelopmentNotice: React.FC = () => {
     const [showPopup, setShowPopup] = useState<boolean>(false);
@@ -100,6 +100,7 @@ const DevelopmentNotice: React.FC = () => {
                     </p>
                     {!isVerified ? (
                         <>
+                            {/* make sure to Change this key from a hcaptcha account*/}
                             <HCaptcha
                                 sitekey="d27bf471-6339-4603-b63f-5ab5fdd96ace"
                                 onVerify={handleVerify}
