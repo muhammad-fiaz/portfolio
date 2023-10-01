@@ -45,7 +45,7 @@ export default function Home() {
 				/>
 				<section className={about.content}>
 					<div className={about.image}>
-						<Image src="https://avatars.githubusercontent.com/u/75434191?v=4" width={600} height={800} alt="Muhammad Fiaz"   loading="eager" />
+						<Image src="https://github.com/muhammad-fiaz/portfolio/assets/75434191/448019a5-433e-4011-bdc6-d263a1d1ff88" width={600} height={800} alt="Muhammad Fiaz"   loading="eager" />
 					</div>
 					<div className={about.copy}>
 						<CopyBlock
