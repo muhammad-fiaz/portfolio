@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2023 [Muhammad Fiaz](https://github.com/muhammad-fiaz/portfolio)
+ * Copyright (c) 2023 [Muhammad Fiaz](https://github.com/muhammad-fiaz/)
  *
  * Permission is hereby granted, free of charge, to any person obtaining a copy
  * of this software and associated documentation files (the "Software"), to deal
