@@ -1,3 +1,24 @@
+/*
+ * Copyright (c) 2023 [Muhammad Fiaz](https://github.com/muhammad-fiaz/)
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining a copy
+ * of this software and associated documentation files (the "Software"), to deal
+ * in the Software without restriction, including without limitation the rights
+ * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+ * copies of the Software, and to permit persons to whom the Software is
+ * furnished to do so, subject to the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be included in
+ * all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+ * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+ * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+ * AUTHORS.md OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+ * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+ * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+ * SOFTWARE.
+ */
 import {Head, Html, Main, NextScript} from 'next/document'
 import Script from 'next/script';
 import React from "react";
@@ -67,8 +88,8 @@ export default function Document() {
 
             <meta property="og:title" content="Muhammad Fiaz" key="title" />
             <meta property="og:description" content="Muhammad Fiaz - A dedicated Full Stack Developer proficient in App/Web, Cloud, DevOps, AI/ML, and Design. Join my journey." />
-            <meta property="og:image" content="https://muhammadfiaz.com/img/muhammadfiaz.jpeg" />
-            <meta property="og:image:secure_url" content="https://muhammadfiaz.com/img/muhammadfiaz.jpeg" />
+            <meta property="og:image" content="https://avatars.githubusercontent.com/u/75434191?v=4" />
+            <meta property="og:image:secure_url" content="https://avatars.githubusercontent.com/u/75434191?v=4" />
             <meta property="og:image:type" content="image/jpeg" />
             <meta property="og:image:alt" content="Muhammad Fiaz" />
             <meta property="og:image:width" content="300" />
@@ -84,7 +105,7 @@ export default function Document() {
             <meta name="twitter:site" content="https://twitter.com/muhammadfiaz_" />
             <meta name="twitter:title" content="Muhammad Fiaz" />
             <meta name="twitter:description" content="Muhammad Fiaz - A dedicated Full Stack Developer proficient in App/Web, Cloud, DevOps, AI/ML, and Design. Join my journey." />
-            <meta name="twitter:image" content="https://muhammadfiaz.com/img/muhammadfiaz.jpeg" />
+            <meta name="twitter:image" content="https://avatars.githubusercontent.com/u/75434191?v=4" />
             <meta name="twitter:creator" content="https://twitter.com/muhammadfiaz_" />
             <meta name="twitter:domain" content="https://muhammadfiaz.com" />
 

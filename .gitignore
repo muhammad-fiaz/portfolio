@@ -1,3 +1,4 @@
+# checkout more information at https://github.com/muhammad-fiaz/portfolio
 # Logs
 logs
 *.log
@@ -44,6 +45,7 @@ jspm_packages/
 !node_modules/
 node_modules/*
 !node_modules/@fortawesome
+!node_modules/LICENSE.md
 
 # TypeScript v1 declaration files
 typings/
