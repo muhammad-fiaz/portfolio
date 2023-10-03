@@ -1,24 +1,4 @@
-/*
- * Copyright (c) 2023 [Muhammad Fiaz](https://github.com/muhammad-fiaz/)
- *
- * Permission is hereby granted, free of charge, to any person obtaining a copy
- * of this software and associated documentation files (the "Software"), to deal
- * in the Software without restriction, including without limitation the rights
- * to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
- * copies of the Software, and to permit persons to whom the Software is
- * furnished to do so, subject to the following conditions:
- *
- * The above copyright notice and this permission notice shall be included in
- * all copies or substantial portions of the Software.
- *
- * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
- * IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
- * FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
- * AUTHORS.md OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
- * LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
- * OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
- * SOFTWARE.
- */
+
 // Core packages
 import Image from 'next/image'
 
@@ -45,7 +25,7 @@ export default function Home() {
 				/>
 				<section className={about.content}>
 					<div className={about.image}>
-						<Image src="https://github.com/muhammad-fiaz/portfolio/assets/75434191/448019a5-433e-4011-bdc6-d263a1d1ff88" width={600} height={800} alt="Muhammad Fiaz"   loading="eager" />
+						<Image src="https://avatars.githubusercontent.com/u/75434191?v=4" width={600} height={800} alt="Muhammad Fiaz"   loading="eager" />
 					</div>
 					<div className={about.copy}>
 						<CopyBlock

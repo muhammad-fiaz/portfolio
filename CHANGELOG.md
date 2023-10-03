@@ -1,5 +1,13 @@
 # Portfolio Changelog - Release Notes
 
+## v1.0.5 (Upcoming)
+
+- improved ui and performance 
+- fixed bugs
+- added new features
+- Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
+- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/commits/main](https://github.com/muhammad-fiaz/portfolio/commits/main)
+
 ## v1.0.4
 
 - improved ui and performance #178
