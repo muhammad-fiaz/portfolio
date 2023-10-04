@@ -7,11 +7,12 @@ import TitleIndex from './title.index';
 // Import your components with dynamic import
 import dynamic from 'next/dynamic';
 import LoadingAnim from "../src/components/intro/loadinganim";
+import TimeLine from "../src/components/sections/index/timeline";
 const Hero = dynamic(() => import('../src/components/sections/index/hero'));
 const Looking = dynamic(() => import('../src/components/sections/index/looking'));
 const About = dynamic(() => import('../src/components/sections/index/home'));
 const Technical = dynamic(() => import('../src/components/sections/index/technical'));
-const Career = dynamic(() => import('../src/components/sections/index/career'));
+const Career = dynamic(() => import('../src/components/sections/index/optional/career'));
 const FeaturedProjects = dynamic(() => import('../src/components/sections/projects/featured'));
 const QnA = dynamic(() => import('../src/components/sections/index/qna'));
 const Color = dynamic(() => import('../src/components/utils/page.colors'));
@@ -34,26 +35,27 @@ export default function HomePage({spacing}: HomePageProps) {
 	}, []);
 
 	return (
-		<>
+		<div>
 			<TitleIndex />
 			<Color colors={colors} />
 
 			{/* Conditionally render components or loading message */}
 			{/* These below line that commanded is Optional */}
 			{/*	{componentsLoaded ? ( */}
-				<>
+				<div>
 					<Hero />
 					<Looking />
 					<About />
 					<FeaturedProjects />
 					<Technical />
-					<Career />
+					{/*<TimeLine/> -> Coming soon */}
+			<Career />
 					<QnA />
-				</>
+				</div>
 			{/*	) : (
 	<LoadingAnim/>
 			)} */}
 
-		</>
+		</div>
 	);
 }
