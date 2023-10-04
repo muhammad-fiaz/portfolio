@@ -68,7 +68,7 @@ or
 
 
 ### `npm run build-webpack`
-Build the app for production to the `.next` folder using webpack.\
+Build the app for production to the `.next` folder using a custom config webpack.\
 This is useful if you want to use [webpack plugins](https://nextjs.org/docs/app/api-reference/next-config-js/webpack) to optimize the build.(**Optional**)
 
 ### `npm start`
