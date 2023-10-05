@@ -1,12 +1,11 @@
 # Portfolio Changelog - Release Notes
 
-## v1.0.5 (Upcoming)
+## v1.0.5 
 
 - improved ui and performance 
 - fixed bugs
 - added new features
 - Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
-- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/commits/main](https://github.com/muhammad-fiaz/portfolio/commits/main)
 
 ## v1.0.4
 
@@ -14,21 +13,18 @@
 - fixed bugs
 - added new features and removed or make some as optional
 - Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
-- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/commits/main](https://github.com/muhammad-fiaz/portfolio/commits/main)
 
 ## v1.0.3
 - Added Custom 500 and 404 Error Pages👻
 - improved UI and Functionality❤️
 - fixed some bugs✌🏻
 - Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
-- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/commits/main](https://github.com/muhammad-fiaz/portfolio/commits/main)
 
 ## v1.0.2
 - Upgraded to Next.js 13
 - Added PostCSS Support
 - Some UI Improvements and Changes
 - Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
-- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/commits/main](https://github.com/muhammad-fiaz/portfolio/commits/main)
 
 ## v1.0.1
 
@@ -36,7 +32,6 @@
 - Some Improvements and Changes
 - Merged updates by @muhammad-fiaz in [#106](https://github.com/muhammad-fiaz/portfolio/pull/106)
 - Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
-- Full Changelog: [https://github.com/muhammad-fiaz/portfolio/commits/main](https://github.com/muhammad-fiaz/portfolio/commits/main)
 
 ## v1.0.0
 
