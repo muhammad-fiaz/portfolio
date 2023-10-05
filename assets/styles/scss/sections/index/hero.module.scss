@@ -3,6 +3,7 @@
 
 //global.module.scss
 .section {
+
 	border-bottom: 1px solid var(--primary-dark);
 	
 	max-height: 1440px;
@@ -12,7 +13,7 @@
 	> .container {
 		height: fit-content;
 	}
-	
+
 	.preHeader {
 		color: var(--secondary);
 		font-family: var(--font-accent);
@@ -20,18 +21,48 @@
 		font-weight: 400;
 		margin: 1rem 0;
 	}
-	
+	.tooltipContent {
+		position: absolute;
+		top: -110px;
+		transform: translateX(-50%);
+		padding: 10px;
+		border-radius: 5px;
+		box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+		z-index: 100;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+       overflow: hidden;
+		img {
+			max-width: 100%;
+			height: auto;
+			background: transparent;
+		}
+	}
+	.hireme_tooltip{
+		left: 8%;
+	}
+.yescat_tooltip{
+		left:25%;
+	}
+
 	.header {
 		color: var(--primary-bright);
 		font-family: var(--font-sans);
 		font-size: 5rem;
 		margin: 0;
 	}
-	
+
+	.subheader {
+		color: var(--primary-bright);
+		font-family: var(--font-sans);
+		font-size: 4rem;
+		margin: 0;
+	}
 	.primaryDim {
 		color: var(--primary-dim);
 	}
-	
+
 	.primaryBright {
 		color: var(--primary);
 	}
@@ -60,6 +91,9 @@
 		}
 		.header {
 			font-size: 2.9rem;
+		}
+		.subheader {
+			font-size: 2rem;
 		}
 		.tempBright {
 			width: 100%;
