@@ -20,14 +20,13 @@
 
 This project is built with Next.js and React, showcasing [Muhammad Fiaz](https://github.com/muhammad-fiaz/)'s personal website.
 
-**Note: This project is currently under Active development. so the Documentation for this project will be available soon**
+**Feel free to use this project for your own portfolio or as a reference for your projects. If you find it helpful, don't forget to give it a ⭐️ to show your support!**
+
 
 **This Project Also Supports [Vercel](https://vercel.com/dashboard) and comes with [(Vercel Analytics pre-enabled in it)](https://vercel.com/analytics) you can Host it there if you like it**
 
-🧑‍💻 Check out the dev branch for new development changes and the Latest Patch updates:—[https://github.com/muhammad-fiaz/portfolio/tree/dev](https://github.com/muhammad-fiaz/portfolio/tree/dev)
 
-
-✅ Also Check out the latest release version for production use:-
+✅ Check out the latest release version for production use:-
 [https://github.com/muhammad-fiaz/portfolio](https://github.com/muhammad-fiaz/portfolio)
 
 ### Release Notes
@@ -126,8 +125,8 @@ And make sure to follow the [project guidelines](CODE_OF_CONDUCT.md)
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
-                                                                                                     
-                                                                                                     
+
+
 Thank you for checking out [my portfolio on GitHub](https://github.com/muhammad-fiaz/portfolio)! We're constantly working to improve and enhance the project. To ensure you're always up-to-date with the latest changes, we recommend following these steps:
 
 1. **Watch This Repository:** Click the ⭐️ "Watch" button at the top right of the page to [receive notifications](https://docs.github.com/en/account-and-profile/managing-subscriptions-and-notifications-on-github/watching-and-unwatching-repositories) for any new releases, issues, or discussions.
@@ -143,7 +142,7 @@ Thank you for checking out [my portfolio on GitHub](https://github.com/muhammad-
 By following these steps, you'll be sure to stay connected with the latest developments and updates. I appreciate your interest in my portfolio and can't wait to see how it benefits you!
 
 If you have any questions or feedback, please don't hesitate to reach out.
-                                                                                             
+
 Don't forget to Stay tuned for updates and new features!
 
 
