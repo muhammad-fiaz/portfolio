@@ -68,12 +68,12 @@ export default function Hero() {
 					</button>
 					{isHiremeTooltipVisible && (
 						<div className={`${hero.tooltipContent} ${hero.hireme_tooltip}`}>
-							<Image src="/gif/hireme.gif" width={100} height={100} alt="Hireme GIF" />
+							<Image src="/gif/hireme.gif" width={100} height={100} alt="Yescat GIF" />
 						</div>
 					)}
 					<button
 						className={`button ${button.secondary} leaveSite`}
-						onClick={() => window.open('https://www.linkedin.com/in/muhammad-fiaz/', '_blank')}
+						onClick={() => window.open('https://www.linkedin.com/in/muhammad-fiaz-', '_blank')}
 						onMouseEnter={() => setIsYescatTooltipVisible(true)}
 						onMouseLeave={() => setIsYescatTooltipVisible(false)}
 					>
@@ -81,7 +81,7 @@ export default function Hero() {
 					</button>
 					{isYescatTooltipVisible && (
 						<div className={`${hero.tooltipContent} ${hero.yescat_tooltip}`}>
-							<Image src="/gif/yes.gif" width={100} height={100} alt="Yescat GIF" />
+							<Image src="/gif/yes.gif" width={100} height={100} alt="GIF" />
 						</div>
 					)}
 				</section>
