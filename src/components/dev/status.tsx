@@ -72,7 +72,7 @@ const DevelopmentNotice: React.FC = () => {
                         style={{ marginBottom: '20px', width: '300px', height: '300px' }}
                     />
                     <p style={{ fontSize: '18px', marginBottom: '20px' }}>
-                        This site is still in Active development.
+                        Thank you for visiting my portfolio!👻
                     </p>
                     <p style={{ fontSize: '14px', marginBottom: '30px' }}>
                         If you encounter any issues or bugs, please report them{' '}
