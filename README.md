@@ -15,6 +15,7 @@
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
+[![Follow me on GitHub](https://img.shields.io/github/followers/muhammad-fiaz?style=social)](https://github.com/muhammad-fiaz)
 
 </div>
 
