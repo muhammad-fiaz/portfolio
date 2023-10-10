@@ -24,13 +24,6 @@ This project is built with Next.js and React, showcasing [Muhammad Fiaz](https:/
 
 **Feel free to use this project for your own portfolio or as a reference for your projects. If you find it helpful, don't forget to give it a ⭐️ to show your support!**
 
-
-**This Project Also Supports [Vercel](https://vercel.com/dashboard) and comes with [(Vercel Analytics pre-enabled in it)](https://vercel.com/analytics) you can Host it there if you like it**
-
-
-✅ Check out the latest release version for production use:-
-[https://github.com/muhammad-fiaz/portfolio](https://github.com/muhammad-fiaz/portfolio)
-
 ## Table of Contents
 
 - [Release Notes](#release-notes)
@@ -145,7 +138,11 @@ And make sure to follow the [project guidelines](CODE_OF_CONDUCT.md)
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**This Project Also Supports [Vercel](https://vercel.com/dashboard) and comes with [(Vercel Analytics pre-enabled in it)](https://vercel.com/analytics) you can Host it there if you like it**
+
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+✅ See [latest release](https://github.com/muhammad-fiaz/portfolio/releases/latest) version for production use!
 
 ## Stay Connected!
 
