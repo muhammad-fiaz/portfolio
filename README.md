@@ -5,13 +5,15 @@
 <div align="center">
   <h1><a href="https://muhammadfiaz.com/">muhammadfiaz.com</a> | portfolio</h1>
 
-![Stability](https://img.shields.io/badge/stability-beta-blue.svg) ![MIT License](https://img.shields.io/badge/license-MIT-green)
+![Stability](https://img.shields.io/badge/stability-good-blue.svg) ![MIT License](https://img.shields.io/badge/license-MIT-green)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/muhammad-fiaz/portfolio)
 [![Build Passing](https://badge.buildkite.com/sample.svg?status=passing)](https://github.com/muhammad-fiaz/portfolio)
 [![Continuous Integration](https://github.com/muhammad-fiaz/portfolio/actions/workflows/prettier.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/prettier.yml)
 [![CodeQL](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codeql.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codeql.yml)
 [![CodeSee](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codesee-arch-diagram.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codesee-arch-diagram.yml)
 [![Dependency Review](https://github.com/muhammad-fiaz/portfolio/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/dependency-review.yml)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/muhammad-fiaz/portfolio)
+[![Maintainer](https://img.shields.io/badge/maintainer-muhammadfiaz-blue)](https://GitHub.com/muhammad-fiaz)
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
@@ -22,12 +24,24 @@ This project is built with Next.js and React, showcasing [Muhammad Fiaz](https:/
 
 **Feel free to use this project for your own portfolio or as a reference for your projects. If you find it helpful, don't forget to give it a ⭐️ to show your support!**
 
+## Table of Contents
 
-**This Project Also Supports [Vercel](https://vercel.com/dashboard) and comes with [(Vercel Analytics pre-enabled in it)](https://vercel.com/analytics) you can Host it there if you like it**
-
-
-✅ Check out the latest release version for production use:-
-[https://github.com/muhammad-fiaz/portfolio](https://github.com/muhammad-fiaz/portfolio)
+- [Release Notes](#release-notes)
+- [Getting Started](#getting-started)
+- [Available Scripts](#available-scripts)
+  - [`npm run dev`](#npm-run-dev)
+  - [`npm run build`](#npm-run-build)
+  - [`npm run build-webpack`](#npm-run-build-webpack)
+  - [`npm start`](#npm-start)
+  - [`next export`](#next-export)
+- [Icons Information](#icons-information)
+- [Vector Graphics Animations](#vector-graphics-animations)
+- [More Information](#more-information)
+- [Support Me](#support-me)
+- [License](#license)
+- [Contributing](#contributing)
+- [Deploy on Vercel](#deploy-on-vercel)
+- [Stay Connected!](#stay-connected)
 
 ### Release Notes
 
@@ -124,8 +138,13 @@ And make sure to follow the [project guidelines](CODE_OF_CONDUCT.md)
 
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+**This Project Also Supports [Vercel](https://vercel.com/dashboard) and comes with [(Vercel Analytics pre-enabled in it)](https://vercel.com/analytics) you can Host it there if you like it**
 
+Check out the [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+✅ See [latest release](https://github.com/muhammad-fiaz/portfolio/releases/latest) version for production use!
+
+## Stay Connected!
 
 Thank you for checking out [my portfolio on GitHub](https://github.com/muhammad-fiaz/portfolio)! We're constantly working to improve and enhance the project. To ensure you're always up-to-date with the latest changes, we recommend following these steps:
 
