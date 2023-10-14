@@ -77,7 +77,7 @@ The open-source Portfolio Project, built with Next.js and React, is a dynamic pe
 - 📚 Offers easy access and reference for project documentation.
 
 **Article/Blog Showcase**
-- 📝 Presents insightful articles and blog posts by the developer.
+- 📝 Presents insightful articles and blog posts by the developer using medium and dev.to APIs.
 - 🌐 Offers valuable content and perspectives.
 
 ## Contributing

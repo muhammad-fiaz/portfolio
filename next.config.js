@@ -50,11 +50,17 @@ Don't remove these this uses the protocol that are need to function properly
 
  */
 	images: {
+
 		remotePatterns: [
 			{
 				protocol: 'https',
 				hostname: '**.vercel.app',
 				pathname: '/api/**'
+			},
+			{
+				protocol: 'https',
+				hostname: '**.cloudinary.com',
+				pathname: '/**'
 			},
 			{
 				protocol: 'https',
