@@ -28,7 +28,7 @@
 
 ### Projects Page
 
-- [ ] Display a list of projects
+- [X] Display a list of projects
 
 ### BACKEND 
 
@@ -50,7 +50,12 @@
 - [X] Design and develop a responsive navigation menu
 - [X] Create a landing page for the website
 - [ ] AMP Support
-- 
+
+### Blogs and Articles
+- [X] Add a blog section to the website(dev.to)
+- [X] Add a Articles section to the website(medium)
+
+
 ## Notice
 
 **Please note that this checklist is dynamic, and the listed tasks may change or be refined as the project progresses. It's essential to remain flexible and adapt to evolving requirements. For the most up-to-date list, refer to [this link](https://github.com/muhammad-fiaz/portfolio/blob/main/TODO.md).**
