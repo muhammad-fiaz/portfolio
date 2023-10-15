@@ -31,7 +31,7 @@
 		"project": "muhammadfiaz.com",
 		"url": "https://github.com/muhammad-fiaz/portfolio",
 		"repo": "public",
-		"descriptionTitle": "An open source personal website",
+		"descriptionTitle": "An open-source portfolio website",
 		"description": "built on Next.js and React. A fast and responsive single page application.",
 		"imageOptions": [
 			{ "key": "size", 		"value": "large" }
@@ -43,8 +43,8 @@
 			{ "key": "nextjs", 		"name": "Next.js", 		"type": "devicon" },
 			{ "key": "react", 		"name": "React", 		"type": "devicon" },
 			{ "key": "nodejs", 		"name": "Node.js", 		"type": "devicon" },
-			{ "key": "mongodb", 	"name": "MongoDB", 		"type": "devicon" },
 			{ "key": "javascript", 	"name": "JavaScript", 	"type": "devicon" },
+			{ "key": "typescript", 	"name": "Typescript", 	"type": "devicon" },
 			{ "key": "html5",		"name": "HTML5", 		"type": "devicon" },
 			{ "key": "css3",		"name": "CSS3", 		"type": "devicon" },
 			{ "key": "sass",		"name": "SCSS", 		"type": "devicon" },
