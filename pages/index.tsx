@@ -41,7 +41,7 @@ export default function HomePage({spacing}: HomePageProps) {
 
 			{/* Conditionally render components or loading message */}
 			{/* These below line that commanded is Optional */}
-			{/*	{componentsLoaded ? ( */}
+		{componentsLoaded ? (
 				<div>
 					<Hero />
 					<Looking />
@@ -52,9 +52,9 @@ export default function HomePage({spacing}: HomePageProps) {
 			<Career />
 					<QnA />
 				</div>
-			{/*	) : (
+		) : (
 	<LoadingAnim/>
-			)} */}
+			)}
 
 		</div>
 	);
