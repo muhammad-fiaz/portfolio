@@ -10,7 +10,7 @@
 		"build-webpack": "webpack --mode production"
 	},
 	"dependencies": {
-		"@fontsource/fira-code": "^5.0.13",
+		"@fontsource/fira-code": "^5.0.14",
 		"@fontsource/inter": "^5.0.13",
 		"@fortawesome/fontawesome-svg-core": "^6.4.2",
 		"@fortawesome/free-brands-svg-icons": "6.4.2",
