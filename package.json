@@ -11,7 +11,7 @@
 	},
 	"dependencies": {
 		"@fontsource/fira-code": "^5.0.14",
-		"@fontsource/inter": "^5.0.14",
+		"@fontsource/inter": "^5.0.15",
 		"@fortawesome/fontawesome-svg-core": "^6.4.2",
 		"@fortawesome/free-brands-svg-icons": "6.4.2",
 		"@fortawesome/free-regular-svg-icons": "6.4.2",
