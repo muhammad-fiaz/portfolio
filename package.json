@@ -51,7 +51,7 @@
 		"react-transition-group": "^4.4.5",
 		"react-type-animation": "^3.2.0",
 		"sharp": "^0.32.6",
-		"the-new-css-reset": "^1.11.0",
+		"the-new-css-reset": "^1.11.1",
 		"yarn": "^1.22.19"
 	},
 	"devDependencies": {
