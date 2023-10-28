@@ -85,7 +85,7 @@
 		"node-sass": "^9.0.0",
 		"postcss": "^8.4.31",
 		"purgecss": "^5.0.0",
-		"sass": "^1.69.4",
+		"sass": "^1.69.5",
 		"sass-loader": "^13.3.2",
 		"style-loader": "^3.3.3",
 		"tailwindcss": "^3.3.5",
