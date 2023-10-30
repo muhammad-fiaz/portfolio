@@ -1,7 +1,6 @@
-// timeline.module.scss
-
-.timeline {
+.content{
   position: relative;
-  width: 100%;
-  margin: 0 auto; // Center the timeline
+display: flex;
+  align-items: center;
+justify-content: center;
 }
