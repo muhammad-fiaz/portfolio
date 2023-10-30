@@ -1,4 +1,6 @@
 const withPWA = require('next-pwa')({
+	disable: process.env.NODE_ENV === 'development',
+
 	dest: 'public',
 	scope: '/',
 	sw: 'service-worker.js', // Service worker file name
