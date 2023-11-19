@@ -3,7 +3,7 @@ const siteUrl = 'https://muhammadfiaz.com'; // Replace with your website's URL
 module.exports = {
     siteUrl: siteUrl,
     generateRobotsTxt: true, // Generates a robots.txt file
-    outDir: './out',
+    outDir: './public', // The out directory path
     // additionalSitemaps: [`${siteUrl}/sitemap.xml`],
     // Additional configuration options can be added here
 
