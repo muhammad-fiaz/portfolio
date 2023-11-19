@@ -2,19 +2,36 @@
 import React, { useEffect, useState } from 'react';
 import { Player } from '@lottiefiles/react-lottie-player';
 import HCaptcha from '@hcaptcha/react-hcaptcha';
-import ConfettiComponent from './../intro/confetti'; // Import your ConfettiComponent here
+import ConfettiComponent from './../intro/confetti';
+import { checkForUpdates, VersionDetails } from './checkforupdates';
+import settings from '../../../src/content/_settings.json';
 
 const DevelopmentNotice: React.FC = () => {
     const [showPopup, setShowPopup] = useState<boolean>(false);
     const [isVerified, setIsVerified] = useState<boolean>(false);
     const [hasShownConfetti, setHasShownConfetti] = useState<boolean>(false);
+    const [versionDetails, setVersionDetails] = useState<VersionDetails | null>(null);
+    const [autoupdatecheck, setAutoupdatecheck] = useState<boolean | null>(null);
 
     useEffect(() => {
-        const hasSeenNotice = localStorage.getItem('developmentNotice');
+        const fetchData = async () => {
+            // Fetch autoupdatecheck from the JSON file
+            const jsonAutoupdatecheck = settings?.autoupdatecheck || false;
+            setAutoupdatecheck(jsonAutoupdatecheck);
 
-        if (!hasSeenNotice) {
-            setShowPopup(true);
-        }
+            if (jsonAutoupdatecheck) {
+                // Fetch version details only if autoupdatecheck is true
+                const details = await checkForUpdates();
+                setVersionDetails(details);
+            }
+
+            const hasSeenNotice = localStorage.getItem('developmentNotice');
+            if (!hasSeenNotice) {
+                setShowPopup(true);
+            }
+        };
+
+        fetchData();
     }, []);
 
     const handleHidePopup = () => {
@@ -24,7 +41,6 @@ const DevelopmentNotice: React.FC = () => {
     };
 
     const handleVerify = (token: string) => {
-        // Verification logic here
         if (token) {
             setIsVerified(true);
         }
@@ -33,7 +49,7 @@ const DevelopmentNotice: React.FC = () => {
     if (!showPopup) {
         return (
             <>
-                {hasShownConfetti && isVerified && <ConfettiComponent />} {/* Display confetti if the notice is not shown */}
+                {hasShownConfetti && isVerified && <ConfettiComponent />}
             </>
         );
     }
@@ -80,10 +96,12 @@ const DevelopmentNotice: React.FC = () => {
                     </p>
                     {!isVerified ? (
                         <>
-                            <HCaptcha
-                                sitekey="d27bf471-6339-4603-b63f-5ab5fdd96ace"
-                                onVerify={handleVerify}
-                            />
+                            <div style={{ marginBottom: '10px', marginLeft: '20px' }}>
+                                <HCaptcha
+                                    sitekey="d27bf471-6339-4603-b63f-5ab5fdd96ace"
+                                    onVerify={handleVerify}
+                                />
+                            </div>
                             <p style={{ fontSize: '12px', color: 'red', marginBottom: '10px' }}>
                                 Please complete the verification.
                             </p>
@@ -104,9 +122,53 @@ const DevelopmentNotice: React.FC = () => {
                     >
                         I understand
                     </button>
+
                 </div>
+                {autoupdatecheck && ( // Render version details only if autoupdatecheck is true
+                    <div
+                        style={{
+                            marginTop: '10px',
+                            fontSize: '12px',
+                            position: 'fixed',
+                            bottom: '0',
+                            left: '0',
+                            width: '100%',
+                            textAlign: 'center',
+                            padding: '10px',
+                        }}
+                    >
+                        <p>
+                            Current Version:{' '}
+                            {versionDetails ? (
+                                <a
+                                    href={`https://github.com/muhammad-fiaz/portfolio/releases/tag/v${versionDetails.currentVersion}`}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                >
+                                    {versionDetails.currentVersion}
+                                </a>
+                            ) : 'Loading...'}{' '}
+                            -{' '}
+                            {versionDetails && versionDetails.isLatestVersion ? (
+                                'Everything is up to date!👻'
+                            ) : (
+                                <>
+                                    {versionDetails ? (
+                                        <a
+                                            href={versionDetails.releasesUrl}
+                                            target="_blank"
+                                            rel="noopener noreferrer"
+                                        >
+                                            New Version {versionDetails.latestVersion} available🎉
+                                        </a>
+                                    ) : 'Checking for updates...'}
+                                </>
+                            )}
+                        </p>
+                    </div>
+                )}
             </div>
-            {hasShownConfetti && isVerified && <ConfettiComponent />} {/* Display confetti if the verification is successful */}
+            {hasShownConfetti && isVerified && <ConfettiComponent />}
         </div>
     );
 };

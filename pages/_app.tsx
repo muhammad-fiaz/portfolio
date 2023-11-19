@@ -1,6 +1,3 @@
-
-
-
 import React, {useEffect, useState} from 'react';
 import {Router} from 'next/router';
 import NProgress from 'nprogress';
@@ -26,6 +23,7 @@ import "../assets/styles/css/utils/backtotop.css";
 import dynamic from "next/dynamic";
 import "../assets/styles/css/sections/404.css";
 import "../assets/styles/css/utils/anim.css";
+import settings from '../src/content/_settings.json';
 const DevelopmentNotice = dynamic(() => import( "../src/components/dev/status"));
 const BackToTop = dynamic(() => import("../src/components/utils/backtotop"));
 const Chatbot = dynamic(() => import("../src/components/sections/index/chatbot"));
@@ -55,33 +53,40 @@ interface MyAppProps {
     pageProps: any;
 }
 
-const MyApp: React.FC<MyAppProps> = ({Component, pageProps}) => {
+const MyApp: React.FC<MyAppProps> = ({ Component, pageProps }) => {
     const [isLoading, setIsLoading] = useState(true);
 
     useEffect(() => {
-        const timer = setTimeout(() => {
-            setIsLoading(false);
-        }, 4000);
+        // Check if splashscreen is enabled in settings
+        const shouldShowSplashscreen = settings.splashscreen;
 
-        return () => clearTimeout(timer);
+        // If splashscreen is enabled, set a timeout to hide it after a certain duration
+        if (shouldShowSplashscreen) {
+            const timer = setTimeout(() => {
+                setIsLoading(false);
+            }, 4000);
+
+            return () => clearTimeout(timer);
+        } else {
+            // If splashscreen is disabled, hide it immediately
+            setIsLoading(false);
+        }
     }, []);
 
     return (
         <>
             {isLoading ? (
-                    <LoadingScreen/>
+                <LoadingScreen />
             ) : (
                 <LazyMotion features={domAnimation}>
                     <Layout>
-
-                            <Component {...pageProps} />
-                        <DevelopmentNotice/>
-
-                        <Chatbot/>
-                        <Analytics/>
-                        <SetGridGap/>
+                        <Component {...pageProps} />
+                        <DevelopmentNotice />
+                        <Chatbot />
+                        <Analytics />
+                        <SetGridGap />
                     </Layout>
-                    <BackToTop/>
+                    <BackToTop />
                 </LazyMotion>
             )}
         </>

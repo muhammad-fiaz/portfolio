@@ -10,7 +10,8 @@
 - [X] Add a 404 page to the website
 - [X] Add a 500 page to the website
 - [X] Add a Signin page to the website
-
+- [X] Add a Auto New Release Version Display
+- 
 ### Home Content 
 
 - [X] Add a hero section to the home page
