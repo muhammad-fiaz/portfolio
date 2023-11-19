@@ -2,15 +2,20 @@
 	"name": "Muhammad Fiaz",
 	"logo": "",
 	"splashscreen": true,
-    "autoupdatecheck": true,
+	"autoupdatecheck": true,
+	"version": "1.0.6",
 	"username": {
 		"github": "muhammad-fiaz",
 		"medium": "@muhammad-fiaz",
 		"dev": "muhammadfiaz"
 	},
-
+	"repository": {
+		"owner": "muhammad-fiaz",
+		"name": "portfolio",
+		"repoName": "portfolio"
+	},
 	"portfolio": {
-		"fork_this": "This is an open-source project 🥰",
+		"fork_this": "Open-Source project 🥰",
 		"repo_html": "https://github.com/muhammad-fiaz/portfolio.git",
 		"repo_api": "https://api.github.com/repos/muhammad-fiaz/portfolio"
 	}

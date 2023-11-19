@@ -1,5 +1,7 @@
 import semver from 'semver';
+import settings from '../../../src/content/_settings.json';
 
+// Define the VersionDetails interface
 export interface VersionDetails {
     currentVersion: string;
     latestVersion: string;
@@ -7,21 +9,30 @@ export interface VersionDetails {
     releasesUrl: string;
 }
 
+// Define the checkForUpdates function
 export async function checkForUpdates(): Promise<VersionDetails | null> {
+    // Extract the current version from settings.json
+    const currentVersion: string = settings.version || '1.0.0';
+
+    // Define the GitHub repository details
     const repoOwner = 'muhammad-fiaz';
-    const repoName = 'portfolio';
+    const repoName: string = settings?.repository?.repoName || 'portfolio';
 
     try {
+        // Fetch the latest release information from GitHub API
         const response = await fetch(`https://api.github.com/repos/${repoOwner}/${repoName}/releases/latest`);
         const data = await response.json();
 
+        // Extract the latest version from the GitHub response
         const latestVersion: string = data.tag_name.replace(/^v/, '');
-        const currentVersion: string = '1.0.6'; // Set this to your current project version, remove 'v' if present
 
+        // Check if the current version is greater than the latest version
         const isLatestVersion = semver.gt(currentVersion, latestVersion);
 
+        // Define the releases URL
         const releasesUrl = `https://github.com/${repoOwner}/${repoName}/releases/tag/v${latestVersion}`;
 
+        // Log messages based on the update status
         if (isLatestVersion) {
             console.log('Your project is up to date.');
         } else {
@@ -29,8 +40,10 @@ export async function checkForUpdates(): Promise<VersionDetails | null> {
             console.log('Visit the releases page for more information:', releasesUrl);
         }
 
+        // Return the VersionDetails object
         return { currentVersion, latestVersion, isLatestVersion, releasesUrl };
     } catch (error) {
+        // Log an error if there is an issue fetching updates
         console.error('Error checking for updates:', error);
         return null;
     }
