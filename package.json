@@ -23,7 +23,7 @@
 		"@fortawesome/pro-thin-svg-icons": "^6.2.1",
 		"@fortawesome/react-fontawesome": "^0.2.0",
 		"@fortawesome/sharp-solid-svg-icons": "^6.2.1",
-		"@hcaptcha/react-hcaptcha": "^1.8.1",
+		"@hcaptcha/react-hcaptcha": "^1.9.1",
 		"@lottiefiles/react-lottie-player": "^3.5.3",
 		"@uiw/react-markdown-preview": "^4.2.2",
 		"@vercel/analytics": "^1.1.1",
