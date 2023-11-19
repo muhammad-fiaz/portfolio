@@ -1,7 +1,8 @@
 {
 	"name": "Muhammad Fiaz",
 	"logo": "",
-
+	"splashscreen": true,
+    "autoupdatecheck": true,
 	"username": {
 		"github": "muhammad-fiaz",
 		"medium": "@muhammad-fiaz",
