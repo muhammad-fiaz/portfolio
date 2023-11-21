@@ -1,0 +1,31 @@
+/*
+ * Author: Muhammad Fiaz (https://github.com/muhammad-fiaz/)
+ * Copyright (c) 2023 Muhammad Fiaz
+ * License: MIT (See the LICENSE file for details)
+ */
+.back-to-top {
+    position: fixed;
+    top: 70px;
+    right: 50px;
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background-color: var(--primary-bright);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--primary-dark);
+    font-size: 20px;
+    z-index: 9999; /* Set a higher z-index value */
+
+}
+@media (max-width: 768px) {
+    /* Adjust position for mobile devices */
+    .back-to-top {
+        right: 20px;
+    }
+
+}

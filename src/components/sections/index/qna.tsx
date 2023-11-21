@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import Section from '../../structure/section';
 import Container from '../../structure/container';
 import SectionTitle from '../../blocks/section.title';
-import career from '../../../../assets/styles/scss/sections/index/career.module.scss';
+import career from '../../../styles/scss/sections/index/career.module.scss';
 import qna from '../../../../src/content/index/qna.json';
 
 interface QnAItem {

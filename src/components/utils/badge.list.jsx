@@ -7,7 +7,7 @@ import {useInView} from 'react-intersection-observer'
 import Icon from './icon.tsx'
 
 
-import badges from '../../../assets/styles/scss/blocks/badges.module.scss';
+import badges from '../../styles/scss/blocks/badges.module.scss';
 import BadgesBlockProps from "../blocks/about.badges";
 
 

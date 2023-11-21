@@ -7,7 +7,7 @@ import Section from '../../structure/section';
 import Container from '../../structure/container';
 import SectionTitle from '../../blocks/section.title'
 
-import css from '../../../../assets/styles/scss/sections/projects/featured.module.scss'
+import css from '../../../styles/scss/sections/projects/featured.module.scss'
 import content from '../../../content/projects/featured.json'
 
 {/* Featured Projects */}

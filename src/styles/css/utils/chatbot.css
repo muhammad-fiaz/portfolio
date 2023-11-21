@@ -1,0 +1,210 @@
+
+.chatbot {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    z-index: 9999;
+}
+
+.chatbot-button {
+    position: fixed;
+    bottom: 50px;
+    right: 50px;
+    width: 60px;
+    height: 60px;
+    background-color: var(--secondary);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 24px;
+    z-index: 1;
+}
+
+.chatbot-button.active {
+    background-color: var(--secondary);
+}
+
+.chatbot-container {
+    position: fixed;
+    bottom: 130px; /* Adjust the height to show the chat container */
+    right: 50px;
+    width: 300px;
+    height: 400px;
+    background: transparent;
+    backdrop-filter: blur(10px); /* Add blur effect */
+    border-radius: 10px;
+    box-shadow: 0 2px 5px var(--primary);
+    transition: bottom 0.3s ease-in-out;
+    z-index: 99999;
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    margin: 0 10px; /* Add margin space on both sides */
+}
+
+.chat-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    margin-bottom: auto;
+    background-color: transparent;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+ /*   border-bottom: 1px solid var(--primary-bright);*/ /* Add your desired border style here */
+
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 16px;
+    color: var(--primary-bright);
+}
+
+.close-icon {
+    cursor: pointer;
+}
+
+.chat-body {
+    flex-grow: 1;
+    padding: 10px;
+    overflow-y: auto;
+    scrollbar-width: thin; /* Add scrollbar width for Firefox */
+}
+
+.chat-body::-webkit-scrollbar {
+    width: 5px; /* Set the width of the scrollbar */
+}
+
+.chat-body::-webkit-scrollbar-thumb {
+    background-color:var(--primary-dim); /* Set the color of the scrollbar thumb */
+    border-radius: 5px; /* Set the border radius of the scrollbar thumb */
+}
+
+.chat-body::-webkit-scrollbar-track {
+    background-color: var(--primary-dark); /* Set the color of the scrollbar track */
+    border-radius: 5px; /* Set the border radius of the scrollbar track */
+}
+
+.message {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+    animation: fadeIn 0.3s ease-in;
+}
+.message-content {
+    max-width: 80%;
+    margin-top: 5px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    background-color: var(--primary-dark); /* Transparent background color (adjust the alpha value as needed) */
+    transition: transform 0.3s ease-in;
+    word-wrap: break-word; /* Add word-wrap property to wrap long messages */
+}
+
+
+.message.bot {
+    align-self: flex-start;
+    animation: slideInLeft 0.3s ease-in;
+}
+
+.message.user {
+    align-self: flex-end;
+    align-items: flex-end;
+    animation: slideInRight 0.3s ease-in;
+}
+
+.sender-info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.sender-info.user-sender {
+    flex-direction: row-reverse;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.sender-image {
+  /*  width: 16px;
+    height: 16px;  */
+    border-radius: 50%;
+    margin-left: 5px;
+}
+
+.sender-name {
+    font-size: 14px;
+    font-weight: bold;
+    margin-left: 5px;
+}
+
+.chat-footer {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: transparent;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    justify-content: center;
+  /* border-top: 1px solid var(--primary-bright); */
+}
+
+.chat-footer input {
+    flex-grow: 1;
+    padding: 8px;
+    border: none;
+    margin-left: 2px;
+    border-radius: 15px; /* Rounded border */
+    margin-right: 10px;
+}
+
+.send-icon {
+    margin-right: 20px;
+    cursor: pointer;
+}
+/* Media query for mobile screens */
+@media (max-width: 767px) {
+    .chatbot-button {
+        bottom: 60px;
+
+        right: 20px; /* Adjust the right position for mobile screens */
+    }
+}
+
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

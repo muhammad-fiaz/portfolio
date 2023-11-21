@@ -3,7 +3,7 @@ import React, {useState} from 'react';
 import Image from 'next/image';
 import Section from '../../structure/section';
 import Container from '../../structure/container';
-import signin from '../../../../assets/styles/scss/sections/index/about.module.scss';
+import signin from '../../../styles/scss/sections/index/about.module.scss';
 import {useRouter} from 'next/router';
 import Cookies from 'js-cookie'; // Import the js-cookie library
 import axios from 'axios'; // Import axios

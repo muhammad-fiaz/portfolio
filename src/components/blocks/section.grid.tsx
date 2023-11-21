@@ -1,5 +1,4 @@
-
-import grid from '../../../assets/styles/scss/blocks/section.grid.module.scss';
+import grid from '../../styles/scss/blocks/section.grid.module.scss';
 
 interface SectionGridProps {
 	gridSize?: number;

@@ -10,7 +10,7 @@ import Container from '../../../structure/container';
 import SectionTitle from '../../../blocks/section.title'
 
 // Career scss
-import career from '../../../../../assets/styles/scss/sections/index/career.module.scss'
+import career from '../../../../styles/scss/sections/index/career.module.scss'
 import Education from "./education";
 
 

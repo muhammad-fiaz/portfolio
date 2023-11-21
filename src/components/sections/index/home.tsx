@@ -11,7 +11,7 @@ import SectionTitle from '../../blocks/section.title'
 import BadgesBlock from '../../blocks/about.badges'
 import CopyBlock from '../../blocks/about.copy'
 
-import about from '../../../../assets/styles/scss/sections/index/about.module.scss';
+import about from '../../../styles/scss/sections/index/about.module.scss';
 import React from "react";
 
 export default function Home() {

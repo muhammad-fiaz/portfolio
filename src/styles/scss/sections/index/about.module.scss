@@ -1,0 +1,199 @@
+
+@import '../../mixins';
+
+// Section
+.section {
+
+	.content {
+		$padding: 2rem;
+		position: relative;
+		display: flex;
+		flex-direction: row;
+		gap: 1rem;
+
+		> div {
+			padding: 0;
+		}
+
+		h3 {
+			position: relative;
+			color: var(--primary-bright);
+
+
+		}
+
+		.container {
+			display: flex;
+			flex-direction: column;
+			gap: var(--size-1x);
+			border: 1px solid var(--primary-dark);
+			border-radius: 2rem;
+			background: var(--background-dim2);
+			box-shadow: 0 0 30px var(--background);
+			overflow: hidden;
+
+			padding: var(--padding);
+			--padding: 2rem;
+			--padding-left: var(--padding);
+			--padding-top: var(--padding);
+			--padding-right: var(--padding);
+			--padding-bottom: var(--padding);
+
+			&:not(:last-of-type) {
+				margin-bottom: var(--size-1x);
+			}
+		}
+
+		.copy {
+			flex-basis: calc(60% + 1px);
+			flex-grow: 1;
+			flex-shrink: 1;
+		}
+
+		.icon {
+			padding: 0.5rem;
+			display: flex;
+			align-items: center;
+			background: var(--primary-dark);
+			width: fit-content;
+			border-radius: 0.5rem;
+			aspect-ratio: 1;
+
+			svg {
+				height: 1.6rem;
+				color: var(--primary);
+
+				path {
+					fill: url(#fa-gradient) #fff;
+				}
+			}
+
+
+		}
+		
+		// Columns
+		.image {
+			flex-basis: 50%;
+			flex-grow: 1;
+			flex-shrink: 1;
+			position: relative;
+			z-index: -10;
+
+			img {
+				height: 100%;
+				width: 100%;
+				aspect-ratio: 3/4;
+				object-fit: cover;
+				border-radius: 2rem;
+			}
+
+			&.technicalSvg {
+				> span {
+					position: relative !important;
+					overflow: visible !important;
+					height: 100% !important;
+					z-index: -1;
+				}
+				img {    
+					overflow: visible;
+					filter: brightness(100%);
+				}
+			}
+		}
+	}
+}
+
+@include media($max: $mobile) {
+	.section {
+		.content {
+			flex-direction: column;
+
+			> div {
+				flex-basis: 100% !important;
+			}
+
+			.container {
+				padding: 2rem 1.25rem;
+			}
+
+			.image {
+				padding: 1rem;
+				&.technicalSvg {
+					position: absolute;
+					top: 50%;
+					left: 50%;
+					transform: translate(-50%, -50%);
+					height: 140%;
+					z-index: -1;
+				}
+			}
+
+			.copy {
+				padding: 0;
+			}
+		}
+	}
+}
+
+/* New styles for the inlineContainer */
+.inlineContainer {
+	display: flex;
+	flex-direction: column; /* Stack elements in a column on smaller screens */
+	margin-bottom: 1rem;
+}
+
+/* New styles for the label */
+.label {
+	font-weight: bold;
+	margin-right: 0.5rem;
+	margin-top: 5px;
+}
+.themelabel{
+	margin-top: 5px;
+}
+/* New styles for the email container */
+.emailContainer {
+	display: flex;
+	flex-direction: row; /* Align email and input in a row */
+	align-items: center; /* Vertically center the elements */
+}
+
+/* New styles for the email */
+.email {
+	padding: 0.2rem 0.5rem;
+	border: 2px solid transparent;
+	border-radius: 4px;
+	margin-left: 0.5rem; /* Add margin to the left of email to center it */
+}
+/* New styles for the defaultTheme container */
+.defaultTheme {
+	align-items: center;
+}
+
+
+/* New styles for the email input */
+.emailInput {
+	padding: 0.2rem 0.5rem;
+	border: 2px solid #007bff;
+	border-radius: 4px;
+	margin-left: 0.5rem; /* Add margin to the left of email input to center it */
+}
+
+/* New styles for the edit button */
+.editButton {
+	cursor: pointer;
+	padding: 0.2rem 0.5rem;
+	border: none;
+	background-color: #007bff;
+	color: #fff;
+	border-radius: 4px;
+	margin-left: 0.5rem; /* Add margin to the left of the edit button to center it */
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+	.inlineContainer {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+}

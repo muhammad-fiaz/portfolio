@@ -7,7 +7,7 @@ const Icon = dynamic(() => import('../../src/components/utils/icon.tsx'));
 import Section from '../../src/components/structure/section';
 import Container from '../../src/components/structure/container';
 
-const css  = dynamic(import('../../assets/styles/scss/sections/icons/iconForm.module.scss'));
+const css  = dynamic(import('../../src/styles/scss/sections/icons/iconForm.module.scss'));
 import dynamic from "next/dynamic";
 
 export default function PageWithJSbasedForm() {

@@ -1,7 +1,7 @@
 
 import React, {ReactNode} from 'react';
 import Spacing from '../utils/spacing';
-import styles from '../../../assets/styles/scss/structure/container.module.scss';
+import styles from '../../styles/scss/structure/container.module.scss';
 
 interface ContainerProps {
 	classProp?: string;

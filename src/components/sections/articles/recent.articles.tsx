@@ -4,7 +4,7 @@ import Container from '../../structure/container';
 import Image from 'next/image';
 import SectionTitle from '../../blocks/section.title';
 import Icon from '../../utils/icon';
-import css from '../../../../assets/styles/scss/sections/articles/recent.module.scss';
+import css from '../../../styles/scss/sections/articles/recent.module.scss';
 
 // Define the shape of a single medium article
 interface MediumArticle {

@@ -15,14 +15,14 @@ import "@fontsource/inter/400.css"
 import "@fontsource/inter/700.css"
 import "@fontsource/inter/800.css"
 import '../node_modules/devicon/devicon.min.css'
-import '../assets/styles/css/variables.css'
-import '../assets/styles/css/global.css'
-import "../assets/styles/css/utils/splash.css";
-import "../assets/styles/css/utils/chatbot.css";
-import "../assets/styles/css/utils/backtotop.css";
+import '../src/styles/css/variables.css'
+import '../src/styles/css/global.css'
+import "../src/styles/css/utils/splash.css";
+import "../src/styles/css/utils/chatbot.css";
+import "../src/styles/css/utils/backtotop.css";
 import dynamic from "next/dynamic";
-import "../assets/styles/css/sections/404.css";
-import "../assets/styles/css/utils/anim.css";
+import "../src/styles/css/sections/404.css";
+import "../src/styles/css/utils/anim.css";
 import settings from '../src/content/_settings.json';
 const DevelopmentNotice = dynamic(() => import( "../src/components/dev/status"));
 const BackToTop = dynamic(() => import("../src/components/utils/backtotop"));

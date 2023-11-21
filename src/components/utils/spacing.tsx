@@ -1,6 +1,6 @@
 
 // Utility scss
-import spaces from '../../../assets/styles/scss/utils/spacing.module.scss';
+import spaces from '../../styles/scss/utils/spacing.module.scss';
 
 
 export default function Spacing( spacing: string | number | any[] ) {

@@ -1,6 +1,6 @@
 
 // Section structure scss
-import sections from '../../../assets/styles/scss/structure/section.module.scss';
+import sections from '../../styles/scss/structure/section.module.scss';
 import React from "react";
 
 /**

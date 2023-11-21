@@ -7,7 +7,7 @@ import SectionTitle from '../../blocks/section.title'
 
 import Icon from '../../utils/icon'
 
-import css from '../../../../assets/styles/scss/sections/articles/recent.module.scss'
+import css from '../../../styles/scss/sections/articles/recent.module.scss'
 import docs from '../../../content/docs/featured.json'
 import React from "react";
 

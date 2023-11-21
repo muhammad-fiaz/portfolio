@@ -4,7 +4,7 @@ import Section from '../../structure/section';
 import Container from '../../structure/container';
 import Image from 'next/image';
 import Icon from '../../utils/icon';
-import css from '../../../../assets/styles/scss/sections/projects/recent.module.scss';
+import css from '../../../styles/scss/sections/projects/recent.module.scss';
 
 export default function GitProjects({ repos, user }) {
 	return (

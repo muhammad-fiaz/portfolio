@@ -1,6 +1,6 @@
 
 import React from 'react';
-import section from '../../../assets/styles/scss/blocks/section.title.module.scss';
+import section from '../../styles/scss/blocks/section.title.module.scss';
 
 interface SectionTitleProps {
 	preTitle: string;

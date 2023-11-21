@@ -3,7 +3,7 @@ import Section from '../structure/section';
 import Container from '../structure/container';
 import { Player } from "@lottiefiles/react-lottie-player";
 
-import css from '../../../assets/styles/scss/sections/projects/featured.module.scss';
+import css from '../../styles/scss/sections/projects/featured.module.scss';
 import React from "react";
 
 interface InactivedevelopmentProps {

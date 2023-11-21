@@ -9,8 +9,8 @@ import space from '../../utils/spacing';
 
 import HeroBg from '../../blocks/hero.bg/section-bg-color';
 
-import hero from '../../../../assets/styles/scss/sections/index/hero.module.scss';
-import button from '../../../../assets/styles/scss/blocks/button.module.scss';
+import hero from '../../../styles/scss/sections/index/hero.module.scss';
+import button from '../../../styles/scss/blocks/button.module.scss';
 
 import content from '../../../content/index/hero.json';
 

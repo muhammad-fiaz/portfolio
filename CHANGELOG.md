@@ -1,10 +1,13 @@
 # Portfolio Changelog - Release Notes
 
-## v1.0.6(Coming Soon)
+## v1.0.6
 
 - improved ui and performance
 - fixed bugs
+- Next.js 14 Support
 - added new features
+- improved documentation
+- improved code quality
 - Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
 
 ## v1.0.5 

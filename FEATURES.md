@@ -43,7 +43,7 @@ The open-source Portfolio Project, built with Next.js and React, is a dynamic pe
 **Webpack Support**
 - 🛠️ Webpack support for additional custom build optimization options.
 
-**TypeScript Integration**: 
+**TypeScript Integration**:
 - Seamless incorporation of TypeScript for enhanced development in the project.
 
 **Vector Graphics Animations**
@@ -79,6 +79,43 @@ The open-source Portfolio Project, built with Next.js and React, is a dynamic pe
 **Article/Blog Showcase**
 - 📝 Presents insightful articles and blog posts by the developer using medium and dev.to APIs.
 - 🌐 Offers valuable content and perspectives.
+
+**Social Media Integration**
+- 📱 Provides links to developer's social media profiles.
+
+**SEO Optimization**
+- 📈 Optimizes SEO for improved search engine visibility.
+- 📊 Increases organic traffic and enhances user engagement.
+- 📉 Boosts website ranking and improves conversion rates.
+
+**Google Analytics Integration**
+- 📊 Integrates Google Analytics for enhanced insights into user behavior.
+- 📈 Provides valuable data for improved decision-making.
+
+**Continuous Integration and Deployment (CI/CD)**
+- 🚀 Implements CI/CD for automated deployment and testing.
+- 🛠️ Ensures consistent quality and performance.
+- 🔄 Enables rapid iteration and deployment.
+
+** Auto Updates and Versioning Control**
+- Updates are available for the latest version of the project.
+- Download the latest version of the project from the repository.
+- 
+** Auto Deployment on Vercel**
+- 🚀 Provides easy deployment on the Vercel platform for a seamless hosting experience.
+- 📈 Supports Vercel Analytics for insights into application usage.
+- 🛠️ Enables rapid iteration and deployment.
+- 🔄 Ensures consistent quality and performance.
+
+**Documentation and Release Notes**
+- 📖 Provides detailed documentation and release notes for easy reference.
+- 📚 Offers valuable information for users and contributors.
+- 📈 Increases transparency and promotes community engagement.
+
+**Support Me**
+- 🙏 Encourages users to support the developer.
+- 🤝 Provides multiple options for users to contribute.
+
 
 ## Contributing
 

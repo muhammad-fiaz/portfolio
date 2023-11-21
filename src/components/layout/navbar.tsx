@@ -6,7 +6,7 @@ import ThemeMode from '../utils/theme'; // Import a custom utility for theme mod
 
 import settings from '../../content/_settings.json'; // Import site settings from a JSON file
 import content from '../../content/navbar.json'; // Import navigation content from a JSON file
-import css from '../../../assets/styles/scss/structure/navbar.module.scss'; // Import SCSS styles for the navbar
+import css from '../../styles/scss/structure/navbar.module.scss'; // Import SCSS styles for the navbar
 import Cookies from 'js-cookie'; // Import a library for handling cookies
 import Image from 'next/image'; // Import Next.js Image component for optimized images
 

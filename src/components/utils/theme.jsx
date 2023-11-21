@@ -2,7 +2,7 @@
 import { useEffect, useState } from "react";
 import { useRouter } from "next/router";
 
-import css from "../../../assets/styles/scss/utils/theme.module.scss";
+import css from "../../styles/scss/utils/theme.module.scss";
 
 {
 	/* theme settings */

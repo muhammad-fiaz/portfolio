@@ -1,5 +1,5 @@
 
-import css from '../../../assets/styles/scss/utils/page.colors.module.scss'
+import css from '../../styles/scss/utils/page.colors.module.scss'
 
 
 {/* Page Colors */}
