@@ -5,11 +5,11 @@
 .section {
 
 	border-bottom: 1px solid var(--primary-dark);
-	
+
 	max-height: 1440px;
 	height: 100vh;
 	justify-content: center;
-	
+
 	> .container {
 		height: fit-content;
 	}
@@ -105,7 +105,6 @@
 		}
 	}
 }
-
 .heroBackground {
 	--hero-gradient-bg-1: var(--neon-1-1);
 	--hero-gradient-bg-2: var(--neon-1-2);
@@ -145,7 +144,6 @@
 			fogPulse 8s ease-in-out infinite,
 			fogRotate 20s linear infinite,
 			starsFloating 20s linear infinite;
-
 		}
 	}
 }
@@ -212,5 +210,16 @@
 	}
 	75% {
 		transform: translateY(50vh) translateX(50vw);
+	}
+}
+
+/* Media Query for Mobile */
+@media (max-width: 768px) {
+	.heroBackground {
+		.radialContainer {
+			.radialGradient {
+				bottom: -30%;
+			}
+		}
 	}
 }
