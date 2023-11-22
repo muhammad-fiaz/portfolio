@@ -1,16 +1,13 @@
 import semver from 'semver';
-
 import settings from '../../../src/content/_settings.json';
 
 // Define the VersionDetails interface
-
 export interface VersionDetails {
     currentVersion: string;
     latestVersion: string;
     isLatestVersion: boolean;
     releasesUrl: string;
 }
-
 
 // Define the checkForUpdates function
 export async function checkForUpdates(): Promise<VersionDetails | null> {
@@ -29,14 +26,12 @@ export async function checkForUpdates(): Promise<VersionDetails | null> {
         // Extract the latest version from the GitHub response
         const latestVersion: string = data.tag_name.replace(/^v/, '');
 
-        // Check if the current version is greater than the latest version
-        const isLatestVersion = semver.gt(currentVersion, latestVersion);
-
+        // Check if the current version is equal to the latest version
+        const isLatestVersion = semver.eq(currentVersion, latestVersion);
         // Define the releases URL
         const releasesUrl = `https://github.com/${repoOwner}/${repoName}/releases/tag/v${latestVersion}`;
 
         // Log messages based on the update status
-
         if (isLatestVersion) {
             console.log('Your project is up to date.');
         } else {
@@ -44,12 +39,10 @@ export async function checkForUpdates(): Promise<VersionDetails | null> {
             console.log('Visit the releases page for more information:', releasesUrl);
         }
 
-
         // Return the VersionDetails object
         return { currentVersion, latestVersion, isLatestVersion, releasesUrl };
     } catch (error) {
         // Log an error if there is an issue fetching updates
-
         console.error('Error checking for updates:', error);
         return null;
     }
