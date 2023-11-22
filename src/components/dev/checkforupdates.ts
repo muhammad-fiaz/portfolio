@@ -28,7 +28,6 @@ export async function checkForUpdates(): Promise<VersionDetails | null> {
 
         // Check if the current version is equal to the latest version
         const isLatestVersion = semver.eq(currentVersion, latestVersion);
-console.log(isLatestVersion);
         // Define the releases URL
         const releasesUrl = `https://github.com/${repoOwner}/${repoName}/releases/tag/v${latestVersion}`;
 
