@@ -63,7 +63,7 @@
 		"@babel/preset-env": "^7.23.3",
 		"@babel/preset-react": "^7.23.3",
 		"@babel/preset-typescript": "^7.23.3",
-		"@testing-library/jest-dom": "^6.1.4",
+		"@testing-library/jest-dom": "^6.1.5",
 		"@testing-library/react": "^14.1.2",
 		"@types/jest": "^29.5.10",
 		"@types/js-cookie": "^3.0.6",
