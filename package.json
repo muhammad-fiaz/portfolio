@@ -70,7 +70,7 @@
 		"@types/node": "^20.10.1",
 		"@types/nprogress": "^0.2.3",
 		"@types/react": "^18.2.42",
-		"@typescript-eslint/eslint-plugin": "^6.13.1",
+		"@typescript-eslint/eslint-plugin": "^6.13.2",
 		"@typescript-eslint/parser": "^6.13.1",
 		"autoprefixer": "^10.4.16",
 		"babel-loader": "^9.1.3",
