@@ -48,7 +48,7 @@
 		"react-dom": "^18.2.0",
 		"react-dom-confetti": "^0.2.0",
 		"react-intersection-observer": "^9.5.3",
-		"react-loader-spinner": "^5.4.5",
+		"react-loader-spinner": "^6.0.0",
 		"react-redux": "^9.0.2",
 		"react-transition-group": "^4.4.5",
 		"react-type-animation": "^3.2.0",
