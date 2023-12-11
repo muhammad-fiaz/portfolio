@@ -22,6 +22,10 @@
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
+[![GitHub visitors](https://img.shields.io/github/contributors/muhammad-fiaz/portfolio.svg)](https://github.com/muhammad-fiaz/portfolio/graphs/contributors)
+![GitHub Repo Popularity](https://badges.pufler.dev/visits/muhammad-fiaz/portfolio?style=flat-square&label=Popularity) 
+![GitHub stars](https://img.shields.io/github/stars/muhammad-fiaz/portfolio.svg?style=social&label=Stars)
+
 [![Follow me on GitHub](https://img.shields.io/github/followers/muhammad-fiaz?label=Follow&style=social)](https://github.com/muhammad-fiaz)
 
 </div>
