@@ -13,7 +13,7 @@
 [![CodeSee](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codesee-arch-diagram.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codesee-arch-diagram.yml)
 [![Dependency Review](https://github.com/muhammad-fiaz/portfolio/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/dependency-review.yml)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/muhammad-fiaz/portfolio)
-[![Maintainer](https://img.shields.io/badge/maintainer-muhammad-fiaz-blue)](https://GitHub.com/muhammad-fiaz)
+[![Maintainer](https://img.shields.io/badge/maintainer-muhammad--fiaz-blue)](https://GitHub.com/muhammad-fiaz)
 
 [![Latest Release](https://img.shields.io/github/release/muhammad-fiaz/portfolio.svg)](https://github.com/muhammad-fiaz/portfolio/releases/latest)
 [![Current Version](https://img.shields.io/badge/Current%20Version-v1.0.7-blue.svg)](https://github.com/muhammad-fiaz/portfolio/releases/tag/v1.0.7)
