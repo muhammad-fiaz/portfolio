@@ -1,10 +1,9 @@
 <p align="center">
   <img src="https://github.com/muhammad-fiaz/portfolio/assets/75434191/44252d99-9dff-4e5f-9bec-819e3fca7fb3"  alt="Muhammad Fiaz's Portfolio"/>
 </p>
-
 <div align="center">
   <h1><a href="https://muhammadfiaz.com/">muhammadfiaz.com</a> | portfolio</h1>
-
+  
 ![Stability](https://img.shields.io/badge/stability-good-blue.svg) ![MIT License](https://img.shields.io/badge/license-MIT-green)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/muhammad-fiaz/portfolio)
 [![Build Passing](https://badge.buildkite.com/sample.svg?status=passing)](https://github.com/muhammad-fiaz/portfolio)
@@ -197,6 +196,7 @@ If you have any questions or feedback, please don't hesitate to reach out.
 
 Don't forget to Stay tuned for updates and new features!
 
-
+
+
 
 ### Happy Coding! 😊
