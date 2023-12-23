@@ -52,6 +52,7 @@ export interface Config {
   observeMutations: boolean;
   keepOriginalSource: boolean;
   measurePerformance: boolean;
+  mutateApproach: "async" | "sync";
   showMissingIcons: boolean;
 }
 export interface AbstractElement {
