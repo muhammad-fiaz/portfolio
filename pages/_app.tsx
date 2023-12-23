@@ -7,6 +7,7 @@ import {domAnimation, LazyMotion} from "framer-motion"
 import SetGridGap from '../src/components/utils/set.grid'
 import Layout from '../src/components/layout/layout'
 import LoadingScreen from "../src/components/intro/splash";
+import { SpeedInsights } from "@vercel/speed-insights/next"
 // Global CSS
 import "../node_modules/the-new-css-reset/css/reset.css"
 import "@fontsource/fira-code/400.css"
@@ -27,6 +28,7 @@ import settings from '../src/content/_settings.json';
 const DevelopmentNotice = dynamic(() => import( "../src/components/dev/status"));
 const BackToTop = dynamic(() => import("../src/components/utils/backtotop"));
 const Chatbot = dynamic(() => import("../src/components/sections/index/chatbot"));
+import { AppProps } from 'next/app';
 
 
 // NProgress configuration
@@ -48,7 +50,7 @@ Router.events.on('routeChangeError', () => {
     NProgress.done();
 });
 
-interface MyAppProps {
+interface MyAppProps extends AppProps{
     Component: React.FC;
     pageProps: any;
 }
@@ -83,6 +85,7 @@ const MyApp: React.FC<MyAppProps> = ({ Component, pageProps }) => {
                         <Component {...pageProps} />
                         <DevelopmentNotice />
                         <Chatbot />
+                        <SpeedInsights/>
                         <Analytics />
                         <SetGridGap />
                     </Layout>

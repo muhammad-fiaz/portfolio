@@ -1826,7 +1826,6 @@ export const faExclamationTriangle: IconDefinition;
 export const faWarning: IconDefinition;
 export const faDatabase: IconDefinition;
 export const faShare: IconDefinition;
-export const faArrowTurnRight: IconDefinition;
 export const faMailForward: IconDefinition;
 export const faBottleDroplet: IconDefinition;
 export const faMaskFace: IconDefinition;
