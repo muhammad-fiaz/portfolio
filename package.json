@@ -48,6 +48,7 @@
 		"react-confetti": "^6.1.0",
 		"react-dom": "^18.2.0",
 		"react-dom-confetti": "^0.2.0",
+		"react-github-calendar": "^4.0.8",
 		"react-intersection-observer": "^9.5.3",
 		"react-loader-spinner": "^6.1.6",
 		"react-redux": "^9.0.4",
@@ -102,7 +103,7 @@
 		"webpack-cli": "^5.1.4"
 	},
 	"name": "portfolio",
-	"version": "1.0.6",
+	"version": "1.0.7",
 	"description": "Open source portfolio website built with Next.js amd TypeScript.",
 	"main": "pages/index.tsx",
 	"repository": "https://github.com/muhammad-fiaz/portfolio.git",

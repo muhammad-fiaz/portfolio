@@ -15,6 +15,7 @@ const FeaturedProjects = dynamic(() => import('../src/components/sections/projec
 const QnA = dynamic(() => import('../src/components/sections/index/qna'));
 const Color = dynamic(() => import('../src/components/utils/page.colors'));
 import settings from '../src/content/_settings.json';
+import GithubGraphSection from "../src/components/sections/index/github.graph";
 
 interface HomePageProps {
 	spacing: string[];
@@ -38,9 +39,11 @@ export default function HomePage({ spacing }: HomePageProps) {
 			<Hero />
 			<Looking />
 			<About />
+			<GithubGraphSection/>
+
 			<FeaturedProjects />
 			<Technical />
-			{/*<TimeLine/> -> Coming soon */}
+			{/*	<TimeLine/> -> Still In Development*/}
 			<Career />
 			<QnA />
 		</div>
