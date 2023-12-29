@@ -10,7 +10,7 @@
 		"build-webpack": "webpack --mode production"
 	},
 	"dependencies": {
-		"@dotlottie/player-component": "^2.7.4",
+		"@dotlottie/player-component": "^2.7.5",
 		"@fontsource/fira-code": "^5.0.16",
 		"@fontsource/inter": "^5.0.16",
 		"@fortawesome/fontawesome-svg-core": "^6.5.1",
