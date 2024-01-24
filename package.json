@@ -35,7 +35,7 @@
 		"devicon": "^2.15.1",
 		"fiaz": "latest",
 		"fiazjs": "latest",
-		"framer-motion": "^10.17.0",
+		"framer-motion": "^11.0.3",
 		"js-cookie": "^3.0.5",
 		"neurolinkjs": "latest",
 		"next": "^14.0.4",
