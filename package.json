@@ -89,7 +89,7 @@
 		"next-purgecss": "^4.0.0",
 		"next-sitemap": "^4.2.3",
 		"node-sass": "^9.0.0",
-		"postcss": "^8.4.33",
+		"postcss": "^8.4.35",
 		"purgecss": "^5.0.0",
 		"sass": "^1.69.7",
 		"sass-loader": "^13.3.3",
