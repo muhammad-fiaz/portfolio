@@ -31,7 +31,7 @@
 		"@vercel/speed-insights": "^1.0.10",
 		"axios": "^1.6.7",
 		"babel-plugin-macros": "^3.1.0",
-		"compression-webpack-plugin": "^10.0.0",
+		"compression-webpack-plugin": "^11.1.0",
 		"devicon": "^2.15.1",
 		"fiaz": "latest",
 		"fiazjs": "latest",
