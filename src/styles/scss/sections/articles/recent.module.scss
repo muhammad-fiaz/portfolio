@@ -46,17 +46,23 @@
 	border-radius: 1rem;
 	padding: 1rem;
 	overflow: hidden;
+	position: relative;
 
-	&:hover {
-		.featuredImage img {
-			filter: brightness(var(--brightness-high));
-		}	
-	}
 
-	.featuredImage {
-		margin: -1rem;
-		margin-bottom: 0;
-	}
+.featuredImage {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 100%; /* Make the container fill its parent */
+	overflow: hidden;
+	position: relative;
+}
+
+.featuredImage img {
+	width: 100%; /* Make the image fill the container width */
+	height: 100%; /* Make the image fill the container height */
+	object-fit: cover; /* Cover the container without distortion */
+}
 
 	.header {
 		display: flex;

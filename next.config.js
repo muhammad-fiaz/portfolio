@@ -67,6 +67,11 @@ Don't remove these this uses the protocol that are need to function properly
 			},
 			{
 				protocol: 'https',
+				hostname: '**.dev.to',
+				pathname: '/**'
+			},
+			{
+				protocol: 'https',
 				hostname: 'github.com',
 				pathname: '/muhammad-fiaz/portfolio/**',
 			},

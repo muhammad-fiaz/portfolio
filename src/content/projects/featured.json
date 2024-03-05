@@ -1,36 +1,26 @@
 [
 	{
-		"project": "NeuroLink",
-		"url": "https://github.com/muhammad-fiaz/neurolink",
-		"repo": "Private",
-		"descriptionTitle": "NeuroLink is a package",
-		"description": "that aims to provide various AI capabilities, including a chatbot, image processing, audio processing, Django support, and more. It utilizes TensorFlow and other related technologies for natural language processing and AI tasks.",
+		"project": "Logly",
+		"url": "https://github.com/muhammad-fiaz/logly",
+		"repo": "Public",
+		"descriptionTitle": "logly is a log management package",
+		"description": "that aims to provide various log management features such as auto logging and customize the log with color and tags and disable specific log levels ease and more",
 		"imageOptions": [
 		],
 		"images": [
-			{ "key": "mock-stack",	"hover": "right", 	"h": "300", "w": "700", "url": "/img/neurolink.png" }
+			{ "key": "mock-stack",	"hover": "right", 	"h": "300", "w": "300", "url": "/img/logly.png" }
 
 		],
 		"stack": [
-			{ "key": "python", "name": "Python", "type": "devicon" },
-			{ "key": "tensorflow", "name": "TensorFlow", "type": "devicon" },
-			{ "key": "javascript", "name": "JavaScript", "type": "devicon" },
-			{ "key": "git", "name": "Git", "type": "devicon" },
-			{ "key": "numpy", "name": "NumPy", "type": "devicon" },
-			{ "key": "scikit", "name": "scikit-learn", "type": "devicon" },
-			{ "key": "pytorch", "name": "PyTorch", "type": "devicon" },
-			{ "key": "keras", "name": "Keras", "type": "devicon" },
-			{ "key": "js", "name": "JavaScript", "type": "devicon" },
-			{ "key": "typescript", "name": "TypeScript", "type": "devicon" },
-			{ "key": "c", "name": "C", "type": "devicon" },
-			{ "key": "cpp", "name": "C++", "type": "devicon" }
+			{ "key": "python", "name": "Python", "type": "devicon" }
+
 		]
 
 	},
 	{
 		"project": "muhammadfiaz.com",
 		"url": "https://github.com/muhammad-fiaz/portfolio",
-		"repo": "public",
+		"repo": "Public",
 		"descriptionTitle": "An open-source portfolio website",
 		"description": "built on Next.js and React. A fast and responsive single page application.",
 		"imageOptions": [
