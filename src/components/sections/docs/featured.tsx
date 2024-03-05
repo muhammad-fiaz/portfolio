@@ -31,7 +31,7 @@ export default function Recent({ }) {
                                 <>
                                     <article key={index} className={css.project}>
 								<span className={css.featuredImage}>
-                                    <Image src={thumbnail} alt="Documentation thumbnail" height={400} width={600} loading="eager" />
+                                    <Image src={thumbnail} alt="Documentation thumbnail" height={300} width={300}  loading="eager" />
 								</span>
                                         <span className={css.header}>
 									<a href={link} rel="noreferrer" target="_blank">{title} <Icon icon={[ 'fad', 'arrow-up-right-from-square' ]} /></a>

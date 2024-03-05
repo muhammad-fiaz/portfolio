@@ -2,18 +2,18 @@
   {
     "title": "muhammadfiaz.com",
     "pubDate": "2023-07-05",
-    "link": "",
+    "link": "https://github.com/muhammad-fiaz/portfolio#readme",
     "author": "Muhammad Fiaz",
     "thumbnail": "/img/jobs.png",
     "categories": ["Portfolio", "Website", "Blog","personal"]
   },
   {
-    "title": "neurolink",
-    "pubDate": "2023-05-31",
-    "link": "",
+    "title": "logly",
+    "pubDate": "2023-12-29",
+    "link": "https://github.com/muhammad-fiaz/logly#readme",
     "author": "Muhammad Fiaz",
-    "thumbnail": "/img/neurolink.png",
-    "categories": ["Machine Learning","Deep Learning","Artificial Intelligence","Neural Network"]
+    "thumbnail": "/img/logly.png",
+    "categories": ["Python","logging"]
   }
 
 ]
