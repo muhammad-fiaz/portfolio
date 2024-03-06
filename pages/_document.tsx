@@ -134,9 +134,9 @@ export default function Document() {
 
 "/>
                 {/*use your own ads sense code here*/}
-                <Script async
-                        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2040560600290490"
-                        crossOrigin="anonymous"></Script>
+		    <meta name="google-adsense-account" content="ca-pub-2040560600290490">
+                <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-2040560600290490"
+     crossorigin="anonymous"></script>
                 <script
                     type="application/ld+json"
                     dangerouslySetInnerHTML={{
