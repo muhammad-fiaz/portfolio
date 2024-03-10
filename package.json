@@ -57,7 +57,7 @@
 		"semver": "^7.6.0",
 		"sharp": "^0.33.2",
 		"the-new-css-reset": "^1.11.2",
-		"three": "^0.160.1",
+		"three": "^0.162.0",
 		"yarn": "^1.22.21"
 	},
 	"devDependencies": {
