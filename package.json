@@ -97,7 +97,7 @@
 		"tailwindcss": "^3.4.1",
 		"ts-loader": "^9.5.1",
 		"ts-node": "^10.9.2",
-		"typescript": "^5.4.2",
+		"typescript": "^5.4.4",
 		"webpack": "^5.91.0",
 		"webpack-bundle-analyzer": "^4.10.1",
 		"webpack-cli": "^5.1.4"
