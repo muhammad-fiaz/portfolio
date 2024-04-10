@@ -9,7 +9,6 @@
 [![Build Passing](https://badge.buildkite.com/sample.svg?status=passing)](https://github.com/muhammad-fiaz/portfolio)
 [![Continuous Integration](https://github.com/muhammad-fiaz/portfolio/actions/workflows/prettier.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/prettier.yml)
 [![CodeQL](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codeql.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codeql.yml)
-[![CodeSee](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codesee-arch-diagram.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codesee-arch-diagram.yml)
 [![Dependency Review](https://github.com/muhammad-fiaz/portfolio/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/dependency-review.yml)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/muhammad-fiaz/portfolio)
 [![Maintainer](https://img.shields.io/badge/maintainer-muhammad--fiaz-blue)](https://GitHub.com/muhammad-fiaz)
