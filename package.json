@@ -29,7 +29,7 @@
 		"@uiw/react-markdown-preview": "^5.1.1",
 		"@vercel/analytics": "^1.2.2",
 		"@vercel/speed-insights": "^1.0.10",
-		"axios": "^1.6.7",
+		"axios": "^1.6.8",
 		"babel-plugin-macros": "^3.1.0",
 		"compression-webpack-plugin": "^11.1.0",
 		"devicon": "^2.16.0",
