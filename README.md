@@ -165,6 +165,7 @@ Contributions are welcome!
 If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 And make sure to follow the [project guidelines](CODE_OF_CONDUCT.md)
 
+[![Star History Chart](https://api.star-history.com/svg?repos=muhammad-fiaz/portfolio&type=Date)](https://star-history.com/#muhammad-fiaz/portfolio&Date)
 
 
 ## Deploy on Vercel
