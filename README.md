@@ -151,7 +151,10 @@ Also, Read the [React.js Documentation](https://reactjs.org/docs/getting-started
 [![Sponsor muhammad-fiaz](https://img.shields.io/badge/Sponsor-%231EAEDB.svg?&style=for-the-badge&logo=GitHub-Sponsors&logoColor=white)](https://github.com/sponsors/muhammad-fiaz)
 
 </div>
+<div align="center">
 
+[![Star History Chart](https://api.star-history.com/svg?repos=muhammad-fiaz/portfolio&type=Date)](https://star-history.com/#muhammad-fiaz/portfolio&Date)
+</div>
 
 
 ## License
@@ -164,8 +167,6 @@ Contributions are welcome!
 
 If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 And make sure to follow the [project guidelines](CODE_OF_CONDUCT.md)
-
-[![Star History Chart](https://api.star-history.com/svg?repos=muhammad-fiaz/portfolio&type=Date)](https://star-history.com/#muhammad-fiaz/portfolio&Date)
 
 
 ## Deploy on Vercel
