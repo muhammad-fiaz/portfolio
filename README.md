@@ -153,7 +153,7 @@ Also, Read the [React.js Documentation](https://reactjs.org/docs/getting-started
 </div>
 <div align="center">
 
-[![Star History Chart](https://api.star-history.com/svg?repos=muhammad-fiaz/portfolio&type=Date)](https://star-history.com/#muhammad-fiaz/portfolio&Date)
+[![Star History Chart](https://api.star-history.com/svg?repos=muhammad-fiaz/portfolio&type=Date)](https://github.com/muhammad-fiaz/portfolio/)
 </div>
 
 
