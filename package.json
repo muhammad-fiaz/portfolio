@@ -65,7 +65,7 @@
 		"@babel/preset-env": "^7.24.5",
 		"@babel/preset-react": "^7.24.1",
 		"@babel/preset-typescript": "^7.24.1",
-		"@testing-library/jest-dom": "^6.4.2",
+		"@testing-library/jest-dom": "^6.4.5",
 		"@testing-library/react": "^14.2.2",
 		"@types/jest": "^29.5.12",
 		"@types/js-cookie": "^3.0.6",
