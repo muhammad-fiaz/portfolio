@@ -11,7 +11,7 @@
 	},
 	"dependencies": {
 		"@dotlottie/player-component": "^2.7.12",
-		"@fontsource/fira-code": "^5.0.17",
+		"@fontsource/fira-code": "^5.0.18",
 		"@fontsource/inter": "^5.0.18",
 		"@fortawesome/fontawesome-svg-core": "^6.5.2",
 		"@fortawesome/free-brands-svg-icons": "6.5.2",
