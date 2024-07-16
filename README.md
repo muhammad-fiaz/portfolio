@@ -25,12 +25,8 @@
 ![GitHub stars](https://img.shields.io/github/stars/muhammad-fiaz/portfolio.svg?style=social&label=Stars)
 
 [![Follow me on GitHub](https://img.shields.io/github/followers/muhammad-fiaz?label=Follow&style=social)](https://github.com/muhammad-fiaz)
-<a href="https://discord.gg/uRkZ5cHf" target="_blank">
-  <img
-    src="https://dcbadge.limes.pink/api/server/https://discord.gg/uRkZ5cHf?style=shield"
-    alt="discord invite"
-  />
-</a>
+[![Discord](https://img.shields.io/badge/Discord-Join%20us-7289DA?logo=discord&style=flat-square)](https://discord.gg/ShaDFdZ7)
+
 </div>
 
 This project is built with Next.js and React, showcasing [Muhammad Fiaz](https://github.com/muhammad-fiaz/)'s [personal website](https://muhammadfiaz.com/).
