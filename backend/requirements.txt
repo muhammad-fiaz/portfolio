@@ -1,5 +1,5 @@
 pip==23.3
-setuptools==68.0.0
+setuptools==70.0.0
 wheel==0.40.0
 neurolink
 djangorestframework==3.14.0
