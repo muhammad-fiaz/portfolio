@@ -4,7 +4,7 @@ wheel==0.40.0
 neurolink
 djangorestframework==3.14.0
 
-Django~=4.2.3
+Django~=4.2.15
 
 django-cors-headers
 pycryptodome
