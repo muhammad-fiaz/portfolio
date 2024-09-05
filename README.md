@@ -14,7 +14,7 @@
 [![Maintainer](https://img.shields.io/badge/maintainer-muhammad--fiaz-blue)](https://GitHub.com/muhammad-fiaz)
 
 [![Latest Release](https://img.shields.io/github/release/muhammad-fiaz/portfolio.svg)](https://github.com/muhammad-fiaz/portfolio/releases/latest)
-[![Current Version](https://img.shields.io/badge/Current%20Version-v1.0.7-blue.svg)](https://github.com/muhammad-fiaz/portfolio/releases/tag/v1.0.7)
+[![Current Version](https://img.shields.io/badge/Current%20Version-v1.0.8-blue.svg)](https://github.com/muhammad-fiaz/portfolio/releases/tag/v1.0.8)
 
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)

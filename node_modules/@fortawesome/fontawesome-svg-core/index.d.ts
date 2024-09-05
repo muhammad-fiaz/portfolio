@@ -121,6 +121,6 @@ export interface DOM {
 }
 type IconDefinitionOrPack = IconDefinition | IconPack;
 export interface Library {
-  add(...definitions: IconDefinitionOrPack[]): void;
+  add(...definitions: IconDefinitionOrPack[] | IconDefinitionOrPack[][]): void;
   reset(): void;
 }
