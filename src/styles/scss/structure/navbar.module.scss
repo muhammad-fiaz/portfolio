@@ -237,7 +237,6 @@
 	border: none;
 	border-radius: 10px;
 	padding: 6px 12px;
-	margin-right: 20px;
 	cursor: pointer;
 	font-size: 14px;
 }
@@ -247,3 +246,10 @@
 	display: inline-block;
 	width: 8px;
 }
+
+@media (min-width: 1024px) { 
+	.signInButton {
+		margin-right: 20px;
+	}
+}
+

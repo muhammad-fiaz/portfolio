@@ -60,7 +60,7 @@ export default function Navbar() {
 		// If email and password cookies do not exist, show the "Sign In" button
 		signInContent = (
 			<button className={css.signInButton}>
-				<Link href="/signin">Sign In</Link>
+				<Link href="/signin" className="justify-center">Sign In</Link>
 			</button>
 		);
 	}
