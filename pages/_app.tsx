@@ -6,7 +6,8 @@ import {Analytics} from '@vercel/analytics/react';
 import {domAnimation, LazyMotion} from "framer-motion"
 import SetGridGap from '../src/components/utils/set.grid'
 import Layout from '../src/components/layout/layout'
-import LoadingScreen from "../src/components/intro/splash";
+const LoadingScreen = dynamic(() => import("../src/components/intro/splash"), { ssr: false
+});
 import { SpeedInsights } from "@vercel/speed-insights/next"
 // Global CSS
 import "../node_modules/the-new-css-reset/css/reset.css"
@@ -25,7 +26,8 @@ import dynamic from "next/dynamic";
 import "../src/styles/css/sections/404.css";
 import "../src/styles/css/utils/anim.css";
 import settings from '../src/content/_settings.json';
-const DevelopmentNotice = dynamic(() => import( "../src/components/dev/status"));
+const DevelopmentNotice = dynamic(() => import( "../src/components/dev/status"),
+    { ssr: false });
 const BackToTop = dynamic(() => import("../src/components/utils/backtotop"));
 const Chatbot = dynamic(() => import("../src/components/sections/index/chatbot"));
 import { AppProps } from 'next/app';

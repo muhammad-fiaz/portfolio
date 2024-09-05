@@ -160,6 +160,11 @@ var faDrupal = {
   iconName: 'drupal',
   icon: [448, 512, [], "f1a9", "M303.973,108.136C268.2,72.459,234.187,38.35,224.047,0c-9.957,38.35-44.25,72.459-80.019,108.136C90.467,161.7,29.716,222.356,29.716,313.436c-2.337,107.3,82.752,196.18,190.053,198.517S415.948,429.2,418.285,321.9q.091-4.231,0-8.464C418.285,222.356,357.534,161.7,303.973,108.136Zm-174.326,223a130.282,130.282,0,0,0-15.211,24.153,4.978,4.978,0,0,1-3.319,2.766h-1.659c-4.333,0-9.219-8.481-9.219-8.481h0c-1.29-2.028-2.489-4.149-3.687-6.361l-.83-1.752c-11.247-25.72-1.475-62.318-1.475-62.318h0a160.585,160.585,0,0,1,23.231-49.873A290.8,290.8,0,0,1,138.5,201.613l9.219,9.219,43.512,44.434a4.979,4.979,0,0,1,0,6.638L145.78,312.33h0Zm96.612,127.311a67.2,67.2,0,0,1-49.781-111.915c14.2-16.871,31.528-33.464,50.334-55.313,22.309,23.785,36.875,40.1,51.164,57.986a28.413,28.413,0,0,1,2.95,4.425,65.905,65.905,0,0,1,11.984,37.981,66.651,66.651,0,0,1-66.466,66.836ZM352.371,351.6h0a7.743,7.743,0,0,1-6.176,5.347H344.9a11.249,11.249,0,0,1-6.269-5.07h0a348.21,348.21,0,0,0-39.456-48.952L281.387,284.49,222.3,223.185a497.888,497.888,0,0,1-35.4-36.322,12.033,12.033,0,0,0-.922-1.382,35.4,35.4,0,0,1-4.7-9.219V174.51a31.346,31.346,0,0,1,9.218-27.656c11.432-11.431,22.955-22.954,33.833-34.939,11.984,13.275,24.8,26,37.428,38.627h0a530.991,530.991,0,0,1,69.6,79.1,147.494,147.494,0,0,1,27.011,83.8A134.109,134.109,0,0,1,352.371,351.6Z"]
 };
+var faJxl = {
+  prefix: 'fab',
+  iconName: 'jxl',
+  icon: [448, 512, [], "e67b", "M412.2 32H35.8C16 32 0 48 0 67.8V444.2C0 464 16 480 35.8 480H412.2c19.8 0 35.8-16 35.8-35.8V67.8C448 48 432 32 412.2 32zM378.6 333.7c0 40.2-32.6 72.8-72.8 72.8H70.2c0-40.2 32.6-72.8 72.8-72.8H378.6zm0-113.9c0 40.2-32.6 72.8-72.8 72.8H70.2c0-40.2 32.6-72.8 72.8-72.8H378.6zm0-113.9c0 40.2-32.6 72.8-72.8 72.8H70.2c0-40.2 32.6-72.8 72.8-72.8H378.6z"]
+};
 var faHireAHelper = {
   prefix: 'fab',
   iconName: 'hire-a-helper',
@@ -224,7 +229,7 @@ var faContao = {
 var faSquareFontAwesome = {
   prefix: 'fab',
   iconName: 'square-font-awesome',
-  icon: [448, 512, [], "e5ad", "M384.5,32.5h-320c-35.3,0-64,28.7-64,64v320c0,35.3,28.7,64,64,64h320c35.3,0,64-28.7,64-64v-320 C448.5,61.2,419.8,32.5,384.5,32.5z M336.5,312.5c-31.6,11.2-41.2,16-59.8,16c-31.4,0-43.2-16-74.6-16c-10.2,0-18.2,1.6-25.6,4v-32 c7.4-2.2,15.4-4,25.6-4c31.2,0,43.2,16,74.6,16c10.2,0,17.8-1.4,27.8-4.6v-96c-10,3.2-17.6,4.6-27.8,4.6c-31.4,0-43.2-16-74.6-16 c-25.4,0-37.4,10.4-57.6,14.4v153.6c0,8.8-7.2,16-16,16c-8.8,0-16-7.2-16-16v-192c0-8.8,7.2-16,16-16c8.8,0,16,7.2,16,16v6.4 c20.2-4,32.2-14.4,57.6-14.4c31.2,0,43.2,16,74.6,16c18.6,0,28.2-4.8,59.8-16V312.5z"]
+  icon: [448, 512, [], "e5ad", "M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm90 122c0 9.3-4.8 17.4-12.1 22l188.9 0c7.3 0 13.2 5.9 13.2 13.2c0 1.8-.4 3.7-1.1 5.4L312 264l30.9 69.4c.7 1.7 1.1 3.5 1.1 5.4c0 7.3-5.9 13.2-13.2 13.2L144 352l0 32-32 0 0-32 0-176 0-1.5c-6.1-4.8-10-12.2-10-20.5c0-14.4 11.6-26 26-26s26 11.6 26 26z"]
 };
 var faDeskpro = {
   prefix: 'fab',
@@ -367,7 +372,7 @@ var faGoogle = {
 var faSquareFontAwesomeStroke = {
   prefix: 'fab',
   iconName: 'square-font-awesome-stroke',
-  icon: [448, 512, ["font-awesome-alt"], "f35c", "M201.6,152c-25.4,0-37.4,10.4-57.6,14.4V160c0-8.8-7.2-16-16-16s-16,7.2-16,16v192c0,0.8,0.1,1.6,0.2,2.4 c0.1,0.4,0.1,0.8,0.2,1.2c1.6,7.1,8,12.4,15.6,12.4s14-5.3,15.6-12.4c0.1-0.4,0.2-0.8,0.2-1.2c0.1-0.8,0.2-1.6,0.2-2.4V198.4 c4-0.8,7.7-1.8,11.2-3c14.3-4.7,26-11.4,46.4-11.4c31.4,0,43.2,16,74.6,16c8.9,0,15.9-1.1,24.2-3.5c1.2-0.3,2.4-0.7,3.6-1.1v96 c-10,3.2-17.6,4.6-27.8,4.6c-31.4,0-43.4-16-74.6-16c-10.2,0-18.2,1.8-25.6,4v32c7.4-2.4,15.4-4,25.6-4c31.4,0,43.2,16,74.6,16 c18.6,0,28.2-4.8,59.8-16V152c-31.6,11.2-41.2,16-59.8,16C244.8,168,232.8,152,201.6,152z M384,32H64C28.7,32,0,60.7,0,96v320 c0,35.3,28.7,64,64,64h320c35.3,0,64-28.7,64-64V96C448,60.7,419.3,32,384,32z M416,416c0,17.6-14.4,32-32,32H64 c-17.6,0-32-14.4-32-32V96c0-17.6,14.4-32,32-32h320c17.6,0,32,14.4,32,32V416z"]
+  icon: [448, 512, ["font-awesome-alt"], "f35c", "M64 64C46.3 64 32 78.3 32 96l0 320c0 17.7 14.3 32 32 32l320 0c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L64 64zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zm154 58c0 9.3-4.8 17.4-12.1 22l188.9 0c7.3 0 13.2 5.9 13.2 13.2c0 1.8-.4 3.7-1.1 5.4L312 264l30.9 69.4c.8 1.7 1.1 3.5 1.1 5.4c0 7.3-5.9 13.2-13.2 13.2L144 352l0 32-32 0 0-32 0-176 0-1.5c-6.1-4.8-10-12.2-10-20.5c0-14.4 11.6-26 26-26s26 11.6 26 26z"]
 };
 var faFontAwesomeAlt = faSquareFontAwesomeStroke;
 var faAtlassian = {
@@ -631,8 +636,9 @@ var faGolang = {
 var faKickstarter = {
   prefix: 'fab',
   iconName: 'kickstarter',
-  icon: [448, 512, [], "f3bb", "M400 480H48c-26.4 0-48-21.6-48-48V80c0-26.4 21.6-48 48-48h352c26.4 0 48 21.6 48 48v352c0 26.4-21.6 48-48 48zM199.6 178.5c0-30.7-17.6-45.1-39.7-45.1-25.8 0-40 19.8-40 44.5v154.8c0 25.8 13.7 45.6 40.5 45.6 21.5 0 39.2-14 39.2-45.6v-41.8l60.6 75.7c12.3 14.9 39 16.8 55.8 0 14.6-15.1 14.8-36.8 4-50.4l-49.1-62.8 40.5-58.7c9.4-13.5 9.5-34.5-5.6-49.1-16.4-15.9-44.6-17.3-61.4 7l-44.8 64.7v-38.8z"]
+  icon: [448, 512, ["square-kickstarter"], "f3bb", "M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM320.8 233l-23.3 23.1L320.8 279c24.1 23.9 24.1 63 0 86.9s-63.4 23.9-87.6 0l-8.5-8.4c-11.3 16-29.7 26.5-50.9 26.5c-34.1 0-61.9-27.5-61.9-61.4l0-133.2c0-33.8 27.7-61.4 61.9-61.4c21.1 0 39.6 10.5 50.9 26.5l8.5-8.4c24.1-23.9 63.4-23.9 87.6 0s24.1 63 0 86.9z"]
 };
+var faSquareKickstarter = faKickstarter;
 var faGrav = {
   prefix: 'fab',
   iconName: 'grav',
@@ -850,7 +856,7 @@ var faAsymmetrik = {
 var faFontAwesome = {
   prefix: 'fab',
   iconName: 'font-awesome',
-  icon: [448, 512, [62501, 62694, "font-awesome-flag", "font-awesome-logo-full"], "f2b4", "M448 48V384C385 407 366 416 329 416C266 416 242 384 179 384C159 384 143 388 128 392V328C143 324 159 320 179 320C242 320 266 352 329 352C349 352 364 349 384 343V135C364 141 349 144 329 144C266 144 242 112 179 112C128 112 104 133 64 141V448C64 466 50 480 32 480S0 466 0 448V64C0 46 14 32 32 32S64 46 64 64V77C104 69 128 48 179 48C242 48 266 80 329 80C366 80 385 71 448 48Z"]
+  icon: [512, 512, [62501, 62694, "font-awesome-flag", "font-awesome-logo-full"], "f2b4", "M91.7 96C106.3 86.8 116 70.5 116 52C116 23.3 92.7 0 64 0S12 23.3 12 52c0 16.7 7.8 31.5 20 41l0 3 0 352 0 64 64 0 0-64 373.6 0c14.6 0 26.4-11.8 26.4-26.4c0-3.7-.8-7.3-2.3-10.7L432 272l61.7-138.9c1.5-3.4 2.3-7 2.3-10.7c0-14.6-11.8-26.4-26.4-26.4L91.7 96z"]
 };
 var faFontAwesomeFlag = faFontAwesome;
 var faFontAwesomeLogoFull = faFontAwesome;
@@ -1309,6 +1315,11 @@ var faSquareGooglePlus = {
   icon: [448, 512, ["google-plus-square"], "f0d4", "M448 96c0-35.3-28.7-64-64-64H64C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96zM64 256c0-55.3 44.7-100 100-100c27 0 49.5 9.8 67 26.2l-27.1 26.1c-7.4-7.1-20.3-15.4-39.8-15.4c-34.1 0-61.9 28.2-61.9 63.2c0 34.9 27.8 63.2 61.9 63.2c39.6 0 54.4-28.5 56.8-43.1H164V241.8h94.4c1 5 1.6 10.1 1.6 16.6c0 57.1-38.3 97.6-96 97.6c-55.3 0-100-44.7-100-100zm291 18.2v29H325.8v-29h-29V245h29V216H355v29h29v29.2H355z"]
 };
 var faGooglePlusSquare = faSquareGooglePlus;
+var faWebAwesome = {
+  prefix: 'fab',
+  iconName: 'web-awesome',
+  icon: [640, 512, [], "e682", "M372.2 52c0 20.9-12.4 39-30.2 47.2L448 192l104.4-20.9c-5.3-7.7-8.4-17.1-8.4-27.1c0-26.5 21.5-48 48-48s48 21.5 48 48c0 26-20.6 47.1-46.4 48L481 442.3c-10.3 23-33.2 37.7-58.4 37.7l-205.2 0c-25.2 0-48-14.8-58.4-37.7L46.4 192C20.6 191.1 0 170 0 144c0-26.5 21.5-48 48-48s48 21.5 48 48c0 10.1-3.1 19.4-8.4 27.1L192 192 298.1 99.1c-17.7-8.3-30-26.3-30-47.1c0-28.7 23.3-52 52-52s52 23.3 52 52z"]
+};
 var faMandalorian = {
   prefix: 'fab',
   iconName: 'mandalorian',
@@ -1567,6 +1578,11 @@ var faXbox = {
   iconName: 'xbox',
   icon: [512, 512, [], "f412", "M369.9 318.2c44.3 54.3 64.7 98.8 54.4 118.7-7.9 15.1-56.7 44.6-92.6 55.9-29.6 9.3-68.4 13.3-100.4 10.2-38.2-3.7-76.9-17.4-110.1-39C93.3 445.8 87 438.3 87 423.4c0-29.9 32.9-82.3 89.2-142.1 32-33.9 76.5-73.7 81.4-72.6 9.4 2.1 84.3 75.1 112.3 109.5zM188.6 143.8c-29.7-26.9-58.1-53.9-86.4-63.4-15.2-5.1-16.3-4.8-28.7 8.1-29.2 30.4-53.5 79.7-60.3 122.4-5.4 34.2-6.1 43.8-4.2 60.5 5.6 50.5 17.3 85.4 40.5 120.9 9.5 14.6 12.1 17.3 9.3 9.9-4.2-11-.3-37.5 9.5-64 14.3-39 53.9-112.9 120.3-194.4zm311.6 63.5C483.3 127.3 432.7 77 425.6 77c-7.3 0-24.2 6.5-36 13.9-23.3 14.5-41 31.4-64.3 52.8C367.7 197 427.5 283.1 448.2 346c6.8 20.7 9.7 41.1 7.4 52.3-1.7 8.5-1.7 8.5 1.4 4.6 6.1-7.7 19.9-31.3 25.4-43.5 7.4-16.2 15-40.2 18.6-58.7 4.3-22.5 3.9-70.8-.8-93.4zM141.3 43C189 40.5 251 77.5 255.6 78.4c.7.1 10.4-4.2 21.6-9.7 63.9-31.1 94-25.8 107.4-25.2-63.9-39.3-152.7-50-233.9-11.7-23.4 11.1-24 11.9-9.4 11.2z"]
 };
+var faSquareWebAwesomeStroke = {
+  prefix: 'fab',
+  iconName: 'square-web-awesome-stroke',
+  icon: [448, 512, [], "e684", "M64 64C46.3 64 32 78.3 32 96l0 320c0 17.7 14.3 32 32 32l320 0c17.7 0 32-14.3 32-32l0-320c0-17.7-14.3-32-32-32L64 64zM0 96C0 60.7 28.7 32 64 32l320 0c35.3 0 64 28.7 64 64l0 320c0 35.3-28.7 64-64 64L64 480c-35.3 0-64-28.7-64-64L0 96zm235 81.6L288 224l52.2-10.4c-2.6-3.9-4.2-8.5-4.2-13.6c0-13.3 10.7-24 24-24s24 10.7 24 24c0 13-10.3 23.6-23.2 24L304.5 349.1c-5.2 11.5-16.6 18.9-29.2 18.9l-102.6 0c-12.6 0-24-7.4-29.2-18.9L87.2 224C74.3 223.6 64 213 64 200c0-13.3 10.7-24 24-24s24 10.7 24 24c0 5-1.5 9.7-4.2 13.6L160 224l53.1-46.4c-8.9-4.1-15-13.1-15-23.6c0-14.4 11.6-26 26-26s26 11.6 26 26c0 10.5-6.2 19.5-15.1 23.6z"]
+};
 var faSearchengin = {
   prefix: 'fab',
   iconName: 'searchengin',
@@ -1682,7 +1698,7 @@ var faCmplid = {
 var faUpwork = {
   prefix: 'fab',
   iconName: 'upwork',
-  icon: [448, 512, [], "e641", "M64 32C28.7 32 0 60.7 0 96V416c0 35.3 28.7 64 64 64H384c35.3 0 64-28.7 64-64V96c0-35.3-28.7-64-64-64H64zM270.8 274.3c5.2 8.4 23.6 29.9 51.5 29.9v0c25.2 0 44.9-20.2 44.9-49.7s-19.4-49.7-44.9-49.7s-44.9 16.7-51.5 69.5zm-26.7-41.8c7.3-30.5 32.7-60.1 78.2-60.1l0 0c45.1 0 80.9 35.2 80.9 82.2s-35.9 81.9-80.9 81.9c-.6 0-1.1 0-1.7 0c-.5 0-1.1 0-1.6 0h-.1c-14.5-.5-28.7-4.8-40.9-12.6c-4.7-2.8-9.1-6-13.4-9.5l-12.8 78.4H214.9l19.4-110.6c-20.8-29.1-31.6-62.4-36.2-79.7V255c0 48-30.5 81.5-74.2 81.5c-22 0-41-8-54.8-23.3c-13.4-14.8-20.8-35.5-20.8-58.3V176.8H84.5l-.3 78.2c0 28.4 14.5 49.3 39.8 49.3s38.2-20.9 38.2-49.3V176.8h62.8c4.8 19.3 10.9 40.1 19.2 55.6z"]
+  icon: [641, 512, [], "e641", "M494.7 295.6c-50.3 0-83.5-38.9-92.8-53.9c11.9-95.3 46.8-125.4 92.8-125.4c45.5 0 80.9 36.4 80.9 89.7s-35.4 89.7-80.9 89.7zm0-237.8c-81.9 0-127.8 53.4-141 108.4c-14.9-28-25.9-65.5-34.5-100.3H206v141c0 51.1-23.3 89-68.8 89s-71.6-37.8-71.6-89l.5-141H.8v141c0 41.1 13.3 78.4 37.6 105.1c25 27.5 59.2 41.8 98.8 41.8c78.8 0 133.8-60.4 133.8-146.9V112.1c8.2 31.2 27.8 91.1 65.3 143.6l-35 199.4h66.4l23.1-141.3c7.6 6.3 15.7 12 24.2 17c22.2 14 47.7 21.9 73.9 22.8c0 0 4 .2 6.1 .2c81.2 0 145.9-62.9 145.9-147.8s-64.8-148.1-146-148.1z"]
 };
 var faFacebook = {
   prefix: 'fab',
@@ -1738,6 +1754,11 @@ var faWhatsapp = {
   prefix: 'fab',
   iconName: 'whatsapp',
   icon: [448, 512, [], "f232", "M380.9 97.1C339 55.1 283.2 32 223.9 32c-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L0 480l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157zm-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3L72 359.2l-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1 34.8 34.9 56.2 81.2 56.1 130.5 0 101.8-84.9 184.6-186.6 184.6zm101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8-3.7 5.6-14.3 18-17.6 21.8-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7-1.4-2.8-12.5-30.1-17.1-41.2-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2-3.7 0-9.7 1.4-14.8 6.9-5.1 5.6-19.4 19-19.4 46.3 0 27.3 19.9 53.7 22.6 57.4 2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4 4.6-13 4.6-24.1 3.2-26.4-1.3-2.5-5-3.9-10.5-6.6z"]
+};
+var faSquareUpwork = {
+  prefix: 'fab',
+  iconName: 'square-upwork',
+  icon: [448, 512, [], "e67c", "M56 32l336 0c30.9 0 56 25.1 56 56l0 336c0 30.9-25.1 56-56 56L56 480c-30.9 0-56-25.1-56-56L0 88C0 57.1 25.1 32 56 32zM270.9 274.2c6.6-52.9 25.9-69.5 51.4-69.5c25.3 0 44.9 20.2 44.9 49.7s-19.7 49.7-44.9 49.7c-27.9 0-46.3-21.5-51.4-29.9zm-26.7-41.8c-8.2-15.5-14.3-36.3-19.2-55.6l-29.7 0-33.2 0 0 78.1c0 28.4-12.9 49.4-38.2 49.4s-39.8-20.9-39.8-49.3l.3-78.1-36.2 0 0 78.1c0 22.8 7.4 43.5 20.9 58.2c13.9 15.2 32.8 23.2 54.8 23.2c43.7 0 74.2-33.5 74.2-81.5l0-52.5c4.6 17.3 15.4 50.5 36.2 79.7L215 392.6l36.8 0 12.8-78.4c4.2 3.5 8.7 6.6 13.4 9.4c12.3 7.8 26.4 12.2 40.9 12.6l.1 0c.5 0 1.1 0 1.6 0c.6 0 1.1 0 1.7 0c45.1 0 80.9-34.9 80.9-81.9s-35.9-82.2-80.9-82.2c-45.4 0-70.9 29.7-78.1 60.1z"]
 };
 var faSlideshare = {
   prefix: 'fab',
@@ -1847,7 +1868,7 @@ var faPiedPiperHat = {
 var faKickstarterK = {
   prefix: 'fab',
   iconName: 'kickstarter-k',
-  icon: [384, 512, [], "f3bc", "M147.3 114.4c0-56.2-32.5-82.4-73.4-82.4C26.2 32 0 68.2 0 113.4v283c0 47.3 25.3 83.4 74.9 83.4 39.8 0 72.4-25.6 72.4-83.4v-76.5l112.1 138.3c22.7 27.2 72.1 30.7 103.2 0 27-27.6 27.3-67.4 7.4-92.2l-90.8-114.8 74.9-107.4c17.4-24.7 17.5-63.1-10.4-89.8-30.3-29-82.4-31.6-113.6 12.8L147.3 185v-70.6z"]
+  icon: [448, 512, [], "f3bc", "M356.6 256.2l40.8-40.5c42.2-41.9 42.2-110.3 0-152.1s-111-41.9-153.2 0L229.3 78.4C209.6 50.3 177.1 32 140.2 32C80.5 32 32 80.2 32 139.5V372.5C32 431.9 80.5 480 140.2 480c37.1 0 69.3-18.3 89-46.4l14.9 14.7c42.2 41.9 111 41.9 153.2 0s42.2-110.3 0-152.1l-40.8-40z"]
 };
 var faYandex = {
   prefix: 'fab',
@@ -1868,6 +1889,11 @@ var faSellsy = {
   prefix: 'fab',
   iconName: 'sellsy',
   icon: [640, 512, [], "f213", "M539.71 237.308c3.064-12.257 4.29-24.821 4.29-37.384C544 107.382 468.618 32 376.076 32c-77.22 0-144.634 53.012-163.02 127.781-15.322-13.176-34.934-20.53-55.157-20.53-46.271 0-83.962 37.69-83.962 83.961 0 7.354.92 15.015 3.065 22.369-42.9 20.225-70.785 63.738-70.785 111.234C6.216 424.843 61.68 480 129.401 480h381.198c67.72 0 123.184-55.157 123.184-123.184.001-56.384-38.916-106.025-94.073-119.508zM199.88 401.554c0 8.274-7.048 15.321-15.321 15.321H153.61c-8.274 0-15.321-7.048-15.321-15.321V290.626c0-8.273 7.048-15.321 15.321-15.321h30.949c8.274 0 15.321 7.048 15.321 15.321v110.928zm89.477 0c0 8.274-7.048 15.321-15.322 15.321h-30.949c-8.274 0-15.321-7.048-15.321-15.321V270.096c0-8.274 7.048-15.321 15.321-15.321h30.949c8.274 0 15.322 7.048 15.322 15.321v131.458zm89.477 0c0 8.274-7.047 15.321-15.321 15.321h-30.949c-8.274 0-15.322-7.048-15.322-15.321V238.84c0-8.274 7.048-15.321 15.322-15.321h30.949c8.274 0 15.321 7.048 15.321 15.321v162.714zm87.027 0c0 8.274-7.048 15.321-15.322 15.321h-28.497c-8.274 0-15.321-7.048-15.321-15.321V176.941c0-8.579 7.047-15.628 15.321-15.628h28.497c8.274 0 15.322 7.048 15.322 15.628v224.613z"]
+};
+var faSquareWebAwesome = {
+  prefix: 'fab',
+  iconName: 'square-web-awesome',
+  icon: [448, 512, [], "e683", "M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zM235 177.6L288 224l52.2-10.4c-2.6-3.9-4.2-8.5-4.2-13.6c0-13.3 10.7-24 24-24s24 10.7 24 24c0 13-10.3 23.6-23.2 24L304.5 349.1c-5.2 11.5-16.6 18.9-29.2 18.9l-102.6 0c-12.6 0-24-7.4-29.2-18.9L87.2 224C74.3 223.6 64 213 64 200c0-13.3 10.7-24 24-24s24 10.7 24 24c0 5-1.5 9.7-4.2 13.6L160 224l53.1-46.4c-8.9-4.1-15-13.1-15-23.6c0-14.4 11.6-26 26-26s26 11.6 26 26c0 10.5-6.2 19.5-15.1 23.6z"]
 };
 var faSass = {
   prefix: 'fab',
@@ -1924,6 +1950,11 @@ var faWaze = {
   prefix: 'fab',
   iconName: 'waze',
   icon: [512, 512, [], "f83f", "M502.17 201.67C516.69 287.53 471.23 369.59 389 409.8c13 34.1-12.4 70.2-48.32 70.2a51.68 51.68 0 0 1-51.57-49c-6.44.19-64.2 0-76.33-.64A51.69 51.69 0 0 1 159 479.92c-33.86-1.36-57.95-34.84-47-67.92-37.21-13.11-72.54-34.87-99.62-70.8-13-17.28-.48-41.8 20.84-41.8 46.31 0 32.22-54.17 43.15-110.26C94.8 95.2 193.12 32 288.09 32c102.48 0 197.15 70.67 214.08 169.67zM373.51 388.28c42-19.18 81.33-56.71 96.29-102.14 40.48-123.09-64.15-228-181.71-228-83.45 0-170.32 55.42-186.07 136-9.53 48.91 5 131.35-68.75 131.35C58.21 358.6 91.6 378.11 127 389.54c24.66-21.8 63.87-15.47 79.83 14.34 14.22 1 79.19 1.18 87.9.82a51.69 51.69 0 0 1 78.78-16.42zM205.12 187.13c0-34.74 50.84-34.75 50.84 0s-50.84 34.74-50.84 0zm116.57 0c0-34.74 50.86-34.75 50.86 0s-50.86 34.75-50.86 0zm-122.61 70.69c-3.44-16.94 22.18-22.18 25.62-5.21l.06.28c4.14 21.42 29.85 44 64.12 43.07 35.68-.94 59.25-22.21 64.11-42.77 4.46-16.05 28.6-10.36 25.47 6-5.23 22.18-31.21 62-91.46 62.9-42.55 0-80.88-27.84-87.9-64.25z"]
+};
+var faBluesky = {
+  prefix: 'fab',
+  iconName: 'bluesky',
+  icon: [576, 512, [], "e671", "M407.8 294.7c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3zM288 227.1C261.9 176.4 190.9 81.9 124.9 35.3C61.6-9.4 37.5-1.7 21.6 5.5C3.3 13.8 0 41.9 0 58.4S9.1 194 15 213.9c19.5 65.7 89.1 87.9 153.2 80.7c3.3-.5 6.6-.9 10-1.4c-3.3 .5-6.6 1-10 1.4C74.3 308.6-9.1 342.8 100.3 464.5C220.6 589.1 265.1 437.8 288 361.1c22.9 76.7 49.2 222.5 185.6 103.4c102.4-103.4 28.1-156-65.8-169.9c-3.3-.4-6.7-.8-10-1.3c3.4 .4 6.7 .9 10 1.3c64.1 7.1 133.6-15.1 153.2-80.7C566.9 194 576 75 576 58.4s-3.3-44.7-21.6-52.9c-15.8-7.1-40-14.9-103.2 29.8C385.1 81.9 314.1 176.4 288 227.1z"]
 };
 var faCcJcb = {
   prefix: 'fab',
@@ -2487,6 +2518,7 @@ var icons = {
   faCentercode: faCentercode,
   faGlideG: faGlideG,
   faDrupal: faDrupal,
+  faJxl: faJxl,
   faHireAHelper: faHireAHelper,
   faCreativeCommonsBy: faCreativeCommonsBy,
   faUnity: faUnity,
@@ -2588,6 +2620,7 @@ var icons = {
   faItunesNote: faItunesNote,
   faGolang: faGolang,
   faKickstarter: faKickstarter,
+  faSquareKickstarter: faSquareKickstarter,
   faGrav: faGrav,
   faWeibo: faWeibo,
   faUncharted: faUncharted,
@@ -2732,6 +2765,7 @@ var icons = {
   faFacebookF: faFacebookF,
   faSquareGooglePlus: faSquareGooglePlus,
   faGooglePlusSquare: faGooglePlusSquare,
+  faWebAwesome: faWebAwesome,
   faMandalorian: faMandalorian,
   faFirstOrderAlt: faFirstOrderAlt,
   faOsi: faOsi,
@@ -2786,6 +2820,7 @@ var icons = {
   faSuperpowers: faSuperpowers,
   faResolving: faResolving,
   faXbox: faXbox,
+  faSquareWebAwesomeStroke: faSquareWebAwesomeStroke,
   faSearchengin: faSearchengin,
   faTiktok: faTiktok,
   faSquareFacebook: faSquareFacebook,
@@ -2822,6 +2857,7 @@ var icons = {
   faTradeFederation: faTradeFederation,
   faAutoprefixer: faAutoprefixer,
   faWhatsapp: faWhatsapp,
+  faSquareUpwork: faSquareUpwork,
   faSlideshare: faSlideshare,
   faGooglePlay: faGooglePlay,
   faViadeo: faViadeo,
@@ -2848,6 +2884,7 @@ var icons = {
   faReadme: faReadme,
   faHtml5: faHtml5,
   faSellsy: faSellsy,
+  faSquareWebAwesome: faSquareWebAwesome,
   faSass: faSass,
   faWirsindhandwerk: faWirsindhandwerk,
   faWsh: faWsh,
@@ -2860,6 +2897,7 @@ var icons = {
   faApper: faApper,
   faFortAwesome: faFortAwesome,
   faWaze: faWaze,
+  faBluesky: faBluesky,
   faCcJcb: faCcJcb,
   faSnapchat: faSnapchat,
   faSnapchatGhost: faSnapchatGhost,
@@ -2974,4 +3012,4 @@ var icons = {
   faSteamSymbol: faSteamSymbol
 };
 
-export { icons as fab, prefix, faMonero, faHooli, faYelp, faCcVisa, faLastfm, faShopware, faCreativeCommonsNc, faAws, faRedhat, faYoast, faCloudflare, faUps, faPixiv, faWpexplorer, faDyalog, faBity, faStackpath, faBuysellads, faFirstOrder, faModx, faGuilded, faVnv, faSquareJs, faJsSquare, faMicrosoft, faQq, faOrcid, faJava, faInvision, faCreativeCommonsPdAlt, faCentercode, faGlideG, faDrupal, faHireAHelper, faCreativeCommonsBy, faUnity, faWhmcs, faRocketchat, faVk, faUntappd, faMailchimp, faCss3Alt, faSquareReddit, faRedditSquare, faVimeoV, faContao, faSquareFontAwesome, faDeskpro, faBrave, faSistrix, faSquareInstagram, faInstagramSquare, faBattleNet, faTheRedYeti, faSquareHackerNews, faHackerNewsSquare, faEdge, faThreads, faNapster, faSquareSnapchat, faSnapchatSquare, faGooglePlusG, faArtstation, faMarkdown, faSourcetree, faGooglePlus, faDiaspora, faFoursquare, faStackOverflow, faGithubAlt, faPhoenixSquadron, faPagelines, faAlgolia, faRedRiver, faCreativeCommonsSa, faSafari, faGoogle, faSquareFontAwesomeStroke, faFontAwesomeAlt, faAtlassian, faLinkedinIn, faDigitalOcean, faNimblr, faChromecast, faEvernote, faHackerNews, faCreativeCommonsSampling, faAdversal, faCreativeCommons, faWatchmanMonitoring, faFonticons, faWeixin, faShirtsinbulk, faCodepen, faGitAlt, faLyft, faRev, faWindows, faWizardsOfTheCoast, faSquareViadeo, faViadeoSquare, faMeetup, faCentos, faAdn, faCloudsmith, faOpensuse, faPiedPiperAlt, faSquareDribbble, faDribbbleSquare, faCodiepie, faNode, faMix, faSteam, faCcApplePay, faScribd, faDebian, faOpenid, faInstalod, faExpeditedssl, faSellcast, faSquareTwitter, faTwitterSquare, faRProject, faDelicious, faFreebsd, faVuejs, faAccusoft, faIoxhost, faFonticonsFi, faAppStore, faCcMastercard, faItunesNote, faGolang, faKickstarter, faGrav, faWeibo, faUncharted, faFirstdraft, faSquareYoutube, faYoutubeSquare, faWikipediaW, faWpressr, faRendact, faAngellist, faGalacticRepublic, faNfcDirectional, faSkype, faJoget, faFedora, faStripeS, faMeta, faLaravel, faHotjar, faBluetoothB, faSquareLetterboxd, faStickerMule, faCreativeCommonsZero, faHips, faBehance, faReddit, faDiscord, faChrome, faAppStoreIos, faCcDiscover, faWpbeginner, faConfluence, faShoelace, faMdb, faDochub, faAccessibleIcon, faEbay, faAmazon, faUnsplash, faYarn, faSquareSteam, faSteamSquare, fa500px, faSquareVimeo, faVimeoSquare, faAsymmetrik, faFontAwesome, faFontAwesomeFlag, faFontAwesomeLogoFull, faGratipay, faApple, faHive, faGitkraken, faKeybase, faApplePay, faPadlet, faAmazonPay, faSquareGithub, faGithubSquare, faStumbleupon, faFedex, faPhoenixFramework, faShopify, faNeos, faSquareThreads, faHackerrank, faResearchgate, faSwift, faAngular, faSpeakap, faAngrycreative, faYCombinator, faEmpire, faEnvira, faGoogleScholar, faSquareGitlab, faGitlabSquare, faStudiovinari, faPiedPiper, faWordpress, faProductHunt, faFirefox, faLinode, faGoodreads, faSquareOdnoklassniki, faOdnoklassnikiSquare, faJsfiddle, faSith, faThemeisle, faPage4, faHashnode, faReact, faCcPaypal, faSquarespace, faCcStripe, faCreativeCommonsShare, faBitcoin, faKeycdn, faOpera, faItchIo, faUmbraco, faGalacticSenate, faUbuntu, faDraft2digital, faStripe, faHouzz, faGg, faDhl, faSquarePinterest, faPinterestSquare, faXing, faBlackberry, faCreativeCommonsPd, faPlaystation, faQuinscape, faLess, faBloggerB, faOpencart, faVine, faSignalMessenger, faPaypal, faGitlab, faTypo3, faRedditAlien, faYahoo, faDailymotion, faAffiliatetheme, faPiedPiperPp, faBootstrap, faOdnoklassniki, faNfcSymbol, faMintbit, faEthereum, faSpeakerDeck, faCreativeCommonsNcEu, faPatreon, faAvianex, faEllo, faGofore, faBimobject, faBraveReverse, faFacebookF, faSquareGooglePlus, faGooglePlusSquare, faMandalorian, faFirstOrderAlt, faOsi, faGoogleWallet, faDAndDBeyond, faPeriscope, faFulcrum, faCloudscale, faForumbee, faMizuni, faSchlix, faSquareXing, faXingSquare, faBandcamp, faWpforms, faCloudversify, faUsps, faMegaport, faMagento, faSpotify, faOptinMonster, faFly, faAviato, faItunes, faCuttlefish, faBlogger, faFlickr, faViber, faSoundcloud, faDigg, faTencentWeibo, faLetterboxd, faSymfony, faMaxcdn, faEtsy, faFacebookMessenger, faAudible, faThinkPeaks, faBilibili, faErlang, faXTwitter, faCottonBureau, faDashcube, fa42Group, faInnosoft, faStackExchange, faElementor, faSquarePiedPiper, faPiedPiperSquare, faCreativeCommonsNd, faPalfed, faSuperpowers, faResolving, faXbox, faSearchengin, faTiktok, faSquareFacebook, faFacebookSquare, faRenren, faLinux, faGlide, faLinkedin, faHubspot, faDeploydog, faTwitch, faRavelry, faMixer, faSquareLastfm, faLastfmSquare, faVimeo, faMendeley, faUniregistry, faFigma, faCreativeCommonsRemix, faCcAmazonPay, faDropbox, faInstagram, faCmplid, faUpwork, faFacebook, faGripfire, faJediOrder, faUikit, faFortAwesomeAlt, faPhabricator, faUssunnah, faEarlybirds, faTradeFederation, faAutoprefixer, faWhatsapp, faSlideshare, faGooglePlay, faViadeo, faLine, faGoogleDrive, faServicestack, faSimplybuilt, faBitbucket, faImdb, faDeezer, faRaspberryPi, faJira, faDocker, faScreenpal, faBluetooth, faGitter, faDAndD, faMicroblog, faCcDinersClub, faGgCircle, faPiedPiperHat, faKickstarterK, faYandex, faReadme, faHtml5, faSellsy, faSass, faWirsindhandwerk, faWsh, faBuromobelexperte, faSalesforce, faOctopusDeploy, faMedapps, faNs8, faPinterestP, faApper, faFortAwesome, faWaze, faCcJcb, faSnapchat, faSnapchatGhost, faFantasyFlightGames, faRust, faWix, faSquareBehance, faBehanceSquare, faSupple, faWebflow, faRebel, faCss3, faStaylinked, faKaggle, faSpaceAwesome, faDeviantart, faCpanel, faGoodreadsG, faSquareGit, faGitSquare, faSquareTumblr, faTumblrSquare, faTrello, faCreativeCommonsNcJp, faGetPocket, faPerbyte, faGrunt, faWeebly, faConnectdevelop, faLeanpub, faBlackTie, faThemeco, faPython, faAndroid, faBots, faFreeCodeCamp, faHornbill, faJs, faIdeal, faGit, faDev, faSketch, faYandexInternational, faCcAmex, faUber, faGithub, faPhp, faAlipay, faYoutube, faSkyatlas, faFirefoxBrowser, faReplyd, faSuse, faJenkins, faTwitter, faRockrms, faPinterest, faBuffer, faNpm, faYammer, faBtc, faDribbble, faStumbleuponCircle, faInternetExplorer, faStubber, faTelegram, faTelegramPlane, faOldRepublic, faOdysee, faSquareWhatsapp, faWhatsappSquare, faNodeJs, faEdgeLegacy, faSlack, faSlackHash, faMedrt, faUsb, faTumblr, faVaadin, faQuora, faSquareXTwitter, faReacteurope, faMedium, faMediumM, faAmilia, faMixcloud, faFlipboard, faViacoin, faCriticalRole, faSitrox, faDiscourse, faJoomla, faMastodon, faAirbnb, faWolfPackBattalion, faBuyNLarge, faGulp, faCreativeCommonsSamplingPlus, faStrava, faEmber, faCanadianMapleLeaf, faTeamspeak, faPushed, faWordpressSimple, faNutritionix, faWodu, faGooglePay, faIntercom, faZhihu, faKorvue, faPix, faSteamSymbol };
+export { icons as fab, prefix, faMonero, faHooli, faYelp, faCcVisa, faLastfm, faShopware, faCreativeCommonsNc, faAws, faRedhat, faYoast, faCloudflare, faUps, faPixiv, faWpexplorer, faDyalog, faBity, faStackpath, faBuysellads, faFirstOrder, faModx, faGuilded, faVnv, faSquareJs, faJsSquare, faMicrosoft, faQq, faOrcid, faJava, faInvision, faCreativeCommonsPdAlt, faCentercode, faGlideG, faDrupal, faJxl, faHireAHelper, faCreativeCommonsBy, faUnity, faWhmcs, faRocketchat, faVk, faUntappd, faMailchimp, faCss3Alt, faSquareReddit, faRedditSquare, faVimeoV, faContao, faSquareFontAwesome, faDeskpro, faBrave, faSistrix, faSquareInstagram, faInstagramSquare, faBattleNet, faTheRedYeti, faSquareHackerNews, faHackerNewsSquare, faEdge, faThreads, faNapster, faSquareSnapchat, faSnapchatSquare, faGooglePlusG, faArtstation, faMarkdown, faSourcetree, faGooglePlus, faDiaspora, faFoursquare, faStackOverflow, faGithubAlt, faPhoenixSquadron, faPagelines, faAlgolia, faRedRiver, faCreativeCommonsSa, faSafari, faGoogle, faSquareFontAwesomeStroke, faFontAwesomeAlt, faAtlassian, faLinkedinIn, faDigitalOcean, faNimblr, faChromecast, faEvernote, faHackerNews, faCreativeCommonsSampling, faAdversal, faCreativeCommons, faWatchmanMonitoring, faFonticons, faWeixin, faShirtsinbulk, faCodepen, faGitAlt, faLyft, faRev, faWindows, faWizardsOfTheCoast, faSquareViadeo, faViadeoSquare, faMeetup, faCentos, faAdn, faCloudsmith, faOpensuse, faPiedPiperAlt, faSquareDribbble, faDribbbleSquare, faCodiepie, faNode, faMix, faSteam, faCcApplePay, faScribd, faDebian, faOpenid, faInstalod, faExpeditedssl, faSellcast, faSquareTwitter, faTwitterSquare, faRProject, faDelicious, faFreebsd, faVuejs, faAccusoft, faIoxhost, faFonticonsFi, faAppStore, faCcMastercard, faItunesNote, faGolang, faKickstarter, faSquareKickstarter, faGrav, faWeibo, faUncharted, faFirstdraft, faSquareYoutube, faYoutubeSquare, faWikipediaW, faWpressr, faRendact, faAngellist, faGalacticRepublic, faNfcDirectional, faSkype, faJoget, faFedora, faStripeS, faMeta, faLaravel, faHotjar, faBluetoothB, faSquareLetterboxd, faStickerMule, faCreativeCommonsZero, faHips, faBehance, faReddit, faDiscord, faChrome, faAppStoreIos, faCcDiscover, faWpbeginner, faConfluence, faShoelace, faMdb, faDochub, faAccessibleIcon, faEbay, faAmazon, faUnsplash, faYarn, faSquareSteam, faSteamSquare, fa500px, faSquareVimeo, faVimeoSquare, faAsymmetrik, faFontAwesome, faFontAwesomeFlag, faFontAwesomeLogoFull, faGratipay, faApple, faHive, faGitkraken, faKeybase, faApplePay, faPadlet, faAmazonPay, faSquareGithub, faGithubSquare, faStumbleupon, faFedex, faPhoenixFramework, faShopify, faNeos, faSquareThreads, faHackerrank, faResearchgate, faSwift, faAngular, faSpeakap, faAngrycreative, faYCombinator, faEmpire, faEnvira, faGoogleScholar, faSquareGitlab, faGitlabSquare, faStudiovinari, faPiedPiper, faWordpress, faProductHunt, faFirefox, faLinode, faGoodreads, faSquareOdnoklassniki, faOdnoklassnikiSquare, faJsfiddle, faSith, faThemeisle, faPage4, faHashnode, faReact, faCcPaypal, faSquarespace, faCcStripe, faCreativeCommonsShare, faBitcoin, faKeycdn, faOpera, faItchIo, faUmbraco, faGalacticSenate, faUbuntu, faDraft2digital, faStripe, faHouzz, faGg, faDhl, faSquarePinterest, faPinterestSquare, faXing, faBlackberry, faCreativeCommonsPd, faPlaystation, faQuinscape, faLess, faBloggerB, faOpencart, faVine, faSignalMessenger, faPaypal, faGitlab, faTypo3, faRedditAlien, faYahoo, faDailymotion, faAffiliatetheme, faPiedPiperPp, faBootstrap, faOdnoklassniki, faNfcSymbol, faMintbit, faEthereum, faSpeakerDeck, faCreativeCommonsNcEu, faPatreon, faAvianex, faEllo, faGofore, faBimobject, faBraveReverse, faFacebookF, faSquareGooglePlus, faGooglePlusSquare, faWebAwesome, faMandalorian, faFirstOrderAlt, faOsi, faGoogleWallet, faDAndDBeyond, faPeriscope, faFulcrum, faCloudscale, faForumbee, faMizuni, faSchlix, faSquareXing, faXingSquare, faBandcamp, faWpforms, faCloudversify, faUsps, faMegaport, faMagento, faSpotify, faOptinMonster, faFly, faAviato, faItunes, faCuttlefish, faBlogger, faFlickr, faViber, faSoundcloud, faDigg, faTencentWeibo, faLetterboxd, faSymfony, faMaxcdn, faEtsy, faFacebookMessenger, faAudible, faThinkPeaks, faBilibili, faErlang, faXTwitter, faCottonBureau, faDashcube, fa42Group, faInnosoft, faStackExchange, faElementor, faSquarePiedPiper, faPiedPiperSquare, faCreativeCommonsNd, faPalfed, faSuperpowers, faResolving, faXbox, faSquareWebAwesomeStroke, faSearchengin, faTiktok, faSquareFacebook, faFacebookSquare, faRenren, faLinux, faGlide, faLinkedin, faHubspot, faDeploydog, faTwitch, faRavelry, faMixer, faSquareLastfm, faLastfmSquare, faVimeo, faMendeley, faUniregistry, faFigma, faCreativeCommonsRemix, faCcAmazonPay, faDropbox, faInstagram, faCmplid, faUpwork, faFacebook, faGripfire, faJediOrder, faUikit, faFortAwesomeAlt, faPhabricator, faUssunnah, faEarlybirds, faTradeFederation, faAutoprefixer, faWhatsapp, faSquareUpwork, faSlideshare, faGooglePlay, faViadeo, faLine, faGoogleDrive, faServicestack, faSimplybuilt, faBitbucket, faImdb, faDeezer, faRaspberryPi, faJira, faDocker, faScreenpal, faBluetooth, faGitter, faDAndD, faMicroblog, faCcDinersClub, faGgCircle, faPiedPiperHat, faKickstarterK, faYandex, faReadme, faHtml5, faSellsy, faSquareWebAwesome, faSass, faWirsindhandwerk, faWsh, faBuromobelexperte, faSalesforce, faOctopusDeploy, faMedapps, faNs8, faPinterestP, faApper, faFortAwesome, faWaze, faBluesky, faCcJcb, faSnapchat, faSnapchatGhost, faFantasyFlightGames, faRust, faWix, faSquareBehance, faBehanceSquare, faSupple, faWebflow, faRebel, faCss3, faStaylinked, faKaggle, faSpaceAwesome, faDeviantart, faCpanel, faGoodreadsG, faSquareGit, faGitSquare, faSquareTumblr, faTumblrSquare, faTrello, faCreativeCommonsNcJp, faGetPocket, faPerbyte, faGrunt, faWeebly, faConnectdevelop, faLeanpub, faBlackTie, faThemeco, faPython, faAndroid, faBots, faFreeCodeCamp, faHornbill, faJs, faIdeal, faGit, faDev, faSketch, faYandexInternational, faCcAmex, faUber, faGithub, faPhp, faAlipay, faYoutube, faSkyatlas, faFirefoxBrowser, faReplyd, faSuse, faJenkins, faTwitter, faRockrms, faPinterest, faBuffer, faNpm, faYammer, faBtc, faDribbble, faStumbleuponCircle, faInternetExplorer, faStubber, faTelegram, faTelegramPlane, faOldRepublic, faOdysee, faSquareWhatsapp, faWhatsappSquare, faNodeJs, faEdgeLegacy, faSlack, faSlackHash, faMedrt, faUsb, faTumblr, faVaadin, faQuora, faSquareXTwitter, faReacteurope, faMedium, faMediumM, faAmilia, faMixcloud, faFlipboard, faViacoin, faCriticalRole, faSitrox, faDiscourse, faJoomla, faMastodon, faAirbnb, faWolfPackBattalion, faBuyNLarge, faGulp, faCreativeCommonsSamplingPlus, faStrava, faEmber, faCanadianMapleLeaf, faTeamspeak, faPushed, faWordpressSimple, faNutritionix, faWodu, faGooglePay, faIntercom, faZhihu, faKorvue, faPix, faSteamSymbol };

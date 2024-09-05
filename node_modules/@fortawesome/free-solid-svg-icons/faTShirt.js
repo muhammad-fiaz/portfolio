@@ -12,7 +12,7 @@ exports.definition = {
     source.svgPathData
   ]};
 
-exports.faTshirt = exports.definition;
+exports.faTShirt = exports.definition;
 exports.prefix = source.prefix;
 exports.iconName = source.iconName;
 exports.width = source.width;
