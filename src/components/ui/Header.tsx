@@ -2,6 +2,7 @@ import Link from 'next/link';
 import HeaderAnimation from '../utils/HeaderAnimation';
 import MobileMenuNav from './MobileMenuNav';
 import NavItem from './NavItem';
+import { siteConfig } from '@/src/configs/config';
 
 const Header = () => {
   return (
@@ -11,7 +12,7 @@ const Header = () => {
         <div>
           <h1>
             <Link href='/public'>
-              <strong>Muhammad Fiaz</strong>
+              <strong>{siteConfig.author}</strong>
             </Link>
           </h1>
         </div>
