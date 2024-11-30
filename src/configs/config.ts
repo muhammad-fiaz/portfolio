@@ -10,6 +10,10 @@ export const siteConfig: {
         github: string;
         linkedin: string;
         blog: string;
+        medium: string;
+        dev: string;
+        hashnode: string;
+
     };
     metadata: {
         description: string;
@@ -28,6 +32,9 @@ export const siteConfig: {
         github: 'muhammad-fiaz',
         linkedin: 'https://www.linkedin.com/in/muhammad-fiaz-/',
         blog: 'https://articles.muhammadfiaz.com',
+        medium: 'https://muhammad-fiaz.medium.com',
+        dev: 'https://dev.to/muhammadfiaz',
+        hashnode: 'https://muhammadfiaz.hashnode.dev',
     },
     metadata: {
         description: `Hi! I'm Muhammad Fiaz, a Full Stack developer passionate about building apps, exploring AI and ML, and collaborating on exciting projects. Let's connect!`,
