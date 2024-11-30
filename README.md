@@ -1,8 +1,9 @@
 <p align="center">
-  <img src="https://github.com/muhammad-fiaz/portfolio/assets/75434191/44252d99-9dff-4e5f-9bec-819e3fca7fb3"  alt="Muhammad Fiaz's Portfolio"/>
+  <img src="https://github.com/user-attachments/assets/97ddad97-5d77-40b6-8fa3-35e2e034a97d"  alt="Muhammad Fiaz's Portfolio"/>
 </p>
+
 <div align="center">
-  <h1><a href="https://muhammadfiaz.com/">muhammadfiaz.com</a> | portfolio</h1>
+  <h1><a href="https://muhammadfiaz.com/">muhammadfiaz.com</a> | portfolio V2.0.0</h1>
   
 ![Stability](https://img.shields.io/badge/stability-good-blue.svg) ![MIT License](https://img.shields.io/badge/license-MIT-green)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/muhammad-fiaz/portfolio)
@@ -31,9 +32,9 @@
 
 This project is built with Next.js and React, showcasing [Muhammad Fiaz](https://github.com/muhammad-fiaz/)'s [personal website](https://muhammadfiaz.com/).
 
-**Feel free to use this project for your own portfolio or as a reference for your projects. If you find it helpful, don't forget to give it a ⭐️ to show your support. [Fork this repo](https://github.com/muhammad-fiaz/portfolio/fork) if you want to contribute✨**
+**Feel free to use this project for your portfolio or as a project reference. If you find it helpful, don't forget to give it a ⭐️ to show your support. [Fork this repo](https://github.com/muhammad-fiaz/portfolio/fork) if you want to contribute✨**
 
-**Support me by a little [sponsor ❤️](https://github.com/sponsors/muhammad-fiaz)**
+**Support me with a little [sponsor ❤️](https://github.com/sponsors/muhammad-fiaz)**
 
 ## Table of Contents
 
@@ -42,12 +43,8 @@ This project is built with Next.js and React, showcasing [Muhammad Fiaz](https:/
 - [Available Scripts](#available-scripts)
   - [`npm run dev`](#npm-run-dev)
   - [`npm run build`](#npm-run-build)
-  - [`npm run build-webpack`](#npm-run-build-webpack)
   - [`npm start`](#npm-start)
-  - [`next export`](#next-export)
   - [`npm run lint`](#npm-run-lint)
-  - [`npm run sitemap`](#npm-run-sitemap)
-  - [`npm run test`](#npm-run-test)
 - [Icons Information](#icons-information)
 - [Vector Graphics Animations](#vector-graphics-animations)
 - [More Information](#more-information)
@@ -91,40 +88,15 @@ You will also see any lint errors in the console.
 Builds the app for production to the `.next` folder using default Next.js build config.\
 It correctly bundles Next.js and optimizes the build for the best performance.
 
-or
-
-
-### `npm run build-webpack`
-Build the app for production to the `.next` folder using a custom config webpack.\
-This is useful if you want to use [webpack plugins](https://nextjs.org/docs/app/api-reference/next-config-js/webpack) to optimize the build.(**Optional**)
-
 ### `npm start`
 
 Starts the production server to serve the built app.\
 Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-### `next export`
-
-Exports the app to static HTML, which can be run without a Node.js server.\
-The exported app will be in the `out` folder.
-
-**Note: if you want to use [export](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports) as static site, then disable the [image optimization](https://nextjs.org/docs/pages/building-your-application/optimizing/images) in [`next.config.ts`](./next.config.ts)**
-
 ### `npm run lint`
 
 Runs the [Next.js ESLint](https://nextjs.org/docs/basic-features/eslint) linter.\
 It will show lint errors in the console.
-
-### `npm run sitemap`
-
-Generate a sitemap for the website.\
-It will generate a sitemap.xml file in the public directory.
-
-## `npm run test`
-
-Runs the [Jest](https://jestjs.io/) test runner on your tests.\
-It will show test results in the console.
-
 
 
 ## Icons Information
