@@ -11,7 +11,7 @@ const Header = () => {
 
         <div>
           <h1>
-            <Link href='/public'>
+            <Link href='/'>
               <strong>{siteConfig.author}</strong>
             </Link>
           </h1>
