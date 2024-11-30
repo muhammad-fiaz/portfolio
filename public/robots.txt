@@ -1,10 +1,13 @@
-# *
+# Global directives for all bots
 User-agent: *
-Allow: *
+Allow: /
 
-# Host
+# Block Internet Archive (Wayback Machine)
+User-agent: ia_archiver
+Disallow: /
+
+# Specify host
 Host: https://muhammadfiaz.com
-Host: https://www.muhammadfiaz.com
 
 # Sitemaps
 Sitemap: https://muhammadfiaz.com/sitemap.xml

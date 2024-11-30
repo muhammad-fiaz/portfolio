@@ -1,5 +1,13 @@
 # Portfolio Changelog - Release Notes
 
+
+## v2.0.0 - new Renewed Portfolio
+- New Design and UI
+- Improved Performance
+- Improved SEO
+- Improved Functionality
+
+
 ## v1.0.8
 - improved ui and performance
 - updated deps

@@ -14,7 +14,7 @@
 [![Maintainer](https://img.shields.io/badge/maintainer-muhammad--fiaz-blue)](https://GitHub.com/muhammad-fiaz)
 
 [![Latest Release](https://img.shields.io/github/release/muhammad-fiaz/portfolio.svg)](https://github.com/muhammad-fiaz/portfolio/releases/latest)
-[![Current Version](https://img.shields.io/badge/Current%20Version-v1.0.8-blue.svg)](https://github.com/muhammad-fiaz/portfolio/releases/tag/v1.0.8)
+[![Current Version](https://img.shields.io/badge/Current%20Version-v2.0.0-blue.svg)](https://github.com/muhammad-fiaz/portfolio/releases/tag/v2.0.0)
 
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
@@ -108,7 +108,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Exports the app to static HTML, which can be run without a Node.js server.\
 The exported app will be in the `out` folder.
 
-**Note: if you want to use [export](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports) as static site, then disable the [image optimization](https://nextjs.org/docs/pages/building-your-application/optimizing/images) in [`next.config.js`](./next.config.js)**
+**Note: if you want to use [export](https://nextjs.org/docs/pages/building-your-application/deploying/static-exports) as static site, then disable the [image optimization](https://nextjs.org/docs/pages/building-your-application/optimizing/images) in [`next.config.ts`](./next.config.ts)**
 
 ### `npm run lint`
 
