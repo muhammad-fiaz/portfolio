@@ -32,10 +32,41 @@ const ProjectsSection = () => {
     fetchProjects();
   }, [projectSearch]); // Trigger search whenever projectSearch changes
 
+  // Generate JSON-LD structured data for SEO and social sharing
+  const generateJsonLd = (projects: CardProjectProps[]) => {
+    const jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      itemListElement: projects.map((project, index) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'CreativeWork',
+          name: project.title,
+          description: project.des,
+          url: project.repo, // GitHub URL or project URL
+          image: project.link, // Assuming this is the project image URL or screenshot
+          keywords: project.topics.join(', '), // Assuming topics are tags
+        },
+
+      })),
+    };
+
+    return JSON.stringify(jsonLd);
+  };
+
   return (
     <SectionContainer>
       <div className="w-full flex flex-col gap-6">
         <TitleSectionPageContainer title="Projects" />
+
+        {/* Add JSON-LD metadata for the page */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: generateJsonLd(allProjectsInfo),
+          }}
+        />
 
         <AnimationContainer customClassName="w-full flex flex-col gap-5 mb-8">
           <p className="w-full text-base text-gray-400">

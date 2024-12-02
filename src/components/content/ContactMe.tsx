@@ -1,30 +1,25 @@
 import AnimationContainer from '../utils/AnimationContainer';
-import {siteConfig} from "@/src/configs/config";
+import { siteConfig } from "@/src/configs/config";
 
 const ContactMe = () => {
   return (
     <AnimationContainer customClassName='w-full'>
-
+      {/* Use h2 for main section header */}
       <h2 className='font-bold text-2xl md:text-2xl tracking-tight mb-8 text-white text-center lg:text-start' id='contactme'>
         Contact me
       </h2>
 
       <div className='w-full flex justify-between items-center flex-col mx-auto max-w-screen-xl'>
-
         <div className='w-full flex justify-between items-center flex-col lg:flex-row gap-6 mb-10'>
-
-            <div className='w-full rounded border border-gray-800 hover:border-gray-900 bg-[#080809] p-4 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] sm:p-6 transition ease'>
-              <h6 className='font-bold text-1xl tracking-tight text-white text-start'>
-                Email
-              </h6>
-              <p className='text-base mt-2 text-gray-400'>
-                {siteConfig.social.email}
-              </p>
-            </div>
-          {/* </a> */}
-
-
-
+          {/* Use h3 for the subheading here, since it's a subsection under "Contact me" */}
+          <div className='w-full rounded border border-gray-800 hover:border-gray-900 bg-[#080809] p-4 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] sm:p-6 transition ease'>
+            <h3 className='font-bold text-1xl tracking-tight text-white text-start'>
+              Email
+            </h3>
+            <p className='text-base mt-2 text-gray-400'>
+              {siteConfig.social.email}
+            </p>
+          </div>
         </div>
 
         <div className='w-full flex justify-center items-center flex-col'>
@@ -99,14 +94,11 @@ const ContactMe = () => {
                 />
               </svg>
             </button>
-
           </form>
         </div>
-
       </div>
-
-    </AnimationContainer >
-  )
-}
+    </AnimationContainer>
+  );
+};
 
 export default ContactMe;

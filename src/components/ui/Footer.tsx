@@ -11,7 +11,7 @@ const Footer = () => {
       <AnimationContainer customClassName="w-full grid place-items-center grid-cols-3 gap-1 lg:gap-4 pb-8 sm:grid-cols-3 mx-3">
         <div className="flex flex-col space-y-4">
           <Link
-            href="/public"
+            href="/home"
             className="flex items-center gap-2 text-gray-500 hover:text-gray-600 transition ease"
           >
             <svg
