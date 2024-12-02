@@ -11,26 +11,22 @@ import ShowSkills from '../utils/ShowSkills';
 
 const HomeSection = () => {
   return (
-    <div>
+    <SectionContainer>
+
       {/* Hero Section */}
       <div className="w-full h-[calc(100vh-11rem)] flex items-center justify-center ">
         <Hero />
       </div>
-  <SectionContainer>
 
       {/* About Me Section */}
       <AnimationContainer customClassName="w-full mt-16">
         <AboutMe />
       </AnimationContainer>
-  </SectionContainer>
-  <SectionContainer>
 
       {/* Timeline Section */}
       <AnimationContainer customClassName="w-full mt-16">
         <CurrentTimeLineExp />
       </AnimationContainer>
-  </SectionContainer>
-  <SectionContainer>
 
       {/* Skills Section */}
       <AnimationContainer customClassName="w-full mt-16">
@@ -62,15 +58,12 @@ const HomeSection = () => {
 
         </div>
       </AnimationContainer>
-  </SectionContainer>
-      <SectionContainer>
 
         {/* Contact Section */}
         <AnimationContainer customClassName="w-full mt-16">
           <ContactMe />
         </AnimationContainer>
       </SectionContainer>
-    </div>
   );
 };
 
