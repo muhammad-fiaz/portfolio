@@ -11,21 +11,26 @@ import ShowSkills from '../utils/ShowSkills';
 
 const HomeSection = () => {
   return (
-    <SectionContainer>
+    <div>
       {/* Hero Section */}
       <div className="w-full h-[calc(100vh-11rem)] flex items-center justify-center ">
         <Hero />
       </div>
+  <SectionContainer>
 
       {/* About Me Section */}
       <AnimationContainer customClassName="w-full mt-16">
         <AboutMe />
       </AnimationContainer>
+  </SectionContainer>
+  <SectionContainer>
 
       {/* Timeline Section */}
       <AnimationContainer customClassName="w-full mt-16">
         <CurrentTimeLineExp />
       </AnimationContainer>
+  </SectionContainer>
+  <SectionContainer>
 
       {/* Skills Section */}
       <AnimationContainer customClassName="w-full mt-16">
@@ -44,23 +49,28 @@ const HomeSection = () => {
           <div className="flex flex-col items-start gap-3 mt-3">
             {skills.map(({ title, techs }) => (
               <div key={title}>
-                <h3 className="font-bold text-1xl md:text-1xl tracking-tight mb-5 text-white">
+                {/* Use h2 for main sections */}
+                <h2 className="font-bold text-1xl md:text-2xl tracking-tight mb-5 text-white">
                   {title}
-                </h3>
+                </h2>
                 <AnimationContainer customClassName="flex items-center flex-wrap gap-3 mb-5">
                   <ShowSkills skills={techs} />
                 </AnimationContainer>
               </div>
             ))}
           </div>
+
         </div>
       </AnimationContainer>
+  </SectionContainer>
+      <SectionContainer>
 
-      {/* Contact Section */}
-      <AnimationContainer customClassName="w-full mt-16">
-        <ContactMe />
-      </AnimationContainer>
-    </SectionContainer>
+        {/* Contact Section */}
+        <AnimationContainer customClassName="w-full mt-16">
+          <ContactMe />
+        </AnimationContainer>
+      </SectionContainer>
+    </div>
   );
 };
 

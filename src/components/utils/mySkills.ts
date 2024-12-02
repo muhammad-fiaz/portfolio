@@ -9,7 +9,7 @@ export const skills = [
   },
   {
     title: 'Tools and IDEs',
-    techs: ['Android Studio', 'Atom', 'Eclipse', 'Figma', 'Git', 'GitHub', 'GitHub Actions', 'GitLab', 'Gradle', 'Gulp', 'Heroku', 'IntelliJ IDEA', 'VS Code', 'Visual Studio', 'Webpack', 'Vite', 'Turbopack']
+    techs: ['Android Studio', 'Atom', 'Eclipse', 'Figma', 'Git', 'GitHub', 'GitHub Actions', 'GitLab', 'Gradle', 'Gulp', 'Heroku', 'IntelliJ IDEA', 'VS Code', 'Visual Studio', 'Webpack', 'Vite', 'Turbopack' ,'Docker']
   },
   {
     title: 'Cloud Platforms and Hosting',
@@ -21,7 +21,7 @@ export const skills = [
   },
   {
     title: 'Version Control & Collaboration',
-    techs: ['Git', 'GitHub', 'GitLab']
+    techs: ['Git', 'GitHub', 'GitLab', 'Bitbucket', 'Slack']
   },
   {
     title: 'Operating Systems & Environments',
@@ -33,10 +33,10 @@ export const skills = [
   },
   {
     title: 'ORM (Object-Relational Mapping)',
-    techs: ['Prisma', 'TypeORM', 'Sequelize', 'Mongoose']
+    techs: ['Prisma', 'TypeORM', 'Sequelize']
   },
   {
     title: 'Machine Learning & AI ',
     techs: ['Hugging Face', 'Transformers', 'Diffusers',  'Stable Diffusion']
-  }
+  },
 ];

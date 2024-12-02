@@ -37,14 +37,49 @@ const BlogSection = () => {
     fetchBlogs();
   }, [blogSearch]);
 
+  // Generate JSON-LD structured data for the blogs
+  const generateJsonLd = (blogs: any[]) => {
+    const jsonLd = {
+      '@context': 'https://schema.org',
+      '@type': 'ItemList',
+      itemListElement: blogs.map((blog: any, index: number) => ({
+        '@type': 'ListItem',
+        position: index + 1,
+        item: {
+          '@type': 'BlogPosting',
+          headline: blog.title,
+          description: blog.contentSnippet,
+          url: blog.link,
+          image: blog.thumbnail, // Add the thumbnail URL if available
+          author: {
+            '@type': 'Person',
+            name: siteConfig.author, // Assuming you have an author name
+          },
+          datePublished: blog.pubDate,
+          keywords: blog.categories.join(', '), // Assuming categories are tags
+        },
+      })),
+    };
+
+    return JSON.stringify(jsonLd);
+  };
+
   return (
     <SectionContainer>
       <div className="w-full flex flex-col gap-6">
         <TitleSectionPageContainer title="Blogs" />
 
+        {/* Add JSON-LD metadata for the page */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: generateJsonLd(blogs),
+          }}
+        />
+
         <AnimationContainer customClassName="w-full flex flex-col gap-5 mb-8">
           <p className="w-full text-base text-gray-400">
-            These are Some of the blog posts I've written since I started
+            These are some of the blog posts I've written since I started
             blogging. Some of them are personal, technical articles, or insights
             I've shared on various topics. If you want to see all my posts,
             visit my{' '}

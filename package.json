@@ -31,6 +31,8 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@types/xml2js": "^0.4.14",
+    "@vercel/analytics": "^1.4.1",
+    "@vercel/speed-insights": "^1.1.0",
     "class-variance-authority": "^0.7.1",
     "classnames": "^2.5.1",
     "clsx": "^2.1.1",

@@ -7,7 +7,8 @@ import FlareCursor from '@/src/components/ui/FlareCursor';
 import ProgressBar from '@/src/components/utils/progress';
 import BackToTopButton from '@/src/components/utils/BackToTopButton';
 import Head from './head';
-
+import { SpeedInsights } from "@vercel/speed-insights/next";
+import { Analytics } from "@vercel/analytics/react";
 const graphik = local({
   src: [
     {
@@ -43,6 +44,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <main className="flex flex-col justify-center items-center mx-auto">
       <FlareCursor />
       {children}
+      <SpeedInsights />
+      <Analytics />
     </main>
     <BackToTopButton />
 
