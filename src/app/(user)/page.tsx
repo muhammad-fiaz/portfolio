@@ -4,7 +4,7 @@ import { generateMetadata as getPageMetadata } from '@/src/components/utils/gene
 export async function generateMetadata() {
   return getPageMetadata({
     title: '',
-    path: '/',
+    path: '/'
   });
 }
 

@@ -4,7 +4,9 @@ export default function NotFound() {
   return (
     <div className="min-h-screen flex flex-col items-center justify-center text-white">
       <h1 className="text-6xl font-extrabold text-white mb-6">404</h1>
-      <p className="text-2xl text-gray-400 mb-4">Oops! The page you're looking for doesn't exist.</p>
+      <p className="text-2xl text-gray-400 mb-4">
+        Oops! The page you're looking for doesn't exist.
+      </p>
       <p className="text-lg text-gray-500 mb-8">
         The page might have been moved or deleted, or the URL may be incorrect.
       </p>
@@ -23,7 +25,9 @@ export default function NotFound() {
         </a>
       </div>
       <div className="mt-12">
-        <p className="text-sm text-gray-500">© 2024 {siteConfig.author}. All Rights Reserved.</p>
+        <p className="text-sm text-gray-500">
+          © 2024 {siteConfig.author}. All Rights Reserved.
+        </p>
       </div>
     </div>
   );

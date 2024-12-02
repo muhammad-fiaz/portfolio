@@ -1,6 +1,6 @@
 import AnimationContainer from '../utils/AnimationContainer';
 import { siteConfig } from '@/src/configs/config';
-import CurrentTimeLineExp, { calculateDuration } from '../content/CurrentTimeLineExp';
+import CurrentTimeLineExp from '../content/CurrentTimeLineExp';
 import ShowSkills from '../utils/ShowSkills';
 import TitleSectionPageContainer from '../utils/TitleSectionPageContainer';
 import { skills } from '../utils/mySkills';

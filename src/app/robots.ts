@@ -5,17 +5,17 @@ export default function robots(): MetadataRoute.Robots {
     rules: [
       {
         userAgent: '*', // All bots
-        allow: '/',      // Allow all pages to be crawled
-        disallow: '/private/', // Disallow crawling of the /private/ directory
+        allow: '/', // Allow all pages to be crawled
+        disallow: '/private/' // Disallow crawling of the /private/ directory
       },
       {
         userAgent: 'ia_archiver', // Block Internet Archive (Wayback Machine)
-        disallow: '/',             // Disallow access to all pages
-      },
+        disallow: '/' // Disallow access to all pages
+      }
     ],
     sitemap: [
-      'https://muhammadfiaz.com/sitemap.xml',   // First sitemap URL
-      'https://muhammadfiaz.com/sitemap-0.xml', // Second sitemap URL
-    ],
+      'https://muhammadfiaz.com/sitemap.xml', // First sitemap URL
+      'https://muhammadfiaz.com/sitemap-0.xml' // Second sitemap URL
+    ]
   };
 }

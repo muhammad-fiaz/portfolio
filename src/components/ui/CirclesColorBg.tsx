@@ -6,8 +6,8 @@ const animation = {
   hide: { opacity: 0, y: -20 },
   show: {
     y: 0,
-    opacity: 1,
-  },
+    opacity: 1
+  }
 };
 
 const CirclesColorBg = () => {

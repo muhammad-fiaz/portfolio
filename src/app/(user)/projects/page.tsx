@@ -4,8 +4,9 @@ import { generateMetadata as getPageMetadata } from '@/src/components/utils/gene
 export async function generateMetadata() {
   return getPageMetadata({
     title: 'Projects',
-    description: 'Explore the projects I have worked on, showcasing skills and technologies.',
-    path: '/projects',
+    description:
+      'Explore the projects I have worked on, showcasing skills and technologies.',
+    path: '/projects'
   });
 }
 

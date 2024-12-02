@@ -1,7 +1,7 @@
 'use client';
 
 import { motion } from 'framer-motion';
-import useScrollPosition from "@/src/hooks/useScrollPosition";
+import useScrollPosition from '@/src/hooks/useScrollPosition';
 
 const animation = {
   hide: { y: -8, opacity: 0 },

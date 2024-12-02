@@ -5,7 +5,6 @@ export const siteConfig: {
     titlePrefix: string;
     profile_image: string;
     form_id: string;
-    googleAdsScript: string;
     social: {
         email: string;
         twitter: string;
@@ -29,7 +28,6 @@ export const siteConfig: {
     titlePrefix: 'Muhammad Fiaz',
     profile_image: 'https://avatars.githubusercontent.com/u/75434191?s=400&u=0aa88e4ae941c44425b2be4595cf92b68f578f8a&v=4',
     form_id:'https://formspree.io/f/myzynpbr',
-    googleAdsScript: `https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=${process.env.ADSENSE_ID}`,
     social: {
         email: 'contact@muhammadfiaz.com',
         twitter: '@muhammadfiaz_',

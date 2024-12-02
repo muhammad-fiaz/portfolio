@@ -2,7 +2,6 @@
 
 import { usePathname } from 'next/navigation';
 import { generateMetadata } from '@/src/components/utils/generateMetadata';
-import { siteConfig } from '@/src/configs/config';
 
 const Head = () => {
   const pathname = usePathname() || '/';
@@ -32,11 +31,7 @@ const Head = () => {
       <meta name="twitter:image" content={meta.twitter.image} />
       <link rel="canonical" href={meta.url} />
       <link rel="icon" href={meta.link[0].href} />
-      <script
-        async
-        src={siteConfig.googleAdsScript}
-        crossOrigin='anonymous'
-      ></script>
+
     </>
   );
 };

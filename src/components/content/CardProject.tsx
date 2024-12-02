@@ -3,11 +3,11 @@ import AnimationContainer from '../utils/AnimationContainer';
 import ShowSkills from '../utils/ShowSkills';
 import { CardProjectProps } from '@/src/types';
 import {
-  ReactElement,
   JSXElementConstructor,
+  Key,
+  ReactElement,
   ReactFragment,
-  ReactPortal,
-  Key
+  ReactPortal
 } from 'react';
 
 const CardProject = ({

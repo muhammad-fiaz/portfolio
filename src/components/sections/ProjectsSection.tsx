@@ -1,5 +1,5 @@
-"use client";
-import { useState, useEffect } from 'react';
+'use client';
+import { useEffect, useState } from 'react';
 import AnimationContainer from '../utils/AnimationContainer';
 import { siteConfig } from '@/src/configs/config';
 import { CardProjectProps } from '@/src/types';

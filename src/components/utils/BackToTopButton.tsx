@@ -1,5 +1,5 @@
-"use client";
-import { useState, useEffect } from 'react';
+'use client';
+import { useEffect, useState } from 'react';
 
 const BackToTopButton = () => {
   const [showButton, setShowButton] = useState(false);

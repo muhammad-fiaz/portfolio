@@ -6,7 +6,7 @@ export async function generateMetadata() {
   return getPageMetadata({
     title: 'About Me',
     description: `Learn more about ${siteConfig.author}, my mission, vision, and values as a developer.`,
-    path: '/about',
+    path: '/about'
   });
 }
 
