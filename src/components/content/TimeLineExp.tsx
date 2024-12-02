@@ -4,15 +4,15 @@ import { TimelineEventProps } from '@/src/types';
 
 export const Timeline = ({ children }: { children: React.ReactNode }) => {
   return (
-    <AnimationContainer customClassName='w-full mb-16'>
-
-      <h2 className='font-bold text-2xl tracking-tight mb-8 text-white text-center lg:text-start'>Experience</h2>
+    <AnimationContainer customClassName="w-full mb-16">
+      <h2 className="font-bold text-2xl tracking-tight mb-8 text-white text-center lg:text-start">
+        Experience
+      </h2>
 
       {children}
-
     </AnimationContainer>
-  )
-}
+  );
+};
 
 export const TimelineEvent = ({ active, children, last }: TimelineEventProps) => {
   return (

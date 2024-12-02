@@ -6,8 +6,8 @@ const animation = {
   hide: { y: -12, opacity: 0 },
   show: {
     y: 0,
-    opacity: 1,
-  },
+    opacity: 1
+  }
 };
 
 const TitleSectionPageContainer = ({ title }: { title: string }) => {

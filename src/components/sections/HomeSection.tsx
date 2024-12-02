@@ -2,7 +2,7 @@
 
 import AboutMe from '../content/AboutMe';
 import ContactMe from '../content/ContactMe';
-import CurrentTimeLineExp, { calculateDuration } from '../content/CurrentTimeLineExp';
+import CurrentTimeLineExp from '../content/CurrentTimeLineExp';
 import Hero from '../content/Hero';
 import AnimationContainer from '../utils/AnimationContainer';
 import { skills } from '../utils/mySkills';

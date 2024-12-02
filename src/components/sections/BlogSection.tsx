@@ -1,6 +1,6 @@
 'use client';
 
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import AnimationContainer from '../utils/AnimationContainer';
 import SectionContainer from '../utils/SectionContainer';
 import TitleSectionPageContainer from '../utils/TitleSectionPageContainer';

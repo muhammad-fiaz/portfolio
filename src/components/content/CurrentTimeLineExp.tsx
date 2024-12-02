@@ -1,20 +1,23 @@
 import { Timeline, TimelineEvent } from './TimeLineExp';
 
-export function calculateDuration(startDate: string, showMonths: boolean): string {
-    const start: Date = new Date(startDate);
-    const now: Date = new Date();
-    const diff: number = now.getTime() - start.getTime();
-    const diffDate: Date = new Date(diff);
-    const years: number = diffDate.getUTCFullYear() - 1970;
-    const months: number = diffDate.getUTCMonth();
+export function calculateDuration(
+  startDate: string,
+  showMonths: boolean
+): string {
+  const start: Date = new Date(startDate);
+  const now: Date = new Date();
+  const diff: number = now.getTime() - start.getTime();
+  const diffDate: Date = new Date(diff);
+  const years: number = diffDate.getUTCFullYear() - 1970;
+  const months: number = diffDate.getUTCMonth();
 
-    if (years === 1 && months === 0) {
-        return "1 year";
-    } else if (!showMonths) {
-        return `${years} years`;
-    } else {
-        return `${years} yr ${months} mos`;
-    }
+  if (years === 1 && months === 0) {
+    return '1 year';
+  } else if (!showMonths) {
+    return `${years} years`;
+  } else {
+    return `${years} yr ${months} mos`;
+  }
 }
 
 const CurrentTimeLineExp = () => {

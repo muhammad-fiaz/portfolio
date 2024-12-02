@@ -1,10 +1,10 @@
-
 import { redirect } from 'next/navigation';
 import { generateMetadata as getPageMetadata } from '@/src/components/utils/generateMetadata';
+
 export async function generateMetadata() {
   return getPageMetadata({
     title: 'Home',
-    path: '/',
+    path: '/'
   });
 }
 export default function HomeRedirectPage() {

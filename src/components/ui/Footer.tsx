@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import AnimationContainer from '../utils/AnimationContainer';
 import ExternalLink from './ExternalLink';
-import {siteConfig} from "@/src/configs/config";
+import { siteConfig } from '@/src/configs/config';
 
 const Footer = () => {
   return (

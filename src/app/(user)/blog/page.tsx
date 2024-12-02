@@ -5,7 +5,7 @@ export async function generateMetadata() {
   return getPageMetadata({
     title: 'Blog',
     description: 'Read the latest articles and updates on my portfolio blog.',
-    path: '/blog',
+    path: '/blog'
   });
 }
 

@@ -15,7 +15,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap --config sitemap.config.js"
+    "prebuild": "next-sitemap --config sitemap.config.js"
   },
   "dependencies": {
     "@emotion/react": "^11.13.5",
