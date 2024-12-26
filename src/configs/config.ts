@@ -22,26 +22,26 @@ export const siteConfig: {
         type: string;
     };
 } = {
-    baseUrl: 'https://muhammadfiaz.com',
-    author: 'Muhammad Fiaz',
-    author_surname: 'Fiaz',
-    titlePrefix: 'Muhammad Fiaz',
-    profile_image: 'https://avatars.githubusercontent.com/u/75434191?s=400&u=0aa88e4ae941c44425b2be4595cf92b68f578f8a&v=4',
+    baseUrl: 'https://aizwan.my',
+    author: 'Alif Izwan',
+    author_surname: 'Aizwan',
+    titlePrefix: 'Alif Izwan',
+    profile_image: '/img/a95ceda6-b5db-441f-8748-7c9349d687d8.jpg',
     form_id:'https://formspree.io/f/myzynpbr',
     social: {
-        email: 'contact@muhammadfiaz.com',
-        twitter: '@muhammadfiaz_',
-        github: 'muhammad-fiaz',
-        linkedin: 'https://www.linkedin.com/in/muhammad-fiaz-/',
-        blog: 'https://articles.muhammadfiaz.com',
-        medium: 'https://muhammad-fiaz.medium.com',
-        dev: 'https://dev.to/muhammadfiaz',
-        hashnode: 'https://muhammadfiaz.hashnode.dev',
+        email: 'aizwan96@gmail.com',
+        twitter: '@alif_pancake',
+        github: 'aizwan',
+        linkedin: 'https://www.linkedin.com/in/alifizwan/',
+        blog: '',
+        medium: '',
+        dev: '',
+        hashnode: '',
     },
     metadata: {
-        description: `Hi! I'm Muhammad Fiaz, a Full Stack developer passionate about building apps, exploring AI and ML, and collaborating on exciting projects. Let's connect!`,
+        description: `With a passion for building intuitive, scalable, and efficient web applications, I specialize in both front-end and back-end development. Leveraging expertise in frameworks like Next.js and tools like Redis, I create seamless user experiences powered by robust server-side logic. Whether it's crafting dynamic UIs or designing efficient APIs, I thrive on turning complex ideas into functional, impactful solutions. Let’s build something extraordinary together!`,
         keywords:
-            'Muhammad Fiaz, Full Stack Developer, Muhammad Fiaz portfolio, Muhammad Fiaz GitHub, Web Development, Mobile Applications, Machine Learning, Artificial Intelligence, Programming Languages, Open Source Developer, App Development',
+            'Alif Izwan, Full Stack Developer, Alif Izwan portfolio, Alif Izwan GitHub, Web Development, Mobile Applications, Machine Learning, Artificial Intelligence, Programming Languages, Open Source Developer, App Development',
         type: 'website',
     },
 };

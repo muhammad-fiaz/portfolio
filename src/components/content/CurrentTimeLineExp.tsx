@@ -25,43 +25,44 @@ const CurrentTimeLineExp = () => {
         <Timeline>
 
             <TimelineEvent>
-                <TimelineEvent.Title>Fiaz Technologies | Nov. 2023 - Present</TimelineEvent.Title>
+                <TimelineEvent.Title>Sr. Software Enginer - ParcelDaily | Oct. 2024 - Present</TimelineEvent.Title>
                 <TimelineEvent.Description>
-                    Building and helping developer-first tools at Fiaz Technologies. Involved in creating innovative tools to enhance developer productivity.
+                    Building and helping revamp the old system into a newer and cleaner version at ParcelDaily. Involved in Frontend and Backend development.
                 </TimelineEvent.Description>
             </TimelineEvent>
 
             <TimelineEvent>
-                <TimelineEvent.Title>Hacktoberfest 2024 | Oct. 2024 - Nov. 2024</TimelineEvent.Title>
+                <TimelineEvent.Title>Web Programmer - Pacific Comnet Sdn. Bhd | May. 2023 - Aug. 2024</TimelineEvent.Title>
                 <TimelineEvent.Description>
-                    Participated as a maintainer and content writer in the Hacktoberfest event. Contributed to open-source projects and wrote technical content on platforms such as Medium, Dev.to, and Hashnode.
+                    Maintain an existing internal system for the company while also upgrading and maintaining deprecated npm packages for the system.
                 </TimelineEvent.Description>
             </TimelineEvent>
 
             <TimelineEvent>
-                <TimelineEvent.Title>CodSoft - Data Science Intern | Sep. 2023 - Oct. 2023</TimelineEvent.Title>
+                <TimelineEvent.Title>Full-Stack Developer - Cake Experiential Communications | July. 2021 - May. 2023</TimelineEvent.Title>
                 <TimelineEvent.Description>
-                    Self-paced Data Science Intern where I gained practical experience in data science applications using Python. I also contributed to open-source projects and maintained repositories on GitHub.
+                    Build and deploy an internal app from scratch for a bank client using flutter and bloc implementation. Develop SAAS solutions with pagebuilder and chatbot integration.
                 </TimelineEvent.Description>
             </TimelineEvent>
 
             <TimelineEvent>
-                <TimelineEvent.Title>Hacktoberfest 2023 | Sep. 2023 - Oct. 2023</TimelineEvent.Title>
+                <TimelineEvent.Title>Backend Developer - Insuradar Sdn. Bhd. | Oct. 2020 - Dec. 2020</TimelineEvent.Title>
                 <TimelineEvent.Description>
-                    Participated as a maintainer and content writer in the Hacktoberfest event. Contributed to open-source projects and wrote technical content on platforms such as Medium, Dev.to, and Hashnode.
-                </TimelineEvent.Description>
-            </TimelineEvent>
-
-            <TimelineEvent>
-                <TimelineEvent.Title>Technical Content Writer | Sep. 2023 - Present</TimelineEvent.Title>
-                <TimelineEvent.Description>
-                    Writing technical content and tutorials on platforms like Medium, Dev.to, and Hashnode. Topics include software development, data science, and open-source contributions.
+                Manage extracted data from AI engine and use relevant information to automates tasks. Also Implemented audit logs, webhook and security permission for application.
                 </TimelineEvent.Description>
             </TimelineEvent>
             <TimelineEvent>
-                <TimelineEvent.Title>Open Source Contributor & Maintainer | Dec. 2020 - Present</TimelineEvent.Title>
+                <TimelineEvent.Title>Full-Stack Developer - Yan3k Sdn. Bhd. | Aug. 2019 - Dec. 2020</TimelineEvent.Title>
                 <TimelineEvent.Description>
-                    Actively contributing to and maintaining open-source repositories on GitHub. Focused on building and improving tools for the developer community.
+                    Develop a SAAS API from ground up complete with payment integration with stripe. Containerized company's project into docker for
+                    consistent working environment and deployment to GKE while also utilizing other Google Cloud Platform services such as Bucket, CloudSQL
+                    and Cloudbuild in building/deploying project.
+                </TimelineEvent.Description>
+            </TimelineEvent>
+            <TimelineEvent>
+                <TimelineEvent.Title>Junior Developer - Segnel Ventures Pte. Ltd | May. 2018 - Jul. 2018</TimelineEvent.Title>
+                <TimelineEvent.Description>
+                    Actively contributing to and maintaining in-house web-based CRM software and E-Commerce solutions.
                 </TimelineEvent.Description>
             </TimelineEvent>
 

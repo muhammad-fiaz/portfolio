@@ -8,7 +8,7 @@ const NavItem = () => {
 
   let pathname = usePathname() as string;
 
-  if (pathname.includes('/blog/')) pathname = '/blog';
+  // if (pathname.includes('/blog/')) pathname = '/blog';
 
   return (
     <>
