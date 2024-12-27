@@ -1,6 +1,7 @@
 import { Config } from 'tailwindcss';
 import defaultTheme from 'tailwindcss/defaultTheme';
 import typography from '@tailwindcss/typography';
+import { nextui } from '@nextui-org/react';
 
 const config: Config = {
   darkMode: ['class'],
@@ -8,7 +9,8 @@ const config: Config = {
     './pages/**/*.tsx',
     './src/components/**/*.tsx',
     './src/layouts/**/*.tsx',
-    './src/**/*.tsx'
+    './src/**/*.tsx',
+    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {
@@ -133,7 +135,8 @@ const config: Config = {
       '6xl': '4rem'
     }
   },
-  plugins: [typography, require('tailwindcss-animate')]
+
+  plugins: [typography, require('tailwindcss-animate'),nextui()]
 };
 
 export default config;

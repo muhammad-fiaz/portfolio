@@ -1,3 +1,4 @@
+"use client";
 import '@/src/styles/globals.css';
 import clsx from 'clsx';
 import local from 'next/font/local';
@@ -9,6 +10,8 @@ import BackToTopButton from '@/src/components/utils/BackToTopButton';
 import Head from './head';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
+import {NextUIProvider} from "@nextui-org/react";
+import { SessionProvider } from 'next-auth/react';
 
 const graphik = local({
   src: [
@@ -39,6 +42,9 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <Head />
 
     <body className="bg-[#080809] transition ease  min-h-screen ">
+    <SessionProvider>
+    <NextUIProvider>
+
     <ProgressBar />
     <Header />
 
@@ -51,6 +57,8 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <BackToTopButton />
 
     <Footer />
+    </NextUIProvider>
+    </SessionProvider>
     </body>
     </html>
   );

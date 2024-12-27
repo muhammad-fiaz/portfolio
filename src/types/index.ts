@@ -17,9 +17,7 @@ export interface ExternalLinkProps {
 
 export interface NavItemHeaderAnimation {
   name: string;
-  x: number;
-  y: number;
-  w: string;
+
 }
 
 export interface NavItemProps {

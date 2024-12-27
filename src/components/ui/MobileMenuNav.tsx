@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import styles from '@/src/styles/mobileMenu.module.css';
 import { useEffect } from 'react';
@@ -31,7 +31,7 @@ const MenuIcon = (props: JSX.IntrinsicElements['svg']) => {
       />
     </svg>
   );
-}
+};
 
 const CrossIcon = (props: JSX.IntrinsicElements['svg']) => {
   return (
@@ -51,10 +51,9 @@ const CrossIcon = (props: JSX.IntrinsicElements['svg']) => {
       <path d='M6 6l12 12' />
     </svg>
   );
-}
+};
 
 const MobileMenuNav = () => {
-
   const { isMenuOpen, toggleMenu } = useMenuNav();
 
   useEffect(() => {
@@ -70,28 +69,23 @@ const MobileMenuNav = () => {
         aria-label='Toggle menu'
         type='button'
         onClick={toggleMenu}>
-
         <MenuIcon data-hide={isMenuOpen} />
-
         <CrossIcon data-hide={!isMenuOpen} />
-
       </button>
-      {
-        isMenuOpen && (
-          <ul
-            className={cn(
-              styles.menu,
-              'flex flex-col items-start justify-center absolute right-0 backdrop-blur-sm bg-black/20 text-end p-5 rounded-br-2xl mr-5',
-              styles.menuRendered
-            )}>
 
-            <LinksMenuNav />
-
-          </ul>
-        )
-      }
+      {isMenuOpen && (
+        <ul
+          className={cn(
+            styles.menu,
+            'flex flex-col items-center justify-start absolute top-full right-0 mt-0.5 backdrop-blur-xl bg-black/80 text-center p-5 rounded-2xl mr-5 w-full sm:w-[90%] md:w-[60%]', // Centering items and increasing width
+            styles.menuRendered
+          )}>
+          <LinksMenuNav />
+          {/* Optional: You can add AuthAvatar here if needed */}
+        </ul>
+      )}
     </>
   );
-}
+};
 
 export default MobileMenuNav;
