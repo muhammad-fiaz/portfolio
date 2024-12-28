@@ -81,7 +81,6 @@ const MobileMenuNav = () => {
             styles.menuRendered
           )}>
           <LinksMenuNav />
-          {/* Optional: You can add AuthAvatar here if needed */}
         </ul>
       )}
     </>

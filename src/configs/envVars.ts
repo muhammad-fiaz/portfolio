@@ -2,9 +2,7 @@ export function validateEnvVars() {
   const requiredEnvVars = [
     'GITHUB_TOKEN',
     'GITHUB_SECRET',
-    'GITHUB_ID',
-    'HASHNODE_API_KEY',
-    'HASHNODE_USERNAME'
+    'GITHUB_ID'
   ];
 
   // Check if all required environment variables are set
@@ -16,9 +14,11 @@ export function validateEnvVars() {
   });
 
   // Set optional environment variables with default values if not set
-  process.env.ADSENSE_ID = process.env.ADSENSE_ID || ''; // not needed
-  process.env.SITE_URL = process.env.SITE_URL || 'http://localhost:3000';
-  process.env.NEXTAUTH_SECRET = process.env.NEXTAUTH_SECRET || 'default_nextauth_secret';
+  process.env.HASHNODE_API_KEY = process.env.HASHNODE_API_KEY || ''; // Optional, default to empty string
+  process.env.HASHNODE_USERNAME = process.env.HASHNODE_USERNAME || ''; // Optional, default to empty string
+  process.env.ADSENSE_ID = process.env.ADSENSE_ID || ''; // Not needed, default to empty string
+  process.env.SITE_URL = process.env.SITE_URL || 'http://localhost:3000'; // Default URL
+  process.env.NEXTAUTH_SECRET = process.env.NEXTAUTH_SECRET || 'default_nextauth_secret'; // Default secret
 }
 
 export function getEnvVars() {
