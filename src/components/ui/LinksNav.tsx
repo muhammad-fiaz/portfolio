@@ -6,27 +6,19 @@ import { NavItemHeaderAnimation } from '@/src/types';
 export const navItemsSelected: { [key: string]: NavItemHeaderAnimation } = {
   '/': {
     name: 'home',
-    x: 1,
-    y: -3,
-    w: '60px'
+
   },
   '/about': {
     name: 'about',
-    x: 65,
-    y: -3,
-    w: '60px'
+
   },
   '/projects': {
     name: 'projects',
-    x: 130,
-    y: -3,
-    w: '75px'
+
   },
   '/blog': {
     name: 'blog',
-    x: 209,
-    y: -3,
-    w: '50px'
+
   }
 };
 
@@ -45,7 +37,7 @@ const LinksNav = () => {
               key={path}
               href={path}
               className={clsx(
-                'hidden lg:inline-block transition ease hover:text-neutral-200 py-[2px] px-[10px]',
+                'hidden lg:inline-block transition ease hover:text-neutral-200 py-[2px] px-[10px] focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-opacity-50 rounded-md ',
                 {
                   'text-neutral-500': !isActive,
                   'font-bold': isActive,

@@ -8,6 +8,7 @@ import TitleSectionPageContainer from '../utils/TitleSectionPageContainer';
 import CardProject from '@/src/components/content/CardProject';
 import Link from 'next/link';
 import { Skeleton } from '../ui/skeleton';
+import Script from 'next/script';
 
 const ProjectsSection = () => {
   const [projectSearch, setProjectSearch] = useState<string>('');
@@ -61,7 +62,8 @@ const ProjectsSection = () => {
         <TitleSectionPageContainer title="Projects" />
 
         {/* Add JSON-LD metadata for the page */}
-        <script
+        <Script
+          id="json-ld-projects"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: generateJsonLd(allProjectsInfo),

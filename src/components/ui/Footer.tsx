@@ -2,6 +2,7 @@ import Link from 'next/link';
 import AnimationContainer from '../utils/AnimationContainer';
 import ExternalLink from './ExternalLink';
 import { siteConfig } from '@/src/configs/config';
+import Credits from '@/src/components/utils/Credits';
 
 const Footer = () => {
   return (
@@ -186,6 +187,9 @@ const Footer = () => {
           </Link>
         </div>
       </AnimationContainer>
+
+<Credits/>
+
     </footer>
   );
 }

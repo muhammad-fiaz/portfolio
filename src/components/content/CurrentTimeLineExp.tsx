@@ -27,8 +27,7 @@ const CurrentTimeLineExp = () => {
             <TimelineEvent>
                 <TimelineEvent.Title>Fiaz Technologies | Nov. 2023 - Present</TimelineEvent.Title>
                 <TimelineEvent.Description>
-                    Building and helping developer-first tools at Fiaz Technologies. Involved in creating innovative tools to enhance developer productivity.
-                </TimelineEvent.Description>
+                  Building developer-first tools at Fiaz Technologies to enhance productivity. Focused on creating innovative solutions that empower developers.                </TimelineEvent.Description>
             </TimelineEvent>
 
             <TimelineEvent>
