@@ -19,11 +19,10 @@ const Hero = () => {
 
       <AnimationContainer customClassName="w-[150px] sm:w-[250px] relative mb-6 lg:mb-0">
         <Image
-          alt={siteConfig.author} // Dynamic alt text
-          height={300} // Increased height
-          width={300} // Increased width
-          src={siteConfig.profile_image} // Dynamic profile image URL
-          sizes="30vw"
+          alt={siteConfig.author}
+          src={siteConfig.profile_image}
+          width={250}
+          height={250}
           priority
           className="rounded-[12px] filter grayscale hover:grayscale-0 transition ease"
         />

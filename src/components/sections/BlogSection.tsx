@@ -8,6 +8,7 @@ import BlogCard from '@/src/components/content/CardBlog';
 import { siteConfig } from '@/src/configs/config';
 import Link from 'next/link';
 import { Skeleton } from '@/src/components/ui/skeleton';
+import Script from 'next/script';
 
 const BlogSection = () => {
   const [blogSearch, setBlogSearch] = useState<string>('');
@@ -70,7 +71,8 @@ const BlogSection = () => {
         <TitleSectionPageContainer title="Blogs" />
 
         {/* Add JSON-LD metadata for the page */}
-        <script
+        <Script
+          id="json-ld-blogs"
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: generateJsonLd(blogs),
