@@ -17,7 +17,7 @@ const TitleSectionPageContainer = ({ title }: { title: string }) => {
       animate={animation.show}
       transition={{ delay: 0.5 }}
     >
-      <h2 className='font-bold text-4xl md:text-5xl tracking-tight mb-8 text-white text-center'>
+      <h2 className='font-bold text-4xl md:text-5xl tracking-tight mb-8 text-black dark:text-white text-center'>
         {title}
       </h2>
     </motion.div>

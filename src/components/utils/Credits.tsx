@@ -32,7 +32,7 @@ const Credits = () => {
 
 
   return (
-    <AnimationContainer customClassName="text-center py-4 text-gray-500 text-sm ">
+    <AnimationContainer customClassName="text-center py-4 dark:text-white/50 text-black/50 text-sm ">
 
 
       <p>

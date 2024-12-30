@@ -6,14 +6,14 @@ import Credits from '@/src/components/utils/Credits';
 
 const Footer = () => {
   return (
-    <footer className="w-full lg:max-w-screen-md flex flex-col justify-center items-center mx-auto">
+    <footer className="w-full lg:max-w-screen-md flex flex-col justify-center items-center mx-auto dark:text-white/70 text-black/70">
       <hr className="w-full border-1 border-gray-800 mb-8" />
 
       <AnimationContainer customClassName="w-full grid place-items-center grid-cols-3 gap-1 lg:gap-4 pb-8 sm:grid-cols-3 mx-3">
         <div className="flex flex-col space-y-4">
           <Link
             href="/home"
-            className="flex items-center gap-2 text-gray-500 hover:text-gray-600 transition ease"
+            className="flex items-center gap-2  hover:text-gray-600 transition ease"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -32,7 +32,7 @@ const Footer = () => {
 
           <Link
             href="/about"
-            className="flex items-center gap-2 text-gray-500 hover:text-gray-600 transition ease"
+            className="flex items-center gap-2  hover:text-gray-600 transition ease"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -47,7 +47,7 @@ const Footer = () => {
 
           <Link
             href="/projects"
-            className="flex items-center gap-2 text-gray-500 hover:text-gray-600 transition ease"
+            className="flex items-center gap-2  hover:text-gray-600 transition ease"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -65,7 +65,7 @@ const Footer = () => {
           </Link>
         </div>
 
-        <div className="flex flex-col space-y-4">
+        <div className="flex flex-col space-y-4 ">
           <ExternalLink href={siteConfig.social.github}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -140,7 +140,7 @@ const Footer = () => {
         <div className="flex flex-col space-y-4">
           <Link
             href="/projects"
-            className="flex items-center gap-2 text-gray-500 hover:text-gray-600 transition ease"
+            className="flex items-center gap-2  hover:text-gray-600 transition ease"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -154,7 +154,7 @@ const Footer = () => {
           </Link>
           <Link
             href="/blog"
-            className="flex items-center gap-2 text-gray-500 hover:text-gray-600 transition ease"
+            className="flex items-center gap-2  hover:text-gray-600 transition ease"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -169,7 +169,7 @@ const Footer = () => {
 
           <Link
             href="#contactme"
-            className="flex items-center gap-2 text-gray-500 hover:text-gray-600 transition ease"
+            className="flex items-center gap-2  hover:text-gray-600 transition ease"
           >
             <svg
               xmlns="http://www.w3.org/2000/svg"

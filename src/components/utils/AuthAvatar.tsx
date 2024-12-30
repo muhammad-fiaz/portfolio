@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import { useState, useEffect } from 'react';
 import { Avatar } from '@nextui-org/avatar';
@@ -44,7 +44,7 @@ const AuthAvatar = () => {
         <Button
           color="primary"
           onPress={handleSignIn}
-          className="cursor-pointer"
+          className="cursor-pointer bg-black text-white dark:bg-white dark:text-black"
         >
           Sign In
         </Button>
@@ -59,7 +59,7 @@ const AuthAvatar = () => {
             />
           </DropdownTrigger>
 
-          <DropdownMenu aria-label="User settings" >
+          <DropdownMenu aria-label="User settings">
             <DropdownItem key="signOut" className="text-danger" color="danger" onPress={handleSignOut}>
               Sign Out
             </DropdownItem>

@@ -77,7 +77,7 @@ const MobileMenuNav = () => {
         <ul
           className={cn(
             styles.menu,
-            'flex flex-col items-center justify-start absolute top-full right-0 mt-0.5 backdrop-blur-xl bg-black/80 text-center p-5 rounded-2xl mr-5 w-full sm:w-[90%] md:w-[60%]', // Centering items and increasing width
+            'flex flex-col items-center justify-start absolute top-full right-0 mt-0.5 backdrop-blur-md bg-primary dark:bg-black/50 text-center p-5 rounded-2xl mr-5 w-full sm:w-[90%] md:w-[60%]', // Blurred background with adaptable light/dark theme colors
             styles.menuRendered
           )}>
           <LinksMenuNav />

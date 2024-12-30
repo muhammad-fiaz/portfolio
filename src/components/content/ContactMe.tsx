@@ -6,7 +6,7 @@ const ContactMe = () => {
     <AnimationContainer customClassName="w-full">
       {/* Use h2 for main section header */}
       <h2
-        className="font-bold text-2xl md:text-2xl tracking-tight mb-8 text-white text-center lg:text-start"
+        className="font-bold text-2xl md:text-2xl tracking-tight mb-8 text-foreground dark:text-white text-center lg:text-start"
         id="contactme"
       >
         Contact me
@@ -15,11 +15,11 @@ const ContactMe = () => {
       <div className="w-full flex justify-between items-center flex-col mx-auto max-w-screen-xl">
         <div className="w-full flex justify-between items-center flex-col lg:flex-row gap-6 mb-10">
           {/* Use h3 for the subheading here, since it's a subsection under "Contact me" */}
-          <div className="w-full rounded border border-gray-800 hover:border-gray-900 bg-[#080809] p-4 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] sm:p-6 transition ease">
-            <h3 className="font-bold text-1xl tracking-tight text-white text-start">
+          <div className="w-full rounded border border-gray-800 hover:border-gray-900 bg-white dark:bg-[#080809] p-4 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] sm:p-6 transition ease">
+            <h3 className="font-bold text-1xl tracking-tight text-foreground dark:text-white text-start">
               Email
             </h3>
-            <p className="text-base mt-2 text-gray-400">
+            <p className="text-base mt-2 text-foreground dark:text-white">
               {siteConfig.social.email}
             </p>
           </div>
@@ -36,7 +36,7 @@ const ContactMe = () => {
                 Name
               </label>
               <input
-                className="w-full rounded p-3 text-base outline-none border text-white bg-black border-gray-900 focus:border-gray-800 transition ease"
+                className="w-full rounded p-3 text-base outline-none border text-foreground dark:text-white bg-white dark:bg-neutral-800 border-gray-900 dark:border-gray-700 focus:border-gray-800 dark:focus:border-gray-600 transition ease"
                 placeholder="Name"
                 type="text"
                 id="name"
@@ -51,7 +51,7 @@ const ContactMe = () => {
                   Email
                 </label>
                 <input
-                  className="w-full rounded p-3 text-base outline-none border text-white bg-black border-gray-900 focus:border-gray-800 transition ease"
+                  className="w-full rounded p-3 text-base outline-none border text-foreground dark:text-white bg-white dark:bg-neutral-800 border-gray-900 dark:border-gray-700 focus:border-gray-800 dark:focus:border-gray-600 transition ease"
                   placeholder="Email"
                   type="email"
                   id="email"
@@ -65,7 +65,7 @@ const ContactMe = () => {
                   Phone
                 </label>
                 <input
-                  className="w-full rounded p-3 text-base outline-none border text-white bg-black border-gray-900 focus:border-gray-800 transition ease"
+                  className="w-full rounded p-3 text-base outline-none border text-foreground dark:text-white bg-white dark:bg-neutral-800 border-gray-900 dark:border-gray-700 focus:border-gray-800 dark:focus:border-gray-600 transition ease"
                   placeholder="Phone"
                   type="tel"
                   id="phone"
@@ -80,7 +80,7 @@ const ContactMe = () => {
                 Message
               </label>
               <textarea
-                className="w-full h-32 rounded p-3 text-base outline-none border text-white bg-black border-gray-900 focus:border-gray-800 transition ease"
+                className="w-full h-32 rounded p-3 text-base outline-none border text-foreground dark:text-white bg-white dark:bg-neutral-800 border-gray-900 dark:border-gray-700 focus:border-gray-800 dark:focus:border-gray-600 transition ease"
                 placeholder="Message"
                 id="message"
                 name="message"
@@ -90,9 +90,9 @@ const ContactMe = () => {
 
             <button
               type="submit"
-              className="flex items-center justify-center rounded px-5 py-3 text-black bg-white hover:bg-white/50 shadow-sm transition ease mx-auto"
+              className="flex items-center justify-center rounded px-5 py-3 text-white dark:text-black bg-black dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-200 shadow-sm transition ease mx-auto"
             >
-              <span className="font-medium text-base ">Send</span>
+              <span className="font-medium text-base">Send</span>
 
               <svg
                 xmlns="http://www.w3.org/2000/svg"

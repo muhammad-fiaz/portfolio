@@ -6,30 +6,36 @@ import 'nprogress/nprogress.css';
 import { usePathname } from 'next/navigation';
 
 const ProgressBar = () => {
-  const pathname = usePathname();
+  const pathname = usePathname(); // Get the current pathname
 
-  // Trigger NProgress when the route is changing
   useEffect(() => {
-    const handleRouteChangeStart = () => NProgress.start();
-    const handleRouteChangeComplete = () => NProgress.done();
-    const handleRouteChangeError = () => NProgress.done();
+    const handleRouteChangeStart = () => {
+      NProgress.start(); // Start NProgress
+    };
 
-    // Trigger NProgress on initial load or when pathname changes
-    if (pathname) {
-      handleRouteChangeStart();
-      handleRouteChangeComplete();
-    }
+    const handleRouteChangeComplete = () => {
+      NProgress.done(); // Finish NProgress
+    };
 
-    // Handle when the pathname changes
+    const handleRouteChangeError = () => {
+      NProgress.done(); // Finish NProgress if error occurs
+    };
+
+    // Call the start and done manually for the first load
+    handleRouteChangeStart();
+    handleRouteChangeComplete();
+
+    // Whenever pathname changes, trigger NProgress
     NProgress.start(); // Start NProgress
-    const timeoutId = setTimeout(() => NProgress.done(), 500); // Finish after 500ms
+    const timeoutId = setTimeout(() => NProgress.done(), 500); // Finish NProgress after a timeout
 
+    // Cleanup
     return () => {
       clearTimeout(timeoutId);
     };
-  }, [pathname]); // Dependency on pathname ensures this runs on route change
+  }, [pathname]); // Re-run when the pathname changes
 
-  return null; // No need to render anything in the DOM, the NProgress bar is automatically shown
+  return null; // No need to render anything, NProgress is globally managed
 };
 
 export default ProgressBar;
