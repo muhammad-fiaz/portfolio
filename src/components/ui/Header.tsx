@@ -5,8 +5,8 @@ import HeaderAnimation from '../utils/HeaderAnimation';
 import MobileMenuNav from './MobileMenuNav';
 import NavItem from './NavItem';
 import { siteConfig } from '@/src/configs/config';
-import AuthAvatar from '@/src/components/utils/AuthAvatar';
 import ThemeToggle from '@/src/components/utils/ThemeToggle';
+import AuthAvatar from '@/src/components/ui/AuthAvatar';
 
 const Header = () => {
   return (

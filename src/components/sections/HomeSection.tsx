@@ -6,7 +6,7 @@ import CurrentTimeLineExp from '../content/CurrentTimeLineExp';
 import Hero from '../content/Hero';
 import AnimationContainer from '../utils/AnimationContainer';
 import SectionContainer from '../utils/SectionContainer';
-import ShowSkills from '../utils/ShowSkills';
+import ShowSkills from '@/src/components/ui/ShowSkills';
 
 const HomeSection = () => {
   return (

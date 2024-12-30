@@ -1,6 +1,5 @@
 import ExternalLink from '../ui/ExternalLink';
 import AnimationContainer from '../utils/AnimationContainer';
-import ShowSkills from '../utils/ShowSkills';
 import { CardProjectProps } from '@/src/types';
 import {
   JSXElementConstructor,

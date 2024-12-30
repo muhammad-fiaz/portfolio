@@ -6,14 +6,14 @@ import local from 'next/font/local';
 import Header from '@/src/components/ui/Header';
 import Footer from '@/src/components/ui/Footer';
 import FlareCursor from '@/src/components/ui/FlareCursor';
-import ProgressBar from '@/src/components/utils/progress';
-import BackToTopButton from '@/src/components/utils/BackToTopButton';
 import Head from './head';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
 import { NextUIProvider } from "@nextui-org/react";
 import { SessionProvider } from 'next-auth/react';
 import { ThemeProvider } from '../components/utils/themeContext';
+import ProgressBar from '@/src/components/ui/progress';
+import BackToTopButton from '@/src/components/ui/BackToTopButton';
 
 const graphik = local({
   src: [

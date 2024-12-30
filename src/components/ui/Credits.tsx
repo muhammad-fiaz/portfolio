@@ -2,7 +2,7 @@
 import React, { useEffect, useState, useRef } from "react";
 import Link from "next/link";
 import { siteConfig } from "@/src/configs/config";
-import AnimationContainer from './AnimationContainer';
+import AnimationContainer from '@/src/components/utils/AnimationContainer';
 
 const Credits = () => {
   const [repoStats, setRepoStats] = useState({ stars: 0, forks: 0 });

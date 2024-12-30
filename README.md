@@ -36,6 +36,11 @@ This project is built with Next.js and React, showcasing [Muhammad Fiaz](https:/
 
 **Support me with a little [sponsor ❤️](https://github.com/sponsors/muhammad-fiaz)**
 
+Here the Sample Performance of the Portfolio measured by [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools.
+
+![performance](https://private-user-images.githubusercontent.com/75434191/391230424-4d9d12db-24ef-4e1f-9060-c15902e12453.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzU1NzEzODcsIm5iZiI6MTczNTU3MTA4NywicGF0aCI6Ii83NTQzNDE5MS8zOTEyMzA0MjQtNGQ5ZDEyZGItMjRlZi00ZTFmLTkwNjAtYzE1OTAyZTEyNDUzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjMwVDE1MDQ0N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTY5ZTgzYTEyYTJlNjM5MDljMjEyZGI2ZWQxYjNkMzFlOGZmOGRhNTAwODQyNTM2MzlkMWEyMDk2OGQ1NzQ1NWYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.8LFhF0xpJE_NPbm_4VZURWgP8lKk0Oh_M8__GoUkK90)
+
+
 ## Table of Contents
 
 - [Release Notes](#release-notes)

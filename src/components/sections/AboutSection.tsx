@@ -1,10 +1,10 @@
 import AnimationContainer from '../utils/AnimationContainer';
 import { siteConfig } from '@/src/configs/config';
 import CurrentTimeLineExp from '../content/CurrentTimeLineExp';
-import ShowSkills from '../utils/ShowSkills';
 import TitleSectionPageContainer from '../utils/TitleSectionPageContainer';
 import SectionContainer from '../utils/SectionContainer';
 import Link from 'next/link';
+import ShowSkills from '@/src/components/ui/ShowSkills';
 
 const AboutSection = () => {
   return (
