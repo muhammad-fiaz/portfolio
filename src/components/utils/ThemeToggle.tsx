@@ -13,7 +13,7 @@ const ThemeToggle = () => {
       color="primary"
       variant="flat"
       onPress={toggleTheme}
-      className="bg-transparent"
+      className="bg-transparent text-black dark:text-white"
     >
       {theme === "light" ? <MoonIcon className="w-5 h-5" /> : <SunIcon className="w-5 h-5" />}
     </Button>

@@ -11,10 +11,21 @@ import Link from 'next/link';
 import { Skeleton } from '@/src/components/ui/skeleton';
 import Script from 'next/script';
 
+interface Blog {
+  guid: string;
+  title: string;
+  link: string;
+  contentSnippet: string;
+  categories: string[];
+  source: string;
+  thumbnail?: string;
+  pubDate?: string;
+}
+
 const BlogSection = () => {
-  const [blogSearch, setBlogSearch] = useState<string>('');
-  const [blogs, setBlogs] = useState<any[]>([]);
-  const [isLoading, setIsLoading] = useState<boolean>(false);
+  const [blogSearch, setBlogSearch] = useState<string>(''); // Add search bar functionality if needed
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+  const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
 
   const pathname = usePathname();
@@ -29,7 +40,8 @@ const BlogSection = () => {
           throw new Error('Failed to fetch blogs');
         }
         const data = await response.json();
-        const filteredBlogs = data.items.filter((blog: any) =>
+
+        const filteredBlogs = data.items.filter((blog: Blog) =>
           blog.title.toLowerCase().includes(blogSearch.toLowerCase())
         );
         setBlogs(filteredBlogs);
@@ -50,18 +62,18 @@ const BlogSection = () => {
         <TitleSectionPageContainer title="Blogs" />
         <AnimationContainer customClassName="w-full flex flex-col gap-5 mb-8">
           <p className="w-full text-base text-black dark:text-white">
-            These are some of the blog posts I've written since I started
-            blogging. Some of them are personal, technical articles, or insights
-            I've shared on various topics. If you want to see all my posts,
-            visit my{' '}
+            These are some of the blog posts I've written since I started blogging. Some of them are personal, technical articles, or insights
+            I've shared on various topics. If you want to see all my posts, visit my{' '}
             <Link
               href={siteConfig.social.blog}
               target="_blank"
               rel="noopener noreferrer"
-              className=" underline transition-all ease"
+              className="underline transition-all ease"
             >
               Blog Page
-            </Link>          </p>
+            </Link>
+            .
+          </p>
         </AnimationContainer>
 
         <article className="w-full flex justify-center items-center content-center flex-wrap gap-6 mx-auto">
@@ -90,6 +102,7 @@ const BlogSection = () => {
         </article>
       </div>
 
+      {/* JSON-LD Schema */}
       <Script
         id="json-ld-blogs"
         type="application/ld+json"
@@ -97,7 +110,7 @@ const BlogSection = () => {
           __html: JSON.stringify({
             '@context': 'https://schema.org',
             '@type': 'ItemList',
-            itemListElement: blogs.map((blog: any, index: number) => ({
+            itemListElement: blogs.map((blog, index) => ({
               '@type': 'ListItem',
               position: index + 1,
               item: {
@@ -105,12 +118,12 @@ const BlogSection = () => {
                 headline: blog.title,
                 description: blog.contentSnippet,
                 url: blog.link,
-                image: blog.thumbnail,
+                image: blog.thumbnail || undefined,
                 author: {
                   '@type': 'Person',
                   name: siteConfig.author,
                 },
-                datePublished: blog.pubDate,
+                datePublished: blog.pubDate || undefined,
                 keywords: blog.categories.join(', '),
               },
             })),
