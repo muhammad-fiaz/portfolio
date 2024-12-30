@@ -7,7 +7,7 @@ import Credits from '@/src/components/utils/Credits';
 const Footer = () => {
   return (
     <footer className="w-full lg:max-w-screen-md flex flex-col justify-center items-center mx-auto dark:text-white/70 text-black/70">
-      <hr className="w-full border-1 border-gray-800 mb-8" />
+      <hr className="w-full border-1 border-black/50 dark:border-white/50 mb-8" />
 
       <AnimationContainer customClassName="w-full grid place-items-center grid-cols-3 gap-1 lg:gap-4 pb-8 sm:grid-cols-3 mx-3">
         <div className="flex flex-col space-y-4">

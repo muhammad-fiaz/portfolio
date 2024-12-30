@@ -79,7 +79,7 @@ const BlogSection = () => {
         <article className="w-full flex justify-center items-center content-center flex-wrap gap-6 mx-auto">
           {isLoading ? (
             Array.from({ length: 6 }).map((_, index) => (
-              <div key={index} className="w-full h-auto p-4">
+              <div key={`skeleton-${index}`} className="w-full h-auto p-4">
                 <Skeleton className="w-full h-10 mb-4 bg-gray-700 dark:bg-gray-600 rounded-md" />
                 <Skeleton className="w-full h-6 bg-gray-700 dark:bg-gray-600 rounded-md" />
                 <Skeleton className="w-3/4 h-4 bg-gray-700 dark:bg-gray-600 rounded-md mt-2" />
@@ -91,8 +91,39 @@ const BlogSection = () => {
               <h2>{error}</h2>
             </div>
           ) : blogs.length > 0 ? (
-            blogs.map(({ guid, title, link, contentSnippet, categories, source }) => (
-              <BlogCard key={guid} title={title} excerpt={contentSnippet} tags={categories} link={link} source={source} />
+            blogs.map(({ guid, title, link, contentSnippet, categories, source, thumbnail, pubDate }) => (
+              <>
+                {/* Individual JSON-LD for Each Blog Post */}
+                <Script
+                  key={`json-ld-blog-${guid}`}
+                  id={`json-ld-blog-${guid}`}
+                  type="application/ld+json"
+                  dangerouslySetInnerHTML={{
+                    __html: JSON.stringify({
+                      '@context': 'https://schema.org',
+                      '@type': 'BlogPosting',
+                      headline: title,
+                      description: contentSnippet,
+                      url: link,
+                      image: thumbnail || undefined, // Optional field
+                      author: {
+                        '@type': 'Person',
+                        name: siteConfig.author, // Assuming the author's name is from siteConfig
+                      },
+                      datePublished: pubDate || undefined, // Optional field, fallback to undefined if not available
+                      keywords: categories.join(', '),
+                    }),
+                  }}
+                />
+                <BlogCard
+                  key={guid} // Each BlogCard gets a unique key
+                  title={title}
+                  excerpt={contentSnippet}
+                  tags={categories}
+                  link={link}
+                  source={source}
+                />
+              </>
             ))
           ) : (
             <div className="w-full flex justify-center items-center text-black dark:text-white p-4">
@@ -101,35 +132,6 @@ const BlogSection = () => {
           )}
         </article>
       </div>
-
-      {/* JSON-LD Schema */}
-      <Script
-        id="json-ld-blogs"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: JSON.stringify({
-            '@context': 'https://schema.org',
-            '@type': 'ItemList',
-            itemListElement: blogs.map((blog, index) => ({
-              '@type': 'ListItem',
-              position: index + 1,
-              item: {
-                '@type': 'BlogPosting',
-                headline: blog.title,
-                description: blog.contentSnippet,
-                url: blog.link,
-                image: blog.thumbnail || undefined,
-                author: {
-                  '@type': 'Person',
-                  name: siteConfig.author,
-                },
-                datePublished: blog.pubDate || undefined,
-                keywords: blog.categories.join(', '),
-              },
-            })),
-          }),
-        }}
-      />
     </SectionContainer>
   );
 };

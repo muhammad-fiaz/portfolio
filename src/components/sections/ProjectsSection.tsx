@@ -44,23 +44,21 @@ const ProjectsSection = () => {
     fetchProjects();
   }, [projectSearch, pathname]); // Re-run when either the projectSearch or pathname changes
 
-  // Generate JSON-LD structured data for SEO and social sharing
-  const generateJsonLd = (projects: CardProjectProps[]) => {
+  // Generate JSON-LD structured data for each individual project
+  const generateJsonLdForProject = (project: CardProjectProps) => {
     const jsonLd = {
       '@context': 'https://schema.org',
-      '@type': 'ItemList',
-      itemListElement: projects.map((project, index) => ({
-        '@type': 'ListItem',
-        position: index + 1,
-        item: {
-          '@type': 'CreativeWork',
-          name: project.title,
-          description: project.des,
-          url: project.repo, // GitHub URL or project URL
-          image: project.link, // Assuming this is the project image URL or screenshot
-          keywords: project.topics.join(', '), // Assuming topics are tags
-        },
-      })),
+      '@type': 'CreativeWork',
+      name: project.title,
+      description: project.des,
+      url: project.repo,
+      image: project.link,
+      keywords: project.topics.join(', '),
+      author: {
+        '@type': 'Person',
+        name: siteConfig.author,
+      },
+      datePublished: project.date,
     };
 
     return JSON.stringify(jsonLd);
@@ -78,9 +76,9 @@ const ProjectsSection = () => {
               <Link
                 href={`https://github.com/${siteConfig.social.github}`}
                 target="_blank"
-                className="  underline transition-all ease"
+                className="underline transition-all ease"
               >
-                {`github page`}
+                github page
               </Link>
               .
             </p>
@@ -125,7 +123,18 @@ const ProjectsSection = () => {
               </AnimationContainer>
             ) : allProjectsInfo.length > 0 ? (
               allProjectsInfo.map(({ id, title, des, category, repo, link, topics }) => (
-                <CardProject key={id} title={title} des={des} category={category} repo={repo} link={link} topics={topics} />
+                <>
+                  {/* Add JSON-LD for each individual project */}
+                  <Script
+                    key={`json-ld-project-${id}`}
+                    id={`json-ld-project-${id}`}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                      __html: generateJsonLdForProject({ id, title, des, category, repo, link, topics }),
+                    }}
+                  />
+                  <CardProject key={id} title={title} des={des} category={category} repo={repo} link={link} topics={topics} />
+                </>
               ))
             ) : (
               <AnimationContainer customClassName="w-full group flex flex-col justify-center items-center mb-8">
@@ -137,15 +146,6 @@ const ProjectsSection = () => {
           </article>
         </div>
       </SectionContainer>
-
-      {/* Add JSON-LD metadata for the page */}
-      <Script
-        id="json-ld-projects"
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{
-          __html: generateJsonLd(allProjectsInfo),
-        }}
-      />
     </>
   );
 };
