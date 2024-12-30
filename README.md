@@ -26,7 +26,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/muhammad-fiaz/portfolio.svg?style=social&label=Stars)
 
 [![Follow me on GitHub](https://img.shields.io/github/followers/muhammad-fiaz?label=Follow&style=social)](https://github.com/muhammad-fiaz)
-[![Discord](https://img.shields.io/badge/Discord-Join%20us-7289DA?logo=discord&style=flat-square)](https://discord.gg/ShaDFdZ7)
+[![Discord](https://img.shields.io/badge/Discord-Join%20us-7289DA?logo=discord&style=flat-square)](https://discord.gg/mXMhy2EX)
 
 </div>
 
