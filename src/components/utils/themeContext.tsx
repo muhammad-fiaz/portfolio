@@ -11,18 +11,15 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [theme, setTheme] = useState<string>("dark"); // Default theme set to "dark"
 
   useEffect(() => {
-    // Check local storage for saved theme preference
-    const savedTheme = localStorage.getItem("theme");
-    if (savedTheme) {
-      setTheme(savedTheme);
-    } else {
-      // Set the default theme
-      setTheme("dark");
-      document.documentElement.classList.add("dark");
-    }
+    // Always force dark theme on load
+    setTheme("dark");
+    document.documentElement.classList.add("dark");
+    localStorage.setItem("theme", "dark"); // Save dark theme to local storage
   }, []);
 
   const toggleTheme = () => {
+    // Optionally, you can still toggle between light and dark in this function.
+    // But with the requirement to always set dark theme, you might not need to toggle it.
     const newTheme = theme === "light" ? "dark" : "light";
     setTheme(newTheme);
     localStorage.setItem("theme", newTheme);
