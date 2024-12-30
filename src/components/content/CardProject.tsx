@@ -1,6 +1,5 @@
 import ExternalLink from '../ui/ExternalLink';
 import AnimationContainer from '../utils/AnimationContainer';
-import ShowSkills from '../utils/ShowSkills';
 import { CardProjectProps } from '@/src/types';
 import {
   JSXElementConstructor,
@@ -19,12 +18,12 @@ const CardProject = ({
   topics
 }: CardProjectProps) => {
   return (
-    <AnimationContainer customClassName="w-full h-42 flex flex-col justify-center items-center rounded border border-gray-800 hover:border-white bg-[#080809] shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 transition-all ease-in-out duration-300 transform hover:scale-105">
+    <AnimationContainer customClassName="w-full h-42 flex flex-col justify-center items-center rounded-xl border border-black/20 hover:border-white bg-[#080809] shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 transition-all ease-in-out duration-300 transform hover:scale-105 text-black bg-white dark:bg-black dark:text-white">
       <div className="w-full flex flex-col justify-center items-start rounded gap-5">
-        <h3 className="text-2xl lg:text-2xl font-medium text-white transition-all ease-in-out duration-300">
+        <h3 className="text-2xl lg:text-2xl font-medium  transition-all ease-in-out duration-300">
           {title}
         </h3>
-        <p className="text-base text-gray-400 transition-all ease-in-out duration-300">
+        <p className="text-base  transition-all ease-in-out duration-300">
           {des}
         </p>
 
@@ -47,7 +46,7 @@ const CardProject = ({
               ) => (
                 <span
                   key={index}
-                  className="text-xs  bg-gray-700 text-gray-300 px-2 py-1 rounded-md shadow-md whitespace-nowrap"
+                  className="text-xs   px-2 py-1 rounded-md shadow-md whitespace-nowrap"
                 >
                   {topic}
                 </span>
@@ -56,9 +55,7 @@ const CardProject = ({
         </div>
 
         <div className="w-full flex justify-between items-start flex-wrap flex-col lg:flex-row gap-5">
-          <div className="flex justify-center items-start gap-3">
-            <ShowSkills skills={category} />
-          </div>
+
 
           <div className="flex justify-center items-end gap-3">
             <ExternalLink

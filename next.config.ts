@@ -12,10 +12,17 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'avatars.githubusercontent.com',
         port: '',
-        pathname: '/**'
-      }
-    ]
-  }
+        pathname: '/**',
+      },
+      {
+        protocol: 'https',
+        hostname: 'skillicons.dev',
+        port: '',
+        pathname: '/icons',
+      },
+    ],
+    dangerouslyAllowSVG: true, // Allow SVG images
+  },
 };
 
 export default nextConfig;

@@ -1,17 +1,19 @@
 "use client";
+
 import '@/src/styles/globals.css';
 import clsx from 'clsx';
 import local from 'next/font/local';
 import Header from '@/src/components/ui/Header';
 import Footer from '@/src/components/ui/Footer';
 import FlareCursor from '@/src/components/ui/FlareCursor';
-import ProgressBar from '@/src/components/utils/progress';
-import BackToTopButton from '@/src/components/utils/BackToTopButton';
 import Head from './head';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
-import {NextUIProvider} from "@nextui-org/react";
+import { NextUIProvider } from "@nextui-org/react";
 import { SessionProvider } from 'next-auth/react';
+import { ThemeProvider } from '../components/utils/themeContext';
+import ProgressBar from '@/src/components/ui/progress';
+import BackToTopButton from '@/src/components/ui/BackToTopButton';
 
 const graphik = local({
   src: [
@@ -35,29 +37,30 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <html
       lang="en"
       className={clsx(
-        'text-black bg-white dark:text-white dark:bg-[#111010] transition ease',
+        'text-foreground bg-background dark:text-foreground dark:bg-background transition ease-in-out',
         graphik.variable
       )}
     >
     <Head />
 
-    <body className="bg-[#080809] transition ease  min-h-screen ">
+    <body className="transition ease-in-out min-h-screen">
     <SessionProvider>
-    <NextUIProvider>
+      <ThemeProvider>
+        <NextUIProvider>
+          <ProgressBar />
+          <Header />
 
-    <ProgressBar />
-    <Header />
+          <main className="flex flex-col justify-center items-center mx-auto">
+            <FlareCursor />
+            {children}
+            <SpeedInsights />
+            <Analytics />
+          </main>
 
-    <main className="flex flex-col justify-center items-center mx-auto">
-      <FlareCursor />
-      {children}
-      <SpeedInsights />
-      <Analytics />
-    </main>
-    <BackToTopButton />
-
-    <Footer />
-    </NextUIProvider>
+          <BackToTopButton />
+          <Footer />
+        </NextUIProvider>
+      </ThemeProvider>
     </SessionProvider>
     </body>
     </html>

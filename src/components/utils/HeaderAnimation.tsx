@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import { motion } from 'framer-motion';
 import useScrollPosition from '@/src/hooks/useScrollPosition';
@@ -20,7 +20,9 @@ const HeaderAnimation = ({ children }: { children: React.ReactNode; }) => {
   return (
     <motion.header
       className={classNames(
-        scrollPosition > 0 ? 'backdrop-blur-md bg-black/30' : '',
+        scrollPosition > 0
+          ? 'bg-white dark:bg-black  transition-all ease-in-out'  // Black background for light theme, dark-gray for dark theme
+          : 'bg-transparent',  // Transparent when not scrolled
         'w-full sticky top-0 flex flex-col justify-center items-center z-10 transition ease-in-out mx-auto'
       )}
       initial={animation.hide}
@@ -29,7 +31,7 @@ const HeaderAnimation = ({ children }: { children: React.ReactNode; }) => {
     >
       {children}
     </motion.header>
-  )
+  );
 }
 
 export default HeaderAnimation;

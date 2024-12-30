@@ -26,7 +26,7 @@
 ![GitHub stars](https://img.shields.io/github/stars/muhammad-fiaz/portfolio.svg?style=social&label=Stars)
 
 [![Follow me on GitHub](https://img.shields.io/github/followers/muhammad-fiaz?label=Follow&style=social)](https://github.com/muhammad-fiaz)
-[![Discord](https://img.shields.io/badge/Discord-Join%20us-7289DA?logo=discord&style=flat-square)](https://discord.gg/ShaDFdZ7)
+[![Discord](https://img.shields.io/badge/Discord-Join%20us-7289DA?logo=discord&style=flat-square)](https://discord.gg/mXMhy2EX)
 
 </div>
 
@@ -35,6 +35,11 @@ This project is built with Next.js and React, showcasing [Muhammad Fiaz](https:/
 **Feel free to use this project for your portfolio or as a project reference. If you find it helpful, don't forget to give it a ⭐️ to show your support. [Fork this repo](https://github.com/muhammad-fiaz/portfolio/fork) if you want to contribute✨**
 
 **Support me with a little [sponsor ❤️](https://github.com/sponsors/muhammad-fiaz)**
+
+Here the Sample Performance of the Portfolio measured by [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools.
+
+![performance](https://private-user-images.githubusercontent.com/75434191/391230424-4d9d12db-24ef-4e1f-9060-c15902e12453.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzU1NzEzODcsIm5iZiI6MTczNTU3MTA4NywicGF0aCI6Ii83NTQzNDE5MS8zOTEyMzA0MjQtNGQ5ZDEyZGItMjRlZi00ZTFmLTkwNjAtYzE1OTAyZTEyNDUzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjMwVDE1MDQ0N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTY5ZTgzYTEyYTJlNjM5MDljMjEyZGI2ZWQxYjNkMzFlOGZmOGRhNTAwODQyNTM2MzlkMWEyMDk2OGQ1NzQ1NWYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.8LFhF0xpJE_NPbm_4VZURWgP8lKk0Oh_M8__GoUkK90)
+
 
 ## Table of Contents
 
