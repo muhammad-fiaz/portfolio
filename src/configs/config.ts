@@ -6,6 +6,8 @@ export const siteConfig: {
     profile_image: string;
     form_id: string;
     social: {
+        kofi: string;
+        sponsor: string;
         email: string;
         twitter: string;
         github: string;
@@ -16,6 +18,9 @@ export const siteConfig: {
         hashnode: string;
 
     };
+    chatbot:{
+        rateLimit: number;
+    }
     metadata: {
         description: string;
         keywords: string;
@@ -29,6 +34,8 @@ export const siteConfig: {
     profile_image: 'https://avatars.githubusercontent.com/u/75434191?s=400&u=0aa88e4ae941c44425b2be4595cf92b68f578f8a&v=4',
     form_id:'https://formspree.io/f/myzynpbr',
     social: {
+        kofi: 'https://ko-fi.com/muhammadfiaz',
+        sponsor: 'https://github.com/sponsors/muhammad-fiaz',
         email: 'contact@muhammadfiaz.com',
         twitter: '@muhammadfiaz_',
         github: 'muhammad-fiaz',
@@ -43,5 +50,8 @@ export const siteConfig: {
         keywords:
             'Muhammad Fiaz, Full Stack Developer, Muhammad Fiaz portfolio, Muhammad Fiaz GitHub, Web Development, Mobile Applications, Machine Learning, Artificial Intelligence, Programming Languages, Open Source Developer, App Development',
         type: 'website',
+    },
+    chatbot: {
+        rateLimit: 10,
     },
 };

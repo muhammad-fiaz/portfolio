@@ -7,6 +7,7 @@ import Hero from '../content/Hero';
 import AnimationContainer from '../utils/AnimationContainer';
 import SectionContainer from '../utils/SectionContainer';
 import ShowSkills from '@/src/components/ui/ShowSkills';
+import SupportMe from '@/src/components/content/SupportMe';
 
 const HomeSection = () => {
   return (
@@ -17,10 +18,12 @@ const HomeSection = () => {
         <Hero />
       </div>
 
+
       {/* About Me Section */}
       <AnimationContainer customClassName="w-full mt-16">
         <AboutMe />
       </AnimationContainer>
+
 
       {/* Timeline Section */}
       <AnimationContainer customClassName="w-full mt-16">
@@ -55,6 +58,10 @@ const HomeSection = () => {
       {/* Contact Section */}
       <AnimationContainer customClassName="w-full mt-16">
         <ContactMe />
+      </AnimationContainer>
+      {/* Support Me Section */}
+      <AnimationContainer customClassName="w-full mt-16">
+        <SupportMe/>
       </AnimationContainer>
     </SectionContainer>
   );
