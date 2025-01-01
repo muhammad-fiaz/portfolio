@@ -43,7 +43,7 @@ const Credits = () => {
         . All rights reserved © {new Date().getFullYear()}.
       </p>
       <div className="flex justify-center items-center gap-4 mt-2">
-        <a
+        <Link
           href={`https://github.com/${siteConfig.social.github}/portfolio/stargazers`}
           target="_blank"
           rel="noopener noreferrer"
@@ -56,8 +56,8 @@ const Credits = () => {
             />
           </svg>
           <span>{repoStats.stars}</span> Stars
-        </a>
-        <a
+        </Link>
+        <Link
           href={`https://github.com/${siteConfig.social.github}/portfolio/fork`}
           target="_blank"
           rel="noopener noreferrer"
@@ -70,7 +70,7 @@ const Credits = () => {
             />
           </svg>
           <span>{repoStats.forks}</span> Forks
-        </a>
+        </Link>
       </div>
     </AnimationContainer>
   );

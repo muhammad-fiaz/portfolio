@@ -2,6 +2,7 @@
 import React, { useState } from 'react';
 import AnimationContainer from '../utils/AnimationContainer';
 import { siteConfig } from '@/src/configs/config';
+import { Button } from '@nextui-org/button';
 
 const ContactMe = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -102,7 +103,7 @@ const ContactMe = () => {
               ></textarea>
             </div>
 
-            <button
+            <Button
               type="submit"
               className="flex items-center justify-center rounded-xl px-5 py-3 text-white dark:text-black bg-black dark:bg-white hover:bg-gray-800 dark:hover:bg-gray-200 shadow-sm transition ease mx-auto"
             >
@@ -122,7 +123,7 @@ const ContactMe = () => {
                   d="M14 5l7 7m0 0l-7 7m7-7H3"
                 />
               </svg>
-            </button>
+            </Button>
           </form>
         </div>
       </div>
@@ -137,12 +138,12 @@ const ContactMe = () => {
             <p className="text-base text-foreground dark:text-gray-400">
               Your message has been sent to {siteConfig.social.email} successfully.
             </p>
-            <button
-              onClick={() => setIsSubmitted(false)}
+            <Button
+              onPress={() => setIsSubmitted(false)}
               className="mt-4 px-4 py-2 rounded-xl bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition ease"
             >
               Close
-            </button>
+            </Button>
           </div>
         </div>
       )}

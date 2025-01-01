@@ -1,5 +1,6 @@
 import React from 'react';
 import { siteConfig } from '@/src/configs/config';
+import { Button } from '@nextui-org/button';
 
 const SupportMe = () => {
   return (
@@ -10,18 +11,18 @@ const SupportMe = () => {
         Your contribution, no matter how small, helps me keep this project going and make it even better!
       </p>
       <div className="mb-6">
-        <button
-          onClick={() => window.open(siteConfig.social.sponsor, '_blank')}
-          className="bg-[#1EAEDB] text-white py-3 px-6 text-lg font-medium rounded-lg inline-block mr-4 transition-all duration-300 transform hover:bg-[#178CB7] hover:shadow-lg dark:bg-[#0A84FF] dark:hover:bg-[#0056A3]"
+        <Button
+          onPress={() => window.open(siteConfig.social.sponsor, '_blank')}
+          className="bg-[#1EAEDB] text-white  px-6 text-lg font-medium rounded-lg inline-block mr-4 transition-all duration-300 transform hover:bg-[#178CB7] hover:shadow-lg dark:bg-[#0A84FF] dark:hover:bg-[#0056A3]"
         >
           Sponsor on GitHub <span className="heartbeat-animation">🧡</span>
-        </button>
-        <button
-          onClick={() => window.open(siteConfig.social.kofi, '_blank')}
-          className="bg-[#FF813F] text-white py-3 px-6 text-lg font-medium rounded-lg inline-block transition-all duration-300 transform hover:bg-[#FF5C1F] hover:shadow-lg dark:bg-[#FF4F00] dark:hover:bg-[#D94400]"
+        </Button>
+        <Button
+          onPress={() => window.open(siteConfig.social.kofi, '_blank')}
+          className="bg-[#FF813F] text-white  px-6 text-lg font-medium rounded-lg inline-block transition-all duration-300 transform hover:bg-[#FF5C1F] hover:shadow-lg dark:bg-[#FF4F00] dark:hover:bg-[#D94400]"
         >
           Buy Me A Coffee <span className="heartbeat-animation">☕</span>
-        </button>
+        </Button>
       </div>
       <p className="text-lg">Thank you for your support! 🙏</p>
 

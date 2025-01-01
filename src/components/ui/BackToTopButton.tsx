@@ -1,5 +1,6 @@
 'use client';
 import { useEffect, useState } from 'react';
+import { Button } from '@nextui-org/button';
 
 const BackToTopButton = () => {
   const [showButton, setShowButton] = useState(false);
@@ -28,12 +29,12 @@ const BackToTopButton = () => {
   if (!showButton) return null;
 
   return (
-    <button
-      onClick={scrollToTop}
-      className="fixed bottom-4 right-4 p-2.5  text-black rounded-full focus:outline-none transition-all ease-in-out  dark:text-white  "
+    <Button
+      onPress={scrollToTop}
+      className="fixed bottom-4 right-4 p-2.5  text-black rounded-full focus:outline-none transition-all ease-in-out  dark:text-white  bg-transparent "
     >
       ↑
-    </button>
+    </Button>
   );
 };
 

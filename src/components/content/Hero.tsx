@@ -3,6 +3,7 @@
 import Image from 'next/image';
 import { siteConfig } from '@/src/configs/config'; // Import siteConfig
 import AnimationContainer from '../utils/AnimationContainer';
+import Link from 'next/link';
 
 const Hero = () => {
   return (
@@ -27,18 +28,18 @@ const Hero = () => {
 
         {/* Buttons Section */}
         <div className="flex gap-4 mt-6">
-          <a
+          <Link
             href={`mailto:${siteConfig.social.email}`}
             className="px-6 py-3 text-teal-500 font-bold rounded-lg border border-teal-500 hover:bg-teal-500 hover:text-white transition duration-300 backdrop-blur-sm bg-white/20 dark:bg-gray-800/30 dark:border-teal-300 dark:text-teal-300 dark:hover:bg-teal-600 dark:hover:text-white"
           >
             Hire Me
-          </a>
-          <a
+          </Link>
+          <Link
             href={siteConfig.social.kofi}
             className="px-6 py-3 text-pink-500 font-bold rounded-lg border border-pink-500 hover:bg-pink-500 hover:text-white transition duration-300 backdrop-blur-sm bg-white/20 dark:bg-gray-800/30 dark:border-pink-300 dark:text-pink-300 dark:hover:bg-pink-600 dark:hover:text-white"
           >
             Buy Me a Coffee
-          </a>
+          </Link>
         </div>
       </AnimationContainer>
 

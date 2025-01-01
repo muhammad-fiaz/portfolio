@@ -5,6 +5,7 @@ import { useEffect } from 'react';
 import cn from 'classnames';
 import useMenuNav from '@/src/hooks/useMenuNav';
 import LinksMenuNav from './LinksMenuNav';
+import { Button } from '@nextui-org/button';
 
 const MenuIcon = (props: JSX.IntrinsicElements['svg']) => {
   return (
@@ -64,14 +65,14 @@ const MobileMenuNav = () => {
 
   return (
     <>
-      <button
+      <Button
         className={cn(styles.burger, 'visible lg:hidden')}
         aria-label='Toggle menu'
         type='button'
-        onClick={toggleMenu}>
+        onPress={toggleMenu}>
         <MenuIcon data-hide={isMenuOpen} />
         <CrossIcon data-hide={!isMenuOpen} />
-      </button>
+      </Button>
 
       {isMenuOpen && (
         <ul
