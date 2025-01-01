@@ -1,62 +1,95 @@
+"use client";
 import ExternalLink from '../ui/ExternalLink';
 import AnimationContainer from '../utils/AnimationContainer';
 import { CardProjectProps } from '@/src/types';
-import {
-  JSXElementConstructor,
-  Key,
-  ReactElement,
-  ReactFragment,
-  ReactPortal
-} from 'react';
+import { useState, useEffect } from 'react';
+import { Button } from '@nextui-org/button';
 
 const CardProject = ({
-  title,
-  des,
-  category,
-  repo,
-  link,
-  topics
-}: CardProjectProps) => {
+                       title,
+                       des,
+                       category,
+                       repo,
+                       link,
+                       topics,
+                     }: CardProjectProps) => {
+  const [showAllTopics, setShowAllTopics] = useState(false);
+  const [showFullDescription, setShowFullDescription] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
+
+  const maxTopicsToShowMobile = 3; // Limit for keywords on mobile
+  const maxDescriptionLength = 100; // Character limit for description on mobile
+
+  // Detect screen size
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize(); // Initial check
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
   return (
-    <AnimationContainer customClassName="w-full h-42 flex flex-col justify-center items-center rounded-xl border border-black/20 hover:border-white bg-[#080809] shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 transition-all ease-in-out duration-300 transform hover:scale-105 text-black bg-white dark:bg-black dark:text-white">
+    <AnimationContainer customClassName="w-full flex flex-col justify-center items-center rounded-xl border border-black/20 hover:border-white bg-[#080809] shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] p-4 transition-all ease-in-out duration-300 transform hover:scale-105 text-black bg-white dark:bg-black dark:text-white">
       <div className="w-full flex flex-col justify-center items-start rounded gap-5">
-        <h3 className="text-2xl lg:text-2xl font-medium  transition-all ease-in-out duration-300">
+        {/* Title */}
+        <h3 className="text-2xl lg:text-2xl font-medium transition-all ease-in-out duration-300">
           {title}
         </h3>
-        <p className="text-base  transition-all ease-in-out duration-300">
-          {des}
+
+        {/* Description */}
+        <p className="text-base transition-all ease-in-out duration-300">
+          {(!isMobile || showFullDescription || des.length <= maxDescriptionLength)
+            ? des
+            : `${des.slice(0, maxDescriptionLength)}...`}
+          {isMobile && des.length > maxDescriptionLength && (
+            <Button
+              onPress={() => setShowFullDescription(!showFullDescription)}
+              className="ml-2 text-sm text-blue-500 hover:underline bg-transparent"
+            >
+              {showFullDescription ? 'Show Less' : 'Show More'}
+            </Button>
+          )}
         </p>
 
         {/* Topics (Tags) Section */}
         <div className="flex flex-wrap gap-2 mt-2">
           {topics &&
             topics.length > 0 &&
-            topics.map(
-              (
-                topic:
-                  | string
-                  | number
-                  | boolean
-                  | ReactElement<any, string | JSXElementConstructor<any>>
-                  | ReactFragment
-                  | ReactPortal
-                  | null
-                  | undefined,
-                index: Key | null | undefined
-              ) => (
+            topics
+              .slice(
+                0,
+                isMobile && !showAllTopics ? maxTopicsToShowMobile : topics.length
+              )
+              .map((topic, index) => (
                 <span
                   key={index}
-                  className="text-xs   px-2 py-1 rounded-md shadow-md whitespace-nowrap"
+                  className="text-xs px-2 py-1 rounded-md shadow-md whitespace-nowrap bg-gray-400 dark:bg-gray-700"
                 >
                   {topic}
                 </span>
-              )
-            )}
+              ))}
+          {isMobile && topics && topics.length > maxTopicsToShowMobile && !showAllTopics && (
+            <Button
+              onPress={() => setShowAllTopics(true)}
+              className="text-xs px-2 py-1 rounded-md shadow-md bg-gray-300 dark:bg-gray-600 bg-transparent"
+            >
+              ...
+            </Button>
+          )}
+          {isMobile && showAllTopics && (
+            <Button
+              onPress={() => setShowAllTopics(false)}
+              className="text-xs px-2 py-1 rounded-md shadow-md text-blue-500 bg-transparent"
+            >
+              Show Less
+            </Button>
+          )}
         </div>
 
+        {/* Action Links */}
         <div className="w-full flex justify-between items-start flex-wrap flex-col lg:flex-row gap-5">
-
-
           <div className="flex justify-center items-end gap-3">
             <ExternalLink
               href={repo}

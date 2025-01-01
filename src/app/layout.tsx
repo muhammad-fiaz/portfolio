@@ -14,6 +14,8 @@ import { SessionProvider } from 'next-auth/react';
 import { ThemeProvider } from '../components/utils/themeContext';
 import ProgressBar from '@/src/components/ui/progress';
 import BackToTopButton from '@/src/components/ui/BackToTopButton';
+import Chatbot from '@/src/components/ui/ChatBot';
+import React from 'react';
 
 const graphik = local({
   src: [
@@ -56,7 +58,7 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             <SpeedInsights />
             <Analytics />
           </main>
-
+          <Chatbot/>
           <BackToTopButton />
           <Footer />
         </NextUIProvider>

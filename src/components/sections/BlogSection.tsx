@@ -1,5 +1,4 @@
-'use client';
-
+"use client";
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import AnimationContainer from '../utils/AnimationContainer';
@@ -87,12 +86,12 @@ const BlogSection = () => {
               </div>
             ))
           ) : error ? (
-            <div className="w-full flex justify-center items-center text-black dark:text-white p-4">
+            <div key="error-message" className="w-full flex justify-center items-center text-black dark:text-white p-4">
               <h2>{error}</h2>
             </div>
           ) : blogs.length > 0 ? (
             blogs.map(({ guid, title, link, contentSnippet, categories, source, thumbnail, pubDate }) => (
-              <>
+              <div key={`blog-${guid}`} className="w-full"> {/* Wrap each blog item in a div with a unique key */}
                 {/* Individual JSON-LD for Each Blog Post */}
                 <Script
                   key={`json-ld-blog-${guid}`}
@@ -116,17 +115,17 @@ const BlogSection = () => {
                   }}
                 />
                 <BlogCard
-                  key={guid} // Each BlogCard gets a unique key
+                  key={guid}
                   title={title}
                   excerpt={contentSnippet}
                   tags={categories}
                   link={link}
                   source={source}
                 />
-              </>
+              </div>
             ))
           ) : (
-            <div className="w-full flex justify-center items-center text-black dark:text-white p-4">
+            <div key="no-blogs" className="w-full flex justify-center items-center text-black dark:text-white p-4">
               <h2>No blogs found</h2>
             </div>
           )}

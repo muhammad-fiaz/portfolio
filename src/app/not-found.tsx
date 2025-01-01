@@ -1,4 +1,5 @@
 import { siteConfig } from '@/src/configs/config';
+import Link from 'next/link';
 
 export default function NotFound() {
   return (
@@ -11,18 +12,18 @@ export default function NotFound() {
         The page might have been moved or deleted, or the URL may be incorrect.
       </p>
       <div className="flex items-center justify-center gap-4">
-        <a
+        <Link
           href="/"
           className="px-6 py-3 bg-blue-600 text-lg text-white rounded-lg hover:bg-blue-700 transition duration-300"
         >
           Go Back Home
-        </a>
-        <a
+        </Link>
+        <Link
           href={`${siteConfig.social.github}/portfolio/issues/new`}
           className="px-6 py-3 bg-green-600 text-lg text-white rounded-lg hover:bg-green-700 transition duration-300"
         >
           Report a Bug
-        </a>
+        </Link>
       </div>
       <div className="mt-12">
         <p className="text-sm text-gray-500">
