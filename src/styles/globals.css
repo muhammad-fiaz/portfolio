@@ -474,3 +474,19 @@ table {
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
   background: var(--foreground);
 }
+/* Global Styles or a separate CSS file */
+@keyframes blinkCircle {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.animate-blink-circle {
+  animation: blinkCircle 1s infinite;
+}
