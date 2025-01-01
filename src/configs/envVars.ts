@@ -2,7 +2,8 @@ export function validateEnvVars() {
   const requiredEnvVars = [
     'GITHUB_TOKEN',
     'GITHUB_SECRET',
-    'GITHUB_ID'
+    'GITHUB_ID',
+    'GEMINI_API_KEY',
   ];
 
   // Check if all required environment variables are set
@@ -26,10 +27,11 @@ export function getEnvVars() {
     GITHUB_TOKEN: process.env.GITHUB_TOKEN,
     GITHUB_SECRET: process.env.GITHUB_SECRET,
     GITHUB_ID: process.env.GITHUB_ID,
+    GEMINI_API_KEY: process.env.GEMINI_API_KEY,
     HASHNODE_API_KEY: process.env.HASHNODE_API_KEY,
     HASHNODE_USERNAME: process.env.HASHNODE_USERNAME,
     ADSENSE_ID: process.env.ADSENSE_ID,
     SITE_URL: process.env.SITE_URL,
-    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET
+    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
   };
 }
