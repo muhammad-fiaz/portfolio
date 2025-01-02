@@ -1,14 +1,19 @@
+"use client";
 import classNames from 'classnames';
 import AnimationContainer from '../utils/AnimationContainer';
 import { TimelineEventProps } from '@/src/types';
+import SectionHeader from '@/src/components/ui/SectionHeader';
 
 // Main Timeline container component
 export const Timeline = ({ children }: { children: React.ReactNode }) => {
   return (
     <AnimationContainer customClassName="w-full mb-16">
-      <h2 className="font-bold text-2xl tracking-tight mb-8 text-black dark:text-white text-center lg:text-start">
-        Experience
-      </h2>
+      <SectionHeader
+        title="Experience"
+        content="I’ve had the opportunity to gain valuable experience as a software developer, both as a freelancer and as an open-source contributor. Below is a summary of my work and the skills I've developed along the way."
+      />
+
+
       {children}
     </AnimationContainer>
   );
@@ -55,9 +60,16 @@ const TimelineEventTitle = ({ children }: { children: React.ReactNode }) => (
 );
 
 // TimelineEvent.Description for event description
-const TimelineEventDescription = ({ children }: { children: React.ReactNode }) => (
-  <p className='text-base text-gray-600 dark:text-gray-400'>{children}</p>  // Dark theme: dimmed white text
-);
+const TimelineEventDescription = ({ children }: { children: React.ReactNode }) => {
+  // Ensure children is a string before performing replacement
+  const formattedDescription = children && typeof children === 'string'
+    ? children.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>')
+    : children;
+
+  return (
+    <p className='text-base text-gray-600 dark:text-gray-400' dangerouslySetInnerHTML={{ __html: formattedDescription as string }} />
+  );  // Dark theme: dimmed white text, bold text inside ** will be bolded
+};
 
 // Attach the Title and Description as static properties of TimelineEvent
 TimelineEvent.Title = TimelineEventTitle;

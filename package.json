@@ -1,6 +1,6 @@
 {
   "name": "portfolio",
-  "version": "2.0.0",
+  "version": "2.0.1",
   "private": true,
   "description": "Open source portfolio website built with Next.js amd TypeScript.",
   "author": "muhammad-fiaz <contact@muhammadfiaz.com>",

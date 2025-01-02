@@ -1,3 +1,4 @@
+"use client";
 import AnimationContainer from '../utils/AnimationContainer';
 import { siteConfig } from '@/src/configs/config';
 import CurrentTimeLineExp from '../content/CurrentTimeLineExp';
@@ -5,6 +6,9 @@ import TitleSectionPageContainer from '../utils/TitleSectionPageContainer';
 import SectionContainer from '../utils/SectionContainer';
 import Link from 'next/link';
 import ShowSkills from '@/src/components/ui/ShowSkills';
+import ContactMe from '@/src/components/content/ContactMe';
+import SupportMe from '@/src/components/content/SupportMe';
+import FAQSection from '@/src/components/sections/FAQSection';
 
 const AboutSection = () => {
   return (
@@ -39,26 +43,26 @@ const AboutSection = () => {
           </p>
 
         </AnimationContainer>
+        <AnimationContainer customClassName="w-full ">
 
         <CurrentTimeLineExp />
+        </AnimationContainer>
 
-        <AnimationContainer customClassName="w-full flex flex-col gap-5 mb-8">
-          <h2 className="font-bold text-2xl md:text-2xl tracking-tight mb-2 text-black dark:text-white text-start">Skills</h2>
-
-          <p className="text-base text-gray-600 dark:text-gray-400">
-            I’ve been programming for over years, gaining experience with a
-            variety of programming languages, frameworks, and tools. I’ve worked on both Frontend and Backend
-            technologies, allowing me to understand and contribute to the entire development process.
-          </p>
-
-          <div className="flex flex-col items-start gap-3 mt-3">
-
-                <AnimationContainer customClassName="flex items-center flex-wrap gap-3 mb-5">
+                <AnimationContainer customClassName="w-full">
                   <ShowSkills  />
                 </AnimationContainer>
+        {/* Contact Section */}
+        <AnimationContainer customClassName="w-full mt-16">
+          <ContactMe />
+        </AnimationContainer>
+        {/* Support Me Section */}
+        <AnimationContainer customClassName="w-full mt-16">
+          <SupportMe />
+        </AnimationContainer>
 
-          </div>
-
+        {/* FAQ Section */}
+        <AnimationContainer customClassName="w-full mt-16">
+          <FAQSection />
         </AnimationContainer>
 
       </div>

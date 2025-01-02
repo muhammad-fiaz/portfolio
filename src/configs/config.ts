@@ -1,3 +1,4 @@
+
 export const siteConfig: {
     baseUrl: string;
     author: string;
@@ -16,6 +17,7 @@ export const siteConfig: {
         medium: string;
         dev: string;
         hashnode: string;
+        discord: string;
 
     };
     chatbot:{
@@ -44,6 +46,7 @@ export const siteConfig: {
         medium: 'https://muhammad-fiaz.medium.com',
         dev: 'https://dev.to/muhammadfiaz',
         hashnode: 'https://muhammadfiaz.hashnode.dev',
+        discord: 'https://discord.gg/mXMhy2EX',
     },
     metadata: {
         description: `Hi! I'm Muhammad Fiaz, a Full Stack developer passionate about building apps, exploring AI and ML, and collaborating on exciting projects. Let's connect!`,

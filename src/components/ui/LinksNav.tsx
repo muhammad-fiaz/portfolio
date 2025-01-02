@@ -1,3 +1,5 @@
+"use client";
+
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import clsx from 'clsx';
@@ -32,7 +34,7 @@ const LinksNav = () => {
               key={path}
               href={path}
               className={clsx(
-                'hidden lg:inline-block transition ease py-[2px] px-[10px] focus:outline-none  ',
+                'hidden lg:inline-block transition ease py-[2px] px-[10px] focus:outline-none focus-jump hover:jump',
                 {
                   'text-neutral-500 dark:text-neutral-400': !isActive,  // Inactive links
                   'text-neutral-800 dark:text-white font-bold': isActive,  // Active links
