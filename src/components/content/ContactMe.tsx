@@ -2,7 +2,8 @@
 import React, { useState } from 'react';
 import AnimationContainer from '../utils/AnimationContainer';
 import { siteConfig } from '@/src/configs/config';
-import { Button } from '@nextui-org/button';
+import { Input, Textarea, Button } from '@nextui-org/react';
+import SectionHeader from '@/src/components/ui/SectionHeader';
 
 const ContactMe = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
@@ -18,13 +19,11 @@ const ContactMe = () => {
 
   return (
     <AnimationContainer customClassName="w-full">
-      {/* Use h2 for main section header */}
-      <h2
-        className="font-bold text-2xl md:text-2xl tracking-tight mb-8 text-foreground dark:text-white text-center lg:text-start"
+      <SectionHeader
         id="contactme"
-      >
-        Contact me
-      </h2>
+        title="Contact Me"
+        content="Fill out the form below to contact me. Please, no spam. I strive to respond to all legitimate inquiries, but please be clear and concise in your message. Whether you have a question about my work, a project collaboration, or just want to connect, feel free to reach out. I look forward to hearing from you!"
+      />
 
       <div className="w-full flex justify-between items-center flex-col mx-auto max-w-screen-xl">
         <div className="w-full flex justify-between items-center flex-col lg:flex-row gap-6 mb-10">
@@ -40,20 +39,12 @@ const ContactMe = () => {
         </div>
 
         <div className="w-full flex justify-center items-center flex-col">
-          <form
-            onSubmit={handleSubmit}
-            className="w-full space-y-4"
-          >
+          <form onSubmit={handleSubmit} className="w-full space-y-4">
             <div>
-              <label className="sr-only" htmlFor="name">
-                Name
-              </label>
-              <input
-                className="w-full rounded-xl p-3 text-base outline-none border text-foreground dark:text-white bg-white dark:bg-neutral-800 border-gray-900/50 dark:border-gray-700 focus:border-gray-800 dark:focus:border-gray-600 transition ease"
+              <Input
+                isClearable={true}
+                label="Name"
                 placeholder="Name"
-                type="text"
-                id="name"
-                name="name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -62,45 +53,34 @@ const ContactMe = () => {
 
             <div className="grid grid-cols-1 gap-4 lg:gap-8 sm:grid-cols-2">
               <div>
-                <label className="sr-only" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  className="w-full rounded-xl p-3 text-base outline-none border text-foreground dark:text-white bg-white dark:bg-neutral-800 border-gray-900/50 dark:border-gray-700 focus:border-gray-800 dark:focus:border-gray-600 transition ease"
+                <Input
+                  isClearable={true}
+                  label="Email"
                   placeholder="Email"
                   type="email"
-                  id="email"
-                  name="email"
                   required
                 />
               </div>
 
               <div>
-                <label className="sr-only" htmlFor="phone">
-                  Phone
-                </label>
-                <input
-                  className="w-full rounded-xl p-3 text-base outline-none border text-foreground dark:text-white bg-white dark:bg-neutral-800 border-gray-900/50 dark:border-gray-700 focus:border-gray-800 dark:focus:border-gray-600 transition ease"
+                <Input
+                  isClearable={true}
+                  label="Phone"
                   placeholder="Phone"
                   type="tel"
-                  id="phone"
-                  name="phone"
                   required
                 />
               </div>
             </div>
 
             <div>
-              <label className="sr-only" htmlFor="message">
-                Message
-              </label>
-              <textarea
-                className="w-full h-32 rounded-xl p-3 text-base outline-none border text-foreground dark:text-white bg-white dark:bg-neutral-800 border-gray-900/50 dark:border-gray-700 focus:border-gray-800 dark:focus:border-gray-600 transition ease"
+              <Textarea
+                isClearable={true}
+                label="Message"
                 placeholder="Message"
-                id="message"
-                name="message"
+                rows={4}
                 required
-              ></textarea>
+              />
             </div>
 
             <Button
@@ -133,10 +113,12 @@ const ContactMe = () => {
         <div className="fixed top-0 left-0 w-full h-full bg-black/60 flex items-center justify-center z-50">
           <div className="bg-white dark:bg-neutral-800 rounded-xl p-6 shadow-lg text-center">
             <h3 className="font-bold text-lg text-foreground dark:text-white mb-4">
-              Thank you, {name}! <span className="text-black dark:text-white">🎉</span>
+              Thank you, {name}!{' '}
+              <span className="text-black dark:text-white">🎉</span>
             </h3>
             <p className="text-base text-foreground dark:text-gray-400">
-              Your message has been sent to {siteConfig.social.email} successfully.
+              Your message has been sent to {siteConfig.social.email}{' '}
+              successfully.
             </p>
             <Button
               onPress={() => setIsSubmitted(false)}

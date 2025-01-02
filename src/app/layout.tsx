@@ -14,8 +14,13 @@ import { SessionProvider } from 'next-auth/react';
 import { ThemeProvider } from '../components/utils/themeContext';
 import ProgressBar from '@/src/components/ui/progress';
 import BackToTopButton from '@/src/components/ui/BackToTopButton';
-import Chatbot from '@/src/components/ui/ChatBot';
+import dynamic from 'next/dynamic';
 import React from 'react';
+
+// Dynamically import the Chatbot component with ssr: false (render only client-side)
+const Chatbot = dynamic(() => import('@/src/components/ui/ChatBot'), {
+  ssr: false
+});
 
 const graphik = local({
   src: [
@@ -31,7 +36,7 @@ const graphik = local({
     },
   ],
   variable: '--font-graphik',
-  display: 'swap',
+  display: 'swap', // Ensures text is visible while the font loads
 });
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -46,10 +51,15 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     <Head />
 
     <body className="transition ease-in-out min-h-screen">
-    <SessionProvider>
-      <ThemeProvider>
-        <NextUIProvider>
+    <NextUIProvider>
+
+    <ThemeProvider>
+        <SessionProvider>
+
+          {/* Show progress bar during loading */}
           <ProgressBar />
+
+          {/* Main layout structure */}
           <Header />
 
           <main className="flex flex-col justify-center items-center mx-auto">
@@ -58,12 +68,16 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
             <SpeedInsights />
             <Analytics />
           </main>
-          <Chatbot/>
+
+          {/* Chatbot now renders client-side only */}
+          <Chatbot />
           <BackToTopButton />
           <Footer />
-        </NextUIProvider>
-      </ThemeProvider>
-    </SessionProvider>
+
+        </SessionProvider>
+    </ThemeProvider>
+    </NextUIProvider>
+
     </body>
     </html>
   );

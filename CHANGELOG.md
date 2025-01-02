@@ -1,11 +1,17 @@
 # Portfolio Changelog - Release Notes
 
+## V2.0.1
+- Added mew FAQ Section
+- improved Blog and Project Section
+- improved UI and Performance
+- improved SEO
 
 ## v2.0.0 - new Renewed Portfolio
 - New Design and UI
 - Improved Performance
 - Improved SEO
 - Improved Functionality
+- Fixed initial load blank page due to server side rendering
 
 
 ## v1.0.8

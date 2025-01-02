@@ -9,6 +9,8 @@ import { siteConfig } from '@/src/configs/config';
 import Link from 'next/link';
 import { Skeleton } from '@/src/components/ui/skeleton';
 import Script from 'next/script';
+import { Input } from '@nextui-org/react';
+import SearchInput from '@/src/components/ui/SearchInput';
 
 interface Blog {
   guid: string;
@@ -22,7 +24,7 @@ interface Blog {
 }
 
 const BlogSection = () => {
-  const [blogSearch, setBlogSearch] = useState<string>(''); // Add search bar functionality if needed
+  const [blogSearch, setBlogSearch] = useState<string>(''); // Add search bar functionality
   const [blogs, setBlogs] = useState<Blog[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
   const [error, setError] = useState<string | null>(null);
@@ -59,6 +61,7 @@ const BlogSection = () => {
     <SectionContainer>
       <div className="w-full flex flex-col gap-6">
         <TitleSectionPageContainer title="Blogs" />
+
         <AnimationContainer customClassName="w-full flex flex-col gap-5 mb-8">
           <p className="w-full text-base text-black dark:text-white">
             These are some of the blog posts I've written since I started blogging. Some of them are personal, technical articles, or insights
@@ -73,6 +76,14 @@ const BlogSection = () => {
             </Link>
             .
           </p>
+
+          {/* Use SearchInput component */}
+          <SearchInput
+            value={blogSearch}
+            onChange={(e) => setBlogSearch(e.target.value)}
+            placeholder="Search blogs (Articles, topics, etc...)"
+            ariaLabel="Search blogs"
+          />
         </AnimationContainer>
 
         <article className="w-full flex justify-center items-center content-center flex-wrap gap-6 mx-auto">
@@ -91,7 +102,7 @@ const BlogSection = () => {
             </div>
           ) : blogs.length > 0 ? (
             blogs.map(({ guid, title, link, contentSnippet, categories, source, thumbnail, pubDate }) => (
-              <div key={`blog-${guid}`} className="w-full"> {/* Wrap each blog item in a div with a unique key */}
+              <div key={`blog-${guid}`} className="w-full">
                 {/* Individual JSON-LD for Each Blog Post */}
                 <Script
                   key={`json-ld-blog-${guid}`}

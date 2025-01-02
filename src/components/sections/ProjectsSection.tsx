@@ -10,6 +10,9 @@ import Link from 'next/link';
 import { Skeleton } from '../ui/skeleton';
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
+import React from 'react';
+import { Input } from '@nextui-org/react';
+import SearchInput from '@/src/components/ui/SearchInput';
 
 const ProjectsSection = () => {
   const [projectSearch, setProjectSearch] = useState<string>('');
@@ -72,7 +75,10 @@ const ProjectsSection = () => {
 
           <AnimationContainer customClassName="w-full flex flex-col gap-5 mb-8">
             <p className="w-full text-base text-black dark:text-white">
-              These are most of the projects I've done since I started programming, some of them are personal projects, freelance, work, practice, or for other situations. If you want to see absolutely all my projects, go to my{' '}
+              These are most of the projects I've done since I started
+              programming, some of them are personal projects, freelance, work,
+              practice, or for other situations. If you want to see absolutely
+              all my projects, go to my{' '}
               <Link
                 href={`https://github.com/${siteConfig.social.github}`}
                 target="_blank"
@@ -84,31 +90,20 @@ const ProjectsSection = () => {
             </p>
           </AnimationContainer>
 
-          {/* Search Input Section */}
-          <AnimationContainer customClassName="w-full group flex flex-col justify-center items-center mb-8">
-            <div className="w-full flex items-center lg:w-4/6 h-12 rounded-xl shadow-lg text-black bg-white border border-gray-800 group-hover:border-gray-500 transition-all ease dark:text-white dark:bg-black dark:border-gray-700">
-              <div className="grid place-items-center h-full w-12 text-gray-500 dark:text-gray-300">
-                <svg xmlns="http://www.w3.org/2000/svg" className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z" />
-                </svg>
-              </div>
-              <input
-                className="peer h-full w-full outline-none rounded text-sm px-2 group-hover:border-gray-500 transition-all ease dark:bg-black dark:text-white"
-                type="text"
-                id="search"
-                placeholder="Search projects (Languages, frameworks, libraries, etc...)"
-                value={projectSearch}
-                onChange={(e) => setProjectSearch(e.target.value)}
-              />
-            </div>
-          </AnimationContainer>
+          {/* Use SearchInput component */}
+          <SearchInput
+            value={projectSearch}
+            onChange={(e) => setProjectSearch(e.target.value)}
+            placeholder="Search projects (Languages, frameworks, libraries, etc...)"
+            ariaLabel="Search projects"
+          />
 
           {/* Display Projects or error message */}
           <article className="w-full flex justify-center items-center content-center flex-wrap gap-6 mx-auto">
             {isLoading ? (
               // Display skeleton loader instead of text or static content
               Array.from({ length: 6 }).map((_, index) => (
-                <div key={index} className="w-full h-auto p-4">
+                <div key={`skeleton-${index}`} className="w-full h-auto p-4">
                   <Skeleton className="w-full h-10 mb-4 bg-gray-700 dark:bg-gray-600 rounded-md" />
                   <Skeleton className="w-full h-6 bg-gray-700 dark:bg-gray-600 rounded-md" />
                   <Skeleton className="w-3/4 h-4 bg-gray-700 dark:bg-gray-600 rounded-md mt-2" />
@@ -122,20 +117,38 @@ const ProjectsSection = () => {
                 </div>
               </AnimationContainer>
             ) : allProjectsInfo.length > 0 ? (
-              allProjectsInfo.map(({ id, title, des, category, repo, link, topics }) => (
-                <>
-                  {/* Add JSON-LD for each individual project */}
-                  <Script
-                    key={`json-ld-project-${id}`}
-                    id={`json-ld-project-${id}`}
-                    type="application/ld+json"
-                    dangerouslySetInnerHTML={{
-                      __html: generateJsonLdForProject({ id, title, des, category, repo, link, topics }),
-                    }}
-                  />
-                  <CardProject key={id} title={title} des={des} category={category} repo={repo} link={link} topics={topics} />
-                </>
-              ))
+              allProjectsInfo.map(
+                ({ id, title, des, category, repo, link, topics }) => (
+                  <React.Fragment key={id}>
+                    {/* Add JSON-LD for each individual project */}
+                    <Script
+                      key={`json-ld-project-${id}`}
+                      id={`json-ld-project-${id}`}
+                      type="application/ld+json"
+                      dangerouslySetInnerHTML={{
+                        __html: generateJsonLdForProject({
+                          id,
+                          title,
+                          des,
+                          category,
+                          repo,
+                          link,
+                          topics
+                        })
+                      }}
+                    />
+                    <CardProject
+                      key={id}
+                      title={title}
+                      des={des}
+                      category={category}
+                      repo={repo}
+                      link={link}
+                      topics={topics}
+                    />
+                  </React.Fragment>
+                )
+              )
             ) : (
               <AnimationContainer customClassName="w-full group flex flex-col justify-center items-center mb-8">
                 <div className="text-center text-black dark:text-white p-4">

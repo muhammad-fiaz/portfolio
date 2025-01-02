@@ -1,3 +1,5 @@
+"use client";
+
 import { ExternalLinkProps } from '@/src/types';
 import Link from 'next/link';
 
