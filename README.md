@@ -63,6 +63,7 @@ Here the Sample Performance of the Portfolio measured by [Lighthouse](https://de
 - [Support Me](#support-me)
 - [License](#license)
 - [Contributing](#contributing)
+-   - [Want to Contribute?](#want-to-contribute)
 - [Deploy on Vercel](#deploy-on-vercel)
 - [Stay Connected!](#stay-connected)
 
@@ -164,6 +165,14 @@ Contributions are welcome!
 
 If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 And make sure to follow the [project guidelines](CODE_OF_CONDUCT.md)
+
+### Want to contribute?
+
+If you'd like to contribute to this project, please check out the [contributing guidelines](CONTRIBUTING.md), fork the repository, and submit a pull request. Every contribution is welcome and appreciated!
+
+A big thank you to everyone who contributed to this project! 💖
+
+[![Portfolio contributors](https://contrib.rocks/image?repo=muhammad-fiaz/portfolio&max=2000)](https://github.com/muhammad-fiaz/portfolio/graphs/contributors)
 
 
 ## Deploy on Vercel
