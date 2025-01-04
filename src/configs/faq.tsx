@@ -96,7 +96,7 @@ export const faqData: FAQItem[] = [
       <>
         I apologize if I missed your message or if I was slow to respond. Sometimes, messages get overlooked, or I may be caught up with other tasks. If I missed your message by mistake, please feel free to reach out again.
         <br className="mb-2" />
-        To get a faster response, you can also create a notice through a <Link href={`https://github.com/${siteConfig.social.github}/${siteConfig.social.github}/discussions`} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">GitHub Discussion</Link> or open an issue on my <Link href={`https://github.com/${siteConfig.social.github}/${siteConfig.social.github}issues`} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">GitHub repository</Link>. I try to keep track of discussions and issues more actively.
+        To get a faster response, you can also create a notice through a <Link href={`https://github.com/${siteConfig.social.github}/${siteConfig.social.github}/discussions`} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">GitHub Discussion</Link> or open an issue on my <Link href={`https://github.com/${siteConfig.social.github}/${siteConfig.social.github}/issues`} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">GitHub repository</Link>. I try to keep track of discussions and issues more actively.
       </>
     ),
   },
