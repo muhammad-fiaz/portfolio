@@ -1,4 +1,6 @@
 "use client";
+import { siteConfig } from '@/src/configs/config';
+
 export interface ExperienceEntry {
   title: string;
   description: string;
@@ -16,7 +18,7 @@ export const experienceEntries: ExperienceEntry[] = [
     startDate: "Present",
     endDate: "Present",
     isActive: true,
-    companyUrl: "https://muhammadfiaz.com/contact",  // Link to your contact page or LinkedIn profile
+    companyUrl: siteConfig.social.linkedin,
   },
   {
     title: "Fiaz Technologies | Nov. 2023 - Present",
@@ -25,7 +27,7 @@ export const experienceEntries: ExperienceEntry[] = [
     startDate: "Nov 2023",
     endDate: "Present",
     isActive: true,
-    companyUrl: "https://github.com/FiazTechnologies",
+    companyUrl: siteConfig.social.github_organisation,
   },
   {
     title: "Hacktoberfest 2024 | Oct. 2024 - Nov. 2024",
@@ -34,7 +36,7 @@ export const experienceEntries: ExperienceEntry[] = [
     startDate: "Oct 2024",
     endDate: "Nov 2024",
     isActive: false,
-    companyUrl: "https://hacktoberfest.com/",
+    companyUrl: siteConfig.other.hacktoberfest,
   },
   {
     title: "CodSoft - Data Science Intern | Sep. 2023 - Oct. 2023",
@@ -42,7 +44,7 @@ export const experienceEntries: ExperienceEntry[] = [
       "Self-paced Data Science Intern where I gained practical experience in data science applications using Python. I also contributed to open-source projects and maintained repositories on GitHub.",
     startDate: "Sep 2023",
     endDate: "Oct 2023",
-    companyUrl: "https://www.codsoft.in/",
+    companyUrl: siteConfig.other.codsoft,
   },
   {
     title: "Hacktoberfest 2023 | Sep. 2023 - Oct. 2023",
@@ -50,7 +52,7 @@ export const experienceEntries: ExperienceEntry[] = [
       "Participated as a maintainer and content writer in the Hacktoberfest event. Contributed to open-source projects and wrote technical content on platforms such as Medium, Dev.to, and Hashnode.",
     startDate: "Sep 2023",
     endDate: "Oct 2023",
-    companyUrl: "https://hacktoberfest.com/",
+    companyUrl: siteConfig.other.hacktoberfest,
   },
   {
     title: "Technical Content Writer | Sep. 2023 - Present",
@@ -59,7 +61,7 @@ export const experienceEntries: ExperienceEntry[] = [
     startDate: "Sep 2023",
     endDate: "Present",
     isActive: true,
-    companyUrl: "https://muhammadfiaz.com/blog",
+    companyUrl: siteConfig.baseUrl+"/blog",
   },
   {
     title: "Open Source Contributor & Maintainer | Dec. 2020 - Present",
@@ -68,6 +70,6 @@ export const experienceEntries: ExperienceEntry[] = [
     startDate: "Dec 2020",
     endDate: "Present",
     isActive: true,
-    companyUrl: "https://github.com/muhammadfiaz",
+    companyUrl: siteConfig.social.github,
   },
 ];
