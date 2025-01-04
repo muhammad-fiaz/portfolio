@@ -18,7 +18,12 @@ export const siteConfig: {
         dev: string;
         hashnode: string;
         discord: string;
+        github_organisation: string;
 
+    };
+    other: {
+        hacktoberfest: string;
+        codsoft: string;
     };
     chatbot:{
         rateLimit: number;
@@ -47,6 +52,7 @@ export const siteConfig: {
         dev: 'https://dev.to/muhammadfiaz',
         hashnode: 'https://muhammadfiaz.hashnode.dev',
         discord: 'https://discord.gg/mXMhy2EX',
+        github_organisation: 'https://github.com/FiazTechnologies',
     },
     metadata: {
         description: `Hi! I'm Muhammad Fiaz, a Full Stack developer passionate about building apps, exploring AI and ML, and collaborating on exciting projects. Let's connect!`,
@@ -56,5 +62,9 @@ export const siteConfig: {
     },
     chatbot: {
         rateLimit: 10,
+    },
+    other: {
+        hacktoberfest: 'https://hacktoberfest.com/',
+        codsoft: 'https://www.codsoft.in/',
     },
 };
