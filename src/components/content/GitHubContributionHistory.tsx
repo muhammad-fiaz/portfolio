@@ -7,7 +7,7 @@ const GitHubContributionHistory: React.FC = () => (
   <AnimationContainer customClassName="w-full mt-16">
 
   <div className="mb-12">
-    <h3 className="text-3xl font-medium mb-6 mt-12">GitHub Contributions</h3>
+    <h3 className="text-3xl font-medium mb-6 mt-12 text-center">GitHub Contributions</h3>
     <Image
       alt="GitHub Snake"
       src={`${siteConfig.other.github_snake}`}

@@ -1,29 +1,28 @@
 "use client";
 import React from 'react';
-import SectionContainer from '@/src/components/utils/SectionContainer';
-import TitleSectionPageContainer from '@/src/components/utils/TitleSectionPageContainer';
 import GitHubStreak from '@/src/components/content/GitHubStreak';
 import GitHubTrophies from '@/src/components/content/GitHubTrophies';
-import DevCard from '@/src/components/content/DevCard';
 import GitHubContributionHistory from '@/src/components/content/GitHubContributionHistory';
 import SectionHeader from '@/src/components/ui/SectionHeader';
+import AnimationContainer from '@/src/components/utils/AnimationContainer';
 
 
 const StatsSection: React.FC = () => {
   return (
-    <SectionContainer>
-      <div className="text-center w-full h-full mx-auto text-black dark:text-white bg-transparent">
+    <AnimationContainer customClassName="w-full mt-16">
+      <div className=" w-full h-full  text-black dark:text-white bg-transparent">
         <SectionHeader
           title="GitHub Stats"
-          content="Check out some of my key stats, achievements, and contributions on GitHub. Here's a snapshot of my GitHub journey."
+          content="Explore some of my key stats, achievements, and contributions on GitHub. Here's a snapshot of my journey on GitHub."
         />
+
         <GitHubStreak />
 
         <GitHubContributionHistory />
 
         <GitHubTrophies />
       </div>
-    </SectionContainer>
+    </AnimationContainer>
   );
 };
 

@@ -7,7 +7,7 @@ const GitHubTrophies: React.FC = () => (
   <AnimationContainer customClassName="w-full mt-16">
 
   <div className="mb-12">
-    <h3 className="text-3xl font-medium mb-6">GitHub Trophies</h3>
+    <h3 className="text-3xl font-medium mb-6 text-center">GitHub Trophies</h3>
     <Image
       src={`https://github-profile-trophy.vercel.app/?username=${siteConfig.social.github}&theme=tokyonight`}
       alt="GitHub Trophies"
