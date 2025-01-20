@@ -1,6 +1,6 @@
-"use client";
+'use client';
 
-import { createContext, useContext, useState, useEffect } from "react";
+import { createContext, useContext, useState, useEffect } from 'react';
 
 interface ThemeContextProps {
   theme: string;
@@ -10,22 +10,22 @@ interface ThemeContextProps {
 const ThemeContext = createContext<ThemeContextProps | undefined>(undefined);
 
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
-  const [theme, setTheme] = useState<string>("dark"); // Default theme set to "dark"
+  const [theme, setTheme] = useState<string>('dark'); // Default theme set to "dark"
 
   useEffect(() => {
     // Always force dark theme on load
-    setTheme("dark");
-    document.documentElement.classList.add("dark");
-    localStorage.setItem("theme", "dark"); // Save dark theme to local storage
+    setTheme('dark');
+    document.documentElement.classList.add('dark');
+    localStorage.setItem('theme', 'dark'); // Save dark theme to local storage
   }, []);
 
   const toggleTheme = () => {
     // Optionally, you can still toggle between light and dark in this function.
     // But with the requirement to always set dark theme, you might not need to toggle it.
-    const newTheme = theme === "light" ? "dark" : "light";
+    const newTheme = theme === 'light' ? 'dark' : 'light';
     setTheme(newTheme);
-    localStorage.setItem("theme", newTheme);
-    document.documentElement.classList.toggle("dark", newTheme === "dark");
+    localStorage.setItem('theme', newTheme);
+    document.documentElement.classList.toggle('dark', newTheme === 'dark');
   };
 
   return (
@@ -38,7 +38,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
 export const useTheme = () => {
   const context = useContext(ThemeContext);
   if (!context) {
-    throw new Error("useTheme must be used within a ThemeProvider");
+    throw new Error('useTheme must be used within a ThemeProvider');
   }
   return context;
 };

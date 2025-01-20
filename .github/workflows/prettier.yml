@@ -5,16 +5,16 @@ on:
   pull_request:
   push:
     branches:
-    - main
+      - main
 
 jobs:
   prettier:
-    name: Run Prettier 
+    name: Run Prettier
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
+      - name: Checkout
+        uses: actions/checkout@v2
 
-    - name: Prettify code
-      uses: creyD/prettier_action@v2.2
+      - name: Prettify code
+        uses: creyD/prettier_action@v2.2

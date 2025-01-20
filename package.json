@@ -15,7 +15,9 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postbuild": "next-sitemap --config sitemap.config.js"
+    "postbuild": "next-sitemap --config sitemap.config.js",
+    "format": "prettier --write .",
+    "format:check": "prettier --check ."
   },
   "dependencies": {
     "@emotion/react": "^11.14.0",
@@ -37,6 +39,8 @@
     "@types/react": "18.0.27",
     "@types/react-dom": "18.0.10",
     "@types/xml2js": "^0.4.14",
+    "@typescript-eslint/eslint-plugin": "^8.20.0",
+    "@typescript-eslint/parser": "^8.20.0",
     "@vercel/analytics": "^1.4.1",
     "@vercel/speed-insights": "^1.1.0",
     "class-variance-authority": "^0.7.1",
@@ -45,6 +49,8 @@
     "cookies-next": "^5.0.2",
     "devicon": "^2.16.0",
     "embla-carousel-react": "^7.1.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
     "framer-motion": "^11.15.0",
     "graphql-request": "^7.1.2",
     "js-cookie": "^3.0.5",
@@ -53,6 +59,7 @@
     "next-auth": "^4.24.11",
     "node-fetch": "^3.3.2",
     "nprogress": "^0.2.0",
+    "prettier-plugin-tailwindcss": "^0.6.10",
     "react": "^19.0.0-rc.1",
     "react-dom": "^19.0.0-rc.1",
     "react-intersection-observer": "^9.14.1",
@@ -74,7 +81,7 @@
     "next-sitemap": "^4.2.3",
     "postcss": "^8.4.49",
     "postcss-preset-env": "^7.8.3",
-    "prettier": "^2.8.8"
+    "prettier": "^3.4.2"
   },
   "prettier": {
     "arrowParens": "always",

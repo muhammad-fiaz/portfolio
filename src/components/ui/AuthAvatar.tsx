@@ -10,7 +10,7 @@ import {
   DropdownTrigger,
   DropdownMenu,
   DropdownItem
-} from "@nextui-org/dropdown";
+} from '@nextui-org/dropdown';
 
 const AuthAvatar = () => {
   const { data: session } = useSession();
@@ -60,7 +60,12 @@ const AuthAvatar = () => {
           </DropdownTrigger>
 
           <DropdownMenu aria-label="User settings">
-            <DropdownItem key="signOut" className="text-danger" color="danger" onPress={handleSignOut}>
+            <DropdownItem
+              key="signOut"
+              className="text-danger"
+              color="danger"
+              onPress={handleSignOut}
+            >
               Sign Out
             </DropdownItem>
           </DropdownMenu>

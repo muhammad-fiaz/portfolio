@@ -25,7 +25,6 @@ const MySkills = () => {
               height={500}
             />
           </div>
-
         </div>
       </div>
     </AnimationContainer>

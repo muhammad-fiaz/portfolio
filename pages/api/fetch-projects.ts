@@ -19,7 +19,11 @@ const CACHE_EXPIRATION = 10 * 60 * 1000; // 10 minutes
 export default async function handler(
   req: { query: { search?: string } },
   res: {
-    status: (arg0: number) => { (): any; new (): any; json: (arg0: any) => void };
+    status: (arg0: number) => {
+      (): any;
+      new (): any;
+      json: (arg0: any) => void;
+    };
   }
 ) {
   const { search } = req.query;
@@ -37,8 +41,8 @@ export default async function handler(
       `https://api.github.com/users/${GITHUB_USERNAME}/repos?sort=updated&per_page=100`,
       {
         headers: {
-          Authorization: `token ${GITHUB_TOKEN}`,
-        },
+          Authorization: `token ${GITHUB_TOKEN}`
+        }
       }
     );
 
@@ -56,8 +60,8 @@ export default async function handler(
           {
             headers: {
               Authorization: `token ${GITHUB_TOKEN}`,
-              Accept: 'application/vnd.github.v3+json',
-            },
+              Accept: 'application/vnd.github.v3+json'
+            }
           }
         );
 
@@ -71,7 +75,7 @@ export default async function handler(
           category: repo.language ? repo.language.toLowerCase() : 'unknown',
           repo: repo.html_url,
           link: repo.homepage || repo.html_url,
-          topics,
+          topics
         };
       })
     );
@@ -79,7 +83,7 @@ export default async function handler(
     // Cache the fetched data
     cache = {
       data: projectsWithTopics,
-      timestamp: Date.now(),
+      timestamp: Date.now()
     };
 
     sendFilteredProjects(projectsWithTopics, search, res);
@@ -96,13 +100,13 @@ function sendFilteredProjects(
 ) {
   const filteredProjects = search
     ? projects.filter(
-      (project: { category: string; title: string; topics: string[] }) =>
-        project.category.toLowerCase().includes(search.toLowerCase()) ||
-        project.title.toLowerCase().includes(search.toLowerCase()) ||
-        project.topics.some((topic) =>
-          topic.toLowerCase().includes(search.toLowerCase())
-        )
-    )
+        (project: { category: string; title: string; topics: string[] }) =>
+          project.category.toLowerCase().includes(search.toLowerCase()) ||
+          project.title.toLowerCase().includes(search.toLowerCase()) ||
+          project.topics.some((topic) =>
+            topic.toLowerCase().includes(search.toLowerCase())
+          )
+      )
     : projects;
 
   res.status(200).json(filteredProjects);

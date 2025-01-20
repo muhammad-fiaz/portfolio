@@ -1,15 +1,21 @@
-"use client";
+'use client';
 import React from 'react';
 import { siteConfig } from '@/src/configs/config';
 import { Button } from '@nextui-org/button';
 
 const SupportMe = () => {
   return (
-    <section id="support" className="text-center mt-12 p-6 bg-black text-white dark:bg-white dark:text-black rounded-lg">
-      <h2 className="text-xl sm:text-2xl font-semibold">💖 Show Your Support for My Non-Profit Open-Source Project!</h2>
+    <section
+      id="support"
+      className="text-center mt-12 p-6 bg-black text-white dark:bg-white dark:text-black rounded-lg"
+    >
+      <h2 className="text-xl sm:text-2xl font-semibold">
+        💖 Show Your Support for My Non-Profit Open-Source Project!
+      </h2>
       <p className="my-4 text-sm sm:text-base">
-        As an open-source enthusiast, I'm dedicated to creating free tools and resources for the community.
-        Your contribution, no matter how small, helps me keep this project going and make it even better!
+        As an open-source enthusiast, I'm dedicated to creating free tools and
+        resources for the community. Your contribution, no matter how small,
+        helps me keep this project going and make it even better!
       </p>
       <div className="mb-6 flex flex-col sm:flex-row sm:justify-center sm:space-x-4">
         <Button

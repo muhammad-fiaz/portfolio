@@ -6,7 +6,6 @@ import Link from 'next/link';
 import { siteConfig } from '@/src/configs/config';
 
 const HolopinBadges: React.FC = () => (
-
   <AnimationContainer customClassName="w-full mt-16">
     <div className="flex flex-col gap-5">
       <SectionHeader
@@ -16,15 +15,15 @@ const HolopinBadges: React.FC = () => (
         code, documentation, and support for open-source tools."
       />
 
-    <Link href={`https://holopin.io/@${siteConfig.social.holopin}`}>
-      <Image
-        src={`https://holopin.me/${siteConfig.social.holopin}`}
-        alt={`${siteConfig.author}'s Holopin Badges`}
-        className="mx-auto mb-12"
-        width={800}
-        height={400}
-      />
-    </Link>
+      <Link href={`https://holopin.io/@${siteConfig.social.holopin}`}>
+        <Image
+          src={`https://holopin.me/${siteConfig.social.holopin}`}
+          alt={`${siteConfig.author}'s Holopin Badges`}
+          className="mx-auto mb-12"
+          width={800}
+          height={400}
+        />
+      </Link>
     </div>
   </AnimationContainer>
 );

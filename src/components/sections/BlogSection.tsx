@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import AnimationContainer from '../utils/AnimationContainer';
@@ -64,8 +64,10 @@ const BlogSection = () => {
 
         <AnimationContainer customClassName="w-full flex flex-col gap-5 mb-8">
           <p className="w-full text-base text-black dark:text-white">
-            These are some of the blog posts I've written since I started blogging. Some of them are personal, technical articles, or insights
-            I've shared on various topics. If you want to see all my posts, visit my{' '}
+            These are some of the blog posts I've written since I started
+            blogging. Some of them are personal, technical articles, or insights
+            I've shared on various topics. If you want to see all my posts,
+            visit my{' '}
             <Link
               href={siteConfig.social.blog}
               target="_blank"
@@ -97,46 +99,63 @@ const BlogSection = () => {
               </div>
             ))
           ) : error ? (
-            <div key="error-message" className="w-full flex justify-center items-center text-black dark:text-white p-4">
+            <div
+              key="error-message"
+              className="w-full flex justify-center items-center text-black dark:text-white p-4"
+            >
               <h2>{error}</h2>
             </div>
           ) : blogs.length > 0 ? (
-            blogs.map(({ guid, title, link, contentSnippet, categories, source, thumbnail, pubDate }) => (
-              <div key={`blog-${guid}`} className="w-full">
-                {/* Individual JSON-LD for Each Blog Post */}
-                <Script
-                  key={`json-ld-blog-${guid}`}
-                  id={`json-ld-blog-${guid}`}
-                  type="application/ld+json"
-                  dangerouslySetInnerHTML={{
-                    __html: JSON.stringify({
-                      '@context': 'https://schema.org',
-                      '@type': 'BlogPosting',
-                      headline: title,
-                      description: contentSnippet,
-                      url: link,
-                      image: thumbnail || undefined, // Optional field
-                      author: {
-                        '@type': 'Person',
-                        name: siteConfig.author, // Assuming the author's name is from siteConfig
-                      },
-                      datePublished: pubDate || undefined, // Optional field, fallback to undefined if not available
-                      keywords: categories.join(', '),
-                    }),
-                  }}
-                />
-                <BlogCard
-                  key={guid}
-                  title={title}
-                  excerpt={contentSnippet}
-                  tags={categories}
-                  link={link}
-                  source={source}
-                />
-              </div>
-            ))
+            blogs.map(
+              ({
+                guid,
+                title,
+                link,
+                contentSnippet,
+                categories,
+                source,
+                thumbnail,
+                pubDate
+              }) => (
+                <div key={`blog-${guid}`} className="w-full">
+                  {/* Individual JSON-LD for Each Blog Post */}
+                  <Script
+                    key={`json-ld-blog-${guid}`}
+                    id={`json-ld-blog-${guid}`}
+                    type="application/ld+json"
+                    dangerouslySetInnerHTML={{
+                      __html: JSON.stringify({
+                        '@context': 'https://schema.org',
+                        '@type': 'BlogPosting',
+                        headline: title,
+                        description: contentSnippet,
+                        url: link,
+                        image: thumbnail || undefined, // Optional field
+                        author: {
+                          '@type': 'Person',
+                          name: siteConfig.author // Assuming the author's name is from siteConfig
+                        },
+                        datePublished: pubDate || undefined, // Optional field, fallback to undefined if not available
+                        keywords: categories.join(', ')
+                      })
+                    }}
+                  />
+                  <BlogCard
+                    key={guid}
+                    title={title}
+                    excerpt={contentSnippet}
+                    tags={categories}
+                    link={link}
+                    source={source}
+                  />
+                </div>
+              )
+            )
           ) : (
-            <div key="no-blogs" className="w-full flex justify-center items-center text-black dark:text-white p-4">
+            <div
+              key="no-blogs"
+              className="w-full flex justify-center items-center text-black dark:text-white p-4"
+            >
               <h2>No blogs found</h2>
             </div>
           )}

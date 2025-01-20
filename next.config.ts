@@ -12,77 +12,77 @@ const nextConfig: NextConfig = {
         protocol: 'https',
         hostname: 'avatars.githubusercontent.com',
         port: '',
-        pathname: '/**',
+        pathname: '/**'
       },
       {
         protocol: 'https',
         hostname: 'skillicons.dev',
         port: '',
-        pathname: '/icons',
+        pathname: '/icons'
       },
       {
         protocol: 'https',
         hostname: 'github-profile-trophy.vercel.app',
         port: '',
-        pathname: '/**',
+        pathname: '/**'
       },
       {
         protocol: 'https',
         hostname: 'github-readme-streak-stats-seven-azure.vercel.app',
         port: '',
-        pathname: '/**',
+        pathname: '/**'
       },
       {
         protocol: 'https',
         hostname: 'github-readme-stats.vercel.app',
         port: '',
-        pathname: '/**',
+        pathname: '/**'
       },
       {
         protocol: 'https',
         hostname: 'github-contributor-stats.vercel.app',
         port: '',
-        pathname: '/**',
+        pathname: '/**'
       },
       {
         protocol: 'https',
         hostname: 'github-readme-activity-graph.vercel.app',
         port: '',
-        pathname: '/**',
+        pathname: '/**'
       },
       {
         protocol: 'https',
         hostname: 'api.daily.dev',
         port: '',
-        pathname: '/devcards/v2/**',
+        pathname: '/devcards/v2/**'
       },
       {
         protocol: 'https',
         hostname: 'holopin.me',
         port: '',
-        pathname: '/**',
+        pathname: '/**'
       },
       {
         protocol: 'https',
         hostname: 'raw.githubusercontent.com',
         port: '',
-        pathname: '/**',
+        pathname: '/**'
       },
       {
         protocol: 'https',
         hostname: 'github-readme-stats.vercel.app',
         port: '',
-        pathname: '/api/wakatime',
+        pathname: '/api/wakatime'
       },
       {
         protocol: 'https',
         hostname: 'wakatime.com',
         port: '',
-        pathname: '/**',
+        pathname: '/**'
       }
     ],
-    dangerouslyAllowSVG: true, // Allow SVG images
-  },
+    dangerouslyAllowSVG: true // Allow SVG images
+  }
 };
 
 export default nextConfig;

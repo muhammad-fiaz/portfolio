@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React, { useState } from 'react';
 import AnimationContainer from '../utils/AnimationContainer';
 import { siteConfig } from '@/src/configs/config';
@@ -22,10 +22,17 @@ const ContactMe = () => {
     const rateLimit = siteConfig.contact.rateLimit;
     const FIVE_MINUTES = rateLimit * 60 * 1000; // default 10 minutes in milliseconds
 
-    if (lastSubmittedTime && currentTime - parseInt(lastSubmittedTime) < FIVE_MINUTES) {
+    if (
+      lastSubmittedTime &&
+      currentTime - parseInt(lastSubmittedTime) < FIVE_MINUTES
+    ) {
       // If less than 10 minutes have passed since last submission
       setIsWaiting(true);
-      setWaitTime(Math.ceil((FIVE_MINUTES - (currentTime - parseInt(lastSubmittedTime))) / 1000)); // Show wait time in seconds
+      setWaitTime(
+        Math.ceil(
+          (FIVE_MINUTES - (currentTime - parseInt(lastSubmittedTime))) / 1000
+        )
+      ); // Show wait time in seconds
       return;
     }
 
@@ -138,7 +145,8 @@ const ContactMe = () => {
           {isWaiting && (
             <div className="mt-4 text-red-500">
               <p>
-                You need to wait {waitTime} second{waitTime !== 1 && 's'} before sending another message.
+                You need to wait {waitTime} second{waitTime !== 1 && 's'} before
+                sending another message.
               </p>
             </div>
           )}

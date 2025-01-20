@@ -42,7 +42,7 @@ export default async function handler(
       link: item.link || '',
       contentSnippet: item.contentSnippet || '',
       categories: item.categories || [], // Categories (tags)
-      source: item.source?.title || 'Hashnode', // Get the source blog title
+      source: item.source?.title || 'Hashnode' // Get the source blog title
     }));
 
     // Update the cache

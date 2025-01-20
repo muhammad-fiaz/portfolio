@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import ExternalLink from '../ui/ExternalLink';
 import AnimationContainer from '../utils/AnimationContainer';
 import { CardProjectProps } from '@/src/types';
@@ -6,13 +6,13 @@ import { useState, useEffect } from 'react';
 import { Button } from '@nextui-org/button';
 
 const CardProject = ({
-                       title,
-                       des,
-                       category,
-                       repo,
-                       link,
-                       topics,
-                     }: CardProjectProps) => {
+  title,
+  des,
+  category,
+  repo,
+  link,
+  topics
+}: CardProjectProps) => {
   const [showAllTopics, setShowAllTopics] = useState(false);
   const [showFullDescription, setShowFullDescription] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -40,7 +40,9 @@ const CardProject = ({
 
         {/* Description */}
         <p className="text-base transition-all ease-in-out duration-300">
-          {(!isMobile || showFullDescription || des.length <= maxDescriptionLength)
+          {!isMobile ||
+          showFullDescription ||
+          des.length <= maxDescriptionLength
             ? des
             : `${des.slice(0, maxDescriptionLength)}...`}
           {isMobile && des.length > maxDescriptionLength && (
@@ -60,7 +62,9 @@ const CardProject = ({
             topics
               .slice(
                 0,
-                isMobile && !showAllTopics ? maxTopicsToShowMobile : topics.length
+                isMobile && !showAllTopics
+                  ? maxTopicsToShowMobile
+                  : topics.length
               )
               .map((topic, index) => (
                 <span
@@ -70,14 +74,17 @@ const CardProject = ({
                   {topic}
                 </span>
               ))}
-          {isMobile && topics && topics.length > maxTopicsToShowMobile && !showAllTopics && (
-            <Button
-              onPress={() => setShowAllTopics(true)}
-              className="text-xs px-2 py-1 rounded-md shadow-md bg-gray-300 dark:bg-gray-600 bg-transparent"
-            >
-              ...
-            </Button>
-          )}
+          {isMobile &&
+            topics &&
+            topics.length > maxTopicsToShowMobile &&
+            !showAllTopics && (
+              <Button
+                onPress={() => setShowAllTopics(true)}
+                className="text-xs px-2 py-1 rounded-md shadow-md bg-gray-300 dark:bg-gray-600 bg-transparent"
+              >
+                ...
+              </Button>
+            )}
           {isMobile && showAllTopics && (
             <Button
               onPress={() => setShowAllTopics(false)}

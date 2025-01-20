@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { Timeline, TimelineEvent } from './TimeLineExp';
 import { experienceEntries } from '@/src/configs/experience';
 import Link from 'next/link';
@@ -22,10 +22,14 @@ const CurrentTimeLineExp = () => {
               entry.title
             )}
             {entry.isActive && (
-              <span className="ml-2 text-sm text-green-500 font-semibold">Active</span>
+              <span className="ml-2 text-sm text-green-500 font-semibold">
+                Active
+              </span>
             )}
           </TimelineEvent.Title>
-          <TimelineEvent.Description>{entry.description}</TimelineEvent.Description>
+          <TimelineEvent.Description>
+            {entry.description}
+          </TimelineEvent.Description>
         </TimelineEvent>
       ))}
     </Timeline>

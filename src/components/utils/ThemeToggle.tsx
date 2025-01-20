@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import { useTheme } from "@/src/components/utils/themeContext";
-import { Button } from "@nextui-org/react";
-import { MoonIcon, SunIcon } from "lucide-react";
+import { useTheme } from '@/src/components/utils/themeContext';
+import { Button } from '@nextui-org/react';
+import { MoonIcon, SunIcon } from 'lucide-react';
 
 const ThemeToggle = () => {
   const { theme, toggleTheme } = useTheme();
@@ -15,7 +15,11 @@ const ThemeToggle = () => {
       onPress={toggleTheme}
       className="bg-transparent text-black dark:text-white"
     >
-      {theme === "light" ? <MoonIcon className="w-5 h-5" /> : <SunIcon className="w-5 h-5" />}
+      {theme === 'light' ? (
+        <MoonIcon className="w-5 h-5" />
+      ) : (
+        <SunIcon className="w-5 h-5" />
+      )}
     </Button>
   );
 };

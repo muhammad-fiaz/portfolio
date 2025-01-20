@@ -30,7 +30,6 @@ const HomeSection = () => {
         <Hero />
       </div>
 
-
       {/* About Me Section */}
       <AnimationContainer customClassName="w-full mt-16">
         <AboutMe />
@@ -46,20 +45,19 @@ const HomeSection = () => {
       </AnimationContainer>
 
       {/* Skills Section */}
-            <AnimationContainer customClassName="w-full mt-16">
-              <SkillsSection/>
-            </AnimationContainer>
+      <AnimationContainer customClassName="w-full mt-16">
+        <SkillsSection />
+      </AnimationContainer>
 
       {/* Skills Section */}
-        <AnimationContainer customClassName="w-full mt-16">
-          <HolopinBadges/>
-        </AnimationContainer>
+      <AnimationContainer customClassName="w-full mt-16">
+        <HolopinBadges />
+      </AnimationContainer>
 
       {/* Stats Section */}
       <AnimationContainer customClassName="w-full mt-16">
-        <StatsSection/>
+        <StatsSection />
       </AnimationContainer>
-
 
       {/* Contact Section */}
       <AnimationContainer customClassName="w-full mt-16">

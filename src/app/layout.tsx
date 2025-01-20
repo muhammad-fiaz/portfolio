@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import '@/src/styles/globals.css';
 import clsx from 'clsx';
@@ -9,7 +9,7 @@ import FlareCursor from '@/src/components/ui/FlareCursor';
 import Head from './head';
 import { SpeedInsights } from '@vercel/speed-insights/next';
 import { Analytics } from '@vercel/analytics/react';
-import { NextUIProvider } from "@nextui-org/react";
+import { NextUIProvider } from '@nextui-org/react';
 import { SessionProvider } from 'next-auth/react';
 import { ThemeProvider } from '../components/utils/themeContext';
 import ProgressBar from '@/src/components/ui/progress';
@@ -27,16 +27,16 @@ const graphik = local({
     {
       path: '../../public/fonts/Graphik-Regular.ttf',
       weight: '400',
-      style: 'normal',
+      style: 'normal'
     },
     {
       path: '../../public/fonts/Graphik-Medium.ttf',
       weight: '600',
-      style: 'bold',
-    },
+      style: 'bold'
+    }
   ],
   variable: '--font-graphik',
-  display: 'swap', // Ensures text is visible while the font loads
+  display: 'swap' // Ensures text is visible while the font loads
 });
 
 const RootLayout = ({ children }: { children: React.ReactNode }) => {
@@ -48,37 +48,33 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
         graphik.variable
       )}
     >
-    <Head />
+      <Head />
 
-    <body className="transition ease-in-out min-h-screen">
-    <NextUIProvider>
+      <body className="transition ease-in-out min-h-screen">
+        <NextUIProvider>
+          <ThemeProvider>
+            <SessionProvider>
+              {/* Show progress bar during loading */}
+              <ProgressBar />
 
-    <ThemeProvider>
-        <SessionProvider>
+              {/* Main layout structure */}
+              <Header />
 
-          {/* Show progress bar during loading */}
-          <ProgressBar />
+              <main className="flex flex-col justify-center items-center mx-auto">
+                <FlareCursor />
+                {children}
+                <SpeedInsights />
+                <Analytics />
+              </main>
 
-          {/* Main layout structure */}
-          <Header />
-
-          <main className="flex flex-col justify-center items-center mx-auto">
-            <FlareCursor />
-            {children}
-            <SpeedInsights />
-            <Analytics />
-          </main>
-
-          {/* Chatbot now renders client-side only */}
-          <Chatbot />
-          <BackToTopButton />
-          <Footer />
-
-        </SessionProvider>
-    </ThemeProvider>
-    </NextUIProvider>
-
-    </body>
+              {/* Chatbot now renders client-side only */}
+              <Chatbot />
+              <BackToTopButton />
+              <Footer />
+            </SessionProvider>
+          </ThemeProvider>
+        </NextUIProvider>
+      </body>
     </html>
   );
 };

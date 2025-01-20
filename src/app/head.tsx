@@ -9,7 +9,7 @@ const Head = () => {
   const pathname = usePathname() || '/';
   const meta = generateMetadata({
     title: pathname === '/' ? '' : pathname.slice(1).replace(/-/g, ' '),
-    path: pathname,
+    path: pathname
   });
 
   // Generate JSON-LD structured data
@@ -24,11 +24,11 @@ const Head = () => {
       publisher: {
         '@type': 'Person',
         name: siteConfig.author,
-        logo: siteConfig.profile_image,
+        logo: siteConfig.profile_image
       },
       image: meta.openGraph.image,
       datePublished: new Date().toISOString(),
-      dateModified: new Date().toISOString(),
+      dateModified: new Date().toISOString()
     };
 
     return JSON.stringify(jsonLd);
@@ -60,7 +60,7 @@ const Head = () => {
         id="json-ld-schema"
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: generateJsonLd(),
+          __html: generateJsonLd()
         }}
       />
     </>

@@ -2,7 +2,10 @@
 import { NextApiRequest, NextApiResponse } from 'next';
 import { GoogleGenerativeAI } from '@google/generative-ai';
 
-export default async function handler(req: NextApiRequest, res: NextApiResponse) {
+export default async function handler(
+  req: NextApiRequest,
+  res: NextApiResponse
+) {
   // Check if the request method is POST
   if (req.method !== 'POST') {
     return res.status(405).json({ message: 'Method Not Allowed' });
@@ -34,6 +37,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse)
     return res.status(200).json({ response: botResponse });
   } catch (error) {
     console.error('Error:', error);
-    return res.status(500).json({ message: 'Error communicating with Gemini API' });
+    return res
+      .status(500)
+      .json({ message: 'Error communicating with Gemini API' });
   }
 }

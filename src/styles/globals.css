@@ -2,11 +2,13 @@
 @tailwind components;
 @tailwind utilities;
 
-html, body {
+html,
+body {
   scroll-behavior: smooth;
 }
 
-body, * {
+body,
+* {
   box-sizing: content-box;
   cursor: none;
 }
@@ -28,7 +30,9 @@ body, * {
   z-index: 999999 !important;
   backdrop-filter: blur(1px);
   background-color: #0000005e;
-  transition: width 0.2s ease-in-out, height 0.2s ease-in-out;
+  transition:
+    width 0.2s ease-in-out,
+    height 0.2s ease-in-out;
   cursor: none !important;
 }
 
@@ -38,14 +42,20 @@ body, * {
     width: 0;
     height: 0;
     opacity: 0;
-    transition: width 0.2s ease-in-out, height 0.2s ease-in-out, opacity 0.2s ease-in-out;
+    transition:
+      width 0.2s ease-in-out,
+      height 0.2s ease-in-out,
+      opacity 0.2s ease-in-out;
   }
 }
 
 .flare.pointer {
   display: none;
   opacity: 0 !important;
-  transition: width 0.2s ease-in-out, height 0.2s ease-in-out, opacity 0.2s ease-in-out;
+  transition:
+    width 0.2s ease-in-out,
+    height 0.2s ease-in-out,
+    opacity 0.2s ease-in-out;
 }
 
 #__next {
@@ -252,33 +262,33 @@ table {
   position: absolute;
   z-index: -1;
   background: radial-gradient(
-          circle at top left,
-          rgba(139, 0, 255, 0.22) 0%,
-          rgba(0, 0, 0, 0) 15%,
-          rgba(128, 128, 128, 0) 100%
-  ),
-  radial-gradient(
-          circle at 85% 30%,
-          rgba(0, 136, 255, 0.28) 0%,
-          rgba(0, 0, 0, 0) 30%,
-          rgba(128, 128, 128, 0) 15%
-  );
+      circle at top left,
+      rgba(139, 0, 255, 0.22) 0%,
+      rgba(0, 0, 0, 0) 15%,
+      rgba(128, 128, 128, 0) 100%
+    ),
+    radial-gradient(
+      circle at 85% 30%,
+      rgba(0, 136, 255, 0.28) 0%,
+      rgba(0, 0, 0, 0) 30%,
+      rgba(128, 128, 128, 0) 15%
+    );
 }
 
 @media (min-width: 900px) {
   .darkBackgroundCirclesColors {
     background: radial-gradient(
-            circle at 15% 55%,
-            rgba(139, 0, 255, 0.22) 0%,
-            rgba(0, 0, 0, 0) 25%,
-            rgba(128, 128, 128, 0) 100%
-    ),
-    radial-gradient(
-            circle at 85% 30%,
-            rgba(0, 136, 255, 0.28) 0%,
-            rgba(0, 0, 0, 0) 30%,
-            rgba(128, 128, 128, 0) 25%
-    );
+        circle at 15% 55%,
+        rgba(139, 0, 255, 0.22) 0%,
+        rgba(0, 0, 0, 0) 25%,
+        rgba(128, 128, 128, 0) 100%
+      ),
+      radial-gradient(
+        circle at 85% 30%,
+        rgba(0, 136, 255, 0.28) 0%,
+        rgba(0, 0, 0, 0) 30%,
+        rgba(128, 128, 128, 0) 25%
+      );
   }
 }
 
@@ -304,7 +314,9 @@ table {
   overflow: hidden;
   white-space: nowrap;
   border-right: 2px solid var(--caret-color, #fff);
-  animation: typing 3.5s steps(30) 1s 1 normal both, blink-caret 0.75s step-end infinite;
+  animation:
+    typing 3.5s steps(30) 1s 1 normal both,
+    blink-caret 0.75s step-end infinite;
 }
 
 /* Caret blink animation */
@@ -329,7 +341,9 @@ table {
 }
 
 #nprogress .peg {
-  box-shadow: 0 0 10px var(--progress-bar-bg), 0 0 5px var(--progress-bar-bg);
+  box-shadow:
+    0 0 10px var(--progress-bar-bg),
+    0 0 5px var(--progress-bar-bg);
 }
 
 #nprogress .spinner {
@@ -510,11 +524,21 @@ table {
   background-color: var(--muted-foreground);
 }
 @keyframes bounce {
-  0% { transform: scale(1); }
-  30% { transform: scale(1.1); }
-  50% { transform: scale(0.9); }
-  70% { transform: scale(1.05); }
-  100% { transform: scale(1); }
+  0% {
+    transform: scale(1);
+  }
+  30% {
+    transform: scale(1.1);
+  }
+  50% {
+    transform: scale(0.9);
+  }
+  70% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
 
 /* Apply bounce effect on focus */
@@ -524,9 +548,15 @@ table {
 }
 
 @keyframes jump {
-  0% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }  /* Move up by 5px */
-  100% { transform: translateY(0); }    /* Return to the original position */
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-5px);
+  } /* Move up by 5px */
+  100% {
+    transform: translateY(0);
+  } /* Return to the original position */
 }
 
 /* Apply jump effect on focus and hover */

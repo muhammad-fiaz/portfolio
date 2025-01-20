@@ -41,5 +41,4 @@ const FlareCursor = () => {
   );
 };
 
-
 export default FlareCursor;

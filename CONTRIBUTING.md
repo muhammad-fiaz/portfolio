@@ -13,22 +13,26 @@ We welcome contributions in the form of bug reports, feature requests, code impr
 1. **Fork the Repository:** Click the ["Fork"](https://github.com/muhammad-fiaz/portfolio/fork) button on the top right of the repository's page.
 
 2. **Clone Your Fork to Your Local Machine:**
+
    ```bash
    git clone https://github.com/yourusername/portfolio.git
    ```
 
 3. **Create a New Branch:**
+
    ```bash
    git checkout -b your-branch-name
    ```
 
 4. **Make Your Changes and Commit Them:**
+
    ```bash
    git add .
    git commit -m 'Commit message'
    ```
 
 5. **Push Your Changes to Your Fork:**
+
    ```bash
    git push origin your-branch-name
    ```
@@ -44,6 +48,7 @@ We welcome contributions in the form of bug reports, feature requests, code impr
 8. **Sync Your Fork (Optional):**
 
    If the original repository has been updated and you would like to sync your fork with it, you can do so by adding the original repository as a remote and pulling from it:
+
    ```bash
    git remote add upstream https://github.com/muhammad-fiaz/portfolio.git
    git pull upstream main

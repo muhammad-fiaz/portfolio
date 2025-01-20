@@ -1,11 +1,10 @@
-
 ## [Todo List](https://github.com/muhammad-fiaz/portfolio/blob/main/TODO.md)
 
-- [X] need to add a dual theme feature
-- [X] need to add a blog section
-- [X] need to add a contact form
-- [X] need to add a project section
+- [x] need to add a dual theme feature
+- [x] need to add a blog section
+- [x] need to add a contact form
+- [x] need to add a project section
 - [] need to add a loading screen
-- [X] need to add a 404 page
-- [X] need to add animations
+- [x] need to add a 404 page
+- [x] need to add animations
 - [] need to add gradient background
