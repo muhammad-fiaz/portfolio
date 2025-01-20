@@ -6,9 +6,12 @@ import CurrentTimeLineExp from '../content/CurrentTimeLineExp';
 import Hero from '../content/Hero';
 import AnimationContainer from '../utils/AnimationContainer';
 import SectionContainer from '../utils/SectionContainer';
-import ShowSkills from '@/src/components/ui/ShowSkills';
 import SupportMe from '@/src/components/content/SupportMe';
 import FAQSection from '@/src/components/sections/FAQSection';
+import StatsSection from '@/src/components/sections/StatsSection';
+import SkillsSection from '@/src/components/sections/SkillsSection';
+import HolopinBadges from '@/src/components/content/HolopinBadges';
+import DevCard from '@/src/components/content/DevCard';
 
 const HomeSection = () => {
   return (
@@ -27,6 +30,7 @@ const HomeSection = () => {
         <Hero />
       </div>
 
+
       {/* About Me Section */}
       <AnimationContainer customClassName="w-full mt-16">
         <AboutMe />
@@ -37,12 +41,24 @@ const HomeSection = () => {
         <CurrentTimeLineExp />
       </AnimationContainer>
 
+      <AnimationContainer customClassName="w-full mt-16">
+        <DevCard />
+      </AnimationContainer>
+
       {/* Skills Section */}
-          <div className="flex flex-col items-start gap-3 mt-3">
-            <AnimationContainer customClassName="flex items-center flex-wrap gap-3 mb-5">
-              <ShowSkills />
+            <AnimationContainer customClassName="w-full mt-16">
+              <SkillsSection/>
             </AnimationContainer>
-          </div>
+
+      {/* Skills Section */}
+        <AnimationContainer customClassName="w-full mt-16">
+          <HolopinBadges/>
+        </AnimationContainer>
+
+      {/* Stats Section */}
+      <AnimationContainer customClassName="w-full mt-16">
+        <StatsSection/>
+      </AnimationContainer>
 
 
       {/* Contact Section */}

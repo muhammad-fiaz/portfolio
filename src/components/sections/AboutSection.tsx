@@ -5,10 +5,10 @@ import CurrentTimeLineExp from '../content/CurrentTimeLineExp';
 import TitleSectionPageContainer from '../utils/TitleSectionPageContainer';
 import SectionContainer from '../utils/SectionContainer';
 import Link from 'next/link';
-import ShowSkills from '@/src/components/ui/ShowSkills';
 import ContactMe from '@/src/components/content/ContactMe';
 import SupportMe from '@/src/components/content/SupportMe';
 import FAQSection from '@/src/components/sections/FAQSection';
+import SkillsSection from '@/src/components/sections/SkillsSection';
 
 const AboutSection = () => {
   return (
@@ -49,7 +49,7 @@ const AboutSection = () => {
         </AnimationContainer>
 
                 <AnimationContainer customClassName="w-full">
-                  <ShowSkills  />
+                  <SkillsSection/>
                 </AnimationContainer>
         {/* Contact Section */}
         <AnimationContainer customClassName="w-full mt-16">

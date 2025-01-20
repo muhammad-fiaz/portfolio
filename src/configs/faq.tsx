@@ -24,9 +24,24 @@ export const faqData: FAQItem[] = [
     title: "What technologies do you use?",
     content: (
       <>
-        I am a full-stack developer with a focus on both frontend and backend technologies. I use tools like Next.js, TypeScript, Node.js, Python (Django, Flask, FastAPI), MongoDB, and SQL for my projects. I am also diving into Generative AI, Machine Learning, and Data Science to build smarter, data-driven full-stack applications.
+        I am a full-stack developer with a focus on both frontend and backend technologies. I mostly use tools like Next.js, TypeScript, Node.js, Python (Django, Flask, FastAPI), MongoDB, and SQL for my regular basis projects. I am also diving into Generative AI, Machine Learning, and Data Science to build smarter, data-driven full-stack applications.
         <br className="mb-2" />
         For more details on my tech stack and projects, please check out my <Link href={`https://github.com/${siteConfig.social.github}`} className="text-blue-500 hover:underline" target="_blank" rel="noopener noreferrer">GitHub page</Link>.
+      </>
+    ),
+  },
+  {
+    title: "Can we hire you?",
+    content: (
+      <>
+        Yes, I am currently looking for job opportunities! Feel free to reach out to me via email or Linkedin if you're interested in hiring me or collaborating on exciting projects.
+        <br className="mb-2" />
+        You can contact me through:
+        <ul className="list-disc pl-6 text-black dark:text-white text-sm">
+          <li>Email: <Link href={`mailto:${siteConfig.social.email}`} className="text-blue-500 hover:underline">{siteConfig.social.email}</Link></li>
+          <li> Linkedin <Link href={`mailto:${siteConfig.social.linkedin}`} className="text-blue-500 hover:underline">{siteConfig.social.linkedin}</Link></li>
+        </ul>
+
       </>
     ),
   },

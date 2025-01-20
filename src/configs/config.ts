@@ -19,11 +19,18 @@ export const siteConfig: {
         hashnode: string;
         discord: string;
         github_organisation: string;
+        daily_dev: {
+            username: string;
+            card: string;
+
+        }
+        holopin: string;
 
     };
     other: {
         hacktoberfest: string;
         codsoft: string;
+        github_snake: string;
     };
     chatbot:{
         rateLimit: number;
@@ -53,6 +60,11 @@ export const siteConfig: {
         hashnode: 'https://muhammadfiaz.hashnode.dev',
         discord: 'https://discord.gg/mXMhy2EX',
         github_organisation: 'https://github.com/FiazTechnologies',
+        daily_dev:{
+            username: 'muhammadfiaz',
+            card: 'https://api.daily.dev/devcards/v2/JVyK3ICBzKPdM0rcDj1o4.png?type=wide&r=vde'
+        },
+        holopin: 'muhammadfiaz'
     },
     metadata: {
         description: `Hi! I'm Muhammad Fiaz, a Full Stack developer passionate about building apps, exploring AI and ML, and collaborating on exciting projects. Let's connect!`,
@@ -66,5 +78,6 @@ export const siteConfig: {
     other: {
         hacktoberfest: 'https://hacktoberfest.com/',
         codsoft: 'https://www.codsoft.in/',
+        github_snake:"https://raw.githubusercontent.com/muhammad-fiaz/muhammad-fiaz/output/github-contribution-grid-snake.svg"
     },
 };

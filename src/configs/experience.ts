@@ -23,7 +23,7 @@ export const experienceEntries: ExperienceEntry[] = [
   {
     title: "Fiaz Technologies | Nov. 2023 - Present",
     description:
-      "Building developer-first tools at Fiaz Technologies to enhance productivity. Focused on creating innovative solutions that empower developers.",
+      "Building developer-first tools at Fiaz Technologies to enhance productivity. Focused on creating innovative Tools that empower developers.",
     startDate: "Nov 2023",
     endDate: "Present",
     isActive: true,
