@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import { siteConfig } from '@/src/configs/config';
 import Link from 'next/link';
 import AnimationContainer from '@/src/components/utils/AnimationContainer';
@@ -7,12 +7,15 @@ export default function NotFound() {
   return (
     <AnimationContainer customClassName="w-full">
       <div className="min-h-screen flex flex-col items-center justify-center text-white px-4 sm:px-6 lg:px-8">
-        <h1 className="text-6xl sm:text-7xl font-extrabold text-white mb-6">404</h1>
+        <h1 className="text-6xl sm:text-7xl font-extrabold text-white mb-6">
+          404
+        </h1>
         <p className="text-2xl sm:text-3xl text-gray-400 mb-4 text-center">
           Oops! The page you're looking for doesn't exist.
         </p>
         <p className="text-lg sm:text-xl text-gray-500 mb-8 text-center">
-          The page might have been moved or deleted, or the URL may be incorrect.
+          The page might have been moved or deleted, or the URL may be
+          incorrect.
         </p>
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
           <Link

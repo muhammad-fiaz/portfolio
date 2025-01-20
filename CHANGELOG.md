@@ -1,6 +1,7 @@
 # Portfolio Changelog - Release Notes
 
 ## V2.0.1
+
 - Added mew FAQ Section
 - improved Blog and Project Section
 - improved UI and Performance
@@ -8,13 +9,14 @@
 - Fixed initial load blank page due to server side rendering
 
 ## v2.0.0 - new Renewed Portfolio
+
 - New Design and UI
 - Improved Performance
 - Improved SEO
 - Improved Functionality
 
-
 ## v1.0.8
+
 - improved ui and performance
 - updated deps
 - fixed lottie error
@@ -27,6 +29,7 @@
 - improved documentation
 - improved code quality
   - Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
+
 ## v1.0.6
 
 - improved ui and performance
@@ -37,9 +40,9 @@
 - improved code quality
 - Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
 
-## v1.0.5 
+## v1.0.5
 
-- improved ui and performance 
+- improved ui and performance
 - fixed bugs
 - added new features
 - Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
@@ -52,12 +55,14 @@
 - Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
 
 ## v1.0.3
+
 - Added Custom 500 and 404 Error Pages👻
 - improved UI and Functionality❤️
 - fixed some bugs✌🏻
 - Full Release notes: [https://github.com/muhammad-fiaz/portfolio/releases](https://github.com/muhammad-fiaz/portfolio/releases)
 
 ## v1.0.2
+
 - Upgraded to Next.js 13
 - Added PostCSS Support
 - Some UI Improvements and Changes
@@ -82,7 +87,4 @@ I am thrilled to unveil Portfolio 1.0.0 – a major leap forward in my project's
 - 📞 **Seamless Contact Integration:** Forge connections effortlessly. Integrated contact forms and social media links pave the way for smooth interactions, allowing others to reach out with ease.
 - ⚡ **Performance at its Best:** I fine-tuned every aspect to guarantee swift loading times and seamless interactions, regardless of the scale of my portfolio.
 - 🐞 **Bug Buster:** Numerous bugs and glitches have been diligently squashed, fostering a stable and dependable user experience.
-- 
-👻 For more information about this release, please check out the repository [muhammad-fiaz](https://github.com/muhammad-fiaz/portfolio).
-
-
+- 👻 For more information about this release, please check out the repository [muhammad-fiaz](https://github.com/muhammad-fiaz/portfolio).

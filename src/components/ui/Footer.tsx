@@ -1,4 +1,4 @@
-"use client";
+'use client';
 
 import Link from 'next/link';
 import AnimationContainer from '../utils/AnimationContainer';
@@ -10,8 +10,7 @@ const Footer = () => {
   return (
     <footer className="w-full lg:max-w-screen-md flex flex-col justify-center items-center mx-auto dark:text-white/70 text-black/70">
       <AnimationContainer customClassName="w-full">
-
-      <hr className="w-full border-1 border-black/50 dark:border-white/50 mb-8" />
+        <hr className="w-full border-1 border-black/50 dark:border-white/50 mb-8" />
       </AnimationContainer>
       <AnimationContainer customClassName="w-full grid place-items-center grid-cols-3 gap-1 lg:gap-4 pb-8 sm:grid-cols-3 mx-3">
         <div className="flex flex-col space-y-4">
@@ -128,7 +127,6 @@ const Footer = () => {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               className="w-5 h-5"
-
               viewBox="0 0 32 32"
             >
               <path
@@ -196,6 +194,6 @@ const Footer = () => {
       <Credits />
     </footer>
   );
-}
+};
 
 export default Footer;

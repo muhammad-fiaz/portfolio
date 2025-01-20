@@ -16,7 +16,9 @@ import SearchInput from '@/src/components/ui/SearchInput';
 
 const ProjectsSection = () => {
   const [projectSearch, setProjectSearch] = useState<string>('');
-  const [allProjectsInfo, setAllProjectsInfo] = useState<CardProjectProps[]>([]);
+  const [allProjectsInfo, setAllProjectsInfo] = useState<CardProjectProps[]>(
+    []
+  );
   const [isLoading, setIsLoading] = useState<boolean>(false);
   const [fetchError, setFetchError] = useState<string>(''); // New state for handling fetch errors
 
@@ -28,7 +30,9 @@ const ProjectsSection = () => {
       setIsLoading(true);
       setFetchError(''); // Reset error message before fetching
       try {
-        const response = await fetch(`/api/fetch-projects?search=${projectSearch}`);
+        const response = await fetch(
+          `/api/fetch-projects?search=${projectSearch}`
+        );
         if (!response.ok) {
           throw new Error('Failed to fetch repositories');
         }
@@ -59,9 +63,9 @@ const ProjectsSection = () => {
       keywords: project.topics.join(', '),
       author: {
         '@type': 'Person',
-        name: siteConfig.author,
+        name: siteConfig.author
       },
-      datePublished: project.date,
+      datePublished: project.date
     };
 
     return JSON.stringify(jsonLd);

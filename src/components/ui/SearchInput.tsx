@@ -1,4 +1,4 @@
-"use client";
+'use client';
 import React from 'react';
 import { Input } from '@nextui-org/react';
 
@@ -9,7 +9,12 @@ interface SearchInputProps {
   ariaLabel: string;
 }
 
-const SearchInput: React.FC<SearchInputProps> = ({ value, onChange, placeholder, ariaLabel }) => {
+const SearchInput: React.FC<SearchInputProps> = ({
+  value,
+  onChange,
+  placeholder,
+  ariaLabel
+}) => {
   return (
     <div className="w-full group flex flex-col justify-center items-center mb-8">
       <Input

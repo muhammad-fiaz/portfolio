@@ -1,25 +1,25 @@
-"use client";
-import { Accordion, AccordionItem } from "@nextui-org/react";
-import React from "react";
-import AnimationContainer from "@/src/components/utils/AnimationContainer";
-import SectionHeader from "@/src/components/ui/SectionHeader";
+'use client';
+import { Accordion, AccordionItem } from '@nextui-org/react';
+import React from 'react';
+import AnimationContainer from '@/src/components/utils/AnimationContainer';
+import SectionHeader from '@/src/components/ui/SectionHeader';
 
-import { faqData } from "@/src/configs/faq";
-import Script from "next/script";
+import { faqData } from '@/src/configs/faq';
+import Script from 'next/script';
 
 export default function FAQSection() {
   // FAQ schema markup in JSON-LD format for SEO
   const faqPageSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": faqData.map((faq) => ({
-      "@type": "Question",
-      "name": faq.title,
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": faq.content.props.children[0], // Extract the main answer text
-      },
-    })),
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqData.map((faq) => ({
+      '@type': 'Question',
+      name: faq.title,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: faq.content.props.children[0] // Extract the main answer text
+      }
+    }))
   };
 
   return (
@@ -43,9 +43,15 @@ export default function FAQSection() {
             <AccordionItem
               key={index}
               aria-label={`Accordion ${index + 1}`}
-              title={<span className="text-black dark:text-white text-sm">{faq.title}</span>}
+              title={
+                <span className="text-black dark:text-white text-sm">
+                  {faq.title}
+                </span>
+              }
             >
-              <div className="text-black dark:text-white text-sm">{faq.content}</div>
+              <div className="text-black dark:text-white text-sm">
+                {faq.content}
+              </div>
             </AccordionItem>
           ))}
         </Accordion>

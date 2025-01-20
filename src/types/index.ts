@@ -17,11 +17,10 @@ export interface ExternalLinkProps {
 
 export interface NavItemHeaderAnimation {
   name: string;
-
 }
 
 export interface NavItemProps {
-  href: string,
+  href: string;
   text: string;
 }
 

@@ -1,8 +1,8 @@
-"use client";
-import ExternalLink from "../ui/ExternalLink";
-import AnimationContainer from "../utils/AnimationContainer";
-import Link from "next/link";
-import { useState, useEffect } from "react";
+'use client';
+import ExternalLink from '../ui/ExternalLink';
+import AnimationContainer from '../utils/AnimationContainer';
+import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { Button } from '@nextui-org/button';
 
 type BlogCardProps = {
@@ -27,8 +27,8 @@ const BlogCard = ({ title, excerpt, tags, link, source }: BlogCardProps) => {
       setIsMobile(window.innerWidth < 768);
     };
     handleResize(); // Initial check
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
   }, []);
 
   return (
@@ -41,7 +41,7 @@ const BlogCard = ({ title, excerpt, tags, link, source }: BlogCardProps) => {
 
         {/* Excerpt */}
         <p className="text-base transition-all ease-in-out duration-300">
-          {(!isMobile || showFullExcerpt || excerpt.length <= maxExcerptLength)
+          {!isMobile || showFullExcerpt || excerpt.length <= maxExcerptLength
             ? excerpt
             : `${excerpt.slice(0, maxExcerptLength)}...`}
           {isMobile && excerpt.length > maxExcerptLength && (
@@ -49,7 +49,7 @@ const BlogCard = ({ title, excerpt, tags, link, source }: BlogCardProps) => {
               onPress={() => setShowFullExcerpt(!showFullExcerpt)}
               className="ml-2 text-sm text-blue-500 hover:underline bg-transparent"
             >
-              {showFullExcerpt ? "Show Less" : "Show More"}
+              {showFullExcerpt ? 'Show Less' : 'Show More'}
             </Button>
           )}
         </p>
@@ -71,14 +71,17 @@ const BlogCard = ({ title, excerpt, tags, link, source }: BlogCardProps) => {
                   {tag}
                 </span>
               ))}
-          {isMobile && tags && tags.length > maxTagsToShowMobile && !showAllTags && (
-            <Button
-              onPress={() => setShowAllTags(true)}
-              className="text-xs px-2 py-1 rounded-md shadow-md bg-gray-300 dark:bg-gray-600"
-            >
-              ...
-            </Button>
-          )}
+          {isMobile &&
+            tags &&
+            tags.length > maxTagsToShowMobile &&
+            !showAllTags && (
+              <Button
+                onPress={() => setShowAllTags(true)}
+                className="text-xs px-2 py-1 rounded-md shadow-md bg-gray-300 dark:bg-gray-600"
+              >
+                ...
+              </Button>
+            )}
           {isMobile && showAllTags && (
             <Button
               onPress={() => setShowAllTags(false)}
@@ -92,7 +95,7 @@ const BlogCard = ({ title, excerpt, tags, link, source }: BlogCardProps) => {
         {/* Action Links */}
         <div className="w-full flex justify-between items-center flex-wrap gap-2 mt-4">
           <span className="text-sm ">
-            From: {" "}
+            From:{' '}
             <Link
               href={link}
               className="hover:underline text-blue-500"

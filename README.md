@@ -17,7 +17,6 @@
 [![Latest Release](https://img.shields.io/github/release/muhammad-fiaz/portfolio.svg)](https://github.com/muhammad-fiaz/portfolio/releases/latest)
 [![Current Version](https://img.shields.io/badge/Current%20Version-v2.0.1-blue.svg)](https://github.com/muhammad-fiaz/portfolio/releases/tag/v2.0.1)
 
-
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
 
@@ -36,17 +35,13 @@ This project is built with Next.js and React, showcasing [Muhammad Fiaz](https:/
 
 **Feel free to use this project for your portfolio or as a project reference. If you find it helpful, don't forget to give it a ⭐️ to show your support. [Fork this repo](https://github.com/muhammad-fiaz/portfolio/fork) if you want to contribute✨**
 
-
 **Support this non-profit open-source project with a little [sponsor ❤️](https://github.com/sponsors/muhammad-fiaz) or [Buy Me a Coffee ☕](https://buymecoffee.com/muhammadfiaz).**
-
 
 Here the Sample Performance of the Portfolio measured by [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools.
 
 <p align="center">
-  <img src="https://private-user-images.githubusercontent.com/75434191/391230424-4d9d12db-24ef-4e1f-9060-c15902e12453.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MzU1NzEzODcsIm5iZiI6MTczNTU3MTA4NywicGF0aCI6Ii83NTQzNDE5MS8zOTEyMzA0MjQtNGQ5ZDEyZGItMjRlZi00ZTFmLTkwNjAtYzE1OTAyZTEyNDUzLnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDEyMzAlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQxMjMwVDE1MDQ0N1omWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTY5ZTgzYTEyYTJlNjM5MDljMjEyZGI2ZWQxYjNkMzFlOGZmOGRhNTAwODQyNTM2MzlkMWEyMDk2OGQ1NzQ1NWYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0In0.8LFhF0xpJE_NPbm_4VZURWgP8lKk0Oh_M8__GoUkK90" alt="performance" />
+  <img src="https://github.com/user-attachments/assets/c08b7d91-6a00-4958-ba10-63eb365d6ad2" alt="performance" />
 </p>
-
-
 
 ## Table of Contents
 
@@ -63,7 +58,7 @@ Here the Sample Performance of the Portfolio measured by [Lighthouse](https://de
 - [Support Me](#support-me)
 - [License](#license)
 - [Contributing](#contributing)
--   - [Want to Contribute?](#want-to-contribute)
+- - [Want to Contribute?](#want-to-contribute)
 - [Deploy on Vercel](#deploy-on-vercel)
 - [Stay Connected!](#stay-connected)
 
@@ -111,13 +106,12 @@ Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 Runs the [Next.js ESLint](https://nextjs.org/docs/basic-features/eslint) linter.\
 It will show lint errors in the console.
 
-
 ## Icons Information
 
 💖 Icons are from [Font Awesome](https://fontawesome.com/), [Devicon](https://devicon.dev/),
 and also [Google Fonts](https://fonts.google.com/icons).
 
-##  Vector Graphics Animations
+## Vector Graphics Animations
 
 ✨ Vector Graphics Animations are from [LottieFiles](https://lottiefiles.com/).
 
@@ -125,7 +119,6 @@ and also [Google Fonts](https://fonts.google.com/icons).
 
 Please Read the [Next.js Documentation](https://nextjs.org/docs/getting-started).
 Also, Read the [React.js Documentation](https://reactjs.org/docs/getting-started.html).
-
 
 ## Support Me
 
@@ -147,13 +140,11 @@ Also, Read the [React.js Documentation](https://reactjs.org/docs/getting-started
 
 </div>
 
-
-
 <div align="center">
 
 [![Star History Chart](https://api.star-history.com/svg?repos=muhammad-fiaz/portfolio&type=Date)](https://github.com/muhammad-fiaz/portfolio/)
-</div>
 
+</div>
 
 ## License
 
@@ -173,7 +164,6 @@ If you'd like to contribute to this project, please check out the [contributing 
 A big thank you to everyone who contributed to this project! 💖
 
 [![Portfolio contributors](https://contrib.rocks/image?repo=muhammad-fiaz/portfolio&max=2000)](https://github.com/muhammad-fiaz/portfolio/graphs/contributors)
-
 
 ## Deploy on Vercel
 
@@ -204,7 +194,6 @@ By following these steps, you'll be sure to stay connected with the latest devel
 If you have any questions or feedback, please don't hesitate to reach out.
 
 Don't forget to Stay tuned for updates and new features!
-
 
   <img   align="right" src="https://github.com/muhammad-fiaz/muhammad-fiaz/assets/75434191/ed52c517-611e-4647-9b35-acd001a287b9" width="20%" />
 

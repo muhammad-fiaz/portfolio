@@ -10,7 +10,7 @@ const config: Config = {
     './src/components/**/*.tsx',
     './src/layouts/**/*.tsx',
     './src/**/*.tsx',
-    "./node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}",
+    './node_modules/@nextui-org/theme/dist/**/*.{js,ts,jsx,tsx}'
   ],
   theme: {
     extend: {
@@ -136,7 +136,7 @@ const config: Config = {
     }
   },
 
-  plugins: [typography, require('tailwindcss-animate'),nextui()]
+  plugins: [typography, require('tailwindcss-animate'), nextui()]
 };
 
 export default config;

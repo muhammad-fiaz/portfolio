@@ -17,20 +17,20 @@ export default function manifest(): MetadataRoute.Manifest {
         src: '/favicon/favicon.ico', // Path to the icon file
         sizes: '64x64 32x32 24x24 16x16', // Icon sizes
         type: 'image/x-icon', // Icon type
-        purpose: 'any', // Valid purpose 'any'
+        purpose: 'any' // Valid purpose 'any'
       },
       {
         src: '/favicon/favicon.jpg', // Path to the icon file
         sizes: '192x192', // Icon size
         type: 'image/png', // Icon type
-        purpose: 'maskable', // Valid purpose 'maskable'
+        purpose: 'maskable' // Valid purpose 'maskable'
       },
       {
         src: '/favicon/favicon.jpg', // Path to the icon file
         sizes: '512x512', // Icon size
         type: 'image/png', // Icon type
-        purpose: 'maskable', // Valid purpose 'maskable'
-      },
-    ],
+        purpose: 'maskable' // Valid purpose 'maskable'
+      }
+    ]
   };
 }
