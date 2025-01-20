@@ -8,12 +8,39 @@ import SectionHeader from '@/src/components/ui/SectionHeader';
 const ContactMe = () => {
   const [isSubmitted, setIsSubmitted] = useState(false);
   const [name, setName] = useState('');
+  const [email, setEmail] = useState('');
+  const [isWaiting, setIsWaiting] = useState(false);
+  const [waitTime, setWaitTime] = useState(0); // In seconds
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+
+    // Check if user is trying to send an email before the ratelimit window is up
+    const lastSubmittedTime = sessionStorage.getItem('lastSubmittedTime');
+    const lastEmail = sessionStorage.getItem('lastEmail');
+    const currentTime = Date.now();
+    const rateLimit = siteConfig.contact.rateLimit;
+    const FIVE_MINUTES = rateLimit * 60 * 1000; // default 10 minutes in milliseconds
+
+    if (lastSubmittedTime && currentTime - parseInt(lastSubmittedTime) < FIVE_MINUTES) {
+      // If less than 10 minutes have passed since last submission
+      setIsWaiting(true);
+      setWaitTime(Math.ceil((FIVE_MINUTES - (currentTime - parseInt(lastSubmittedTime))) / 1000)); // Show wait time in seconds
+      return;
+    }
+
+    if (lastEmail && lastEmail !== email) {
+      // If email is different and already used
+      setIsWaiting(true);
+      setWaitTime(Math.ceil(FIVE_MINUTES / 1000)); // Show 5 minutes wait time
+      return;
+    }
+
     // Simulate form submission and success
     setTimeout(() => {
       setIsSubmitted(true);
+      sessionStorage.setItem('lastSubmittedTime', currentTime.toString());
+      sessionStorage.setItem('lastEmail', email);
     }, 500);
   };
 
@@ -27,7 +54,6 @@ const ContactMe = () => {
 
       <div className="w-full flex justify-between items-center flex-col mx-auto max-w-screen-xl">
         <div className="w-full flex justify-between items-center flex-col lg:flex-row gap-6 mb-10">
-          {/* Use h3 for the subheading here, since it's a subsection under "Contact me" */}
           <div className="w-full rounded-xl border border-gray-800 hover:border-gray-900 bg-white dark:bg-[#080809] p-4 shadow-sm hover:shadow-[0_8px_30px_rgb(0,0,0,0.12)] sm:p-6 transition ease">
             <h3 className="font-bold text-1xl tracking-tight text-foreground dark:text-white text-start">
               Email
@@ -58,6 +84,8 @@ const ContactMe = () => {
                   label="Email"
                   placeholder="Email"
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   required
                 />
               </div>
@@ -105,6 +133,15 @@ const ContactMe = () => {
               </svg>
             </Button>
           </form>
+
+          {/* Show warning message if the user tries to submit before waiting */}
+          {isWaiting && (
+            <div className="mt-4 text-red-500">
+              <p>
+                You need to wait {waitTime} second{waitTime !== 1 && 's'} before sending another message.
+              </p>
+            </div>
+          )}
         </div>
       </div>
 

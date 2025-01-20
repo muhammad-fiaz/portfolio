@@ -35,6 +35,9 @@ export const siteConfig: {
     chatbot:{
         rateLimit: number;
     }
+    contact:{
+        rateLimit: number;
+    }
     metadata: {
         description: string;
         keywords: string;
@@ -73,6 +76,9 @@ export const siteConfig: {
         type: 'website',
     },
     chatbot: {
+        rateLimit: 10,
+    },
+    contact: {
         rateLimit: 10,
     },
     other: {
