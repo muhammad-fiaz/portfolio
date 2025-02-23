@@ -36,7 +36,7 @@ export const siteConfig: {
     rateLimit: number;
   };
   contact: {
-    debug:  boolean;
+    debug: boolean;
     rateLimit: number;
   };
   metadata: {
@@ -50,7 +50,7 @@ export const siteConfig: {
   author: 'Muhammad Fiaz',
   author_surname: 'Fiaz',
   titlePrefix: 'Muhammad Fiaz',
-  github_org_name:"Fiaz Technologies",
+  github_org_name: 'Fiaz Technologies',
   country: 'India',
   profile_image:
     'https://avatars.githubusercontent.com/u/75434191?s=400&u=0aa88e4ae941c44425b2be4595cf92b68f578f8a&v=4',

@@ -30,8 +30,10 @@ const ContactMe = () => {
             platform: navigator.platform,
             screenResolution: `${window.screen.width}x${window.screen.height}`,
             os: navigator.platform,
-            chromeVersion: navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./)?.[2],
-            domain: window.location.href,
+            chromeVersion: navigator.userAgent.match(
+              /Chrom(e|ium)\/([0-9]+)\./
+            )?.[2],
+            domain: window.location.href
           };
           setUserInfo(browserInfo);
         } catch (error) {
@@ -103,8 +105,12 @@ const ContactMe = () => {
         </div>
 
         <div className="w-full flex justify-center items-center flex-col">
-          <form onSubmit={handleSubmit} className="w-full space-y-4"  method="POST"
-                encType="multipart/form-data">
+          <form
+            onSubmit={handleSubmit}
+            className="w-full space-y-4"
+            method="POST"
+            encType="multipart/form-data"
+          >
             <div>
               <Input
                 isClearable={true}
@@ -152,7 +158,12 @@ const ContactMe = () => {
 
             {siteConfig.contact.debug && (
               <div>
-              <Input type="hidden" name="userInfo" value={JSON.stringify(userInfo)} required />
+                <Input
+                  type="hidden"
+                  name="userInfo"
+                  value={JSON.stringify(userInfo)}
+                  required
+                />
               </div>
             )}
 
