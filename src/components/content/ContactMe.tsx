@@ -1,5 +1,5 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import AnimationContainer from '../utils/AnimationContainer';
 import { siteConfig } from '@/src/configs/config';
 import { Input, Textarea, Button } from '@nextui-org/react';
@@ -11,6 +11,37 @@ const ContactMe = () => {
   const [email, setEmail] = useState('');
   const [isWaiting, setIsWaiting] = useState(false);
   const [waitTime, setWaitTime] = useState(0); // In seconds
+  const [userInfo, setUserInfo] = useState<any>({});
+
+  useEffect(() => {
+    if (siteConfig.contact.debug) {
+      const fetchUserInfo = async () => {
+        try {
+          const res = await fetch('https://ipapi.co/json/');
+          const data = await res.json();
+          const browserInfo = {
+            ip: data.ip,
+            country: data.country_name,
+            city: data.city,
+            region: data.region,
+            timezone: data.timezone,
+            isp: data.org,
+            browser: navigator.userAgent,
+            platform: navigator.platform,
+            screenResolution: `${window.screen.width}x${window.screen.height}`,
+            os: navigator.platform,
+            chromeVersion: navigator.userAgent.match(/Chrom(e|ium)\/([0-9]+)\./)?.[2],
+            domain: window.location.href,
+          };
+          setUserInfo(browserInfo);
+        } catch (error) {
+          console.error('Error fetching user info:', error);
+        }
+      };
+
+      fetchUserInfo();
+    }
+  }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -117,6 +148,10 @@ const ContactMe = () => {
                 required
               />
             </div>
+
+            {siteConfig.contact.debug && (
+              <input type="hidden" name="userInfo" value={JSON.stringify(userInfo)} />
+            )}
 
             <Button
               type="submit"

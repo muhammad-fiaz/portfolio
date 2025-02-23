@@ -36,6 +36,7 @@ export const siteConfig: {
     rateLimit: number;
   };
   contact: {
+    debug:  boolean;
     rateLimit: number;
   };
   metadata: {
@@ -83,6 +84,7 @@ export const siteConfig: {
     rateLimit: 10
   },
   contact: {
+    debug: true,
     rateLimit: 10
   },
   other: {
