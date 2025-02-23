@@ -103,12 +103,13 @@ const ContactMe = () => {
         </div>
 
         <div className="w-full flex justify-center items-center flex-col">
-          <form onSubmit={handleSubmit} className="w-full space-y-4">
+          <form onSubmit={handleSubmit} className="w-full space-y-4"  method="POST"
+                encType="multipart/form-data">
             <div>
               <Input
                 isClearable={true}
                 label="Name"
-                placeholder="Name"
+                placeholder="Enter your name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -120,7 +121,7 @@ const ContactMe = () => {
                 <Input
                   isClearable={true}
                   label="Email"
-                  placeholder="Email"
+                  placeholder="Enter your email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -132,7 +133,7 @@ const ContactMe = () => {
                 <Input
                   isClearable={true}
                   label="Phone"
-                  placeholder="Phone"
+                  placeholder="Enter your phone number"
                   type="tel"
                   required
                 />
@@ -143,14 +144,16 @@ const ContactMe = () => {
               <Textarea
                 isClearable={true}
                 label="Message"
-                placeholder="Message"
+                placeholder="Enter your message"
                 rows={4}
                 required
               />
             </div>
 
             {siteConfig.contact.debug && (
-              <input type="hidden" name="userInfo" value={JSON.stringify(userInfo)} />
+              <div>
+              <Input type="hidden" name="userInfo" value={JSON.stringify(userInfo)} required />
+              </div>
             )}
 
             <Button
@@ -202,6 +205,7 @@ const ContactMe = () => {
             </p>
             <Button
               onPress={() => setIsSubmitted(false)}
+              type="submit"
               className="mt-4 px-4 py-2 rounded-xl bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition ease"
             >
               Close
