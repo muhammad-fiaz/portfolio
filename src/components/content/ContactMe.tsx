@@ -216,7 +216,6 @@ const ContactMe = () => {
             </p>
             <Button
               onPress={() => setIsSubmitted(false)}
-              type="submit"
               className="mt-4 px-4 py-2 rounded-xl bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 transition ease"
             >
               Close
