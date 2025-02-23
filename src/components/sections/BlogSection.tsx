@@ -9,7 +9,6 @@ import { siteConfig } from '@/src/configs/config';
 import Link from 'next/link';
 import { Skeleton } from '@/src/components/ui/skeleton';
 import Script from 'next/script';
-import { Input } from '@nextui-org/react';
 import SearchInput from '@/src/components/ui/SearchInput';
 
 interface Blog {

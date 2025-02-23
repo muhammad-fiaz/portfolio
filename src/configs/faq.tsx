@@ -1,6 +1,7 @@
 'use client';
 import { siteConfig } from '@/src/configs/config';
 import Link from 'next/link';
+import { JSX } from 'react';
 
 // Define a type for FAQ item
 export interface FAQItem {

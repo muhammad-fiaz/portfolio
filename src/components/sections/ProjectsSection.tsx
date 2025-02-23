@@ -1,5 +1,5 @@
 'use client';
-import { useEffect, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AnimationContainer from '../utils/AnimationContainer';
 import { siteConfig } from '@/src/configs/config';
 import { CardProjectProps } from '@/src/types';
@@ -10,8 +10,6 @@ import Link from 'next/link';
 import { Skeleton } from '../ui/skeleton';
 import Script from 'next/script';
 import { usePathname } from 'next/navigation';
-import React from 'react';
-import { Input } from '@nextui-org/react';
 import SearchInput from '@/src/components/ui/SearchInput';
 
 const ProjectsSection = () => {

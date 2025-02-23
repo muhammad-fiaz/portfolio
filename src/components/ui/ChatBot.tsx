@@ -1,7 +1,7 @@
 'use client';
-import React, { useState, useEffect } from 'react';
-import { Spinner, Textarea, Button } from '@nextui-org/react';
-import { setCookie, getCookie } from 'cookies-next'; // Import cookies
+import React, { useEffect, useState } from 'react';
+import { Button, Spinner, Textarea } from '@nextui-org/react';
+import { getCookie, setCookie } from 'cookies-next'; // Import cookies
 import { siteConfig } from '@/src/configs/config';
 
 const Chatbot = () => {

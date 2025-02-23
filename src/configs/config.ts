@@ -1,10 +1,13 @@
 export const siteConfig: {
   baseUrl: string;
+  domain: string;
   author: string;
   author_surname: string;
   titlePrefix: string;
   profile_image: string;
   form_id: string;
+  github_org_name: string;
+  country: string;
   social: {
     kofi: string;
     sponsor: string;
@@ -33,6 +36,7 @@ export const siteConfig: {
     rateLimit: number;
   };
   contact: {
+    debug: boolean;
     rateLimit: number;
   };
   metadata: {
@@ -42,9 +46,12 @@ export const siteConfig: {
   };
 } = {
   baseUrl: 'https://muhammadfiaz.com',
+  domain: 'muhammadfiaz.com',
   author: 'Muhammad Fiaz',
   author_surname: 'Fiaz',
   titlePrefix: 'Muhammad Fiaz',
+  github_org_name: 'Fiaz Technologies',
+  country: 'India',
   profile_image:
     'https://avatars.githubusercontent.com/u/75434191?s=400&u=0aa88e4ae941c44425b2be4595cf92b68f578f8a&v=4',
   form_id: 'https://formspree.io/f/myzynpbr',
@@ -77,6 +84,7 @@ export const siteConfig: {
     rateLimit: 10
   },
   contact: {
+    debug: true,
     rateLimit: 10
   },
   other: {

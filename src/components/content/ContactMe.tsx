@@ -1,8 +1,8 @@
 'use client';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import AnimationContainer from '../utils/AnimationContainer';
 import { siteConfig } from '@/src/configs/config';
-import { Input, Textarea, Button } from '@nextui-org/react';
+import { Button, Input, Textarea } from '@nextui-org/react';
 import SectionHeader from '@/src/components/ui/SectionHeader';
 
 const ContactMe = () => {
@@ -11,6 +11,39 @@ const ContactMe = () => {
   const [email, setEmail] = useState('');
   const [isWaiting, setIsWaiting] = useState(false);
   const [waitTime, setWaitTime] = useState(0); // In seconds
+  const [userInfo, setUserInfo] = useState<any>({});
+
+  useEffect(() => {
+    if (siteConfig.contact.debug) {
+      const fetchUserInfo = async () => {
+        try {
+          const res = await fetch('https://ipapi.co/json/');
+          const data = await res.json();
+          const browserInfo = {
+            ip: data.ip,
+            country: data.country_name,
+            city: data.city,
+            region: data.region,
+            timezone: data.timezone,
+            isp: data.org,
+            browser: navigator.userAgent,
+            platform: navigator.platform,
+            screenResolution: `${window.screen.width}x${window.screen.height}`,
+            os: navigator.platform,
+            chromeVersion: navigator.userAgent.match(
+              /Chrom(e|ium)\/([0-9]+)\./
+            )?.[2],
+            domain: window.location.href
+          };
+          setUserInfo(browserInfo);
+        } catch (error) {
+          console.error('Error fetching user info:', error);
+        }
+      };
+
+      fetchUserInfo();
+    }
+  }, []);
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -72,12 +105,17 @@ const ContactMe = () => {
         </div>
 
         <div className="w-full flex justify-center items-center flex-col">
-          <form onSubmit={handleSubmit} className="w-full space-y-4">
+          <form
+            onSubmit={handleSubmit}
+            className="w-full space-y-4"
+            method="POST"
+            encType="multipart/form-data"
+          >
             <div>
               <Input
                 isClearable={true}
                 label="Name"
-                placeholder="Name"
+                placeholder="Enter your name"
                 value={name}
                 onChange={(e) => setName(e.target.value)}
                 required
@@ -89,7 +127,7 @@ const ContactMe = () => {
                 <Input
                   isClearable={true}
                   label="Email"
-                  placeholder="Email"
+                  placeholder="Enter your email"
                   type="email"
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
@@ -101,7 +139,7 @@ const ContactMe = () => {
                 <Input
                   isClearable={true}
                   label="Phone"
-                  placeholder="Phone"
+                  placeholder="Enter your phone number"
                   type="tel"
                   required
                 />
@@ -112,11 +150,22 @@ const ContactMe = () => {
               <Textarea
                 isClearable={true}
                 label="Message"
-                placeholder="Message"
+                placeholder="Enter your message"
                 rows={4}
                 required
               />
             </div>
+
+            {siteConfig.contact.debug && (
+              <div>
+                <Input
+                  type="hidden"
+                  name="userInfo"
+                  value={JSON.stringify(userInfo)}
+                  required
+                />
+              </div>
+            )}
 
             <Button
               type="submit"

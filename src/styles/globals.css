@@ -261,7 +261,8 @@ table {
   inset: 0px;
   position: absolute;
   z-index: -1;
-  background: radial-gradient(
+  background:
+    radial-gradient(
       circle at top left,
       rgba(139, 0, 255, 0.22) 0%,
       rgba(0, 0, 0, 0) 15%,
@@ -277,7 +278,8 @@ table {
 
 @media (min-width: 900px) {
   .darkBackgroundCirclesColors {
-    background: radial-gradient(
+    background:
+      radial-gradient(
         circle at 15% 55%,
         rgba(139, 0, 255, 0.22) 0%,
         rgba(0, 0, 0, 0) 25%,
