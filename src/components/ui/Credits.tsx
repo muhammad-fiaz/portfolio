@@ -1,5 +1,5 @@
 'use client';
-import React, { useEffect, useState, useRef } from 'react';
+import React, { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { siteConfig } from '@/src/configs/config';
 import AnimationContainer from '@/src/components/utils/AnimationContainer';

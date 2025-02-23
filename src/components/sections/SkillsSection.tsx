@@ -3,7 +3,6 @@
 import Image from 'next/image';
 import AnimationContainer from '@/src/components/utils/AnimationContainer';
 import SectionHeader from '@/src/components/ui/SectionHeader';
-import HolopinBadges from '@/src/components/content/HolopinBadges';
 import React from 'react';
 
 const MySkills = () => {

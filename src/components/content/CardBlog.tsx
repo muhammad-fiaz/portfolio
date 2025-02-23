@@ -2,7 +2,7 @@
 import ExternalLink from '../ui/ExternalLink';
 import AnimationContainer from '../utils/AnimationContainer';
 import Link from 'next/link';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '@nextui-org/button';
 
 type BlogCardProps = {

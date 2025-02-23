@@ -2,7 +2,7 @@
 import ExternalLink from '../ui/ExternalLink';
 import AnimationContainer from '../utils/AnimationContainer';
 import { CardProjectProps } from '@/src/types';
-import { useState, useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { Button } from '@nextui-org/button';
 
 const CardProject = ({

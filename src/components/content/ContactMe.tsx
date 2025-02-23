@@ -1,8 +1,8 @@
 'use client';
-import React, { useState, useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import AnimationContainer from '../utils/AnimationContainer';
 import { siteConfig } from '@/src/configs/config';
-import { Input, Textarea, Button } from '@nextui-org/react';
+import { Button, Input, Textarea } from '@nextui-org/react';
 import SectionHeader from '@/src/components/ui/SectionHeader';
 
 const ContactMe = () => {
