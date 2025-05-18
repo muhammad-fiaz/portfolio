@@ -3,7 +3,7 @@ import ExternalLink from '../ui/ExternalLink';
 import AnimationContainer from '../utils/AnimationContainer';
 import Link from 'next/link';
 import { useEffect, useState } from 'react';
-import { Button } from '@nextui-org/button';
+import { Button } from '@heroui/react';
 
 type BlogCardProps = {
   title: string;

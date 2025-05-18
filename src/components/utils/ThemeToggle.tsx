@@ -1,7 +1,7 @@
 'use client';
 
 import { useTheme } from '@/src/components/utils/themeContext';
-import { Button } from '@nextui-org/react';
+import { Button } from '@heroui/react';
 import { MoonIcon, SunIcon } from 'lucide-react';
 
 const ThemeToggle = () => {

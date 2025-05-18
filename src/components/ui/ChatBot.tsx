@@ -1,6 +1,6 @@
 'use client';
 import React, { useEffect, useState } from 'react';
-import { Button, Spinner, Textarea } from '@nextui-org/react';
+import { Button, Spinner, Textarea } from '@heroui/react';
 import { getCookie, setCookie } from 'cookies-next'; // Import cookies
 import { siteConfig } from '@/src/configs/config';
 

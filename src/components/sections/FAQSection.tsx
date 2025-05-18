@@ -1,5 +1,5 @@
 'use client';
-import { Accordion, AccordionItem } from '@nextui-org/react';
+import { Accordion, AccordionItem } from '@heroui/react';
 import React from 'react';
 import AnimationContainer from '@/src/components/utils/AnimationContainer';
 import SectionHeader from '@/src/components/ui/SectionHeader';
