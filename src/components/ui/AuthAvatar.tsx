@@ -1,16 +1,10 @@
 'use client';
 
 import { useEffect, useState } from 'react';
-import { Avatar } from '@nextui-org/avatar';
-import { Button } from '@nextui-org/button';
+import { Avatar } from '@heroui/react';
 import { signIn, signOut, useSession } from 'next-auth/react';
 import Cookies from 'js-cookie';
-import {
-  Dropdown,
-  DropdownItem,
-  DropdownMenu,
-  DropdownTrigger
-} from '@nextui-org/dropdown';
+import { Button, Dropdown, DropdownItem, DropdownMenu, DropdownTrigger } from '@heroui/react';
 
 const AuthAvatar = () => {
   const { data: session } = useSession();

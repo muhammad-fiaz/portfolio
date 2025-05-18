@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import AnimationContainer from '../utils/AnimationContainer';
 import { siteConfig } from '@/src/configs/config';
-import { Button, Input, Textarea } from '@nextui-org/react';
+import { Button, Input, Textarea } from '@heroui/react';
 import SectionHeader from '@/src/components/ui/SectionHeader';
 
 const ContactMe = () => {

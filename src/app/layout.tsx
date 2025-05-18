@@ -50,7 +50,11 @@ const RootLayout = ({ children }: { children: React.ReactNode }) => {
     >
       <Head />
 
-      <body className="transition ease-in-out min-h-screen">
+      <body className="transition ease-in-out min-h-screen"
+            data-new-gr-c-s-check-loaded="14.1235.0"
+            data-gr-ext-installed=""
+
+      >
         <HeroUIProvider>
           <ThemeProvider>
             <SessionProvider>

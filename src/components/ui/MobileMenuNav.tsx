@@ -5,7 +5,7 @@ import { JSX, useEffect } from 'react';
 import cn from 'classnames';
 import useMenuNav from '@/src/hooks/useMenuNav';
 import LinksMenuNav from './LinksMenuNav';
-import { Button } from '@nextui-org/button';
+import { Button } from '@heroui/react';
 
 const MenuIcon = (props: JSX.IntrinsicElements['svg']) => {
   return (
