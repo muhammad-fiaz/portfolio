@@ -3,15 +3,15 @@
 </p>
 
 <div align="center">
-  <h1><a href="https://muhammadfiaz.com/">muhammadfiaz.com</a> | portfolio V2</h1>
+  <h1>Portfolio V2 is Now Decrypted 🥲</h1>
   
-![Stability](https://img.shields.io/badge/stability-good-blue.svg) ![MIT License](https://img.shields.io/badge/license-MIT-green)
+![Stability](https://img.shields.io/badge/stability-archived-lightgrey.svg) ![MIT License](https://img.shields.io/badge/license-MIT-green)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/muhammad-fiaz/portfolio)
 [![Build Passing](https://badge.buildkite.com/sample.svg?status=passing)](https://github.com/muhammad-fiaz/portfolio)
 [![Continuous Integration](https://github.com/muhammad-fiaz/portfolio/actions/workflows/prettier.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/prettier.yml)
 [![CodeQL](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codeql.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codeql.yml)
 [![Dependency Review](https://github.com/muhammad-fiaz/portfolio/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/dependency-review.yml)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/muhammad-fiaz/portfolio)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-lightgrey.svg)](https://GitHub.com/muhammad-fiaz/portfolio)
 [![Maintainer](https://img.shields.io/badge/maintainer-muhammad--fiaz-blue)](https://GitHub.com/muhammad-fiaz)
 
 [![Latest Release](https://img.shields.io/github/release/muhammad-fiaz/portfolio.svg)](https://github.com/muhammad-fiaz/portfolio/releases/latest)
@@ -30,6 +30,33 @@
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/F1F6MME1W)
 
 </div>
+
+
+Thank you for your interest in my portfolio project! 🎉
+
+**This repository ([portfolio V2](https://github.com/muhammad-fiaz/portfolio)) is now fully decrypted and will no longer receive major updates.**  
+I am excited to announce that I am moving forward with my new and improved portfolio (V3), **now built with Astro!**, which will be available at:  
+👉 [muhammad-fiaz/website](https://github.com/muhammad-fiaz/website)
+
+### What does this mean for you?
+- **You are welcome to use, fork, or reference this V2 portfolio for your own learning or projects.**
+- The repo will remain public as an archive for the community.
+- All features, code, and documentation are now fully accessible.
+
+### Looking for the latest version?
+Check out my new portfolio work (V3, built with Astro):  
+🔗 [https://github.com/muhammad-fiaz/website](https://github.com/muhammad-fiaz/website)
+
+### Thank you!
+Thanks to everyone who starred, contributed, or offered feedback on V2.  
+Your support has been invaluable and I look forward to sharing even more with V3 (Astro)!
+
+---
+
+**Stay tuned for more updates and features in Portfolio V3! 🚀**
+
+
+# About This Project
 
 This project is built with Next.js and React, showcasing [Muhammad Fiaz](https://github.com/muhammad-fiaz/)'s [personal website](https://muhammadfiaz.com/).
 
