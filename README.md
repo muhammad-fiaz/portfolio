@@ -1,21 +1,19 @@
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/97ddad97-5d77-40b6-8fa3-35e2e034a97d"  alt="Muhammad Fiaz's Portfolio"/>
-</p>
+
 
 <div align="center">
-  <h1>Portfolio V2 is Now Decrypted 🥲</h1>
-  
-![Stability](https://img.shields.io/badge/stability-archived-lightgrey.svg) ![MIT License](https://img.shields.io/badge/license-MIT-green)
+  <h1>Portfolio V4 🎉</h1>
+
+![Stability](https://img.shields.io/badge/stability-active-brightgreen.svg) ![MIT License](https://img.shields.io/badge/license-MIT-green)
 [![GitHub Repository](https://img.shields.io/badge/GitHub-Repository-blue)](https://github.com/muhammad-fiaz/portfolio)
 [![Build Passing](https://badge.buildkite.com/sample.svg?status=passing)](https://github.com/muhammad-fiaz/portfolio)
 [![Continuous Integration](https://github.com/muhammad-fiaz/portfolio/actions/workflows/prettier.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/prettier.yml)
 [![CodeQL](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codeql.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/codeql.yml)
 [![Dependency Review](https://github.com/muhammad-fiaz/portfolio/actions/workflows/dependency-review.yml/badge.svg)](https://github.com/muhammad-fiaz/portfolio/actions/workflows/dependency-review.yml)
-[![Maintenance](https://img.shields.io/badge/Maintained%3F-no-lightgrey.svg)](https://GitHub.com/muhammad-fiaz/portfolio)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-brightgreen.svg)](https://GitHub.com/muhammad-fiaz/portfolio)
 [![Maintainer](https://img.shields.io/badge/maintainer-muhammad--fiaz-blue)](https://GitHub.com/muhammad-fiaz)
 
 [![Latest Release](https://img.shields.io/github/release/muhammad-fiaz/portfolio.svg)](https://github.com/muhammad-fiaz/portfolio/releases/latest)
-[![Current Version](https://img.shields.io/badge/Current%20Version-v2.0.2-blue.svg)](https://github.com/muhammad-fiaz/portfolio/releases/tag/v2.0.2)
+[![Current Version](https://img.shields.io/badge/Current%20Version-v4.0.0-blue.svg)](https://github.com/muhammad-fiaz/portfolio/releases/tag/v4.0.0)
 
 ![Next JS](https://img.shields.io/badge/Next-black?style=for-the-badge&logo=next.js&logoColor=white)
 ![Vercel](https://img.shields.io/badge/Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)
@@ -32,24 +30,28 @@
 </div>
 
 
+
 Thank you for your interest in my portfolio project! 🎉
 
-**This repository ([portfolio V2](https://github.com/muhammad-fiaz/portfolio)) is now fully decrypted and will no longer receive major updates.**  
-I am excited to announce that I am moving forward with my new and improved portfolio (V3), **now built with Astro!**, which will be available at:  
-👉 [muhammad-fiaz/website](https://github.com/muhammad-fiaz/website)
+**This repository ([portfolio V4](https://github.com/muhammad-fiaz/portfolio)) is the latest version and is still in active development.**
+
+Due to the amazing support, feedback, and requests from the community, I have decided to continue developing and improving this project. Your encouragement and enthusiasm have made a big impact!
+
+I'm currently building my portfolio with Next.js (V4), and side-by-side, I'm also working on my Astro V3 portfolio version:
+👉 [muhammad-fiaz/website (Astro V3)](https://github.com/muhammad-fiaz/website)
 
 ### What does this mean for you?
-- **You are welcome to use, fork, or reference this V2 portfolio for your own learning or projects.**
-- The repo will remain public as an archive for the community.
+- **You are welcome to use, fork, or reference this V4 portfolio for your own learning or projects.**
+- The repo will remain public and actively maintained for the community.
 - All features, code, and documentation are now fully accessible.
 
-### Looking for the latest version?
-Check out my new portfolio work (V3, built with Astro):  
+### Looking for the Astro version?
+Check out my Astro V3 portfolio work:
 🔗 [https://github.com/muhammad-fiaz/website](https://github.com/muhammad-fiaz/website)
 
 ### Thank you!
-Thanks to everyone who starred, contributed, or offered feedback on V2.  
-Your support has been invaluable and I look forward to sharing even more with V3 (Astro)!
+Thanks to everyone who starred, contributed, or offered feedback on previous versions.  
+Your support has been invaluable and I look forward to sharing even more with V4 (Next.js) and V3 (Astro)!
 
 ---
 
@@ -64,30 +66,27 @@ This project is built with Next.js and React, showcasing [Muhammad Fiaz](https:/
 
 **Support this non-profit open-source project with a little [sponsor ❤️](https://github.com/sponsors/muhammad-fiaz) or [Buy Me a Coffee ☕](https://buymecoffee.com/muhammadfiaz).**
 
-Here the Sample Performance of the Portfolio measured by [Lighthouse](https://developers.google.com/web/tools/lighthouse) in Chrome DevTools.
-
-<p align="center">
-  <img src="https://github.com/user-attachments/assets/c08b7d91-6a00-4958-ba10-63eb365d6ad2" alt="performance" />
-</p>
-
 ## Table of Contents
 
-- [Release Notes](#release-notes)
-- [Getting Started](#getting-started)
-- [Available Scripts](#available-scripts)
-  - [`npm run dev`](#npm-run-dev)
-  - [`npm run build`](#npm-run-build)
-  - [`npm start`](#npm-start)
-  - [`npm run lint`](#npm-run-lint)
-- [Icons Information](#icons-information)
-- [Vector Graphics Animations](#vector-graphics-animations)
-- [More Information](#more-information)
-- [Support Me](#support-me)
-- [License](#license)
-- [Contributing](#contributing)
-- - [Want to Contribute?](#want-to-contribute)
-- [Deploy on Vercel](#deploy-on-vercel)
-- [Stay Connected!](#stay-connected)
+- [About This Project](#about-this-project)
+  - [Table of Contents](#table-of-contents)
+    - [Release Notes](#release-notes)
+  - [Getting Started](#getting-started)
+  - [Available Scripts](#available-scripts)
+    - [`npm run dev`](#npm-run-dev)
+    - [`npm run build`](#npm-run-build)
+    - [`npm start`](#npm-start)
+    - [`npm run lint`](#npm-run-lint)
+  - [Icons Information](#icons-information)
+  - [Vector Graphics Animations](#vector-graphics-animations)
+  - [More Information](#more-information)
+  - [Support Me](#support-me)
+  - [License](#license)
+  - [Contributing](#contributing)
+    - [Want to contribute?](#want-to-contribute)
+  - [Deploy on Vercel](#deploy-on-vercel)
+  - [Stay Connected!](#stay-connected)
+    - [Happy Coding! 😊](#happy-coding-)
 
 ### Release Notes
 
