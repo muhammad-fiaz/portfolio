@@ -1,41 +1,31 @@
-'use client';
+"use client"
 
-import { useEffect } from 'react';
-import NProgress from 'nprogress';
-import 'nprogress/nprogress.css';
-import { usePathname } from 'next/navigation';
+import * as React from "react"
+import * as ProgressPrimitive from "@radix-ui/react-progress"
 
-const ProgressBar = () => {
-  const pathname = usePathname(); // Get the current pathname
+import { cn } from "@/lib/utils"
 
-  useEffect(() => {
-    const handleRouteChangeStart = () => {
-      NProgress.start(); // Start NProgress
-    };
+function Progress({
+  className,
+  value,
+  ...props
+}: React.ComponentProps<typeof ProgressPrimitive.Root>) {
+  return (
+    <ProgressPrimitive.Root
+      data-slot="progress"
+      className={cn(
+        "bg-primary/20 relative h-2 w-full overflow-hidden rounded-full",
+        className
+      )}
+      {...props}
+    >
+      <ProgressPrimitive.Indicator
+        data-slot="progress-indicator"
+        className="bg-primary h-full w-full flex-1 transition-all"
+        style={{ transform: `translateX(-${100 - (value || 0)}%)` }}
+      />
+    </ProgressPrimitive.Root>
+  )
+}
 
-    const handleRouteChangeComplete = () => {
-      NProgress.done(); // Finish NProgress
-    };
-
-    const handleRouteChangeError = () => {
-      NProgress.done(); // Finish NProgress if error occurs
-    };
-
-    // Call the start and done manually for the first load
-    handleRouteChangeStart();
-    handleRouteChangeComplete();
-
-    // Whenever pathname changes, trigger NProgress
-    NProgress.start(); // Start NProgress
-    const timeoutId = setTimeout(() => NProgress.done(), 500); // Finish NProgress after a timeout
-
-    // Cleanup
-    return () => {
-      clearTimeout(timeoutId);
-    };
-  }, [pathname]); // Re-run when the pathname changes
-
-  return null; // No need to render anything, NProgress is globally managed
-};
-
-export default ProgressBar;
+export { Progress }
