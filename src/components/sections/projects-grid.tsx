@@ -11,6 +11,7 @@ import {
   Star, 
   GitFork, 
   Calendar,
+
   AlertCircle,
   Search,
   X
@@ -25,6 +26,7 @@ import {
   PaginationItem,
   PaginationPrevious,
   PaginationNext,
+
 } from '@/components/ui/pagination';
 
 interface GitHubRepo {

@@ -4,6 +4,7 @@ import { Button } from '@/components/ui/button';
 import { Github } from 'lucide-react';
 import { signIn } from '@/lib/auth-client';
 
+
 export function BetterAuthSignIn() {
   return (
     <div className="flex flex-col items-center gap-2 py-6">

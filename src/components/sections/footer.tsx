@@ -12,5 +12,6 @@ export function FooterSection() {
         </p>
       </div>
     </footer>
+
   );
 }

@@ -11,6 +11,7 @@ import { ArrowUpRightIcon } from 'lucide-react';
 export function HeroSection() {
 
 
+
   return (
     <motion.section
       initial={{ opacity: 0 }}
@@ -53,6 +54,7 @@ export function HeroSection() {
               <p className="mx-auto max-w-2xl sm:max-w-3xl text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-muted-foreground leading-relaxed px-4 sm:px-0">
                 I Build Next-Generation Technologies
               </p>
+
           </div>
           {/* CTA Buttons */}
           <motion.div
@@ -69,6 +71,7 @@ export function HeroSection() {
               <Link href='/projects'>
                 <Zap className="mr-2 h-4 w-4 transition-transform group-hover:scale-110 text-white dark:text-black" />
                 View Projects
+
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 text-white dark:text-black" />
               </Link>
             </Button>
@@ -80,6 +83,7 @@ export function HeroSection() {
             >
               <Link href={`${siteConfig.links.email}`}>
                 Get in Touch
+
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>

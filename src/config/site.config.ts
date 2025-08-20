@@ -7,6 +7,7 @@ export type SocialLink = {
   icon?: string; // name for icon library if needed later
 };
 
+
 export type NavItem = {
   label: string;
   href: string;
@@ -17,12 +18,14 @@ export interface SiteConfig {
   siteName: string;
   domain: string;
   description: string;
+
   about: string;
   keywords: string[];
   ogImage: string;
   twitterHandle: string;
   author: string;
   author_img:string;
+
   theme: {
     default: 'light' | 'dark';
     allowSystem: boolean;
@@ -74,6 +77,7 @@ export const siteConfig: SiteConfig = {
   ],
   ogImage: '/og.png',
   twitterHandle: '@muhammadfiaz_',
+
   theme: {
     default: 'dark',
     allowSystem: true,
@@ -130,6 +134,7 @@ export const siteConfig: SiteConfig = {
 
 export function buildMetadata(overrides: Partial<Metadata> = {}): Metadata {
   const { seo, siteName, domain } = siteConfig;
+
   const base: Metadata = {
     title: seo.title,
     description: seo.description,
@@ -160,6 +165,7 @@ export function buildMetadata(overrides: Partial<Metadata> = {}): Metadata {
       'og:image:alt': seo.imageAlt,
     },
   } as Metadata;
+
   return { ...base, ...overrides };
 }
 

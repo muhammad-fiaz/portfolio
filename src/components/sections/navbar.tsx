@@ -183,6 +183,7 @@ export function Navbar() {
                   <h3 className="text-sm font-semibold">About</h3>
                   <p className="text-sm text-muted-foreground leading-relaxed">
                     {siteConfig.description}
+
                   </p>
                 </div>
 

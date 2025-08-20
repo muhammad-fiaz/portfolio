@@ -5,6 +5,7 @@ import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Image from 'next/image';
 import {siteConfig} from '@/config/site.config'
 
+
 export function AboutContent() {
   return (
     <motion.div
