@@ -22,6 +22,7 @@ export interface SiteConfig {
   ogImage: string;
   twitterHandle: string;
   author: string;
+  author_img:string;
   theme: {
     default: 'light' | 'dark';
     allowSystem: boolean;
@@ -58,7 +59,8 @@ export const siteConfig: SiteConfig = {
   description: 'Full Stack developer creating useful & delightful web experiences. Exploring ML & AI.',
   about:
     'I am a Full Stack developer who loves creating new things. I spend my spare time building free apps & tools, and I am currently diving into Machine Learning & AI to expand my problem‑solving toolkit. Always open to collaboration & new challenges.',
-  keywords: [
+    author_img: 'https://avatars.githubusercontent.com/u/75434191?v=4',
+    keywords: [
     'Muhammad Fiaz',
     'Full Stack Developer',
     'Portfolio',

@@ -3,6 +3,7 @@
 import { motion } from 'motion/react';
 import { Badge } from '@/components/ui/badge';
 import { User } from 'lucide-react';
+import {siteConfig} from '@/config/site.config'
 
 export function AboutHeader() {
   return (
