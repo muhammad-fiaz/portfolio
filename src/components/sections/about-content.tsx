@@ -1,9 +1,10 @@
 "use client";
 
 import { motion } from 'motion/react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { siteConfig } from '@/config/site.config';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Image from 'next/image';
+import {siteConfig} from '@/config/site.config'
+
 
 export function AboutContent() {
   return (
@@ -18,8 +19,8 @@ export function AboutContent() {
         <CardHeader className="relative z-10 flex flex-col items-center justify-center gap-4 pt-8 pb-2">
           <div className="relative w-48 h-48 overflow-hidden border-4 border-primary shadow-xl bg-background">
             <Image
-              src="https://avatars.githubusercontent.com/u/75434191?v=4"
-              alt="Muhammad Fiaz profile"
+              src={siteConfig.author_img}
+              alt={`${siteConfig.author} profile`}
               width={192}
               height={192}
               className="object-cover w-full h-full rounded-lg"

@@ -1,4 +1,6 @@
 "use client";
+import Image from 'next/image';
+
 import { BetterAuthSignIn } from './better-auth-signin';
 import { useState, useEffect } from 'react';
 import { motion } from 'motion/react';
@@ -82,7 +84,8 @@ export function ChatInterface() {
                 >
                   <div className="flex items-end gap-2 max-w-[70%]">
                     {msg.sender === 'user' && (
-                      <img src={msg.avatar} alt={msg.name} className="h-8 w-8 rounded-full border border-border" />
+                      <Image src={msg.avatar} alt={msg.name} width={32} height={32} className="h-8 w-8 rounded-full border border-border object-cover" />
+
                     )}
                     <div
                       className={
@@ -97,7 +100,8 @@ export function ChatInterface() {
                       <div className="text-sm leading-relaxed">{msg.content}</div>
                     </div>
                     {msg.sender === 'me' && (
-                      <img src={msg.avatar} alt={msg.name} className="h-8 w-8 rounded-full border border-border" />
+                      <Image src={msg.avatar} alt={msg.name} width={32} height={32} className="h-8 w-8 rounded-full border border-border object-cover" />
+
                     )}
                   </div>
                 </div>

@@ -5,19 +5,12 @@ import { siteConfig } from '@/config/site.config';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { Announcement, AnnouncementTitle ,AnnouncementTag} from '@/components/ui/announcement';
-import { ArrowRight, Sparkles, Zap, AlertCircle } from 'lucide-react';
-import { TypingMotion } from './TypingMotion';
+import { ArrowRight, Zap } from 'lucide-react';
 import { ArrowUpRightIcon } from 'lucide-react';
 
-const roles = [
-  "I'm a Full Stack Developer",
-  'Building SaaS & AI Apps',
-  'Open Source Enthusiast',
-  'Exploring ML & AI',
-];
-
 export function HeroSection() {
-  const h = siteConfig.hero;
+
+
 
   return (
     <motion.section
@@ -53,18 +46,15 @@ export function HeroSection() {
               </AnnouncementTitle>
             </Announcement>
           </motion.div>
-          {/* Main Heading */}
+          {/* Main Heading - show name and description from config */}
           <div className="space-y-4 sm:space-y-6">
             <h1 className="text-4xl sm:text-6xl md:text-8xl lg:text-9xl xl:text-[8rem] font-extrabold tracking-tight leading-none">
-                <span className="block">Muhammad Fiaz</span>
+                <span className="block">{siteConfig.siteName}</span>
             </h1>
-            <TypingMotion
-              roles={roles}
-              className="block text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl font-semibold text-muted-foreground min-h-[2rem] sm:min-h-[3rem]"
-            />
-            <p className="mx-auto max-w-2xl sm:max-w-3xl text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-muted-foreground leading-relaxed px-4 sm:px-0">
-              {h.subtitle}
-            </p>
+              <p className="mx-auto max-w-2xl sm:max-w-3xl text-sm sm:text-base md:text-lg lg:text-xl xl:text-2xl text-muted-foreground leading-relaxed px-4 sm:px-0">
+                I Build Next-Generation Technologies
+              </p>
+
           </div>
           {/* CTA Buttons */}
           <motion.div
@@ -78,9 +68,10 @@ export function HeroSection() {
               size="lg"
               className="group relative overflow-hidden bg-primary text-white dark:bg-white dark:text-black px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-bold shadow-xl hover:shadow-2xl transition-all duration-300 w-full sm:w-auto"
             >
-              <Link href={h.primaryCta.href}>
+              <Link href='/projects'>
                 <Zap className="mr-2 h-4 w-4 transition-transform group-hover:scale-110 text-white dark:text-black" />
-                {h.primaryCta.label}
+                View Projects
+
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 text-white dark:text-black" />
               </Link>
             </Button>
@@ -90,8 +81,9 @@ export function HeroSection() {
               size="lg"
               className="group border-border/60 bg-background/50 backdrop-blur-sm px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium hover:bg-background/80 hover:border-primary/50 transition-all duration-300 w-full sm:w-auto"
             >
-              <Link href={h.secondaryCta.href}>
-                {h.secondaryCta.label}
+              <Link href={`${siteConfig.links.email}`}>
+                Get in Touch
+
                 <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
