@@ -1,8 +1,7 @@
 "use client";
 
 import { motion } from 'motion/react';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
-import { siteConfig } from '@/config/site.config';
+import { Card, CardContent, CardHeader } from '@/components/ui/card';
 import Image from 'next/image';
 
 export function AboutContent() {

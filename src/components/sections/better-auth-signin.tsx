@@ -2,7 +2,7 @@
 
 import { Button } from '@/components/ui/button';
 import { Github } from 'lucide-react';
-import { signIn, useSession } from '@/lib/auth-client';
+import { signIn } from '@/lib/auth-client';
 
 export function BetterAuthSignIn() {
   return (
