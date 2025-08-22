@@ -4,7 +4,13 @@ export async function GET() {
   const host = siteConfig.domain || 'localhost';
   const lines = [
     'User-agent: *',
-    'Disallow:',
+  'Disallow:',
+  // Explicitly allow common payment/verification endpoints (e.g. Razorpay webhooks)
+  'Allow: /api/razorpay',
+  'Allow: /api/payment',
+  'Allow: /api/webhook',
+  'Allow: /verify',
+  'Allow: /payments',
     `Sitemap: https://${host}/sitemap.xml`,
   ];
 

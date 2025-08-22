@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { siteConfig, buildMetadata } from "@/config/site.config";
 export const metadata = buildMetadata({
   title: `Privacy Policy | ${siteConfig.siteName}`,
@@ -20,7 +21,7 @@ export default function PrivacyPolicy() {
           <CardTitle>Privacy Policy</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-lg space-y-4">
+          <div className="text-base lg:text-lg space-y-4">
           <p className="text-sm text-muted-foreground mb-4">Last updated: August 20, 2025.</p>
 
           <p className="mb-4">
@@ -47,14 +48,14 @@ export default function PrivacyPolicy() {
 
           <h3 id="toc" className="text-lg font-medium mt-6">Table of Contents</h3>
           <ul className="list-disc list-inside my-3 space-y-1 text-sm">
-            <li><a href="#collection" className="underline text-primary">Information We Collect</a></li>
-            <li><a href="#use" className="underline text-primary">How We Use Information</a></li>
-            <li><a href="#sharing" className="underline text-primary">Sharing & Third Parties</a></li>
-            <li><a href="#cookies" className="underline text-primary">Cookies & Tracking</a></li>
-            <li><a href="#security" className="underline text-primary">Security</a></li>
-            <li><a href="#rights" className="underline text-primary">Your Rights</a></li>
-            <li><a href="#international" className="underline text-primary">International Users & Transfers</a></li>
-            <li><a href="#contact" className="underline text-primary">Contact</a></li>
+            <li><Link href="#collection" className="underline text-primary">Information We Collect</Link></li>
+            <li><Link href="#use" className="underline text-primary">How We Use Information</Link></li>
+            <li><Link href="#sharing" className="underline text-primary">Sharing & Third Parties</Link></li>
+            <li><Link href="#cookies" className="underline text-primary">Cookies & Tracking</Link></li>
+            <li><Link href="#security" className="underline text-primary">Security</Link></li>
+            <li><Link href="#rights" className="underline text-primary">Your Rights</Link></li>
+            <li><Link href="#international" className="underline text-primary">International Users & Transfers</Link></li>
+            <li><Link href="#contact" className="underline text-primary">Contact</Link></li>
           </ul>
 
           <h4 id="collection" className="mt-4 font-semibold">Information We Collect</h4>
@@ -90,7 +91,7 @@ export default function PrivacyPolicy() {
           <p className="mb-2 text-sm">Our Sites are accessible globally and personal data may be transferred to, stored, and processed in India or other countries. We will take steps (such as standard contractual clauses or other appropriate safeguards) when required by law to protect your personal data during cross-border transfers.</p>
 
           <h4 id="contact" className="mt-4 font-semibold">Contact</h4>
-          <p className="mb-2 text-sm">For privacy requests or questions, contact: <a className="underline text-primary" href="mailto:contact@muhammadfiaz.com">contact@muhammadfiaz.com</a> (personal) or <a className="underline text-primary" href="mailto:contactus@fiaz.dev">contactus@fiaz.dev</a> (Fiaz Technologies). For legal requests, contact <a className="underline text-primary" href="mailto:legal@fiaz.dev">legal@fiaz.dev</a>. For privacy-related disputes, please include sufficient information to identify your request and allow us to respond promptly.</p>
+          <p className="mb-2 text-sm">For privacy requests or questions, contact: <a className="underline text-primary" href="mailto:contact@muhammadfiaz.com">contact@muhammadfiaz.com</a> (personal), <a className="underline text-primary" href="mailto:s.muhammadfiaz2003@gmail.com">s.muhammadfiaz2003@gmail.com</a> (personal), or <a className="underline text-primary" href="mailto:contactus@fiaz.dev">contactus@fiaz.dev</a> (Fiaz Technologies). For legal requests, contact <a className="underline text-primary" href="mailto:legal@fiaz.dev">legal@fiaz.dev</a>. For privacy-related disputes, please include sufficient information to identify your request and allow us to respond promptly.</p>
 
           <p className="mt-6 text-sm">We may update this Privacy Policy from time to time. The &quot;Last updated&quot; date at the top indicates the most recent revision; please review this page periodically to stay informed about any changes.</p>
           </div>
