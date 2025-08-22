@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { siteConfig, buildMetadata } from "@/config/site.config";
 export const metadata = buildMetadata({
   title: `Terms of Service | ${siteConfig.siteName}`,
@@ -20,7 +21,7 @@ export default function TermsOfService() {
           <CardTitle>Terms of Service</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-lg space-y-4">
+          <div className="text-base lg:text-lg space-y-4">
           <p className="text-sm text-muted-foreground mb-4">Last updated: August 20, 2025.</p>
 
           <p className="mb-4">These Terms of Service (&quot;Terms&quot;) govern your access to and use of muhammadfiaz.com and fiaz.dev (the &quot;Sites&quot;), owned and operated by Fiaz Technologies (&quot;we&quot;, &quot;us&quot;). By accessing or using the Sites or purchasing services you agree to be bound by these Terms and any separate agreement you enter into with us.</p>
@@ -31,16 +32,16 @@ export default function TermsOfService() {
 
           <h3 id="toc" className="text-lg font-medium mt-6">Table of Contents</h3>
           <ul className="list-disc list-inside my-3 space-y-1 text-sm">
-            <li><a href="#acceptance" className="underline text-primary">Acceptance of Terms</a></li>
-            <li><a href="#services" className="underline text-primary">Services & Offers</a></li>
-            <li><a href="#payments" className="underline text-primary">Payments</a></li>
-            <li><a href="#refunds" className="underline text-primary">Refunds</a></li>
-            <li><a href="#user-content" className="underline text-primary">User Content</a></li>
-            <li><a href="#limitation" className="underline text-primary">Limitation of Liability</a></li>
-            <li><a href="#termination" className="underline text-primary">Termination</a></li>
-            <li><a href="#governing" className="underline text-primary">Governing Law & Dispute Resolution</a></li>
-            <li><a href="#changes" className="underline text-primary">Changes to Terms</a></li>
-            <li><a href="#contact" className="underline text-primary">Contact</a></li>
+            <li><Link href="#acceptance" className="underline text-primary">Acceptance of Terms</Link></li>
+            <li><Link href="#services" className="underline text-primary">Services & Offers</Link></li>
+            <li><Link href="#payments" className="underline text-primary">Payments</Link></li>
+            <li><Link href="#refunds" className="underline text-primary">Refunds</Link></li>
+            <li><Link href="#user-content" className="underline text-primary">User Content</Link></li>
+            <li><Link href="#limitation" className="underline text-primary">Limitation of Liability</Link></li>
+            <li><Link href="#termination" className="underline text-primary">Termination</Link></li>
+            <li><Link href="#governing" className="underline text-primary">Governing Law & Dispute Resolution</Link></li>
+            <li><Link href="#changes" className="underline text-primary">Changes to Terms</Link></li>
+            <li><Link href="#contact" className="underline text-primary">Contact</Link></li>
           </ul>
 
           <h4 id="acceptance" className="mt-4 font-semibold">Acceptance of Terms</h4>
@@ -71,7 +72,7 @@ export default function TermsOfService() {
           <p className="mb-2 text-sm">We may modify these Terms; material changes will be posted and effective as stated. Continued use of the Sites after changes constitutes acceptance.</p>
 
           <h4 id="contact" className="mt-4 font-semibold">Contact</h4>
-          <p className="mb-2 text-sm">For questions about these Terms or to serve legal notices: <a className="underline text-primary" href="mailto:contact@muhammadfiaz.com">contact@muhammadfiaz.com</a> (personal) or <a className="underline text-primary" href="mailto:contactus@fiaz.dev">contactus@fiaz.dev</a> (Fiaz Technologies). For legal notices: <a className="underline text-primary" href="mailto:legal@fiaz.dev">legal@fiaz.dev</a>. For refund enquiries: <a className="underline text-primary" href="mailto:refund@muhammadfiaz.com">refund@muhammadfiaz.com</a> or <a className="underline text-primary" href="mailto:refund@fiaz.dev">refund@fiaz.dev</a> depending on where you purchased the service.</p>
+          <p className="mb-2 text-sm">For questions about these Terms or to serve legal notices: <a className="underline text-primary" href="mailto:contact@muhammadfiaz.com">contact@muhammadfiaz.com</a> (personal), <a className="underline text-primary" href="mailto:s.muhammadfiaz2003@gmail.com">s.muhammadfiaz2003@gmail.com</a> (personal), or <a className="underline text-primary" href="mailto:contactus@fiaz.dev">contactus@fiaz.dev</a> (Fiaz Technologies). For legal notices: <a className="underline text-primary" href="mailto:legal@fiaz.dev">legal@fiaz.dev</a>. For refund enquiries: <a className="underline text-primary" href="mailto:refund@muhammadfiaz.com">refund@muhammadfiaz.com</a> or <a className="underline text-primary" href="mailto:refund@fiaz.dev">refund@fiaz.dev</a> depending on where you purchased the service.</p>
 
           <p className="mt-6 text-sm">These Terms may change from time to time. We will post updates here and the &quot;Last updated&quot; date reflects the most recent revision; please check this page periodically.</p>
           </div>

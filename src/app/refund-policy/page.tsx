@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import { siteConfig, buildMetadata } from "@/config/site.config";
 export const metadata = buildMetadata({
   title: `Refund Policy | ${siteConfig.siteName}`,
@@ -20,7 +21,7 @@ export default function RefundPolicy() {
           <CardTitle>Refund Policy</CardTitle>
         </CardHeader>
         <CardContent>
-          <div className="text-lg space-y-4">
+          <div className="text-base lg:text-lg space-y-4">
           <p className="text-sm text-muted-foreground mb-4">Last updated: August 20, 2025.</p>
 
           <p className="mb-4">This Refund Policy applies to purchases and services made through muhammadfiaz.com and fiaz.dev (Fiaz Technologies) and to any related offerings or services provided by Muhammad Fiaz personally or by Fiaz Technologies. References to &quot;we&quot;, &quot;us&quot;, or &quot;our&quot; include both Muhammad Fiaz and Fiaz Technologies where applicable.</p>
@@ -30,14 +31,14 @@ export default function RefundPolicy() {
 
           <h3 id="toc" className="text-lg font-medium mt-6">Table of Contents</h3>
           <ul className="list-disc list-inside my-3 space-y-1 text-sm">
-            <li><a href="#summary" className="underline text-primary">Summary</a></li>
-            <li><a href="#scope" className="underline text-primary">Scope</a></li>
-            <li><a href="#no-refund" className="underline text-primary">No Refund Policy</a></li>
-            <li><a href="#exceptions" className="underline text-primary">Exceptions</a></li>
-            <li><a href="#requests" className="underline text-primary">How to Request a Refund</a></li>
-            <li><a href="#payments" className="underline text-primary">Payment Processing & Fees</a></li>
-            <li><a href="#disputes" className="underline text-primary">Dispute Resolution</a></li>
-            <li><a href="#contact" className="underline text-primary">Contact</a></li>
+            <li><Link href="#summary" className="underline text-primary">Summary</Link></li>
+            <li><Link href="#scope" className="underline text-primary">Scope</Link></li>
+            <li><Link href="#no-refund" className="underline text-primary">No Refund Policy</Link></li>
+            <li><Link href="#exceptions" className="underline text-primary">Exceptions</Link></li>
+            <li><Link href="#requests" className="underline text-primary">How to Request a Refund</Link></li>
+            <li><Link href="#payments" className="underline text-primary">Payment Processing & Fees</Link></li>
+            <li><Link href="#disputes" className="underline text-primary">Dispute Resolution</Link></li>
+            <li><Link href="#contact" className="underline text-primary">Contact</Link></li>
           </ul>
 
           <h4 id="summary" className="mt-4 font-semibold">Summary</h4>
@@ -87,7 +88,7 @@ export default function RefundPolicy() {
           <p className="mb-2 text-sm">If a payment dispute arises, parties should contact us at the addresses below to attempt an amicable resolution. Governing law is the laws of India; for international customers, local consumer protection laws may also apply.</p>
 
           <h4 id="contact" className="mt-4 font-semibold">Contact</h4>
-          <p className="mb-2 text-sm">For refund requests or questions: <a className="underline text-primary" href="mailto:refund@muhammadfiaz.com">refund@muhammadfiaz.com</a> (for purchases made via muhammadfiaz.com) or <a className="underline text-primary" href="mailto:refund@fiaz.dev">refund@fiaz.dev</a> (for purchases made via fiaz.dev). General inquiries: <a className="underline text-primary" href="mailto:contact@muhammadfiaz.com">contact@muhammadfiaz.com</a> or <a className="underline text-primary" href="mailto:contactus@fiaz.dev">contactus@fiaz.dev</a>.</p>
+          <p className="mb-2 text-sm">For refund requests or questions: <a className="underline text-primary" href="mailto:refund@muhammadfiaz.com">refund@muhammadfiaz.com</a> (for purchases made via muhammadfiaz.com), <a className="underline text-primary" href="mailto:s.muhammadfiaz2003@gmail.com">s.muhammadfiaz2003@gmail.com</a> (personal), or <a className="underline text-primary" href="mailto:refund@fiaz.dev">refund@fiaz.dev</a> (for purchases made via fiaz.dev). General inquiries: <a className="underline text-primary" href="mailto:contact@muhammadfiaz.com">contact@muhammadfiaz.com</a> or <a className="underline text-primary" href="mailto:contactus@fiaz.dev">contactus@fiaz.dev</a>.</p>
 
           <p className="mt-6 text-sm">This Refund Policy may be updated occasionally. The &quot;Last updated&quot; date at the top of this page indicates the most recent revision; please check this page periodically.</p>
           </div>
