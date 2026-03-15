@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { ProjectPageClient } from "@/components/pages/project-page-client";
 import { getGithubRepos } from "@/lib/server/portfolio-data";
 import { siteUrl } from "@/lib/site-config";
@@ -129,7 +130,9 @@ export default async function ProjectPage() {
         </p>
       </section>
 
-      <ProjectPageClient initialRepos={repos} />
+      <Suspense fallback={null}>
+        <ProjectPageClient initialRepos={repos} />
+      </Suspense>
     </div>
   );
 }
