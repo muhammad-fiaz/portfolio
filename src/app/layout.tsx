@@ -166,34 +166,36 @@ export default function RootLayout({
           <GoogleTagManager gtmId={gtmId} />
         ) : null}
         {shouldLoadAnalytics && gaId ? <GoogleAnalytics gaId={gaId} /> : null}
-        <ThemeProvider>
-          <Suspense fallback={null}>
-            <RouteProgressBar />
-          </Suspense>
-          <Suspense fallback={null}>
-            <InitialLoader />
-          </Suspense>
-          <Suspense fallback={null}>
-            <AnimePageAnimator />
-          </Suspense>
-          <script type="application/ld+json" suppressHydrationWarning>
-            {serializeJsonLd(personJsonLd)}
-          </script>
-          <script type="application/ld+json" suppressHydrationWarning>
-            {serializeJsonLd(websiteJsonLd)}
-          </script>
-          <div className="relative flex min-h-screen flex-col overflow-x-hidden">
+        <Suspense fallback={null}>
+          <ThemeProvider>
             <Suspense fallback={null}>
-              <Navbar />
+              <RouteProgressBar />
             </Suspense>
-            <main className="mx-auto w-full max-w-6xl flex-1 px-4 pt-24 sm:pt-28">
-              {children}
-            </main>
-            <Footer />
-            <LazyCookieNotice />
-            <ReleaseUpdateNoticeLazy />
-          </div>
-        </ThemeProvider>
+            <Suspense fallback={null}>
+              <InitialLoader />
+            </Suspense>
+            <Suspense fallback={null}>
+              <AnimePageAnimator />
+            </Suspense>
+            <script type="application/ld+json" suppressHydrationWarning>
+              {serializeJsonLd(personJsonLd)}
+            </script>
+            <script type="application/ld+json" suppressHydrationWarning>
+              {serializeJsonLd(websiteJsonLd)}
+            </script>
+            <div className="relative flex min-h-screen flex-col overflow-x-hidden">
+              <Suspense fallback={null}>
+                <Navbar />
+              </Suspense>
+              <main className="mx-auto w-full max-w-6xl flex-1 px-4 pt-24 sm:pt-28">
+                {children}
+              </main>
+              <Footer />
+              <LazyCookieNotice />
+              <ReleaseUpdateNoticeLazy />
+            </div>
+          </ThemeProvider>
+        </Suspense>
         <Analytics />
         <SpeedInsights />
       </body>
