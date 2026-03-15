@@ -1,39 +1,47 @@
-# Project Code of Conduct
+# Code of Conduct
 
 ## Our Pledge
 
-In the interest of fostering an open and welcoming environment, we as contributors and maintainers pledge to make participation in our project and community a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, gender identity and expression, level of experience, nationality, personal appearance, race, religion, or sexual identity and orientation.
+We are committed to making participation in this project a harassment-free experience for everyone, regardless of age, body size, disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socioeconomic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
 ## Our Standards
 
-Examples of behavior that contributes to creating a positive environment include:
+Examples of behavior that contributes to a positive environment:
 
-- Being respectful and considerate of differing viewpoints and experiences.
-- Using inclusive language and avoiding offensive comments or personal attacks.
-- Being mindful of your words and actions and their potential impact on others.
-- Being open to constructive feedback and willing to learn from it.
+- Showing empathy and respect for others.
+- Giving and receiving constructive feedback gracefully.
+- Being collaborative, professional, and considerate.
+- Focusing on what is best for the community and the project.
 
-Examples of unacceptable behavior by participants include:
+Examples of unacceptable behavior:
 
-- The use of sexualized language or imagery and unwelcome advances or attention.
-- Trolling, insulting, derogatory comments, and personal or political attacks.
-- Public or private harassment, and any other conduct that could reasonably be considered inappropriate in a professional setting.
-- Advocating for, or encouraging, any of the above behavior.
+- Harassment, threats, discrimination, or hateful conduct.
+- Personal attacks, trolling, or deliberate intimidation.
+- Publishing private information without explicit permission.
+- Any sexualized language or unwelcome sexual attention.
 
-## Our Responsibilities
+## Enforcement Responsibilities
 
-Project maintainers are responsible for clarifying the standards of acceptable behavior and are expected to take appropriate and fair corrective action in response to any instances of unacceptable behavior.
-
-Project maintainers have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned with this Code of Conduct, or to temporarily or permanently ban any contributor for other behaviors they deem inappropriate, threatening, offensive, or harmful.
+Maintainers are responsible for clarifying and enforcing standards of acceptable behavior. They may remove or edit comments, commits, code, issues, and other contributions that violate this Code of Conduct.
 
 ## Scope
 
-This Code of Conduct applies both within project spaces and in public spaces when an individual is representing the project or its community. Examples of representing a project or community include using an official project email address, posting via an official social media account, or acting as an appointed representative at an online or offline event.
+This Code of Conduct applies in all project spaces and public spaces when individuals represent this project or community.
+
+## Reporting
+
+To report violations, contact:
+
+- contact@muhammadfiaz.com
+
+Reports will be reviewed promptly and handled confidentially where possible.
+
+## Enforcement Guidelines
+
+Maintainers may apply actions including warning, temporary restriction, or permanent ban depending on severity and recurrence.
 
 ## Attribution
 
-This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org/version/2/0/code_of_conduct.html).
+This Code of Conduct is adapted from Contributor Covenant v2.1:
 
-## License
-
-This Code of Conduct is licensed under the [Creative Commons Attribution 4.0 International License](http://creativecommons.org/licenses/by/4.0/).
+https://www.contributor-covenant.org/version/2/1/code_of_conduct/

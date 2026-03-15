@@ -40,4 +40,6 @@ yarn-error.log*
 *.tsbuildinfo
 next-env.d.ts
 
-.idea/
+## Panda
+styled-system
+styled-system-studio
