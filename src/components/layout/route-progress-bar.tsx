@@ -4,12 +4,16 @@ import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 
 export function RouteProgressBar() {
-  const _pathname = usePathname();
+  const pathname = usePathname();
   const [visible, setVisible] = useState(false);
   const [stage, setStage] = useState<"idle" | "start" | "mid" | "end">("idle");
   const firstRenderRef = useRef(true);
 
   useEffect(() => {
+    if (!pathname) {
+      return;
+    }
+
     if (firstRenderRef.current) {
       firstRenderRef.current = false;
       return;
@@ -30,7 +34,7 @@ export function RouteProgressBar() {
       window.clearTimeout(complete);
       window.clearTimeout(hide);
     };
-  }, []);
+  }, [pathname]);
 
   const widthClass =
     stage === "start"

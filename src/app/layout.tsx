@@ -167,11 +167,15 @@ export default function RootLayout({
         ) : null}
         {shouldLoadAnalytics && gaId ? <GoogleAnalytics gaId={gaId} /> : null}
         <ThemeProvider>
-          <RouteProgressBar />
+          <Suspense fallback={null}>
+            <RouteProgressBar />
+          </Suspense>
           <Suspense fallback={null}>
             <InitialLoader />
           </Suspense>
-          <AnimePageAnimator />
+          <Suspense fallback={null}>
+            <AnimePageAnimator />
+          </Suspense>
           <script type="application/ld+json" suppressHydrationWarning>
             {serializeJsonLd(personJsonLd)}
           </script>
@@ -179,7 +183,9 @@ export default function RootLayout({
             {serializeJsonLd(websiteJsonLd)}
           </script>
           <div className="relative flex min-h-screen flex-col overflow-x-hidden">
-            <Navbar />
+            <Suspense fallback={null}>
+              <Navbar />
+            </Suspense>
             <main className="mx-auto w-full max-w-6xl flex-1 px-4 pt-24 sm:pt-28">
               {children}
             </main>

@@ -5,9 +5,13 @@ import { usePathname } from "next/navigation";
 import { useEffect } from "react";
 
 export function AnimePageAnimator() {
-  const _pathname = usePathname();
+  const pathname = usePathname();
 
   useEffect(() => {
+    if (!pathname) {
+      return;
+    }
+
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
       return;
     }
@@ -33,7 +37,7 @@ export function AnimePageAnimator() {
     return () => {
       window.clearTimeout(timer);
     };
-  }, []);
+  }, [pathname]);
 
   return null;
 }
