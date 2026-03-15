@@ -3,15 +3,19 @@
 import { animate } from "animejs";
 import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
-import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { BlogGrid } from "@/components/portfolio/blog-grid";
 import { GithubOverviewBento } from "@/components/portfolio/github-overview-bento";
 import { HeroFloatingBadges } from "@/components/portfolio/hero-floating-badges";
+import { HomeDeliveryProcess } from "@/components/portfolio/home-delivery-process";
+import { HomeEngagementModel } from "@/components/portfolio/home-engagement-model";
 import { HyperNameReveal } from "@/components/portfolio/hyper-name-reveal";
+import { MorphScrollShowcase } from "@/components/portfolio/morph-scroll-showcase";
 import { ProjectsGrid } from "@/components/portfolio/projects-grid";
+import { RetroCodeShowcase } from "@/components/portfolio/retro-code-showcase";
+import { RetroTerminalSection } from "@/components/portfolio/retro-terminal-section";
 import { StatsMarquee } from "@/components/portfolio/stats-marquee";
 import { WakaTimeBento } from "@/components/portfolio/wakatime-bento";
 import { BentoCard, BentoGrid } from "@/components/retroui/Bento";
@@ -26,74 +30,6 @@ import type {
 } from "@/lib/portfolio-types";
 import { siteHost } from "@/lib/site-config";
 import { useHomeStore } from "@/store/home-store";
-
-function LazySectionFallback({ title }: { title: string }) {
-  return (
-    <section className="space-y-4">
-      <h2 className="font-display text-3xl uppercase sm:text-4xl">{title}</h2>
-      <Card className="border-4 border-black bg-card p-6 shadow-retro-md">
-        <div className="h-20 animate-pulse border-2 border-black bg-muted" />
-      </Card>
-    </section>
-  );
-}
-
-const MorphScrollShowcase = dynamic(
-  () =>
-    import("@/components/portfolio/morph-scroll-showcase").then(
-      (mod) => mod.MorphScrollShowcase,
-    ),
-  {
-    ssr: false,
-    loading: () => <LazySectionFallback title="Execution Engine" />,
-  },
-);
-
-const RetroCodeShowcase = dynamic(
-  () =>
-    import("@/components/portfolio/retro-code-showcase").then(
-      (mod) => mod.RetroCodeShowcase,
-    ),
-  {
-    ssr: false,
-    loading: () => <LazySectionFallback title="Services & Delivery Matrix" />,
-  },
-);
-
-const RetroTerminalSection = dynamic(
-  () =>
-    import("@/components/portfolio/retro-terminal-section").then(
-      (mod) => mod.RetroTerminalSection,
-    ),
-  {
-    ssr: false,
-    loading: () => (
-      <LazySectionFallback title="Deployment Operations Console" />
-    ),
-  },
-);
-
-const HomeDeliveryProcess = dynamic(
-  () =>
-    import("@/components/portfolio/home-delivery-process").then(
-      (mod) => mod.HomeDeliveryProcess,
-    ),
-  {
-    ssr: false,
-    loading: () => <LazySectionFallback title="Delivery Process" />,
-  },
-);
-
-const HomeEngagementModel = dynamic(
-  () =>
-    import("@/components/portfolio/home-engagement-model").then(
-      (mod) => mod.HomeEngagementModel,
-    ),
-  {
-    ssr: false,
-    loading: () => <LazySectionFallback title="Engagement Model" />,
-  },
-);
 
 const traits = [
   {

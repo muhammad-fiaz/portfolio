@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { BlogPageClient } from "@/components/pages/blog-page-client";
 import { getBlogPosts } from "@/lib/server/portfolio-data";
 import { siteUrl } from "@/lib/site-config";
@@ -127,9 +126,7 @@ export default async function BlogPage() {
         </p>
       </section>
 
-      <Suspense fallback={null}>
-        <BlogPageClient initialPosts={posts} />
-      </Suspense>
+      <BlogPageClient initialPosts={posts} />
     </div>
   );
 }

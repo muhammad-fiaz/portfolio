@@ -11,6 +11,7 @@ import {
 
 export function Footer() {
   const footerRef = useRef<HTMLElement>(null);
+  const currentYear = new Date().getFullYear();
 
   useEffect(() => {
     const root = footerRef.current;
@@ -69,7 +70,7 @@ export function Footer() {
             className="inline-flex border-4 border-black bg-[#111827] px-3 py-2 text-xs font-black uppercase text-white shadow-retro-sm sm:text-sm"
             data-footer-policy
           >
-            Copyright 2026 Muhammad Fiaz
+            Copyright {currentYear} Muhammad Fiaz
           </p>
         </div>
 

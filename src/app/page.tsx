@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import { Suspense } from "react";
 import { HomePageClient } from "@/components/portfolio/home-page-client";
 import {
   getBlogPosts,
@@ -120,14 +119,12 @@ export default async function HomePage() {
       <script type="application/ld+json">
         {serializeJsonLd(breadcrumbJsonLd)}
       </script>
-      <Suspense fallback={null}>
-        <HomePageClient
-          initialRepos={initialRepos}
-          initialPosts={initialPosts}
-          initialWakaTime={initialWakaTime}
-          initialGitHubOverview={initialGitHubOverview}
-        />
-      </Suspense>
+      <HomePageClient
+        initialRepos={initialRepos}
+        initialPosts={initialPosts}
+        initialWakaTime={initialWakaTime}
+        initialGitHubOverview={initialGitHubOverview}
+      />
     </>
   );
 }

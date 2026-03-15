@@ -12,6 +12,7 @@ const DEFAULT_GITHUB_USER =
   "muhammad-fiaz";
 const DEVTO_USER = "muhammadfiaz";
 const HASHNODE_HOST = "muhammadfiaz.hashnode.dev";
+const GITHUB_CACHE_REVALIDATE_SECONDS = 60 * 60 * 12;
 
 function resolveGithubUser(user?: string): string {
   const normalized = (user ?? DEFAULT_GITHUB_USER).trim();
@@ -31,6 +32,30 @@ function getGithubHeaders(): HeadersInit {
   return headers;
 }
 
+async function getAuthenticatedGithubLogin(
+  headers: HeadersInit,
+): Promise<string | null> {
+  if (!process.env.GITHUB_TOKEN) {
+    return null;
+  }
+
+  const response = await fetch("https://api.github.com/user", {
+    headers,
+    cache: "force-cache",
+    next: {
+      revalidate: GITHUB_CACHE_REVALIDATE_SECONDS,
+      tags: ["github-auth-user"],
+    },
+  });
+
+  if (!response.ok) {
+    return null;
+  }
+
+  const payload = (await response.json()) as { login?: string };
+  return payload.login?.trim() || null;
+}
+
 function toHours(value: number): number {
   if (Number.isNaN(value)) return 0;
   return Math.max(0, value / 3600);
@@ -39,22 +64,49 @@ function toHours(value: number): number {
 export async function getGithubRepos(user?: string): Promise<GithubRepo[]> {
   const username = resolveGithubUser(user);
   const headers = getGithubHeaders();
+  const authenticatedLogin = await getAuthenticatedGithubLogin(headers);
+  const canReadOwnerPrivateRepos =
+    authenticatedLogin?.toLowerCase() === username.toLowerCase();
 
-  const response = await fetch(
-    `https://api.github.com/users/${username}/repos?sort=updated&per_page=100&type=owner`,
-    {
+  const allRepos: GithubRepo[] = [];
+
+  for (let page = 1; page <= 10; page += 1) {
+    const endpoint = canReadOwnerPrivateRepos
+      ? `https://api.github.com/user/repos?visibility=all&affiliation=owner&sort=updated&per_page=100&page=${page}`
+      : `https://api.github.com/users/${username}/repos?sort=updated&per_page=100&type=owner&page=${page}`;
+
+    const response = await fetch(endpoint, {
       headers,
       cache: "force-cache",
-      next: { revalidate: 1800, tags: [`github-repos-${username}`] },
-    },
-  );
+      next: {
+        revalidate: GITHUB_CACHE_REVALIDATE_SECONDS,
+        tags: [
+          `github-repos-${username}`,
+          `github-repos-${username}-p${page}`,
+        ],
+      },
+    });
 
-  if (!response.ok) {
-    return [];
+    if (!response.ok) {
+      break;
+    }
+
+    const pageRepos = (await response.json()) as GithubRepo[];
+    allRepos.push(...pageRepos);
+
+    if (pageRepos.length < 100) {
+      break;
+    }
   }
 
-  const data = (await response.json()) as GithubRepo[];
-  return data.filter((repo) => !repo.name.startsWith("."));
+  const dedupedById = new Map<number, GithubRepo>();
+  for (const repo of allRepos) {
+    dedupedById.set(repo.id, repo);
+  }
+
+  return Array.from(dedupedById.values()).filter(
+    (repo) => !repo.name.startsWith("."),
+  );
 }
 
 export async function getGithubOverview(
@@ -67,12 +119,23 @@ export async function getGithubOverview(
   }
 
   const headers = getGithubHeaders();
+  const authenticatedLogin = await getAuthenticatedGithubLogin(headers);
+  const canReadOwnerPrivateRepos =
+    authenticatedLogin?.toLowerCase() === username.toLowerCase();
 
-  const userResponse = await fetch(`https://api.github.com/users/${username}`, {
-    headers,
-    cache: "force-cache",
-    next: { revalidate: 1800, tags: [`github-profile-${username}`] },
-  });
+  const userResponse = await fetch(
+    canReadOwnerPrivateRepos
+      ? "https://api.github.com/user"
+      : `https://api.github.com/users/${username}`,
+    {
+      headers,
+      cache: "force-cache",
+      next: {
+        revalidate: GITHUB_CACHE_REVALIDATE_SECONDS,
+        tags: [`github-profile-${username}`],
+      },
+    },
+  );
 
   const profile = userResponse.ok
     ? ((await userResponse.json()) as {
@@ -80,6 +143,8 @@ export async function getGithubOverview(
         followers?: number;
         following?: number;
         public_repos?: number;
+        total_private_repos?: number;
+        owned_private_repos?: number;
       })
     : {};
 
@@ -87,15 +152,20 @@ export async function getGithubOverview(
   const referenceDate = new Date(
     responseDateHeader ?? repos[0]?.updated_at ?? "1970-01-01T00:00:00Z",
   );
-  const commitYear = referenceDate.getUTCFullYear();
-  const rangeEndDate = new Date(referenceDate);
+  const rangeEndDate = Number.isNaN(referenceDate.getTime())
+    ? new Date("1970-01-01T00:00:00Z")
+    : new Date(referenceDate);
+  const commitYear = rangeEndDate.getUTCFullYear();
   rangeEndDate.setUTCHours(23, 59, 59, 999);
-  const rangeStartDate = new Date(referenceDate);
+  const rangeStartDate = new Date(rangeEndDate);
   rangeStartDate.setUTCDate(rangeStartDate.getUTCDate() - 364);
   rangeStartDate.setUTCHours(0, 0, 0, 0);
   const rangeStart = rangeStartDate.toISOString();
   const rangeEnd = rangeEndDate.toISOString();
   let commitHistory: Array<{ date: string; commits: number }> = [];
+
+  // Focus stats/charts on active owned projects.
+  const projectRepos = repos.filter((repo) => !repo.fork && !repo.archived);
 
   // Use GraphQL contribution calendar when token is available for accurate yearly commits.
   if (process.env.GITHUB_TOKEN) {
@@ -130,7 +200,7 @@ export async function getGithubOverview(
       }),
       cache: "force-cache",
       next: {
-        revalidate: 1800,
+        revalidate: GITHUB_CACHE_REVALIDATE_SECONDS,
         tags: [`github-contributions-${username}-${commitYear}`],
       },
     });
@@ -156,7 +226,7 @@ export async function getGithubOverview(
       const days =
         payload.data?.user?.contributionsCollection?.contributionCalendar?.weeks
           ?.flatMap((week) => week.contributionDays ?? [])
-          .filter((day) => day.contributionCount > 0) ?? [];
+          .filter((day) => typeof day.date === "string") ?? [];
 
       commitHistory = days.map((day) => ({
         date: day.date,
@@ -165,20 +235,20 @@ export async function getGithubOverview(
     }
   }
 
-  const totalStars = repos.reduce(
+  const totalStars = projectRepos.reduce(
     (sum, repo) => sum + (repo.stargazers_count ?? 0),
     0,
   );
-  const totalForks = repos.reduce(
+  const totalForks = projectRepos.reduce(
     (sum, repo) => sum + (repo.forks_count ?? 0),
     0,
   );
-  const totalWatchers = repos.reduce(
+  const totalWatchers = projectRepos.reduce(
     (sum, repo) => sum + (repo.watchers_count ?? 0),
     0,
   );
 
-  const topRepositories = [...repos]
+  const topRepositories = [...projectRepos]
     .sort((a, b) => b.stargazers_count - a.stargazers_count)
     .slice(0, 7)
     .map((repo) => ({
@@ -187,8 +257,12 @@ export async function getGithubOverview(
     }));
 
   const languageMap = new Map<string, number>();
-  for (const repo of repos) {
-    const language = repo.language ?? "Unknown";
+  for (const repo of projectRepos) {
+    const language = repo.language?.trim();
+    if (!language) {
+      continue;
+    }
+
     const value = languageMap.get(language) ?? 0;
     languageMap.set(language, value + 1);
   }
@@ -216,26 +290,14 @@ export async function getGithubOverview(
   ];
   const monthlyMap = new Map<string, number>();
 
-  if (commitHistory.length > 0) {
-    for (const day of commitHistory) {
-      const date = new Date(day.date);
-      if (Number.isNaN(date.getTime())) {
-        continue;
-      }
-
-      const month = monthOrder[date.getUTCMonth()] ?? "Unknown";
-      monthlyMap.set(month, (monthlyMap.get(month) ?? 0) + day.commits);
+  for (const day of commitHistory) {
+    const date = new Date(day.date);
+    if (Number.isNaN(date.getTime())) {
+      continue;
     }
-  } else {
-    for (const repo of repos) {
-      const date = new Date(repo.updated_at);
-      if (Number.isNaN(date.getTime())) {
-        continue;
-      }
 
-      const month = monthOrder[date.getUTCMonth()] ?? "Unknown";
-      monthlyMap.set(month, (monthlyMap.get(month) ?? 0) + 1);
-    }
+    const month = monthOrder[date.getUTCMonth()] ?? "Unknown";
+    monthlyMap.set(month, (monthlyMap.get(month) ?? 0) + day.commits);
   }
 
   const monthlyActivity = monthOrder
@@ -245,17 +307,16 @@ export async function getGithubOverview(
       repos: monthlyMap.get(month) ?? 0,
     }));
 
-  const updateDates =
-    commitHistory.length > 0
-      ? commitHistory.flatMap((entry) =>
-          Array.from({ length: entry.commits }, () => entry.date),
-        )
-      : repos
-          .map((repo) => repo.updated_at)
-          .filter(
-            (value): value is string =>
-              typeof value === "string" && value.length > 0,
-          );
+  const updateDates = commitHistory.flatMap((entry) =>
+    Array.from({ length: Math.max(0, entry.commits) }, () => entry.date),
+  );
+
+  const publicRepoCount = profile.public_repos ?? projectRepos.length;
+  const privateRepoCount = canReadOwnerPrivateRepos
+    ? (profile.owned_private_repos ?? profile.total_private_repos ?? 0)
+    : 0;
+  const profileTotalRepoCount = publicRepoCount + privateRepoCount;
+  const totalRepositories = Math.max(profileTotalRepoCount, projectRepos.length);
 
   return {
     username: profile.login ?? username,
@@ -264,8 +325,8 @@ export async function getGithubOverview(
     commitRangeEnd: rangeEnd,
     followers: profile.followers ?? 0,
     following: profile.following ?? 0,
-    publicRepos: profile.public_repos ?? repos.length,
-    totalRepositories: repos.length,
+    publicRepos: publicRepoCount,
+    totalRepositories,
     totalStars,
     totalForks,
     totalWatchers,

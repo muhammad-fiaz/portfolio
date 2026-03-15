@@ -9,7 +9,7 @@ import { LineChart } from "@/components/retroui/charts/LineChart";
 import type { GitHubOverviewPayload } from "@/lib/portfolio-types";
 
 const intensityClasses = [
-  "bg-[#d3f1b1]",
+  "bg-white",
   "bg-[#b7e28a]",
   "bg-[#8bcc68]",
   "bg-[#4ea44d]",
@@ -17,39 +17,28 @@ const intensityClasses = [
 ];
 
 function getHeatmapData(
-  updateDates: string[],
-  commitHistory?: Array<{ date: string; commits: number }>,
+  commitHistory: Array<{ date: string; commits: number }>,
   rangeStart?: string,
   rangeEnd?: string,
 ) {
   const days = 53 * 7;
   const end = new Date(rangeEnd ?? "1970-01-01T00:00:00Z");
   end.setUTCHours(0, 0, 0, 0);
+  const today = new Date();
+  today.setUTCHours(0, 0, 0, 0);
   const start = new Date(rangeStart ?? end.toISOString());
   start.setUTCHours(0, 0, 0, 0);
 
   const dayBuckets = new Map<string, number>();
 
-  if (commitHistory && commitHistory.length > 0) {
-    for (const entry of commitHistory) {
-      const date = new Date(entry.date);
-      if (Number.isNaN(date.getTime())) {
-        continue;
-      }
-
-      const key = `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, "0")}-${String(date.getUTCDate()).padStart(2, "0")}`;
-      dayBuckets.set(key, (dayBuckets.get(key) ?? 0) + entry.commits);
+  for (const entry of commitHistory) {
+    const date = new Date(entry.date);
+    if (Number.isNaN(date.getTime())) {
+      continue;
     }
-  } else {
-    for (const raw of updateDates) {
-      const date = new Date(raw);
-      if (Number.isNaN(date.getTime())) {
-        continue;
-      }
 
-      const key = `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, "0")}-${String(date.getUTCDate()).padStart(2, "0")}`;
-      dayBuckets.set(key, (dayBuckets.get(key) ?? 0) + 1);
-    }
+    const key = `${date.getUTCFullYear()}-${String(date.getUTCMonth() + 1).padStart(2, "0")}-${String(date.getUTCDate()).padStart(2, "0")}`;
+    dayBuckets.set(key, (dayBuckets.get(key) ?? 0) + entry.commits);
   }
 
   const cells: Array<{
@@ -57,6 +46,7 @@ function getHeatmapData(
     week: number;
     day: number;
     value: number;
+    isFuture: boolean;
   }> = [];
   for (let i = 0; i < days; i += 1) {
     const current = new Date(start);
@@ -66,12 +56,17 @@ function getHeatmapData(
     const week = Math.floor(i / 7);
     const key = `${current.getUTCFullYear()}-${String(current.getUTCMonth() + 1).padStart(2, "0")}-${String(current.getUTCDate()).padStart(2, "0")}`;
     const value = dayBuckets.get(key) ?? 0;
+    const isFuture = current.getTime() > today.getTime();
 
-    cells.push({ key, week, day, value });
+    cells.push({ key, week, day, value, isFuture });
   }
 
   const maxValue = Math.max(...cells.map((cell) => cell.value), 1);
   const withIntensity = cells.map((cell) => {
+    if (cell.isFuture) {
+      return { ...cell, intensity: 0, isFuture: true };
+    }
+
     if (cell.value <= 0) {
       return { ...cell, intensity: 0 };
     }
@@ -81,7 +76,6 @@ function getHeatmapData(
   });
 
   const monthLabels: Array<{ key: string; label: string }> = [];
-  const topRowMonths: Array<{ key: string; label: string }> = [];
   let lastMonthKey = "";
 
   for (let week = 0; week < 53; week += 1) {
@@ -90,31 +84,24 @@ function getHeatmapData(
     const monthKey = `${weekDate.getUTCFullYear()}-${weekDate.getUTCMonth()}`;
 
     if (monthKey !== lastMonthKey) {
-      const month = weekDate.toLocaleDateString("en-US", {
+      const monthName = weekDate.toLocaleDateString("en-US", {
         month: "short",
         timeZone: "UTC",
       });
-      const year = weekDate.toLocaleDateString("en-US", {
-        year: "2-digit",
-        timeZone: "UTC",
-      });
-      const compactLabel = `${month} '${year}`;
-      monthLabels.push({ key: `wk-${week}`, label: compactLabel });
-      topRowMonths.push({
-        key: `top-${monthKey}`,
-        label: weekDate.toLocaleDateString("en-US", {
-          month: "long",
-          year: "numeric",
-          timeZone: "UTC",
-        }),
-      });
+      monthLabels.push({ key: `wk-${week}`, label: monthName });
       lastMonthKey = monthKey;
     } else {
       monthLabels.push({ key: `wk-${week}`, label: "" });
     }
   }
 
-  return { cells: withIntensity, monthLabels, topRowMonths };
+  const endMonthLabel = end.toLocaleDateString("en-US", {
+    month: "short",
+    timeZone: "UTC",
+  });
+  monthLabels[52] = { key: "wk-52", label: endMonthLabel };
+
+  return { cells: withIntensity, monthLabels };
 }
 
 export function GithubOverviewBento({
@@ -196,11 +183,12 @@ export function GithubOverviewBento({
   }
 
   const heatmap = getHeatmapData(
-    stats.updateDates,
     stats.commitHistory,
     stats.commitRangeStart,
     stats.commitRangeEnd,
   );
+  const rangeStartYear = new Date(stats.commitRangeStart).getUTCFullYear();
+  const rangeEndYear = new Date(stats.commitRangeEnd).getUTCFullYear();
   const languageChartData = [...stats.languages].sort(
     (a, b) => b.repos - a.repos,
   );
@@ -292,35 +280,18 @@ export function GithubOverviewBento({
         >
           <p className="font-display text-2xl uppercase">Github Graphs</p>
           <p className="mt-1 text-xs font-bold uppercase text-muted-foreground">
-            Commit history (
-            {new Date(stats.commitRangeStart).toLocaleDateString("en-US", {
-              month: "short",
-              year: "numeric",
-              timeZone: "UTC",
-            })}{" "}
-            -{" "}
-            {new Date(stats.commitRangeEnd).toLocaleDateString("en-US", {
-              day: "2-digit",
-              month: "short",
-              year: "numeric",
-              timeZone: "UTC",
-            })}
-            )
+            Commit history ({rangeStartYear} - {rangeEndYear})
           </p>
           <div className="mt-4 min-w-0 pb-1">
             <div className="w-full min-w-0">
-              <div className="mb-2 flex flex-wrap items-center gap-x-3 gap-y-1 text-[10px] font-bold uppercase text-muted-foreground sm:text-xs">
-                {heatmap.topRowMonths.map((month) => (
-                  <span key={month.key} className="whitespace-nowrap">
-                    {month.label}
-                  </span>
-                ))}
-              </div>
               <div className="mb-2 grid grid-cols-[2rem_minmax(0,1fr)] gap-2">
                 <span />
                 <div className="grid grid-cols-53 gap-0.75 text-[9px] font-bold uppercase text-muted-foreground sm:text-[10px]">
                   {heatmap.monthLabels.map((month) => (
-                    <span key={month.key} className="truncate">
+                    <span
+                      key={month.key}
+                      className="overflow-visible whitespace-nowrap leading-none"
+                    >
                       {month.label}
                     </span>
                   ))}
@@ -337,8 +308,8 @@ export function GithubOverviewBento({
                     <span
                       key={cell.key}
                       data-gh-cell
-                      className={`aspect-square w-full border border-black/30 ${intensityClasses[cell.intensity]}`}
-                      title={`${cell.key}: ${cell.value} updates`}
+                      className={`aspect-square w-full border border-black/30 ${cell.isFuture ? "bg-background" : intensityClasses[cell.intensity]}`}
+                      title={`${cell.key}: ${cell.value} commits`}
                     />
                   ))}
                 </div>
@@ -393,7 +364,7 @@ export function GithubOverviewBento({
               data={languageChartData}
               index="language"
               categories={["repos"]}
-              className="h-[28rem] w-full min-h-[28rem]"
+              className="h-112 w-full min-h-112"
               alignment="horizontal"
               isAnimationActive={false}
               horizontalYAxisWidth={116}

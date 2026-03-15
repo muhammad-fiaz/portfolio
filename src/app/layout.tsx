@@ -5,13 +5,13 @@ import { Bungee, Press_Start_2P, Space_Grotesk } from "next/font/google";
 import { Suspense } from "react";
 import "./globals.css";
 import { AnimePageAnimator } from "@/components/layout/anime-page-animator";
+import { CookieNotice } from "@/components/layout/cookie-notice";
 import { Footer } from "@/components/layout/footer";
 import { GoogleAnalytics } from "@/components/layout/google-analytics";
 import { GoogleTagManager } from "@/components/layout/google-tag-manager";
 import { InitialLoader } from "@/components/layout/initial-loader";
-import { LazyCookieNotice } from "@/components/layout/lazy-cookie-notice";
 import { Navbar } from "@/components/layout/navbar";
-import { ReleaseUpdateNoticeLazy } from "@/components/layout/release-update-notice-lazy";
+import { ReleaseUpdateNotice } from "@/components/layout/release-update-notice";
 import { RouteProgressBar } from "@/components/layout/route-progress-bar";
 import { ThemeProvider } from "@/components/theme-provider";
 import { siteUrl } from "@/lib/site-config";
@@ -168,15 +168,9 @@ export default function RootLayout({
         {shouldLoadAnalytics && gaId ? <GoogleAnalytics gaId={gaId} /> : null}
         <Suspense fallback={null}>
           <ThemeProvider>
-            <Suspense fallback={null}>
-              <RouteProgressBar />
-            </Suspense>
-            <Suspense fallback={null}>
-              <InitialLoader />
-            </Suspense>
-            <Suspense fallback={null}>
-              <AnimePageAnimator />
-            </Suspense>
+            <RouteProgressBar />
+            <InitialLoader />
+            <AnimePageAnimator />
             <script type="application/ld+json" suppressHydrationWarning>
               {serializeJsonLd(personJsonLd)}
             </script>
@@ -184,15 +178,13 @@ export default function RootLayout({
               {serializeJsonLd(websiteJsonLd)}
             </script>
             <div className="relative flex min-h-screen flex-col overflow-x-hidden">
-              <Suspense fallback={null}>
-                <Navbar />
-              </Suspense>
+              <Navbar />
               <main className="mx-auto w-full max-w-6xl flex-1 px-4 pt-24 sm:pt-28">
                 {children}
               </main>
               <Footer />
-              <LazyCookieNotice />
-              <ReleaseUpdateNoticeLazy />
+              <CookieNotice />
+              <ReleaseUpdateNotice />
             </div>
           </ThemeProvider>
         </Suspense>

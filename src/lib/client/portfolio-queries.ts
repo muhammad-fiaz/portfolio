@@ -33,6 +33,8 @@ type Web3FormsResponse = {
   message: string;
 };
 
+const TWELVE_HOURS_MS = 1000 * 60 * 60 * 12;
+
 const WEB3_FORMS_ENDPOINT = "https://api.web3forms.com/submit";
 const WEB3_FORMS_ACCESS_KEY =
   process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY ?? "";
@@ -101,7 +103,9 @@ export function usePortfolioReposQuery(
   return useQuery({
     queryKey: ["portfolio", "repos", user ?? "default"],
     queryFn: () => fetchJson<GithubRepo[]>(`/api/portfolio/repos${suffix}`),
-    staleTime: 1000 * 60 * 10,
+    staleTime: TWELVE_HOURS_MS,
+    refetchOnMount: false,
+    refetchOnReconnect: false,
     initialData,
   });
 }
@@ -110,7 +114,9 @@ export function usePortfolioPostsQuery(initialData?: BlogPost[]) {
   return useQuery({
     queryKey: ["portfolio", "posts"],
     queryFn: () => fetchJson<BlogPost[]>("/api/portfolio/posts"),
-    staleTime: 1000 * 60 * 10,
+    staleTime: TWELVE_HOURS_MS,
+    refetchOnMount: false,
+    refetchOnReconnect: false,
     initialData,
   });
 }
@@ -121,7 +127,9 @@ export function usePortfolioWakaTimeQuery(
   return useQuery({
     queryKey: ["portfolio", "wakatime"],
     queryFn: () => fetchJson<WakaTimePayload | null>("/api/portfolio/wakatime"),
-    staleTime: 1000 * 60 * 5,
+    staleTime: TWELVE_HOURS_MS,
+    refetchOnMount: false,
+    refetchOnReconnect: false,
     initialData,
   });
 }
@@ -138,7 +146,9 @@ export function usePortfolioGitHubOverviewQuery(
       fetchJson<GitHubOverviewPayload | null>(
         `/api/portfolio/github-overview${suffix}`,
       ),
-    staleTime: 1000 * 60 * 10,
+    staleTime: TWELVE_HOURS_MS,
+    refetchOnMount: false,
+    refetchOnReconnect: false,
     initialData,
   });
 }

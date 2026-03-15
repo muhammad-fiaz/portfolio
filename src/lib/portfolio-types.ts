@@ -4,6 +4,8 @@ export interface GithubRepo {
   full_name: string;
   description: string | null;
   language: string | null;
+  fork?: boolean;
+  archived?: boolean;
   stargazers_count: number;
   forks_count: number;
   watchers_count: number;
