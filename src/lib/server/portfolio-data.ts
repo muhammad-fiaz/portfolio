@@ -80,10 +80,7 @@ export async function getGithubRepos(user?: string): Promise<GithubRepo[]> {
       cache: "force-cache",
       next: {
         revalidate: GITHUB_CACHE_REVALIDATE_SECONDS,
-        tags: [
-          `github-repos-${username}`,
-          `github-repos-${username}-p${page}`,
-        ],
+        tags: [`github-repos-${username}`, `github-repos-${username}-p${page}`],
       },
     });
 
@@ -316,7 +313,10 @@ export async function getGithubOverview(
     ? (profile.owned_private_repos ?? profile.total_private_repos ?? 0)
     : 0;
   const profileTotalRepoCount = publicRepoCount + privateRepoCount;
-  const totalRepositories = Math.max(profileTotalRepoCount, projectRepos.length);
+  const totalRepositories = Math.max(
+    profileTotalRepoCount,
+    projectRepos.length,
+  );
 
   return {
     username: profile.login ?? username,

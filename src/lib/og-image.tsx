@@ -54,7 +54,8 @@ export function buildOgImage({
       <div
         style={{
           position: "relative",
-          display: "inline-flex",
+          display: "flex",
+          alignSelf: "flex-start",
           alignItems: "center",
           border: "4px solid #000",
           background: accentColorMap[accent],
@@ -101,7 +102,8 @@ export function buildOgImage({
         </div>
         <div
           style={{
-            display: "inline-flex",
+            display: "flex",
+            alignSelf: "flex-start",
             alignItems: "center",
             border: "4px solid #000",
             padding: "10px 14px",
@@ -151,7 +153,8 @@ export function buildTwitterImage({
       <div
         style={{
           position: "relative",
-          display: "inline-flex",
+          display: "flex",
+          alignSelf: "flex-start",
           background: accentColorMap[accent],
           border: "4px solid #000",
           boxShadow: "8px 8px 0 #000",
@@ -186,7 +189,8 @@ export function buildTwitterImage({
 
         <div
           style={{
-            display: "inline-flex",
+            display: "flex",
+            alignSelf: "flex-start",
             border: "3px solid #000",
             padding: "9px 12px",
             background: "#fff",
