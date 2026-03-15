@@ -1,61 +1,66 @@
-# Contributing to My Portfolio ✨
+# Contributing
 
-Welcome to my portfolio repository! Your contributions and suggestions are welcomed and encouraged. Please follow the guidelines below to contribute.
+Thank you for your interest in contributing to Portfolio v5.
+
+Contributions are welcome for bug fixes, performance improvements, accessibility, documentation, and developer experience.
 
 ## Code of Conduct
 
-This project and its community adhere to the [Code of Conduct](./CODE_OF_CONDUCT.md). By participating, you are expected to uphold this code. Please report any unacceptable behavior to [email](s.muhammadfiaz2003@gmail.com).
+All contributors are expected to follow [CODE_OF_CONDUCT.md](CODE_OF_CONDUCT.md).
 
-## How to Contribute 👻
+## Development Workflow
 
-We welcome contributions in the form of bug reports, feature requests, code improvements, and more. Here's how you can contribute:
+1. Fork the repository.
+2. Clone your fork.
+3. Create a focused feature/fix branch.
 
-1. **Fork the Repository:** Click the ["Fork"](https://github.com/muhammad-fiaz/portfolio/fork) button on the top right of the repository's page.
+```bash
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+git checkout -b feat/your-change
+```
 
-2. **Clone Your Fork to Your Local Machine:**
+4. Install dependencies and run checks.
 
-   ```bash
-   git clone https://github.com/yourusername/portfolio.git
-   ```
+```bash
+bun install
+bun run lint
+bunx tsc --noEmit
+```
 
-3. **Create a New Branch:**
+5. Implement your changes with clear commit messages.
 
-   ```bash
-   git checkout -b your-branch-name
-   ```
+```bash
+git add .
+git commit -m "feat: short summary"
+git push origin feat/your-change
+```
 
-4. **Make Your Changes and Commit Them:**
+6. Open a pull request against `main`.
 
-   ```bash
-   git add .
-   git commit -m 'Commit message'
-   ```
+## Pull Request Guidelines
 
-5. **Push Your Changes to Your Fork:**
+- Keep PRs scoped and easy to review.
+- Include before/after context for UI or behavior changes.
+- Mention any environment/config updates.
+- Ensure lint and type-check pass before requesting review.
+- Update docs/changelog for user-visible changes.
 
-   ```bash
-   git push origin your-branch-name
-   ```
+## Reporting Issues
 
-6. **Create a Pull Request:**
+Use GitHub Issues and include:
 
-   Go back to the repository on GitHub and click the ["New Pull Request"](https://github.com/muhammad-fiaz/portfolio/pulls) button on your branch. Fill out the form with a title and a detailed description, then submit the pull request.
+- Expected behavior
+- Actual behavior
+- Steps to reproduce
+- Screenshots/logs when relevant
 
-7. **Wait for Your Pull Request to Be Reviewed:**
+## Security
 
-   I will review your pull request and suggest any necessary changes. Once everything looks good, I will merge your pull request. 🎉
+Do not open public issues for sensitive vulnerabilities.
+Use the process documented in `SECURITY.md`.
 
-8. **Sync Your Fork (Optional):**
+## Maintainer Notes
 
-   If the original repository has been updated and you would like to sync your fork with it, you can do so by adding the original repository as a remote and pulling from it:
-
-   ```bash
-   git remote add upstream https://github.com/muhammad-fiaz/portfolio.git
-   git pull upstream main
-   ```
-
-## Reporting Issues 🐞
-
-If you find any issues or have suggestions for improvements, please open an issue on the [Issues](https://github.com/muhammad-fiaz/portfolio/issues) page. Be sure to include a clear description of the problem or suggestion.
-
-Thank you for contributing to my Portfolio! ❤️
+Project versioning follows `package.json` as source of truth.
+If a change affects release behavior, ensure versioning/docs remain consistent.

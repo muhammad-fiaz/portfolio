@@ -6,7 +6,7 @@ Use this section to know about the versions of my project that are currently sup
 
 | Version | Supported          |
 | ------- | ------------------ |
-| 2.x.x+  | :white_check_mark: |
+| 5.x.x+  | :white_check_mark: |
 | < 2.0   | :x:                |
 
 ## Reporting a Vulnerability
