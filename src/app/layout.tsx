@@ -98,6 +98,9 @@ export const metadata: Metadata = {
   },
 };
 
+const DEFAULT_GTM_ID = "GTM-5BQ5RPW2";
+const DEFAULT_GA_ID = "G-SDJ0K1Y70X";
+
 function serializeJsonLd(value: unknown): string {
   return JSON.stringify(value).replace(/</g, "\\u003c");
 }
@@ -107,8 +110,8 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  const gtmId = process.env.NEXT_PUBLIC_GTM_ID || DEFAULT_GTM_ID;
+  const gaId = process.env.NEXT_PUBLIC_GA_ID || DEFAULT_GA_ID;
   const shouldLoadAnalytics = process.env.NODE_ENV === "production";
 
   const personJsonLd = {

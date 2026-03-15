@@ -31,7 +31,7 @@ Suggested keys:
 - `NEXT_PUBLIC_SITE_URL`
 - `WAKATIME_API_KEY` (optional)
 - `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` (contact form)
-- `NEXT_PUBLIC_GTM_ID` and `NEXT_PUBLIC_GA_ID` (optional analytics)
+- `NEXT_PUBLIC_GTM_ID` and `NEXT_PUBLIC_GA_ID` (optional overrides, defaults are already configured)
 
 ### 3. Run development server
 
