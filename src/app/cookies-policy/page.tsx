@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { PolicyPageClient } from "@/components/policies/policy-page-client";
 import { siteUrl } from "@/lib/site-config";
 
+const cookiesPolicyOgImageUrl = `${siteUrl}/cookies-policy/opengraph-image`;
+
 export const metadata: Metadata = {
   title: "Cookies Policy",
   description: "Cookies and tracking technologies policy for muhammadfiaz.com.",
@@ -12,14 +14,14 @@ export const metadata: Metadata = {
       "How cookies and analytics technologies are used on muhammadfiaz.com.",
     url: `${siteUrl}/cookies-policy`,
     type: "website",
-    images: ["/android-chrome-512x512.png"],
+    images: [cookiesPolicyOgImageUrl],
   },
   twitter: {
     card: "summary_large_image",
     title: "Cookies Policy | Muhammad Fiaz",
     description:
       "How cookies and analytics technologies are used on muhammadfiaz.com.",
-    images: ["/android-chrome-512x512.png"],
+    images: [cookiesPolicyOgImageUrl],
   },
 };
 

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { ContactPageClient } from "@/components/pages/contact-page-client";
 import { siteUrl } from "@/lib/site-config";
 
+const contactOgImageUrl = `${siteUrl}/contact/opengraph-image`;
+
 export const metadata: Metadata = {
   title: "Contact",
   description:
@@ -23,9 +25,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/android-chrome-512x512.png",
-        width: 512,
-        height: 512,
+        url: contactOgImageUrl,
+        width: 1200,
+        height: 630,
         alt: "Contact Muhammad Fiaz",
       },
     ],
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     title: "Contact Muhammad Fiaz",
     description:
       "Send project goals and timelines for software execution, consulting, and delivery.",
-    images: ["/android-chrome-512x512.png"],
+    images: [contactOgImageUrl],
   },
 };
 

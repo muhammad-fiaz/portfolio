@@ -3,6 +3,8 @@ import { AboutPageClient } from "@/components/pages/about-page-client";
 import type { TimelineItem } from "@/components/portfolio/about-timeline";
 import { siteUrl } from "@/lib/site-config";
 
+const aboutOgImageUrl = `${siteUrl}/about/opengraph-image`;
+
 export const metadata: Metadata = {
   title: "About",
   description: "The journey, roles, and milestones of Muhammad Fiaz.",
@@ -23,9 +25,9 @@ export const metadata: Metadata = {
     type: "profile",
     images: [
       {
-        url: "/android-chrome-512x512.png",
-        width: 512,
-        height: 512,
+        url: aboutOgImageUrl,
+        width: 1200,
+        height: 630,
         alt: "About Muhammad Fiaz",
       },
     ],
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
     title: "About Muhammad Fiaz",
     description:
       "Journey, milestones, and experience across full stack, open source, and AI delivery.",
-    images: ["/android-chrome-512x512.png"],
+    images: [aboutOgImageUrl],
   },
 };
 

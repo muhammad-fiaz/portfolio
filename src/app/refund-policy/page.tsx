@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { PolicyPageClient } from "@/components/policies/policy-page-client";
 import { siteUrl } from "@/lib/site-config";
 
+const refundPolicyOgImageUrl = `${siteUrl}/refund-policy/opengraph-image`;
+
 export const metadata: Metadata = {
   title: "Refund Policy",
   description: "Refund terms for services provided by Muhammad Fiaz.",
@@ -12,14 +14,14 @@ export const metadata: Metadata = {
       "Professional refund terms for client services and digital delivery.",
     url: `${siteUrl}/refund-policy`,
     type: "website",
-    images: ["/android-chrome-512x512.png"],
+    images: [refundPolicyOgImageUrl],
   },
   twitter: {
     card: "summary_large_image",
     title: "Refund Policy | Muhammad Fiaz",
     description:
       "Professional refund terms for client services and digital delivery.",
-    images: ["/android-chrome-512x512.png"],
+    images: [refundPolicyOgImageUrl],
   },
 };
 

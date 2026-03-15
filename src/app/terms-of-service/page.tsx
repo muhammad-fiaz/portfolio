@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { PolicyPageClient } from "@/components/policies/policy-page-client";
 import { siteUrl } from "@/lib/site-config";
 
+const termsOgImageUrl = `${siteUrl}/terms-of-service/opengraph-image`;
+
 export const metadata: Metadata = {
   title: "Terms of Service",
   description: "Professional Terms of Service for services by Muhammad Fiaz.",
@@ -12,14 +14,14 @@ export const metadata: Metadata = {
       "Service terms, client obligations, delivery standards, and legal conditions.",
     url: `${siteUrl}/terms-of-service`,
     type: "website",
-    images: ["/android-chrome-512x512.png"],
+    images: [termsOgImageUrl],
   },
   twitter: {
     card: "summary_large_image",
     title: "Terms of Service | Muhammad Fiaz",
     description:
       "Service terms, client obligations, delivery standards, and legal conditions.",
-    images: ["/android-chrome-512x512.png"],
+    images: [termsOgImageUrl],
   },
 };
 

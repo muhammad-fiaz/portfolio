@@ -6,7 +6,18 @@ import {
   getGithubRepos,
   getWakaTimeStats,
 } from "@/lib/server/portfolio-data";
-import { siteUrl } from "@/lib/site-config";
+import {
+  donationUrl,
+  fiazDevUrl,
+  githubUrl,
+  linkedinUrl,
+  linkHubUrl,
+  ogImageUrl,
+  siteUrl,
+  sponsorUrl,
+  wakatimeUrl,
+  xUrl,
+} from "@/lib/site-config";
 
 export const metadata: Metadata = {
   title: {
@@ -32,9 +43,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/android-chrome-512x512.png",
-        width: 512,
-        height: 512,
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
         alt: "Muhammad Fiaz Portfolio Home",
       },
     ],
@@ -44,7 +55,7 @@ export const metadata: Metadata = {
     title: "Muhammad Fiaz",
     description:
       "Business-first product engineering and open-source execution.",
-    images: ["/android-chrome-512x512.png"],
+    images: [ogImageUrl],
   },
 };
 
@@ -71,7 +82,16 @@ export default async function HomePage() {
       "@type": "Person",
       name: "Muhammad Fiaz",
       url: siteUrl,
+      sameAs: [
+        githubUrl,
+        linkedinUrl,
+        xUrl,
+        wakatimeUrl,
+        linkHubUrl,
+        fiazDevUrl,
+      ],
     },
+    significantLink: [linkHubUrl, sponsorUrl, donationUrl, fiazDevUrl],
   };
 
   const profileStatsJsonLd = initialGitHubOverview

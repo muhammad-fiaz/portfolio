@@ -1,6 +1,6 @@
 import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Bungee, Press_Start_2P, Space_Grotesk } from "next/font/google";
 import { Suspense } from "react";
 import "./globals.css";
@@ -14,7 +14,18 @@ import { Navbar } from "@/components/layout/navbar";
 import { ReleaseUpdateNotice } from "@/components/layout/release-update-notice";
 import { RouteProgressBar } from "@/components/layout/route-progress-bar";
 import { ThemeProvider } from "@/components/theme-provider";
-import { siteUrl } from "@/lib/site-config";
+import {
+  donationUrl,
+  fiazDevUrl,
+  githubUrl,
+  linkedinUrl,
+  linkHubUrl,
+  ogImageUrl,
+  siteUrl,
+  sponsorUrl,
+  wakatimeUrl,
+  xUrl,
+} from "@/lib/site-config";
 
 const spaceGrotesk = Space_Grotesk({
   variable: "--font-space-grotesk",
@@ -53,7 +64,7 @@ export const metadata: Metadata = {
     "TypeScript developer",
     "Freelancer",
     "Startup product engineer",
-    "Open Source",
+    "Open-Sourcerer",
     "WakaTime",
     "Portfolio",
     "India",
@@ -81,10 +92,10 @@ export const metadata: Metadata = {
     locale: "en_US",
     images: [
       {
-        url: "/android-chrome-512x512.png",
-        width: 512,
-        height: 512,
-        alt: "Muhammad Fiaz - Portfolio",
+        url: ogImageUrl,
+        width: 1200,
+        height: 630,
+        alt: "Muhammad Fiaz Portfolio v5",
       },
     ],
   },
@@ -93,10 +104,20 @@ export const metadata: Metadata = {
     title: "Muhammad Fiaz",
     description:
       "Founder, Entrepreneur, Full Stack Developer, Freelancer and Full-Time Open-Sourcerer.",
-    images: ["/android-chrome-512x512.png"],
+    images: [ogImageUrl],
     creator: "@muhammadfiaz_",
   },
 };
+
+export function generateViewport(): Viewport {
+  return {
+    themeColor: [
+      { media: "(prefers-color-scheme: light)", color: "#ff7a00" },
+      { media: "(prefers-color-scheme: dark)", color: "#ff9d00" },
+    ],
+    colorScheme: "light dark",
+  };
+}
 
 const DEFAULT_GTM_ID = "GTM-5BQ5RPW2";
 const DEFAULT_GA_ID = "G-SDJ0K1Y70X";
@@ -121,9 +142,14 @@ export default function RootLayout({
     url: siteUrl,
     jobTitle: "Founder, Entrepreneur, Full Stack Developer",
     sameAs: [
-      "https://github.com/muhammad-fiaz",
-      "https://x.com/muhammadfiaz_",
-      "https://wakatime.com/@muhammadfiaz",
+      githubUrl,
+      linkedinUrl,
+      xUrl,
+      wakatimeUrl,
+      linkHubUrl,
+      sponsorUrl,
+      donationUrl,
+      fiazDevUrl,
     ],
     address: {
       "@type": "PostalAddress",
@@ -142,11 +168,31 @@ export default function RootLayout({
       name: "Muhammad Fiaz",
       url: siteUrl,
     },
+    sameAs: [linkHubUrl, fiazDevUrl, sponsorUrl, donationUrl],
     potentialAction: {
       "@type": "SearchAction",
       target: `${siteUrl}/project?query={search_term_string}`,
       "query-input": "required name=search_term_string",
     },
+  };
+
+  const organizationJsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Fiaz Technologies",
+    url: fiazDevUrl,
+    founder: {
+      "@type": "Person",
+      name: "Muhammad Fiaz",
+      url: siteUrl,
+    },
+    sameAs: [githubUrl, linkedinUrl, xUrl, linkHubUrl],
+    sponsor: {
+      "@type": "Offer",
+      url: sponsorUrl,
+      name: "Sponsor Muhammad Fiaz on GitHub",
+    },
+    funding: donationUrl,
   };
 
   const shellFallback = (
@@ -192,6 +238,9 @@ export default function RootLayout({
             </script>
             <script type="application/ld+json" suppressHydrationWarning>
               {serializeJsonLd(websiteJsonLd)}
+            </script>
+            <script type="application/ld+json" suppressHydrationWarning>
+              {serializeJsonLd(organizationJsonLd)}
             </script>
             <div className="relative flex min-h-screen flex-col overflow-x-hidden">
               <Navbar />

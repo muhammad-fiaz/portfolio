@@ -258,33 +258,35 @@ export function HomePageClient({
           aria-hidden
           className="retro-stripes pointer-events-none absolute inset-0 opacity-20"
         />
-        <HeroFloatingBadges />
+        <div className="hidden sm:block">
+          <HeroFloatingBadges />
+        </div>
 
         <div className="relative z-10 overflow-hidden border-4 border-black bg-card">
-          <div className="flex items-center justify-between border-b-4 border-black bg-[#d7d7d7] px-3 py-2 text-black dark:bg-[#2f2f2f] dark:text-white">
+          <div className="flex items-center justify-between border-b-4 border-black bg-[#d7d7d7] px-2 py-2 text-black sm:px-3 dark:bg-[#2f2f2f] dark:text-white">
             <p className="font-pixel text-[11px] font-black sm:text-xs">
               {siteHost}
             </p>
             <div className="flex gap-2">
-              <span className="inline-flex h-6 w-6 items-center justify-center border-2 border-black bg-[#ffd146] text-[#5c3d00] font-black text-xs shadow-retro-sm">
+              <span className="inline-flex h-5 w-5 items-center justify-center border-2 border-black bg-[#ffd146] text-[#5c3d00] font-black text-[10px] shadow-retro-sm sm:h-6 sm:w-6 sm:text-xs">
                 -
               </span>
-              <span className="inline-flex h-6 w-6 items-center justify-center border-2 border-black bg-[#52d46b] text-[#0d4f1a] font-black text-xs shadow-retro-sm">
+              <span className="inline-flex h-5 w-5 items-center justify-center border-2 border-black bg-[#52d46b] text-[#0d4f1a] font-black text-[10px] shadow-retro-sm sm:h-6 sm:w-6 sm:text-xs">
                 +
               </span>
-              <span className="inline-flex h-6 w-6 items-center justify-center border-2 border-black bg-[#ff6e6e] text-[#6b1010] font-black text-xs shadow-retro-sm">
+              <span className="inline-flex h-5 w-5 items-center justify-center border-2 border-black bg-[#ff6e6e] text-[#6b1010] font-black text-[10px] shadow-retro-sm sm:h-6 sm:w-6 sm:text-xs">
                 x
               </span>
             </div>
           </div>
 
-          <div className="grid gap-5 p-3 sm:gap-6 sm:p-5 md:grid-cols-[1.2fr_0.8fr] md:gap-8 md:p-10">
+          <div className="grid gap-4 p-2 sm:gap-6 sm:p-5 md:grid-cols-[1.2fr_0.8fr] md:gap-8 md:p-10">
             <div className="order-2 space-y-4 md:order-1 md:space-y-6">
               <h1 className="font-display uppercase leading-[1.1]">
-                <span className="block text-[clamp(1.05rem,7vw,2.5rem)] sm:text-[clamp(1.7rem,5.2vw,3.8rem)]">
+                <span className="block text-[clamp(0.95rem,6vw,2.5rem)] sm:text-[clamp(1.7rem,5.2vw,3.8rem)]">
                   Hey There! I&apos;M
                 </span>
-                <span className="mt-1 block text-[clamp(1.2rem,8.5vw,3rem)] sm:text-[clamp(1.8rem,5.6vw,4.4rem)]">
+                <span className="mt-1 block text-[clamp(1.05rem,8vw,3rem)] sm:text-[clamp(1.8rem,5.6vw,4.4rem)]">
                   <span className="retro-curve-underline">
                     <HyperNameReveal text="Muhammad Fiaz." />
                   </span>
@@ -299,7 +301,7 @@ export function HomePageClient({
                 <Button
                   size="lg"
                   asChild
-                  className="border-4 border-black px-4 py-2 text-sm font-black uppercase tracking-wide shadow-retro retro-press sm:px-6 sm:py-3 sm:text-base"
+                  className="w-full border-4 border-black px-4 py-2 text-sm font-black uppercase tracking-wide shadow-retro retro-press sm:w-auto sm:px-6 sm:py-3 sm:text-base"
                 >
                   <Link href="mailto:contact@muhammadfiaz.com">Contact Me</Link>
                 </Button>
@@ -307,7 +309,7 @@ export function HomePageClient({
                   variant="secondary"
                   size="lg"
                   asChild
-                  className="border-4 border-black px-4 py-2 text-sm font-black uppercase tracking-wide shadow-retro retro-press sm:px-6 sm:py-3 sm:text-base"
+                  className="w-full border-4 border-black px-4 py-2 text-sm font-black uppercase tracking-wide shadow-retro retro-press sm:w-auto sm:px-6 sm:py-3 sm:text-base"
                 >
                   <Link href="/project">View Projects</Link>
                 </Button>

@@ -2,13 +2,19 @@
 
 import { animate, stagger } from "animejs";
 import { usePathname } from "next/navigation";
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 
 export function AnimePageAnimator() {
   const pathname = usePathname();
+  const hasHydratedRef = useRef(false);
 
   useEffect(() => {
     if (!pathname) {
+      return;
+    }
+
+    if (!hasHydratedRef.current) {
+      hasHydratedRef.current = true;
       return;
     }
 

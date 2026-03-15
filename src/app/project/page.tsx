@@ -3,6 +3,8 @@ import { ProjectPageClient } from "@/components/pages/project-page-client";
 import { getGithubRepos } from "@/lib/server/portfolio-data";
 import { siteUrl } from "@/lib/site-config";
 
+const projectOgImageUrl = `${siteUrl}/project/opengraph-image`;
+
 export const metadata: Metadata = {
   title: "Projects",
   description:
@@ -24,9 +26,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/android-chrome-512x512.png",
-        width: 512,
-        height: 512,
+        url: projectOgImageUrl,
+        width: 1200,
+        height: 630,
         alt: "Muhammad Fiaz Projects",
       },
     ],
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
     title: "Projects by Muhammad Fiaz",
     description:
       "Explore top-starred and recently updated projects with filters and search.",
-    images: ["/android-chrome-512x512.png"],
+    images: [projectOgImageUrl],
   },
 };
 

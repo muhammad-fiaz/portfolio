@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { PolicyPageClient } from "@/components/policies/policy-page-client";
 import { siteUrl } from "@/lib/site-config";
 
+const privacyPolicyOgImageUrl = `${siteUrl}/privacy-policy/opengraph-image`;
+
 export const metadata: Metadata = {
   title: "Privacy Policy",
   description:
@@ -13,14 +15,14 @@ export const metadata: Metadata = {
       "How data is collected, used, and protected on muhammadfiaz.com.",
     url: `${siteUrl}/privacy-policy`,
     type: "website",
-    images: ["/android-chrome-512x512.png"],
+    images: [privacyPolicyOgImageUrl],
   },
   twitter: {
     card: "summary_large_image",
     title: "Privacy Policy | Muhammad Fiaz",
     description:
       "How data is collected, used, and protected on muhammadfiaz.com.",
-    images: ["/android-chrome-512x512.png"],
+    images: [privacyPolicyOgImageUrl],
   },
 };
 

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { PolicyPageClient } from "@/components/policies/policy-page-client";
 import { siteUrl } from "@/lib/site-config";
 
+const deliveryPolicyOgImageUrl = `${siteUrl}/delivery-policy/opengraph-image`;
+
 export const metadata: Metadata = {
   title: "Delivery Policy",
   description: "Delivery standards and channels for services by Muhammad Fiaz.",
@@ -11,13 +13,13 @@ export const metadata: Metadata = {
     description: "How services and deliverables are provided and handed over.",
     url: `${siteUrl}/delivery-policy`,
     type: "website",
-    images: ["/android-chrome-512x512.png"],
+    images: [deliveryPolicyOgImageUrl],
   },
   twitter: {
     card: "summary_large_image",
     title: "Delivery Policy | Muhammad Fiaz",
     description: "How services and deliverables are provided and handed over.",
-    images: ["/android-chrome-512x512.png"],
+    images: [deliveryPolicyOgImageUrl],
   },
 };
 

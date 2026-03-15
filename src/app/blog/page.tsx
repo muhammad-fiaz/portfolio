@@ -3,6 +3,8 @@ import { BlogPageClient } from "@/components/pages/blog-page-client";
 import { getBlogPosts } from "@/lib/server/portfolio-data";
 import { siteUrl } from "@/lib/site-config";
 
+const blogOgImageUrl = `${siteUrl}/blog/opengraph-image`;
+
 export const metadata: Metadata = {
   title: "Blog",
   description:
@@ -24,9 +26,9 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/android-chrome-512x512.png",
-        width: 512,
-        height: 512,
+        url: blogOgImageUrl,
+        width: 1200,
+        height: 630,
         alt: "Muhammad Fiaz Blog",
       },
     ],
@@ -36,7 +38,7 @@ export const metadata: Metadata = {
     title: "Blog by Muhammad Fiaz",
     description:
       "Engineering, product, and open-source articles aggregated from multiple platforms.",
-    images: ["/android-chrome-512x512.png"],
+    images: [blogOgImageUrl],
   },
 };
 
