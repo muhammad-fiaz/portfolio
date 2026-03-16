@@ -1,11 +1,8 @@
 "use client";
 
-import { animate } from "animejs";
-import { motion } from "framer-motion";
 import { Github, Linkedin, Twitter } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { useEffect, useRef } from "react";
 import { BlogGrid } from "@/components/portfolio/blog-grid";
 import { GithubOverviewBento } from "@/components/portfolio/github-overview-bento";
 import { HackatimeBento } from "@/components/portfolio/hackatime-bento";
@@ -118,7 +115,6 @@ export function HomePageClient({
   initialHackatime,
   initialGitHubOverview,
 }: HomePageClientProps) {
-  const homeRef = useRef<HTMLDivElement>(null);
   const hackatime = initialHackatime ?? null;
   const githubOverview = initialGitHubOverview ?? null;
   const focus = useHomeStore((state) => state.focus);
@@ -152,102 +148,8 @@ export function HomePageClient({
       ? focusItems
       : focusItems.filter((item) => item.key === focus);
 
-  useEffect(() => {
-    const root = homeRef.current;
-    if (!root) {
-      return;
-    }
-
-    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
-      return;
-    }
-
-    const sectionObserver = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (!entry.isIntersecting) {
-            return;
-          }
-
-          const section = entry.target as HTMLElement;
-          if (section.dataset.homeAnimated === "true") {
-            return;
-          }
-
-          section.dataset.homeAnimated = "true";
-
-          const heading = section.querySelectorAll("h1, h2");
-          if (heading.length > 0) {
-            animate(heading, {
-              opacity: [0, 1],
-              translateY: [12, 0],
-              duration: 320,
-              ease: "outQuad",
-            });
-          }
-
-          const bodyBlocks = section.querySelectorAll("p, [data-home-block]");
-          if (bodyBlocks.length > 0) {
-            animate(bodyBlocks, {
-              opacity: [0, 1],
-              translateY: [14, 0],
-              delay: (_, index) => 80 + index * 28,
-              duration: 280,
-              ease: "outQuad",
-            });
-          }
-
-          const gridItems = section.querySelectorAll(".grid > *");
-          if (gridItems.length > 0) {
-            animate(gridItems, {
-              opacity: [0, 1],
-              translateY: [16, 0],
-              delay: (_, index) => 120 + index * 36,
-              duration: 320,
-              ease: "outQuad",
-            });
-          }
-
-          const ctaButtons = section.querySelectorAll(
-            "button, a[class*='uppercase']",
-          );
-          if (ctaButtons.length > 0) {
-            animate(ctaButtons, {
-              opacity: [0, 1],
-              translateY: [10, 0],
-              delay: (_, index) => 140 + index * 30,
-              duration: 260,
-              ease: "outQuad",
-            });
-          }
-
-          sectionObserver.unobserve(section);
-        });
-      },
-      {
-        threshold: 0.18,
-        rootMargin: "0px 0px -8% 0px",
-      },
-    );
-
-    const sections = root.querySelectorAll("[data-home-reveal]");
-    sections.forEach((section) => {
-      sectionObserver.observe(section);
-    });
-
-    return () => {
-      sectionObserver.disconnect();
-    };
-  }, []);
-
   return (
-    <motion.div
-      ref={homeRef}
-      className="-mt-2 space-y-14 pb-16 sm:mt-0"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ duration: 0.35 }}
-    >
+    <div className="-mt-3 space-y-8 pb-16 sm:mt-0 sm:space-y-14">
       <StatsMarquee />
 
       <section
@@ -321,11 +223,13 @@ export function HomePageClient({
                 <Image
                   src="https://avatars.githubusercontent.com/u/75434191?v=4"
                   alt="Muhammad Fiaz"
-                  width={420}
-                  height={420}
+                  width={384}
+                  height={384}
                   loading="eager"
                   priority
-                  sizes="(max-width: 768px) 80vw, 420px"
+                  fetchPriority="high"
+                  quality={65}
+                  sizes="(max-width: 640px) 224px, (max-width: 768px) 320px, 384px"
                   className="block h-full w-full object-cover"
                 />
               </div>
@@ -760,6 +664,6 @@ export function HomePageClient({
       <div data-home-reveal>
         <RetroTerminalSection />
       </div>
-    </motion.div>
+    </div>
   );
 }
