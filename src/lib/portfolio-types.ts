@@ -26,9 +26,14 @@ export interface BlogPost {
   readingMinutes: number;
 }
 
-export interface WakaTimePayload {
+export interface HackatimePayload {
   totalHours: string;
+  last7DaysTotalHours: string;
   dailyAverage: string;
+  dailyAverageHours: number;
+  todayHours: string;
+  todaySeconds: number;
+  activeDaysLast7: number;
   topLanguages: Array<{ name: string; hours: number }>;
   last7Days: Array<{ day: string; hours: number }>;
   hasActivity: boolean;

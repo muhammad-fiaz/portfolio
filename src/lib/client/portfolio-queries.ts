@@ -5,7 +5,7 @@ import type {
   BlogPost,
   GitHubOverviewPayload,
   GithubRepo,
-  WakaTimePayload,
+  HackatimePayload,
 } from "@/lib/portfolio-types";
 
 async function fetchJson<T>(url: string): Promise<T> {
@@ -121,12 +121,13 @@ export function usePortfolioPostsQuery(initialData?: BlogPost[]) {
   });
 }
 
-export function usePortfolioWakaTimeQuery(
-  initialData?: WakaTimePayload | null,
+export function usePortfolioHackatimeQuery(
+  initialData?: HackatimePayload | null,
 ) {
   return useQuery({
-    queryKey: ["portfolio", "wakatime"],
-    queryFn: () => fetchJson<WakaTimePayload | null>("/api/portfolio/wakatime"),
+    queryKey: ["portfolio", "hackatime"],
+    queryFn: () =>
+      fetchJson<HackatimePayload | null>("/api/portfolio/hackatime"),
     staleTime: TWELVE_HOURS_MS,
     refetchOnMount: false,
     refetchOnReconnect: false,

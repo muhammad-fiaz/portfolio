@@ -1,4 +1,4 @@
-import { Analytics } from "@vercel/analytics/next";
+﻿import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
 import { Bungee, Press_Start_2P, Space_Grotesk } from "next/font/google";
@@ -18,12 +18,12 @@ import {
   donationUrl,
   fiazDevUrl,
   githubUrl,
+  hackatimeUrl,
   linkedinUrl,
   linkHubUrl,
   ogImageUrl,
   siteUrl,
   sponsorUrl,
-  wakatimeUrl,
   xUrl,
 } from "@/lib/site-config";
 
@@ -145,7 +145,7 @@ export default function RootLayout({
       githubUrl,
       linkedinUrl,
       xUrl,
-      wakatimeUrl,
+      hackatimeUrl,
       linkHubUrl,
       sponsorUrl,
       donationUrl,

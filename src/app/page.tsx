@@ -4,18 +4,18 @@ import {
   getBlogPosts,
   getGithubOverview,
   getGithubRepos,
-  getWakaTimeStats,
+  getHackatimeStats,
 } from "@/lib/server/portfolio-data";
 import {
   donationUrl,
   fiazDevUrl,
   githubUrl,
+  hackatimeUrl,
   linkedinUrl,
   linkHubUrl,
   ogImageUrl,
   siteUrl,
   sponsorUrl,
-  wakatimeUrl,
   xUrl,
 } from "@/lib/site-config";
 
@@ -64,11 +64,11 @@ function serializeJsonLd(value: unknown): string {
 }
 
 export default async function HomePage() {
-  const [initialRepos, initialPosts, initialWakaTime, initialGitHubOverview] =
+  const [initialRepos, initialPosts, initialHackatime, initialGitHubOverview] =
     await Promise.all([
       getGithubRepos(),
       getBlogPosts(),
-      getWakaTimeStats(),
+      getHackatimeStats(),
       getGithubOverview(),
     ]);
 
@@ -86,7 +86,7 @@ export default async function HomePage() {
         githubUrl,
         linkedinUrl,
         xUrl,
-        wakatimeUrl,
+        hackatimeUrl,
         linkHubUrl,
         fiazDevUrl,
       ],
@@ -142,7 +142,7 @@ export default async function HomePage() {
       <HomePageClient
         initialRepos={initialRepos}
         initialPosts={initialPosts}
-        initialWakaTime={initialWakaTime}
+        initialHackatime={initialHackatime}
         initialGitHubOverview={initialGitHubOverview}
       />
     </>

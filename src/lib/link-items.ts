@@ -16,9 +16,9 @@ export const links: LinkItem[] = [
     description: "Connect with me professionally",
   },
   {
-    href: "https://wakatime.com/@muhammadfiaz",
-    name: "WakaTime",
-    description: "My coding activity stats",
+    href: "https://heatmap.shymike.dev/?id=30609&timezone=UTC",
+    name: "Hackatime",
+    description: "My Hack Club coding streak and activity heatmap",
   },
   {
     href: "https://muhammadfiaz.com",

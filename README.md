@@ -29,9 +29,15 @@ Suggested keys:
 - `GITHUB_TOKEN` (recommended for accurate contribution calendar data)
 - `GITHUB_USER` (optional override for default username)
 - `NEXT_PUBLIC_SITE_URL`
-- `WAKATIME_API_KEY` (optional)
+- `HACKATIME_API_KEY` (required for Hack Club coding insights)
+- `HACKATIME_API_BASE_URL` (optional, defaults to `https://hackatime.hackclub.com`)
 - `NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY` (contact form)
 - `NEXT_PUBLIC_GTM_ID` and `NEXT_PUBLIC_GA_ID` (optional overrides, defaults are already configured)
+
+## Highlights
+
+- GitHub stats section includes the live contribution snake SVG from the profile output branch.
+- Hack Club coding insights are powered by Hackatime data and heatmap visuals.
 
 ### 3. Run development server
 

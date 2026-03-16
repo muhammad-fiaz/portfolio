@@ -8,6 +8,7 @@ import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { BlogGrid } from "@/components/portfolio/blog-grid";
 import { GithubOverviewBento } from "@/components/portfolio/github-overview-bento";
+import { HackatimeBento } from "@/components/portfolio/hackatime-bento";
 import { HeroFloatingBadges } from "@/components/portfolio/hero-floating-badges";
 import { HomeDeliveryProcess } from "@/components/portfolio/home-delivery-process";
 import { HomeEngagementModel } from "@/components/portfolio/home-engagement-model";
@@ -17,7 +18,6 @@ import { ProjectsGrid } from "@/components/portfolio/projects-grid";
 import { RetroCodeShowcase } from "@/components/portfolio/retro-code-showcase";
 import { RetroTerminalSection } from "@/components/portfolio/retro-terminal-section";
 import { StatsMarquee } from "@/components/portfolio/stats-marquee";
-import { WakaTimeBento } from "@/components/portfolio/wakatime-bento";
 import { BentoCard, BentoGrid } from "@/components/retroui/Bento";
 import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
@@ -26,7 +26,7 @@ import type {
   BlogPost,
   GitHubOverviewPayload,
   GithubRepo,
-  WakaTimePayload,
+  HackatimePayload,
 } from "@/lib/portfolio-types";
 import { siteHost } from "@/lib/site-config";
 import { useHomeStore } from "@/store/home-store";
@@ -108,18 +108,18 @@ const faqItems: readonly FaqItem[] = [
 type HomePageClientProps = {
   initialRepos?: GithubRepo[];
   initialPosts?: BlogPost[];
-  initialWakaTime?: WakaTimePayload | null;
+  initialHackatime?: HackatimePayload | null;
   initialGitHubOverview?: GitHubOverviewPayload | null;
 };
 
 export function HomePageClient({
   initialRepos,
   initialPosts,
-  initialWakaTime,
+  initialHackatime,
   initialGitHubOverview,
 }: HomePageClientProps) {
   const homeRef = useRef<HTMLDivElement>(null);
-  const wakatime = initialWakaTime ?? null;
+  const hackatime = initialHackatime ?? null;
   const githubOverview = initialGitHubOverview ?? null;
   const focus = useHomeStore((state) => state.focus);
   const setFocus = useHomeStore((state) => state.setFocus);
@@ -525,25 +525,55 @@ export function HomePageClient({
       </section>
 
       <section className="space-y-4" data-home-reveal>
-        <h2 className="font-display text-3xl uppercase sm:text-4xl">
-          Github Stats
-        </h2>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <h2 className="font-display text-3xl uppercase sm:text-4xl">
+            Github Stats
+          </h2>
+          <Button
+            asChild
+            variant="secondary"
+            className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
+          >
+            <Link
+              href="https://github.com/muhammad-fiaz"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              View Full GitHub Profile
+            </Link>
+          </Button>
+        </div>
         <p className="font-bold uppercase text-muted-foreground">
-          Followers, following, stars, forks, watchers, repositories, and retro
-          chart analytics.
+          Followers, following, stars, forks, watchers, repositories, and GitHub
+          activity analytics.
         </p>
         <GithubOverviewBento stats={githubOverview ?? null} />
       </section>
 
       <section className="space-y-4" data-home-reveal>
-        <h2 className="font-display text-3xl uppercase sm:text-4xl">
-          WakaTime Insights
-        </h2>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <h2 className="font-display text-3xl uppercase sm:text-4xl">
+            Hackatime Insights
+          </h2>
+          <Button
+            asChild
+            variant="secondary"
+            className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
+          >
+            <Link
+              href="https://hackatime.hackclub.com/@muhammadfiaz"
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              View HackClub Profile
+            </Link>
+          </Button>
+        </div>
         <p className="font-bold uppercase text-muted-foreground">
-          Live coding insights from the last 7 days and all-time tracked
-          development hours.
+          Live coding insights from Hack Club for the last 7 days and total
+          tracked development time.
         </p>
-        <WakaTimeBento stats={wakatime ?? null} />
+        <HackatimeBento stats={hackatime ?? null} />
       </section>
 
       <section className="space-y-4" data-home-reveal>

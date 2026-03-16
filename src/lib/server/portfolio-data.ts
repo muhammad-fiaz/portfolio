@@ -3,7 +3,7 @@ import type {
   BlogPost,
   GitHubOverviewPayload,
   GithubRepo,
-  WakaTimePayload,
+  HackatimePayload,
 } from "@/lib/portfolio-types";
 
 const DEFAULT_GITHUB_USER =
@@ -453,110 +453,159 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
   );
 }
 
-export async function getWakaTimeStats(): Promise<WakaTimePayload | null> {
-  const apiKey = process.env.WAKATIME_API_KEY;
+export async function getHackatimeStats(): Promise<HackatimePayload | null> {
+  const hackatimeApiKey = process.env.HACKATIME_API_KEY;
+  const apiKey = hackatimeApiKey;
 
   if (!apiKey) return null;
 
-  const [summariesResponse, sevenDayResponse, allTimeResponse] =
+  const hackatimeBaseUrl = (
+    process.env.HACKATIME_API_BASE_URL ?? "https://hackatime.hackclub.com"
+  ).replace(/\/$/, "");
+
+  const sevenDayUrl = `${hackatimeBaseUrl}/api/hackatime/v1/users/current/stats/last_7_days?api_key=${apiKey}`;
+  const allTimeUrl = `${hackatimeBaseUrl}/api/hackatime/v1/users/current/all_time_since_today?api_key=${apiKey}`;
+  const todayStatusUrl = `${hackatimeBaseUrl}/api/hackatime/v1/users/current/statusbar/today?api_key=${apiKey}`;
+
+  const [sevenDayResponse, allTimeResponse, todayStatusResponse] =
     await Promise.all([
-      fetch(
-        `https://api.wakatime.com/api/v1/users/current/summaries?range=last_7_days&api_key=${apiKey}`,
-        {
-          cache: "force-cache",
-          next: { revalidate: 1800, tags: ["wakatime", "wakatime-summaries"] },
+      fetch(sevenDayUrl, {
+        cache: "force-cache",
+        next: {
+          revalidate: 1800,
+          tags: ["coding-time", "coding-time-seven-days"],
         },
-      ),
-      fetch(
-        `https://api.wakatime.com/api/v1/users/current/stats/last_7_days?api_key=${apiKey}`,
-        {
-          cache: "force-cache",
-          next: { revalidate: 1800, tags: ["wakatime", "wakatime-seven-days"] },
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
         },
-      ),
-      fetch(
-        `https://api.wakatime.com/api/v1/users/current/all_time_since_today?api_key=${apiKey}`,
-        {
-          cache: "force-cache",
-          next: { revalidate: 1800, tags: ["wakatime", "wakatime-total"] },
+      }),
+      fetch(allTimeUrl, {
+        cache: "force-cache",
+        next: {
+          revalidate: 1800,
+          tags: ["coding-time", "coding-time-total"],
         },
-      ),
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+        },
+      }).catch(() => null),
+      fetch(todayStatusUrl, {
+        cache: "force-cache",
+        next: {
+          revalidate: 300,
+          tags: ["coding-time", "coding-time-today"],
+        },
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+        },
+      }).catch(() => null),
     ]);
 
-  if (!allTimeResponse.ok || (!summariesResponse.ok && !sevenDayResponse.ok)) {
+  if (!sevenDayResponse.ok) {
     return null;
   }
 
-  const summaries = summariesResponse.ok
-    ? ((await summariesResponse.json()) as {
-        data?: Array<{
-          range?: { date?: string };
-          grand_total?: { total_seconds?: number };
-          languages?: Array<{ name: string; total_seconds: number }>;
-        }>;
-      })
-    : { data: [] };
-
-  const sevenDay = sevenDayResponse.ok
-    ? ((await sevenDayResponse.json()) as {
-        data?: {
-          human_readable_daily_average_including_other_language?: string;
-          human_readable_total_including_other_language?: string;
-          languages?: Array<{ name: string; total_seconds: number }>;
-          days?: Array<{
-            date: string;
-            grand_total: {
-              total_seconds: number;
-            };
-          }>;
-        };
-      })
-    : { data: {} };
-
-  const allTime = (await allTimeResponse.json()) as {
+  const sevenDay = (await sevenDayResponse.json()) as {
     data?: {
-      total_seconds: number;
-      text?: string;
+      username?: string;
+      human_readable_daily_average_including_other_language?: string;
+      human_readable_total_including_other_language?: string;
+      human_readable_total?: string;
+      human_readable_daily_average?: string;
+      daily_average?: number;
+      languages?: Array<{ name: string; total_seconds: number }>;
+      days?: Array<{
+        date: string;
+        grand_total: {
+          total_seconds: number;
+        };
+      }>;
+      total_seconds?: number;
     };
   };
 
-  const summaryDays = summaries.data ?? [];
-  const daysFromSummaries = summaryDays.map((entry) => ({
-    day: new Date(entry.range?.date ?? "1970-01-01").toLocaleDateString(
-      "en-US",
-      {
-        weekday: "short",
-      },
-    ),
-    hours: Number(toHours(entry.grand_total?.total_seconds ?? 0).toFixed(2)),
-  }));
+  const allTime = allTimeResponse?.ok
+    ? ((await allTimeResponse.json()) as {
+        data?: {
+          total_seconds?: number;
+          text?: string;
+        };
+      })
+    : { data: { total_seconds: undefined } };
+
+  const todayStatus = todayStatusResponse?.ok
+    ? ((await todayStatusResponse.json()) as {
+        data?: {
+          grand_total?: {
+            total_seconds?: number;
+            text?: string;
+          };
+        };
+      })
+    : {
+        data: {
+          grand_total: {
+            total_seconds: 0,
+            text: "0h today",
+          },
+        },
+      };
 
   const daysFromStats = (sevenDay.data?.days ?? []).map((day) => ({
     day: new Date(day.date).toLocaleDateString("en-US", { weekday: "short" }),
     hours: Number(toHours(day.grand_total?.total_seconds ?? 0).toFixed(2)),
   }));
 
+  const hackatimeLast7Days = await (async () => {
+    const now = new Date();
+    const requests = Array.from({ length: 7 }, (_, index) => {
+      const date = new Date(now);
+      date.setUTCDate(date.getUTCDate() - (6 - index));
+
+      const start = `${date.toISOString().slice(0, 10)}T00:00:00Z`;
+      const end = `${date.toISOString().slice(0, 10)}T23:59:59Z`;
+
+      return fetch(
+        `${hackatimeBaseUrl}/api/v1/my/heartbeats?start_time=${encodeURIComponent(start)}&end_time=${encodeURIComponent(end)}&api_key=${apiKey}`,
+        {
+          cache: "force-cache",
+          next: {
+            revalidate: 1800,
+            tags: ["coding-time", "coding-time-heartbeats"],
+          },
+          headers: {
+            Authorization: `Bearer ${apiKey}`,
+          },
+        },
+      )
+        .then(async (response) => {
+          if (!response.ok) {
+            return {
+              day: date.toLocaleDateString("en-US", { weekday: "short" }),
+              hours: 0,
+            };
+          }
+
+          const payload = (await response.json()) as {
+            total_seconds?: number;
+          };
+
+          return {
+            day: date.toLocaleDateString("en-US", { weekday: "short" }),
+            hours: Number(toHours(payload.total_seconds ?? 0).toFixed(2)),
+          };
+        })
+        .catch(() => ({
+          day: date.toLocaleDateString("en-US", { weekday: "short" }),
+          hours: 0,
+        }));
+    });
+
+    return Promise.all(requests);
+  })();
+
   const last7Days =
-    daysFromSummaries.length > 0 ? daysFromSummaries : daysFromStats;
-
-  const languageAccumulator = new Map<string, number>();
-  for (const entry of summaryDays) {
-    for (const language of entry.languages ?? []) {
-      const existing = languageAccumulator.get(language.name) ?? 0;
-      languageAccumulator.set(
-        language.name,
-        existing + (language.total_seconds ?? 0),
-      );
-    }
-  }
-
-  const topLanguagesFromSummaries = Array.from(languageAccumulator.entries())
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 5)
-    .map(([name, seconds]) => ({
-      name,
-      hours: Number(toHours(seconds).toFixed(1)),
-    }));
+    daysFromStats.length > 0 ? daysFromStats : hackatimeLast7Days;
 
   const topLanguagesFromStats = (sevenDay.data?.languages ?? [])
     .slice(0, 5)
@@ -565,22 +614,89 @@ export async function getWakaTimeStats(): Promise<WakaTimePayload | null> {
       hours: Number(toHours(lang.total_seconds).toFixed(1)),
     }));
 
-  const topLanguages =
-    topLanguagesFromSummaries.length > 0
-      ? topLanguagesFromSummaries
-      : topLanguagesFromStats;
+  const topLanguages = topLanguagesFromStats;
 
-  const totalSeconds = allTime.data?.total_seconds ?? 0;
-  const totalHours = `${toHours(totalSeconds).toFixed(1)}h`;
+  const last7DaysTotalSeconds = Math.round(
+    last7Days.reduce((sum, day) => sum + day.hours * 3600, 0),
+  );
+  const last7DaysTotalHours = `${toHours(last7DaysTotalSeconds).toFixed(1)}h`;
+
+  let totalSeconds =
+    sevenDay.data?.total_seconds ??
+    allTime.data?.total_seconds ??
+    last7DaysTotalSeconds;
+  let totalHours = `${toHours(totalSeconds).toFixed(1)}h`;
+
+  const hackatimeUsername =
+    sevenDay.data?.username?.trim() ||
+    process.env.HACKATIME_USERNAME ||
+    DEFAULT_GITHUB_USER;
+
+  if (hackatimeUsername) {
+    const allTimeHackclubResponse = await fetch(
+      `${hackatimeBaseUrl}/api/v1/users/${encodeURIComponent(hackatimeUsername)}/stats?api_key=${apiKey}`,
+      {
+        cache: "force-cache",
+        next: {
+          revalidate: 1800,
+          tags: ["coding-time", "coding-time-hackclub-total"],
+        },
+        headers: {
+          Authorization: `Bearer ${apiKey}`,
+        },
+      },
+    ).catch(() => null);
+
+    if (allTimeHackclubResponse?.ok) {
+      const allTimeHackclubPayload = (await allTimeHackclubResponse.json()) as {
+        data?: {
+          grand_total?: {
+            total_seconds?: number;
+            text?: string;
+          };
+          total_seconds?: number;
+          human_readable_total?: string;
+          text?: string;
+        };
+      };
+
+      const allTimeHackclubSeconds =
+        allTimeHackclubPayload.data?.grand_total?.total_seconds ??
+        allTimeHackclubPayload.data?.total_seconds ??
+        totalSeconds;
+      totalSeconds = allTimeHackclubSeconds;
+      totalHours =
+        allTimeHackclubPayload.data?.human_readable_total ??
+        allTimeHackclubPayload.data?.grand_total?.text ??
+        allTimeHackclubPayload.data?.text ??
+        `${toHours(allTimeHackclubSeconds).toFixed(1)}h`;
+    }
+  }
+
   const hasActivity =
     last7Days.some((day) => day.hours > 0) ||
     topLanguages.some((language) => language.hours > 0);
 
+  const dailyAverageHours = Number(
+    toHours(sevenDay.data?.daily_average ?? 0).toFixed(2),
+  );
+  const activeDaysLast7 = last7Days.filter((day) => day.hours > 0).length;
+  const todaySeconds = todayStatus.data?.grand_total?.total_seconds ?? 0;
+  const todayHours =
+    todayStatus.data?.grand_total?.text ??
+    `${toHours(todaySeconds).toFixed(1)}h today`;
+
   return {
     totalHours,
+    last7DaysTotalHours,
     dailyAverage:
       sevenDay.data?.human_readable_daily_average_including_other_language ??
-      "0 hrs 0 mins",
+      sevenDay.data?.human_readable_daily_average ??
+      `${toHours(sevenDay.data?.daily_average ?? 0).toFixed(2)} h/day`,
+    dailyAverageHours,
+    todayHours,
+    todaySeconds,
+    activeDaysLast7,
     topLanguages,
     last7Days,
     hasActivity,
