@@ -7,6 +7,7 @@ import { useEffect, useRef } from "react";
 import { ContactForm } from "@/components/portfolio/contact-form";
 import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
+import { linkedinUrl } from "@/lib/site-config";
 
 const contactFaqItems = [
   {
@@ -122,7 +123,7 @@ export function ContactPageClient() {
             className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
           >
             <Link
-              href="https://www.linkedin.com/in/muhammad-fiaz-"
+              href={linkedinUrl}
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -167,7 +168,7 @@ export function ContactPageClient() {
                 className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
               >
                 <Link
-                  href="https://www.linkedin.com/in/muhammad-fiaz-"
+                  href={linkedinUrl}
                   target="_blank"
                   rel="noreferrer noopener"
                 >

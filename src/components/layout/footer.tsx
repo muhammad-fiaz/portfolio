@@ -8,6 +8,7 @@ import {
   CURRENT_PORTFOLIO_VERSION,
   PORTFOLIO_REPO_URL,
 } from "@/lib/portfolio-version";
+import { githubUrl, linkHubUrl, linkedinUrl, xUrl } from "@/lib/site-config";
 
 export function Footer() {
   const footerRef = useRef<HTMLElement>(null);
@@ -77,7 +78,7 @@ export function Footer() {
         <div className="flex w-full flex-col items-center gap-3 lg:w-auto lg:items-end">
           <div className="grid grid-cols-4 gap-2">
             <Link
-              href="https://github.com/muhammad-fiaz"
+              href={githubUrl}
               className="retro-social-icon"
               target="_blank"
               rel="noreferrer noopener"
@@ -87,7 +88,7 @@ export function Footer() {
               <Github className="h-4 w-4" />
             </Link>
             <Link
-              href="https://x.com/muhammadfiaz_"
+              href={xUrl}
               className="retro-social-icon"
               target="_blank"
               rel="noreferrer noopener"
@@ -97,7 +98,7 @@ export function Footer() {
               <Twitter className="h-4 w-4" />
             </Link>
             <Link
-              href="https://www.linkedin.com/in/muhammad-fiaz-"
+              href={linkedinUrl}
               className="retro-social-icon"
               target="_blank"
               rel="noreferrer noopener"
@@ -107,7 +108,7 @@ export function Footer() {
               <Linkedin className="h-4 w-4" />
             </Link>
             <Link
-              href="https://links.muhammadfiaz.com"
+              href={linkHubUrl}
               className="retro-social-icon"
               target="_blank"
               rel="noreferrer noopener"

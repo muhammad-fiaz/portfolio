@@ -25,7 +25,15 @@ import type {
   GithubRepo,
   HackatimePayload,
 } from "@/lib/portfolio-types";
-import { siteHost } from "@/lib/site-config";
+import {
+  donationUrl,
+  githubUrl,
+  linkHubUrl,
+  linkedinUrl,
+  siteHost,
+  sponsorUrl,
+  xUrl,
+} from "@/lib/site-config";
 import { useHomeStore } from "@/store/home-store";
 
 const traits = [
@@ -235,7 +243,7 @@ export function HomePageClient({
               </div>
               <div className="mt-3 flex items-center justify-center gap-3">
                 <Link
-                  href="https://github.com/muhammad-fiaz"
+                  href={githubUrl}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="retro-social-icon"
@@ -244,7 +252,7 @@ export function HomePageClient({
                   <Github className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="https://twitter.com/muhammadfiaz_"
+                  href={xUrl}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="retro-social-icon"
@@ -253,7 +261,7 @@ export function HomePageClient({
                   <Twitter className="h-4 w-4" />
                 </Link>
                 <Link
-                  href="https://www.linkedin.com/in/muhammad-fiaz-"
+                  href={linkedinUrl}
                   target="_blank"
                   rel="noreferrer noopener"
                   className="retro-social-icon"
@@ -439,7 +447,7 @@ export function HomePageClient({
             className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
           >
             <Link
-              href="https://github.com/muhammad-fiaz"
+              href={githubUrl}
               target="_blank"
               rel="noreferrer noopener"
             >
@@ -537,7 +545,7 @@ export function HomePageClient({
               </p>
               <Button asChild className="w-full sm:w-auto">
                 <Link
-                  href="https://github.com/sponsors/muhammad-fiaz/"
+                  href={sponsorUrl}
                   target="_blank"
                   rel="noreferrer noopener"
                 >
@@ -560,7 +568,7 @@ export function HomePageClient({
               </p>
               <Button asChild variant="secondary" className="w-full sm:w-auto">
                 <Link
-                  href="https://pay.muhammadfiaz.com/"
+                  href={donationUrl}
                   target="_blank"
                   rel="noreferrer noopener"
                 >
@@ -583,7 +591,7 @@ export function HomePageClient({
             className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
           >
             <Link
-              href="https://links.muhammadfiaz.com"
+              href={linkHubUrl}
               target="_blank"
               rel="noreferrer noopener"
             >

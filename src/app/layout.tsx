@@ -9,7 +9,6 @@ import { AnimePageAnimator } from "@/components/layout/anime-page-animator";
 import { Footer } from "@/components/layout/footer";
 import { GoogleAnalytics } from "@/components/layout/google-analytics";
 import { GoogleTagManager } from "@/components/layout/google-tag-manager";
-import { InitialLoader } from "@/components/layout/initial-loader";
 import { Navbar } from "@/components/layout/navbar";
 import { RouteProgressBar } from "@/components/layout/route-progress-bar";
 import { ThemeProvider } from "@/components/theme-provider";
@@ -249,15 +248,21 @@ export default function RootLayout({
           crossOrigin=""
         />
         <link rel="dns-prefetch" href="https://avatars.githubusercontent.com" />
-        <script type="application/ld+json" suppressHydrationWarning>
-          {serializeJsonLd(personJsonLd)}
-        </script>
-        <script type="application/ld+json" suppressHydrationWarning>
-          {serializeJsonLd(websiteJsonLd)}
-        </script>
-        <script type="application/ld+json" suppressHydrationWarning>
-          {serializeJsonLd(organizationJsonLd)}
-        </script>
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(personJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(websiteJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          suppressHydrationWarning
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(organizationJsonLd) }}
+        />
       </head>
       <body
         className={`${spaceGrotesk.variable} ${bungee.variable} ${pressStart.variable} antialiased`}
@@ -269,7 +274,6 @@ export default function RootLayout({
         <Suspense fallback={shellFallback}>
           <ThemeProvider>
             <RouteProgressBar />
-            <InitialLoader />
             <AnimePageAnimator />
             <div className="relative flex min-h-screen flex-col overflow-x-hidden">
               <Navbar />

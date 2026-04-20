@@ -46,65 +46,70 @@ const cookieStorage: StateStorage = {
 };
 
 type BusinessNoticeState = {
-  dismissed: boolean;
+  nextShowAt: number | null;
+  hasShownOnce: boolean;
   cycleStartAt: number | null;
   hydrated: boolean;
-  dismissNotice: () => void;
-  ensureCycleStarted: (now: number) => void;
+  
+  initialize: (now: number) => void;
+  dismissNotice: (now: number) => void;
+  redeemOffer: (now: number) => void;
   syncCycle: (now: number) => void;
-  resetCycle: (now: number) => void;
   setHydrated: (hydrated: boolean) => void;
 };
 
 export const useBusinessNoticeStore = create<BusinessNoticeState>()(
   persist(
     (set) => ({
-      dismissed: false,
+      nextShowAt: null,
+      hasShownOnce: false,
       cycleStartAt: null,
       hydrated: false,
-      dismissNotice: () => set({ dismissed: true }),
-      ensureCycleStarted: (now) =>
-        set((state) => {
-          if (state.cycleStartAt !== null) {
-            return state;
-          }
-
-          return {
-            cycleStartAt: now,
-            dismissed: false,
-          };
-        }),
-      syncCycle: (now) =>
-        set((state) => {
-          if (state.cycleStartAt === null) {
-            return {
-              cycleStartAt: now,
-              dismissed: false,
-            };
-          }
-
-          if (now - state.cycleStartAt >= BUSINESS_NOTICE_CYCLE_MS) {
-            return {
-              cycleStartAt: now,
-              dismissed: false,
-            };
-          }
-
-          return state;
-        }),
-      resetCycle: (now) => set({ cycleStartAt: now, dismissed: false }),
+      
+      initialize: (now) => set((state) => {
+        const updates: Partial<BusinessNoticeState> = {};
+        
+        if (state.cycleStartAt === null) {
+          updates.cycleStartAt = now;
+        }
+        
+        if (state.nextShowAt === null && !state.hasShownOnce) {
+          updates.nextShowAt = now + 5000; // Show after 5 seconds initially
+          updates.hasShownOnce = true;
+        }
+        
+        return updates;
+      }),
+      dismissNotice: (now) => set({
+        // Random time to wait between 1 to 3 minutes (60000ms to 180000ms)
+        nextShowAt: now + Math.floor(Math.random() * 120000) + 60000,
+        hasShownOnce: true
+      }),
+      redeemOffer: (now) => set({
+        // Wait exactly 5 minutes (300000ms) after redeeming
+        nextShowAt: now + 300000,
+        hasShownOnce: true
+      }),
+      syncCycle: (now) => set((state) => {
+        if (state.cycleStartAt === null) return { cycleStartAt: now };
+        if (now - state.cycleStartAt >= BUSINESS_NOTICE_CYCLE_MS) {
+          return { cycleStartAt: now };
+        }
+        return state;
+      }),
       setHydrated: (hydrated) => set({ hydrated }),
     }),
     {
       name: BUSINESS_NOTICE_COOKIE_KEY,
       storage: createJSONStorage(() => cookieStorage),
       partialize: (state) => ({
-        dismissed: state.dismissed,
+        nextShowAt: state.nextShowAt,
+        hasShownOnce: state.hasShownOnce,
         cycleStartAt: state.cycleStartAt,
       }),
       onRehydrateStorage: () => (state) => {
         state?.setHydrated(true);
       },
-    },
-  ),
+    }
+  )
 );

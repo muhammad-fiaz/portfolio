@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { AboutPageClient } from "@/components/pages/about-page-client";
 import type { TimelineItem } from "@/components/portfolio/about-timeline";
-import { siteUrl } from "@/lib/site-config";
+import { fiazDevUrl, siteUrl } from "@/lib/site-config";
 
 const aboutOgImageUrl = `${siteUrl}/about/opengraph-image`;
 
@@ -49,6 +49,7 @@ const timelineItems: TimelineItem[] = [
   {
     period: "Sep 2025 - Present · 7 mos",
     title: "Founder (Fiaz Technologies · Full-time)",
+    url: fiazDevUrl,
     description:
       "Building developer-first tools, software solutions, and AI workflows for founders, startups, and growing businesses as a full-time founder.",
     highlights: [

@@ -1,12 +1,5 @@
-import { RetroContentLoading } from "@/components/portfolio/retro-content-loading";
+import { InitialLoader } from "@/components/layout/initial-loader";
 
 export default function Loading() {
-  return (
-    <div className="py-4 sm:py-8">
-      <RetroContentLoading
-        title="Booting Workspace"
-        message="Loading data. Please wait while the terminal authenticates."
-      />
-    </div>
-  );
+  return <InitialLoader />;
 }

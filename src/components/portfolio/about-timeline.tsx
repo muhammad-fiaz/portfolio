@@ -3,11 +3,14 @@
 import { motion } from "framer-motion";
 import { Card } from "@/components/retroui/Card";
 
+import Link from "next/link";
+
 export interface TimelineItem {
   period: string;
   title: string;
   description: string;
   highlights?: string[];
+  url?: string;
 }
 
 function extractYear(period: string) {
@@ -57,7 +60,18 @@ export function AboutTimeline({ items }: { items: TimelineItem[] }) {
                       {item.period}
                     </p>
                     <Card.Title className="font-display text-2xl uppercase">
-                      {item.title}
+                      {item.url ? (
+                        <Link
+                          href={item.url}
+                          target="_blank"
+                          rel="noreferrer noopener"
+                          className="hover:underline hover:decoration-4 hover:underline-offset-4"
+                        >
+                          {item.title}
+                        </Link>
+                      ) : (
+                        item.title
+                      )}
                     </Card.Title>
                   </Card.Header>
                   <Card.Content>

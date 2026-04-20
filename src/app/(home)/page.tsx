@@ -128,17 +128,20 @@ export default async function HomePage() {
 
   return (
     <>
-      <script type="application/ld+json">
-        {serializeJsonLd(homepageJsonLd)}
-      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(homepageJsonLd) }}
+      />
       {profileStatsJsonLd ? (
-        <script type="application/ld+json">
-          {serializeJsonLd(profileStatsJsonLd)}
-        </script>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: serializeJsonLd(profileStatsJsonLd) }}
+        />
       ) : null}
-      <script type="application/ld+json">
-        {serializeJsonLd(breadcrumbJsonLd)}
-      </script>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: serializeJsonLd(breadcrumbJsonLd) }}
+      />
       <HomePageClient
         initialRepos={initialRepos}
         initialPosts={initialPosts}

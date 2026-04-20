@@ -11,6 +11,7 @@ import {
 } from "@/components/portfolio/about-timeline";
 import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
+import { githubUrl, linkedinUrl, xUrl } from "@/lib/site-config";
 
 type AboutPageClientProps = {
   timelineItems: TimelineItem[];
@@ -73,7 +74,7 @@ export function AboutPageClient({ timelineItems }: AboutPageClientProps) {
             </div>
             <div className="mt-3 flex items-center justify-center gap-3">
               <Link
-                href="https://github.com/muhammad-fiaz"
+                href={githubUrl}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="retro-social-icon"
@@ -82,7 +83,7 @@ export function AboutPageClient({ timelineItems }: AboutPageClientProps) {
                 <Github className="h-4 w-4" />
               </Link>
               <Link
-                href="https://twitter.com/muhammadfiaz_"
+                href={xUrl}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="retro-social-icon"
@@ -91,7 +92,7 @@ export function AboutPageClient({ timelineItems }: AboutPageClientProps) {
                 <Twitter className="h-4 w-4" />
               </Link>
               <Link
-                href="https://www.linkedin.com/in/muhammad-fiaz-"
+                href={linkedinUrl}
                 target="_blank"
                 rel="noreferrer noopener"
                 className="retro-social-icon"
@@ -251,11 +252,11 @@ export function AboutPageClient({ timelineItems }: AboutPageClientProps) {
             className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
           >
             <Link
-              href="https://fiaz.dev"
+              href={linkedinUrl}
               target="_blank"
               rel="noreferrer noopener"
             >
-              View Fiaz Technologies Journey
+              View it on Linkedin
             </Link>
           </Button>
         </div>
