@@ -154,6 +154,8 @@ function serializeJsonLd(value: unknown): string {
   return JSON.stringify(value).replace(/</g, "\\u003c");
 }
 
+const THEME_INIT_SCRIPT = `(function(){try{var stored=window.localStorage.getItem('theme');var mode=(stored==='light'||stored==='dark'||stored==='auto'||stored==='system')?stored:'auto';var prefersDark=window.matchMedia('(prefers-color-scheme: dark)').matches;var resolved=(mode==='auto'||mode==='system')?(prefersDark?'dark':'light'):mode;var root=document.documentElement;root.classList.remove('light','dark');root.classList.add(resolved);if(mode==='auto'||mode==='system'){root.removeAttribute('data-theme')}else{root.setAttribute('data-theme',mode)}root.style.colorScheme=resolved;}catch(e){}})();`;
+
 export default function RootLayout({
   children,
 }: Readonly<{
@@ -230,7 +232,7 @@ export default function RootLayout({
           Muhammad Fiaz
         </p>
         <p className="mt-2 text-sm font-black uppercase text-muted-foreground sm:text-base">
-          Loading workspace...
+          Loading workspace<span className="animate-dots" />
         </p>
         <div className="mt-5 h-7 border-4 border-black bg-muted p-1 sm:h-8">
           <div className="h-full w-full animate-pulse border-2 border-black bg-primary" />
@@ -242,6 +244,8 @@ export default function RootLayout({
   return (
     <html lang="en" suppressHydrationWarning>
       <head>
+        {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Required to set theme class before hydration and prevent flash */}
+        <script dangerouslySetInnerHTML={{ __html: THEME_INIT_SCRIPT }} />
         <link
           rel="preconnect"
           href="https://avatars.githubusercontent.com"

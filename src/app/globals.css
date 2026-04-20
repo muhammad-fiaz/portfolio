@@ -340,6 +340,20 @@
   .retro-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #ff9d00;
   }
+
+  .animate-dots::after {
+    content: ".";
+    animation: dots 1.5s infinite steps(1);
+    display: inline-block;
+    width: 1.5em;
+    text-align: left;
+  }
+
+  @keyframes dots {
+    0%, 20% { content: "."; }
+    40% { content: ".."; }
+    60%, 100% { content: "..."; }
+  }
 }
 
 ::view-transition-old(root),
