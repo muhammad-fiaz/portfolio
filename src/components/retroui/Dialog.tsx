@@ -3,7 +3,7 @@
 import * as ReactDialog from "@radix-ui/react-dialog";
 import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 import { cva, type VariantProps } from "class-variance-authority";
-import { X } from "lucide-react";
+import { X } from "@/components/retroui/icons";
 import React, { type HTMLAttributes, type ReactNode } from "react";
 import { cn } from "@/lib/utils";
 
@@ -103,6 +103,7 @@ const DialogContent = React.forwardRef<HTMLDivElement, IDialogContentProps>(
         >
           <VisuallyHidden>
             <ReactDialog.Title />
+            <ReactDialog.Description />
           </VisuallyHidden>
           <div className="flex flex-col relative">{children}</div>
         </ReactDialog.Content>

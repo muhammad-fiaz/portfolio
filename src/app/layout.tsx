@@ -1,17 +1,16 @@
-﻿import { Analytics } from "@vercel/analytics/next";
+import { Analytics } from "@vercel/analytics/next";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import type { Metadata, Viewport } from "next";
+import dynamic from "next/dynamic";
 import { Bungee, Press_Start_2P, Space_Grotesk } from "next/font/google";
 import { Suspense } from "react";
 import "./globals.css";
 import { AnimePageAnimator } from "@/components/layout/anime-page-animator";
-import { CookieNotice } from "@/components/layout/cookie-notice";
 import { Footer } from "@/components/layout/footer";
 import { GoogleAnalytics } from "@/components/layout/google-analytics";
 import { GoogleTagManager } from "@/components/layout/google-tag-manager";
 import { InitialLoader } from "@/components/layout/initial-loader";
 import { Navbar } from "@/components/layout/navbar";
-import { ReleaseUpdateNotice } from "@/components/layout/release-update-notice";
 import { RouteProgressBar } from "@/components/layout/route-progress-bar";
 import { ThemeProvider } from "@/components/theme-provider";
 import {
@@ -43,6 +42,36 @@ const bungee = Bungee({
   weight: "400",
   subsets: ["latin"],
 });
+
+const BusinessScaleNotice = dynamic(
+  () =>
+    import("@/components/layout/business-scale-notice").then(
+      (module) => module.BusinessScaleNotice,
+    ),
+  {
+    loading: () => null,
+  },
+);
+
+const CookieNotice = dynamic(
+  () =>
+    import("@/components/layout/cookie-notice").then(
+      (module) => module.CookieNotice,
+    ),
+  {
+    loading: () => null,
+  },
+);
+
+const ReleaseUpdateNotice = dynamic(
+  () =>
+    import("@/components/layout/release-update-notice").then(
+      (module) => module.ReleaseUpdateNotice,
+    ),
+  {
+    loading: () => null,
+  },
+);
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -220,6 +249,15 @@ export default function RootLayout({
           crossOrigin=""
         />
         <link rel="dns-prefetch" href="https://avatars.githubusercontent.com" />
+        <script type="application/ld+json" suppressHydrationWarning>
+          {serializeJsonLd(personJsonLd)}
+        </script>
+        <script type="application/ld+json" suppressHydrationWarning>
+          {serializeJsonLd(websiteJsonLd)}
+        </script>
+        <script type="application/ld+json" suppressHydrationWarning>
+          {serializeJsonLd(organizationJsonLd)}
+        </script>
       </head>
       <body
         className={`${spaceGrotesk.variable} ${bungee.variable} ${pressStart.variable} antialiased`}
@@ -233,21 +271,13 @@ export default function RootLayout({
             <RouteProgressBar />
             <InitialLoader />
             <AnimePageAnimator />
-            <script type="application/ld+json" suppressHydrationWarning>
-              {serializeJsonLd(personJsonLd)}
-            </script>
-            <script type="application/ld+json" suppressHydrationWarning>
-              {serializeJsonLd(websiteJsonLd)}
-            </script>
-            <script type="application/ld+json" suppressHydrationWarning>
-              {serializeJsonLd(organizationJsonLd)}
-            </script>
             <div className="relative flex min-h-screen flex-col overflow-x-hidden">
               <Navbar />
               <main className="mx-auto w-full max-w-6xl flex-1 px-4 pt-24 sm:pt-28">
                 {children}
               </main>
               <Footer />
+              <BusinessScaleNotice />
               <CookieNotice />
               <ReleaseUpdateNotice />
             </div>

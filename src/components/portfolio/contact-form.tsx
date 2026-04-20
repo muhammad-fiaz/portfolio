@@ -14,7 +14,7 @@ import {
   Phone,
   User,
   XCircle,
-} from "lucide-react";
+} from "@/components/retroui/icons";
 import { useEffect, useRef, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
@@ -348,6 +348,10 @@ export function ContactForm() {
             Cooldown active for this email: {cooldownMinutes}:{cooldownSeconds}
           </p>
         ) : null}
+
+        <p className="border-4 border-primary bg-primary/10 px-3 py-2 text-xs font-bold uppercase sm:text-sm">
+          🔥 Claim the 20% off limited time summer offer by submitting your inquiry now.
+        </p>
 
         <div className="flex flex-col gap-3 sm:flex-row">
           <motion.div

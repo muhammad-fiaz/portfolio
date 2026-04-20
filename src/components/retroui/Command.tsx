@@ -2,7 +2,7 @@
 
 import type { DialogProps } from "@radix-ui/react-dialog";
 import { Command as CommandPrimitive } from "cmdk";
-import { Check, type LucideIcon, Search } from "lucide-react";
+import { Check, Search, type LucideIcon } from "@/components/retroui/icons";
 import type React from "react";
 import { Dialog } from "@/components/retroui/Dialog";
 import { cn } from "@/lib/utils";

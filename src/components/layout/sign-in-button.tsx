@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, LogOut } from "lucide-react";
+import { Github, LogOut } from "@/components/retroui/icons";
 import { useRouter } from "next/navigation";
 import { Avatar } from "@/components/retroui/Avatar";
 import { Button } from "@/components/retroui/Button";

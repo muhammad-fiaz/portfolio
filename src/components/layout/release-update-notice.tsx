@@ -1,7 +1,7 @@
 "use client";
 
 import { animate } from "animejs";
-import { Rocket, X } from "lucide-react";
+import { Rocket, X } from "@/components/retroui/icons";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
 import {

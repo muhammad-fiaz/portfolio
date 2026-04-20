@@ -1,6 +1,6 @@
 "use client";
 
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter } from "@/components/retroui/icons";
 import Image from "next/image";
 import Link from "next/link";
 import { BlogGrid } from "@/components/portfolio/blog-grid";

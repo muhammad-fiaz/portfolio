@@ -1,4 +1,4 @@
-import { Ghost } from "lucide-react";
+import { Ghost } from "@/components/retroui/icons";
 import type { HTMLAttributes } from "react";
 import { Text } from "@/components/retroui/Text";
 import { cn } from "@/lib/utils";

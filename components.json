@@ -10,7 +10,7 @@
     "cssVariables": true,
     "prefix": ""
   },
-  "iconLibrary": "lucide",
+  "iconLibrary": "hugeicons",
   "rtl": false,
   "aliases": {
     "components": "@/components",
@@ -20,9 +20,6 @@
     "hooks": "@/hooks"
   },
   "registries": {
-    "@kokonutui": "https://kokonutui.com/r/{name}.json",
-    "@retroui": "https://retroui.dev/r/{name}.json",
-    "@aceternity": "https://ui.aceternity.com/registry/{name}.json",
-    "@magicui": "https://magicui.design/r/{name}"
+    "@retroui": "https://retroui.dev/r/{name}.json"
   }
 }

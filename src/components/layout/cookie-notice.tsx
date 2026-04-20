@@ -32,7 +32,7 @@ export function CookieNotice() {
 
   return (
     <div
-      className="fixed inset-x-2 bottom-2 z-50 border-4 border-black bg-card p-4 shadow-retro-lg sm:bottom-4 sm:left-4 sm:right-4 sm:max-w-xl"
+      className="fixed bottom-2 right-2 z-50 border-4 border-black bg-card p-4 shadow-retro-lg sm:bottom-4 sm:right-4 sm:w-full sm:max-w-xl"
       role="dialog"
       aria-live="polite"
       aria-label="Cookie notice"

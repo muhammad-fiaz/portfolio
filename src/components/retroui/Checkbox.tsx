@@ -1,6 +1,6 @@
 import * as CheckboxPrimitive from "@radix-ui/react-checkbox";
 import { cva, type VariantProps } from "class-variance-authority";
-import { Check } from "lucide-react";
+import { Check } from "@/components/retroui/icons";
 import { cn } from "@/lib/utils";
 
 const checkboxVariants = cva("border-2 rounded", {

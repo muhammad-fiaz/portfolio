@@ -3,7 +3,7 @@
 import useEmblaCarousel, {
   type UseEmblaCarouselType,
 } from "embla-carousel-react";
-import { ArrowLeft, ArrowRight } from "lucide-react";
+import { ArrowLeft, ArrowRight } from "@/components/retroui/icons";
 import * as React from "react";
 import { Button } from "@/components/retroui/Button";
 import { cn } from "@/lib/utils";

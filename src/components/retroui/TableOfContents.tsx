@@ -3,6 +3,7 @@
 import type React from "react";
 import { useEffect, useState } from "react";
 import { cn } from "@/lib/utils";
+import Link from "next/link";
 
 interface TOCItem {
   title: string;
@@ -72,7 +73,7 @@ function renderTOCItems(items: TOCItem[], level = 0, activeId: string | null) {
         const isActive = activeId === item.url.substring(1);
         return (
           <li key={item.url}>
-            <a
+            <Link
               href={item.url}
               className={`text-sm max-w-full truncate transition-colors block py-1 border-l-2 pl-2 ${
                 isActive
@@ -81,7 +82,7 @@ function renderTOCItems(items: TOCItem[], level = 0, activeId: string | null) {
               }`}
             >
               {item.title}
-            </a>
+            </Link>
             {item.items && renderTOCItems(item.items, level + 1, activeId)}
           </li>
         );

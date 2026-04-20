@@ -1,6 +1,6 @@
 "use client";
 
-import { AlertOctagon } from "lucide-react";
+import { AlertOctagon } from "@/components/retroui/icons";
 import Link from "next/link";
 import { useEffect } from "react";
 import { SystemStatusPanel } from "@/components/pages/system-status-panel";

@@ -1,7 +1,7 @@
 "use client";
 
 import { animate } from "animejs";
-import { Github, Link2, Linkedin, Twitter } from "lucide-react";
+import { Github, Link2, Linkedin, Twitter } from "@/components/retroui/icons";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import {

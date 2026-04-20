@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AnimatedNumberTicker } from "@/components/portfolio/animated-number-ticker";
 import { BentoCard, BentoGrid } from "@/components/retroui/Bento";
@@ -175,7 +176,7 @@ export function HackatimeBento({ stats }: { stats: HackatimePayload | null }) {
         <p className="mt-2 text-xs font-black uppercase text-muted-foreground">
           Live streak heatmap (UTC) from Hackatime user 30609.
         </p>
-        <a
+        <Link
           href="https://heatmap.shymike.dev/?id=30609&timezone=UTC"
           target="_blank"
           rel="noreferrer noopener"
@@ -191,15 +192,15 @@ export function HackatimeBento({ stats }: { stats: HackatimePayload | null }) {
             loading="lazy"
             unoptimized
           />
-        </a>
+        </Link>
         <Button asChild className="mt-4 w-full border-4 border-black uppercase">
-          <a
+          <Link
             href="https://hackatime.hackclub.com/@muhammadfiaz"
             target="_blank"
             rel="noreferrer noopener"
           >
             View HackClub Profile
-          </a>
+          </Link>
         </Button>
       </BentoCard>
 

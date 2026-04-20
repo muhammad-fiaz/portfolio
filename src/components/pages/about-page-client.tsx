@@ -1,7 +1,7 @@
 "use client";
 
 import { animate } from "animejs";
-import { Github, Linkedin, Twitter } from "lucide-react";
+import { Github, Linkedin, Twitter } from "@/components/retroui/icons";
 import Image from "next/image";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
@@ -251,11 +251,11 @@ export function AboutPageClient({ timelineItems }: AboutPageClientProps) {
             className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
           >
             <Link
-              href="https://www.linkedin.com/in/muhammad-fiaz-"
+              href="https://fiaz.dev"
               target="_blank"
               rel="noreferrer noopener"
             >
-              View Full Experience on LinkedIn
+              View Fiaz Technologies Journey
             </Link>
           </Button>
         </div>

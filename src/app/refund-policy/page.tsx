@@ -34,37 +34,36 @@ export default function RefundPolicyPage() {
         {
           title: "General Policy",
           content: [
-            "As a default policy, payments are non-refundable once project work has started due to time allocation, technical planning, and delivery commitments.",
-            "By purchasing services, clients acknowledge and accept this no-refund baseline policy.",
+            "All payments are non-refundable once project work is started and resources are allocated.",
+            "By purchasing services, clients acknowledge and accept this no-refund policy.",
           ],
         },
         {
-          title: "Exceptional Refund Cases",
+          title: "No Refund After Completion and Delivery",
           content: [
-            "Refunds may be considered only in specific exceptions, such as duplicate payment, billing error, or proven non-delivery caused solely by provider-side inability to perform.",
-            "Any approved refund is processed at reasonable discretion after review of project scope, communication history, and actual work delivered.",
-            "Where applicable, approved refunds are issued via the original payment channel, subject to gateway and bank processing timelines.",
+            "No refund is provided after work is completed and delivered, whether delivery is full, milestone-based, or partial as agreed in scope.",
+            "Completed deliverables, source files, deployments, handoffs, consultations, architecture planning, and implementation hours are final and non-refundable.",
           ],
         },
         {
-          title: "Exclusions",
+          title: "Limited Exceptions",
           content: [
-            "No refund is provided for change of mind, strategy shifts, delayed client responses, third-party platform limitations, or scope changes after kickoff.",
-            "Partial deliveries, milestone completions, research, architecture planning, and consultation hours are billable and non-refundable.",
+            "A refund may be considered only for verified duplicate payment or clear billing error.",
+            "Refunds are not available for change of mind, strategy changes, delayed client feedback, third-party platform restrictions, or scope changes after kickoff.",
           ],
         },
         {
-          title: "Request Process",
+          title: "Disputes and Review",
           content: [
             "Refund requests must be sent in writing to contact@muhammadfiaz.com with invoice details and a clear reason.",
-            "Requests are reviewed case-by-case and response timelines are shared through email communication.",
+            "Any approved exception is reviewed against payment records, communication history, and project scope.",
           ],
         },
         {
           title: "Chargeback and Disputes",
           content: [
             "Before initiating a payment dispute, clients are expected to contact support for direct resolution.",
-            "Chargebacks for completed or partially delivered services may be contested with supporting delivery records.",
+            "Chargebacks for completed or delivered services may be formally contested with supporting delivery records.",
           ],
         },
       ]}

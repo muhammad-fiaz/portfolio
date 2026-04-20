@@ -1,7 +1,7 @@
 "use client";
 
 import { animate } from "animejs";
-import { Mail, MessageSquare, Users } from "lucide-react";
+import { Mail, MessageSquare, Users } from "@/components/retroui/icons";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { ContactForm } from "@/components/portfolio/contact-form";
@@ -46,10 +46,15 @@ export function ContactPageClient() {
         className="border-4 border-black bg-card p-4 shadow-retro-lg sm:p-6 md:p-8"
         data-contact-reveal
       >
-        <h1 className="font-pixel text-3xl uppercase sm:text-4xl md:text-5xl">
-          Contact
-        </h1>
-        <p className="mt-3 max-w-2xl text-sm font-medium leading-relaxed sm:text-base">
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+          <h1 className="font-pixel text-3xl uppercase sm:text-4xl md:text-5xl">
+            Contact
+          </h1>
+          <span className="inline-block w-fit px-3 py-1.5 bg-primary text-primary-foreground font-black uppercase text-sm sm:text-base border-2 border-black rotate-[-2deg] shadow-retro-sm">
+            20% Off Limited Time Summer Offer
+          </span>
+        </div>
+        <p className="mt-4 max-w-2xl text-sm font-medium leading-relaxed sm:text-base">
           Let&apos;s build something valuable together. Please include complete
           inquiry details: name, email, country, business inquiry topic, project
           requirements, and optional phone/start/end dates so I can reply with a
@@ -166,7 +171,7 @@ export function ContactPageClient() {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  Open LinkedIn
+                  Connect on LinkedIn
                 </Link>
               </Button>
             </Card.Content>
