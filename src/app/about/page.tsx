@@ -45,9 +45,35 @@ function serializeJsonLd(value: unknown): string {
   return JSON.stringify(value).replace(/</g, "\\u003c");
 }
 
+function formatPeriod(start: string, end: string): string {
+  const startDate = new Date(`${start} 01`);
+  const endDate = end.toLowerCase() === "present" ? new Date() : new Date(`${end} 01`);
+
+  let months = (endDate.getFullYear() - startDate.getFullYear()) * 12;
+  months += endDate.getMonth() - startDate.getMonth();
+  months += 1;
+
+  const years = Math.floor(months / 12);
+  const remainingMonths = months % 12;
+
+  let durationObj = "";
+  if (years > 0) {
+    durationObj += `${years} yr${years > 1 ? "s" : ""}`;
+  }
+  if (remainingMonths > 0) {
+    if (durationObj) durationObj += " ";
+    durationObj += `${remainingMonths} mo${remainingMonths > 1 ? "s" : ""}`;
+  }
+  if (!durationObj) {
+    durationObj = "1 mo";
+  }
+
+  return `${start} - ${end} · ${durationObj}`;
+}
+
 const timelineItems: TimelineItem[] = [
   {
-    period: "Sep 2025 - Present · 7 mos",
+    period: formatPeriod("Sep 2025", "Present"),
     title: "Founder (Fiaz Technologies · Full-time)",
     url: fiazDevUrl,
     description:
@@ -59,7 +85,7 @@ const timelineItems: TimelineItem[] = [
     ],
   },
   {
-    period: "Dec 2020 - Present · 5 yrs 4 mos",
+    period: formatPeriod("Dec 2020", "Present"),
     title:
       "Open Source Contributor & Maintainer (Open-Source Developer) · GitHub",
     description:
@@ -71,7 +97,7 @@ const timelineItems: TimelineItem[] = [
     ],
   },
   {
-    period: "Dec 2024 - Present · 1 yr 4 mos",
+    period: formatPeriod("Dec 2024", "Present"),
     title: "Community Moderator (Dev Source · Full-time)",
     description:
       "Founded Dev Source as a daily initiative to spotlight the best developer tools, frameworks, and open-source resources.",
@@ -82,7 +108,7 @@ const timelineItems: TimelineItem[] = [
     ],
   },
   {
-    period: "Oct 2025 - Nov 2025 · 2 mos",
+    period: formatPeriod("Oct 2025", "Nov 2025"),
     title:
       "Open Source Contributor & Project Maintainer (Hacktoberfest · Freelance)",
     description:
@@ -94,7 +120,7 @@ const timelineItems: TimelineItem[] = [
     ],
   },
   {
-    period: "Apr 2025 - May 2025 · 2 mos",
+    period: formatPeriod("Apr 2025", "May 2025"),
     title: "AI Intern (Edunet Foundation · Internship)",
     description:
       "Built and deployed machine learning solutions using Azure and worked on real-world GenAI and capstone projects.",
@@ -105,7 +131,7 @@ const timelineItems: TimelineItem[] = [
     ],
   },
   {
-    period: "Oct 2024 - Nov 2024 · 2 mos",
+    period: formatPeriod("Oct 2024", "Nov 2024"),
     title:
       "Open Source Developer & Project Maintainer (Hacktoberfest · Freelance)",
     description:
@@ -118,7 +144,7 @@ const timelineItems: TimelineItem[] = [
     ],
   },
   {
-    period: "Sep 2023 - Oct 2023 · 2 mos",
+    period: formatPeriod("Sep 2023", "Oct 2023"),
     title: "Data Science Intern (CodSoft · Internship)",
     description:
       "Worked across applied ML projects including fraud detection, classification, and forecasting using Python tooling.",
@@ -129,7 +155,7 @@ const timelineItems: TimelineItem[] = [
     ],
   },
   {
-    period: "Sep 2023 - Oct 2023 · 2 mos",
+    period: formatPeriod("Sep 2023", "Oct 2023"),
     title:
       "Open Source Developer & Project Maintainer (Hacktoberfest · Freelance)",
     description:

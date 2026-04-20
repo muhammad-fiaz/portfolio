@@ -4,7 +4,6 @@ import { animate } from "animejs";
 import { useEffect, useRef, useState } from "react";
 
 export function InitialLoader() {
-  const [visible, setVisible] = useState(true);
   const barRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -16,23 +15,14 @@ export function InitialLoader() {
 
     const progressAnim = animate(bar, {
       width: ["0%", "100%"],
-      duration: 950,
+      duration: 1800,
       ease: "outCubic",
     });
 
-    const hideTimer = window.setTimeout(() => {
-      setVisible(false);
-    }, 1000);
-
     return () => {
       progressAnim.cancel();
-      window.clearTimeout(hideTimer);
     };
   }, []);
-
-  if (!visible) {
-    return null;
-  }
 
   return (
     <div className="fixed inset-0 z-70 flex items-center justify-center bg-background/95 px-4">
