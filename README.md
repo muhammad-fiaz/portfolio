@@ -1,4 +1,25 @@
-# Portfolio (v5.0.0)
+<h1 align="center">🚀 Portfolio (v5.0.0)</h1>
+
+
+
+<p align="center">
+  <a href="https://github.com/muhammad-fiaz/portfolio/stargazers">
+    <img src="https://img.shields.io/github/stars/muhammad-fiaz/portfolio?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/muhammad-fiaz/portfolio/network/members">
+    <img src="https://img.shields.io/github/forks/muhammad-fiaz/portfolio?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/muhammad-fiaz/portfolio/issues">
+    <img src="https://img.shields.io/github/issues/muhammad-fiaz/portfolio?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/muhammad-fiaz/portfolio/blob/main/LICENSE">
+    <img src="https://img.shields.io/github/license/muhammad-fiaz/portfolio?style=for-the-badge" />
+  </a>
+  <a href="https://github.com/muhammad-fiaz/portfolio/commits/main">
+    <img src="https://img.shields.io/github/last-commit/muhammad-fiaz/portfolio?style=for-the-badge" />
+  </a>
+</p>
+
 
 Production-ready portfolio built with Next.js 16, React 19, TypeScript, Panda CSS, and a retro-modern UI system.
 
