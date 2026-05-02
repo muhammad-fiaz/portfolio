@@ -164,7 +164,7 @@ export function BusinessScaleNotice() {
               </div>
             </div>
             <p className="mt-3 text-xs font-black uppercase leading-relaxed text-muted-foreground sm:text-sm">
-              This campaign automatically resets every 7 days.
+              Don't miss out your last chance.
             </p>
           </div>
 
