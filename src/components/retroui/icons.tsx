@@ -144,6 +144,7 @@ export const Globe2 = createIcon("Globe2", "Globe", "GlobeIcon", "Globe02Icon");
 export const Home = createIcon("Home", "HomeIcon", "Home01Icon");
 
 export const Info = createIcon("Info", "InformationCircle", "InformationCircleIcon");
+export const Instagram = createIcon("Instagram", "InstagramIcon");
 
 export const LifeBuoy = createIcon("LifeBuoy", "Lifebuoy", "LifebuoyIcon");
 export const Link2 = createIcon("Link2", "Link02", "Link02Icon", "Link01Icon");
@@ -180,6 +181,7 @@ export const Twitter = createIcon("Twitter", "TwitterIcon", "NewTwitterIcon");
 
 export const User = createIcon("User", "UserIcon");
 export const Users = createIcon("Users", "UserGroup", "UserCircleIcon");
+export const Youtube = createIcon("Youtube", "YoutubeIcon");
 
 export const X = createIcon("X", "Cancel01Icon", "CancelCircleIcon", "CircleX");
 export const XCircle = createIcon("XCircle", "CircleX", "CancelCircleIcon");

@@ -16,9 +16,15 @@ export const links: LinkItem[] = [
     description: "Connect with me professionally",
   },
   {
-    href: "https://heatmap.shymike.dev/?id=30609&timezone=UTC",
-    name: "Hackatime",
-    description: "My Hack Club coding streak and activity heatmap",
+    href:
+      process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime"
+        ? "https://heatmap.shymike.dev/?id=30609&timezone=UTC"
+        : "https://wakatime.com/@muhammadfiaz",
+    name:
+      process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime"
+        ? "Hackatime Activity"
+        : "Wakatime Activity",
+    description: "Check my coding activity",
   },
   {
     href: "https://muhammadfiaz.com",
@@ -26,9 +32,19 @@ export const links: LinkItem[] = [
     description: "Visit my main website",
   },
   {
-    href: "https://twitter.com/muhammadfiaz_",
-    name: "Twitter (X)",
+    href: "https://x.com/muhammadfiaz_",
+    name: "X (Twitter)",
     description: "Follow me for updates",
+  },
+  {
+    href: "https://www.instagram.com/muhammadfiaz.dev",
+    name: "Instagram",
+    description: "Follow my journey on Instagram",
+  },
+  {
+    href: "https://www.youtube.com/@muhammad_fiaz",
+    name: "YouTube",
+    description: "Subscribe to my channel for tech content",
   },
   {
     href: "https://dribbble.com/muhammadfiaz",
@@ -56,7 +72,7 @@ export const links: LinkItem[] = [
     description: "My daily.dev developer profile",
   },
   {
-    href: "https://fiaz.dev",
+    href: "https://fiaztechnologies.github.io",
     name: "Fiaz Technologies",
     description: "Developer-first next-generation solutions",
   },

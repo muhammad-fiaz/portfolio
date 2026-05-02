@@ -47,64 +47,69 @@ const cookieStorage: StateStorage = {
 
 type BusinessNoticeState = {
   nextShowAt: number | null;
-  hasShownOnce: boolean;
+  dismissed: boolean;
   cycleStartAt: number | null;
   hydrated: boolean;
   
-  initialize: (now: number) => void;
-  dismissNotice: (now: number) => void;
-  redeemOffer: (now: number) => void;
+  initialize: (now?: number) => void;
+  dismissNotice: () => void;
+  redeemOffer: (now?: number) => void;
   syncCycle: (now: number) => void;
   setHydrated: (hydrated: boolean) => void;
+  ensureCycleStarted: (now: number) => void;
 };
 
 export const useBusinessNoticeStore = create<BusinessNoticeState>()(
   persist(
     (set) => ({
       nextShowAt: null,
-      hasShownOnce: false,
+      dismissed: false,
       cycleStartAt: null,
       hydrated: false,
       
-      initialize: (now) => set((state) => {
+      initialize: (now = Date.now()) => set((state) => {
         const updates: Partial<BusinessNoticeState> = {};
         
         if (state.cycleStartAt === null) {
           updates.cycleStartAt = now;
         }
         
-        if (state.nextShowAt === null && !state.hasShownOnce) {
+        if (state.nextShowAt === null && !state.dismissed) {
           updates.nextShowAt = now + 5000; // Show after 5 seconds initially
-          updates.hasShownOnce = true;
+          updates.dismissed = false;
         }
         
         return updates;
       }),
-      dismissNotice: (now) => set({
-        // Random time to wait between 1 to 3 minutes (60000ms to 180000ms)
-        nextShowAt: now + Math.floor(Math.random() * 120000) + 60000,
-        hasShownOnce: true
+      dismissNotice: () => set({
+        nextShowAt: Date.now() + Math.floor(Math.random() * 120000) + 60000,
+        dismissed: true
       }),
-      redeemOffer: (now) => set({
-        // Wait exactly 5 minutes (300000ms) after redeeming
+      redeemOffer: (now = Date.now()) => set({
         nextShowAt: now + 300000,
-        hasShownOnce: true
+        dismissed: true
       }),
       syncCycle: (now) => set((state) => {
         if (state.cycleStartAt === null) return { cycleStartAt: now };
         if (now - state.cycleStartAt >= BUSINESS_NOTICE_CYCLE_MS) {
-          return { cycleStartAt: now };
+          return { cycleStartAt: now, dismissed: false };
         }
         return state;
       }),
       setHydrated: (hydrated) => set({ hydrated }),
+      ensureCycleStarted: (now) => set((state) => {
+        if (state.cycleStartAt === null) {
+          return { cycleStartAt: now };
+        }
+        return state;
+      }),
     }),
     {
       name: BUSINESS_NOTICE_COOKIE_KEY,
       storage: createJSONStorage(() => cookieStorage),
       partialize: (state) => ({
         nextShowAt: state.nextShowAt,
-        hasShownOnce: state.hasShownOnce,
+        dismissed: state.dismissed,
         cycleStartAt: state.cycleStartAt,
       }),
       onRehydrateStorage: () => (state) => {

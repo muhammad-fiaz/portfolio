@@ -101,6 +101,7 @@ export default async function HomePage() {
         name: "Muhammad Fiaz GitHub Portfolio Stats",
         description:
           "Live GitHub repository, stars, forks, and watcher metrics.",
+        license: "https://opensource.org/licenses/MIT",
         creator: {
           "@type": "Person",
           name: "Muhammad Fiaz",

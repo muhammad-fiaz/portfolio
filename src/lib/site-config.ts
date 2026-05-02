@@ -20,15 +20,19 @@ export const siteUrl = normalizeSiteUrl(
 
 export const siteHost = new URL(`${siteUrl}/`).host;
 
-export const fiazDevUrl = "https://fiaz.dev";
+export const fiazDevUrl = "https://fiaztechnologies.github.io";
 export const linkHubUrl = "https://links.muhammadfiaz.com";
 export const githubUrl = "https://github.com/muhammad-fiaz";
 export const githubSnakeGraphUrl =
   "https://raw.githubusercontent.com/muhammad-fiaz/muhammad-fiaz/output/github-contribution-grid-snake.svg";
 export const linkedinUrl = "https://www.linkedin.com/in/muhammad-fiaz-";
 export const xUrl = "https://x.com/muhammadfiaz_";
+export const instagramUrl = "https://www.instagram.com/muhammadfiaz.dev";
+export const youtubeUrl = "https://www.youtube.com/@muhammad_fiaz";
 export const hackatimeUrl =
-  "https://heatmap.shymike.dev/?id=30609&timezone=UTC";
+  process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime"
+    ? "https://heatmap.shymike.dev/?id=30609&timezone=UTC"
+    : "https://wakatime.com/@muhammadfiaz";
 export const sponsorUrl = "https://github.com/sponsors/muhammad-fiaz/";
 export const donationUrl = "https://pay.muhammadfiaz.com/";
 export const ogImageUrl = `${siteUrl}/opengraph-image`;

@@ -8,7 +8,7 @@ export default function OpenGraphImage() {
   return buildOgImage({
     eyebrow: "Muhammad Fiaz Portfolio v5",
     title: "Muhammad Fiaz",
-    subtitle: "Founder | Full Stack Developer | Open-Sourcerer",
+    subtitle: "Founder | Full Stack Developer | Let's Connect",
     accent: "primary",
   });
 }

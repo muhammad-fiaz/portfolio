@@ -17,12 +17,14 @@ import {
   fiazDevUrl,
   githubUrl,
   hackatimeUrl,
+  instagramUrl,
   linkedinUrl,
   linkHubUrl,
   ogImageUrl,
   siteUrl,
   sponsorUrl,
   xUrl,
+  youtubeUrl,
 } from "@/lib/site-config";
 
 const spaceGrotesk = Space_Grotesk({
@@ -66,6 +68,16 @@ const ReleaseUpdateNotice = dynamic(
   () =>
     import("@/components/layout/release-update-notice").then(
       (module) => module.ReleaseUpdateNotice,
+    ),
+  {
+    loading: () => null,
+  },
+);
+
+const BusinessInquiryPopup = dynamic(
+  () =>
+    import("@/components/layout/business-inquiry-popup").then(
+      (module) => module.BusinessInquiryPopup,
     ),
   {
     loading: () => null,
@@ -175,6 +187,8 @@ export default function RootLayout({
       githubUrl,
       linkedinUrl,
       xUrl,
+      instagramUrl,
+      youtubeUrl,
       hackatimeUrl,
       linkHubUrl,
       sponsorUrl,
@@ -216,7 +230,7 @@ export default function RootLayout({
       name: "Muhammad Fiaz",
       url: siteUrl,
     },
-    sameAs: [githubUrl, linkedinUrl, xUrl, linkHubUrl],
+    sameAs: [githubUrl, linkedinUrl, xUrl, instagramUrl, youtubeUrl, linkHubUrl],
     sponsor: {
       "@type": "Offer",
       url: sponsorUrl,
@@ -286,6 +300,7 @@ export default function RootLayout({
               </main>
               <Footer />
               <BusinessScaleNotice />
+              <BusinessInquiryPopup />
               <CookieNotice />
               <ReleaseUpdateNotice />
             </div>

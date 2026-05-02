@@ -198,7 +198,7 @@ export function RetroTerminalSection() {
     animate(supportCards, {
       opacity: [0, 1],
       translateY: [12, 0],
-      delay: (_, index) => index * 75,
+      delay: (_: unknown, index: number) => index * 75,
       duration: 300,
       ease: "outQuad",
     });
