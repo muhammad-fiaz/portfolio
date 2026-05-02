@@ -78,7 +78,7 @@ export function BusinessInquiryPopup() {
     <Dialog open={open} onOpenChange={setOpen}>
       <Dialog.Content
         size="md"
-        className="w-[calc(100%-1rem)] max-w-lg border-4 border-black bg-card p-0 shadow-retro-lg sm:w-full"
+        className="z-130 w-[calc(100%-1rem)] max-w-lg border-4 border-black bg-card p-0 shadow-retro-lg sm:w-full"
         overlay={{ className: "z-[129] bg-black/70" }}
       >
         <Dialog.Header
