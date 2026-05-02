@@ -17,7 +17,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     "/cookies-policy",
   ].map((path) => ({
     url: `${siteUrl}${path}`,
-    lastModified: new Date(),
+    lastModified: "2026-05-02T16:00:00Z",
     changeFrequency: "weekly",
     priority: path === "" ? 1 : 0.8,
   }));

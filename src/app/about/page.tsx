@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import { AboutPageClient } from "@/components/pages/about-page-client";
 import type { TimelineItem } from "@/components/portfolio/about-timeline";
-import { fiazDevUrl, siteUrl } from "@/lib/site-config";
+import { fiazDevUrl, githubUrl, siteUrl } from "@/lib/site-config";
 
 const aboutOgImageUrl = `${siteUrl}/about/opengraph-image`;
 
@@ -47,7 +47,8 @@ function serializeJsonLd(value: unknown): string {
 
 function formatPeriod(start: string, end: string): string {
   const startDate = new Date(`${start} 01`);
-  const endDate = end.toLowerCase() === "present" ? new Date() : new Date(`${end} 01`);
+  // Use a fixed date for prerendering if "Present" is specified
+  const endDate = end.toLowerCase() === "present" ? new Date("2026-05-01") : new Date(`${end} 01`);
 
   let months = (endDate.getFullYear() - startDate.getFullYear()) * 12;
   months += endDate.getMonth() - startDate.getMonth();
@@ -88,6 +89,7 @@ const timelineItems: TimelineItem[] = [
     period: formatPeriod("Dec 2020", "Present"),
     title:
       "Open Source Contributor & Maintainer (Open-Source Developer) · GitHub",
+    url: githubUrl,
     description:
       "Contributing to and maintaining a range of open-source repositories on GitHub, focused on robust tools and practical solutions for the developer community.",
     highlights: [

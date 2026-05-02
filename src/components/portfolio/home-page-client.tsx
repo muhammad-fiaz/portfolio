@@ -3,21 +3,26 @@
 import { Github, Linkedin, Twitter } from "@/components/retroui/icons";
 import Image from "next/image";
 import Link from "next/link";
-import { BlogGrid } from "@/components/portfolio/blog-grid";
-import { GithubOverviewBento } from "@/components/portfolio/github-overview-bento";
-import { HackatimeBento } from "@/components/portfolio/hackatime-bento";
-import { HeroFloatingBadges } from "@/components/portfolio/hero-floating-badges";
-import { HomeDeliveryProcess } from "@/components/portfolio/home-delivery-process";
-import { HomeEngagementModel } from "@/components/portfolio/home-engagement-model";
-import { HyperNameReveal } from "@/components/portfolio/hyper-name-reveal";
-import { MorphScrollShowcase } from "@/components/portfolio/morph-scroll-showcase";
-import { ProjectsGrid } from "@/components/portfolio/projects-grid";
-import { RetroCodeShowcase } from "@/components/portfolio/retro-code-showcase";
-import { RetroTerminalSection } from "@/components/portfolio/retro-terminal-section";
-import { StatsMarquee } from "@/components/portfolio/stats-marquee";
+import dynamic from "next/dynamic";
 import { BentoCard, BentoGrid } from "@/components/retroui/Bento";
 import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
+
+// Hero section components — loaded eagerly (above the fold, must render immediately)
+import { HeroFloatingBadges } from "@/components/portfolio/hero-floating-badges";
+import { HyperNameReveal } from "@/components/portfolio/hyper-name-reveal";
+import { StatsMarquee } from "@/components/portfolio/stats-marquee";
+
+// Below-the-fold components — lazy loaded for performance
+const BlogGrid = dynamic(() => import("@/components/portfolio/blog-grid").then(m => m.BlogGrid), { ssr: false });
+const GithubOverviewBento = dynamic(() => import("@/components/portfolio/github-overview-bento").then(m => m.GithubOverviewBento), { ssr: false });
+const HackatimeBento = dynamic(() => import("@/components/portfolio/hackatime-bento").then(m => m.HackatimeBento), { ssr: false });
+const HomeDeliveryProcess = dynamic(() => import("@/components/portfolio/home-delivery-process").then(m => m.HomeDeliveryProcess), { ssr: false });
+const HomeEngagementModel = dynamic(() => import("@/components/portfolio/home-engagement-model").then(m => m.HomeEngagementModel), { ssr: false });
+const MorphScrollShowcase = dynamic(() => import("@/components/portfolio/morph-scroll-showcase").then(m => m.MorphScrollShowcase), { ssr: false });
+const ProjectsGrid = dynamic(() => import("@/components/portfolio/projects-grid").then(m => m.ProjectsGrid), { ssr: false });
+const RetroCodeShowcase = dynamic(() => import("@/components/portfolio/retro-code-showcase").then(m => m.RetroCodeShowcase), { ssr: false });
+const RetroTerminalSection = dynamic(() => import("@/components/portfolio/retro-terminal-section").then(m => m.RetroTerminalSection), { ssr: false });
 import { links } from "@/lib/link-items";
 import type {
   BlogPost,
@@ -465,7 +470,7 @@ export function HomePageClient({
       <section className="space-y-4" data-home-reveal>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="font-display text-3xl uppercase sm:text-4xl">
-            Hackatime Insights
+            {process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime" ? "Hackatime Insights" : "Wakatime Insights"}
           </h2>
           <Button
             asChild
@@ -473,17 +478,18 @@ export function HomePageClient({
             className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
           >
             <Link
-              href="https://hackatime.hackclub.com/@muhammadfiaz"
+              href={process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime" ? "https://hackatime.hackclub.com/@muhammadfiaz" : "https://wakatime.com/@muhammadfiaz"}
               target="_blank"
               rel="noreferrer noopener"
             >
-              View HackClub Profile
+              View {process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime" ? "HackClub" : "Wakatime"} Profile
             </Link>
           </Button>
         </div>
         <p className="font-bold uppercase text-muted-foreground">
-          Live coding insights from Hack Club for the last 7 days and total
-          tracked development time.
+          {process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime" 
+            ? "Live coding insights from Hack Club for the last 7 days and total tracked development time."
+            : "Live coding insights from Wakatime for the last 7 days and total tracked development time."}
         </p>
         <HackatimeBento stats={hackatime ?? null} />
       </section>
@@ -629,6 +635,46 @@ export function HomePageClient({
               </Card.Content>
             </Card>
           ))}
+        </div>
+      </section>
+
+      <section
+        className="border-4 border-black bg-primary p-6 shadow-retro-lg sm:p-8 md:p-10"
+        data-home-reveal
+      >
+        <div className="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
+          <div className="space-y-3">
+            <h2 className="font-display text-3xl uppercase text-primary-foreground sm:text-4xl md:text-5xl">
+              Let&apos;s Connect
+            </h2>
+            <p className="max-w-xl text-sm font-medium leading-relaxed text-primary-foreground/90 sm:text-base">
+              Ready to start your project, discuss an idea, or explore collaboration?
+              Send me your inquiry and I&apos;ll reply with a clear execution plan.
+            </p>
+          </div>
+          <div className="flex flex-col gap-3 sm:flex-row">
+            <Button
+              size="lg"
+              asChild
+              className="w-full border-4 border-black bg-card text-card-foreground px-6 py-3 font-black uppercase shadow-retro retro-press sm:w-auto"
+            >
+              <Link href="/contact">Contact Me</Link>
+            </Button>
+            <Button
+              size="lg"
+              variant="secondary"
+              asChild
+              className="w-full border-4 border-black px-6 py-3 font-black uppercase shadow-retro retro-press sm:w-auto"
+            >
+              <Link
+                href={linkedinUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+              >
+                LinkedIn
+              </Link>
+            </Button>
+          </div>
         </div>
       </section>
 

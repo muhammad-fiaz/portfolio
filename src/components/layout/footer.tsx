@@ -1,14 +1,14 @@
 "use client";
 
 import { animate } from "animejs";
-import { Github, Link2, Linkedin, Twitter } from "@/components/retroui/icons";
+import { Github, Instagram, Link2, Linkedin, Twitter, Youtube } from "@/components/retroui/icons";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import {
   CURRENT_PORTFOLIO_VERSION,
   PORTFOLIO_REPO_URL,
 } from "@/lib/portfolio-version";
-import { githubUrl, linkHubUrl, linkedinUrl, xUrl } from "@/lib/site-config";
+import { githubUrl, instagramUrl, linkHubUrl, linkedinUrl, xUrl, youtubeUrl } from "@/lib/site-config";
 
 export function Footer() {
   const footerRef = useRef<HTMLElement>(null);
@@ -27,7 +27,7 @@ export function Footer() {
     animate(socialTargets, {
       opacity: [0, 1],
       translateY: [10, 0],
-      delay: (_, index) => index * 45,
+      delay: (_: unknown, index: number) => index * 45,
       duration: 280,
       ease: "outQuad",
     });
@@ -35,7 +35,7 @@ export function Footer() {
     animate(policyTargets, {
       opacity: [0, 1],
       translateY: [10, 0],
-      delay: (_, index) => 120 + index * 35,
+      delay: (_: unknown, index: number) => 120 + index * 35,
       duration: 280,
       ease: "outQuad",
     });
@@ -106,6 +106,26 @@ export function Footer() {
               data-footer-social
             >
               <Linkedin className="h-4 w-4" />
+            </Link>
+            <Link
+              href={instagramUrl}
+              className="retro-social-icon"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Instagram"
+              data-footer-social
+            >
+              <Instagram className="h-4 w-4" />
+            </Link>
+            <Link
+              href={youtubeUrl}
+              className="retro-social-icon"
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="YouTube"
+              data-footer-social
+            >
+              <Youtube className="h-4 w-4" />
             </Link>
             <Link
               href={linkHubUrl}

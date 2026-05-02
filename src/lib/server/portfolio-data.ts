@@ -1,4 +1,5 @@
 import "server-only";
+import { cacheLife } from "next/cache";
 import type {
   BlogPost,
   GitHubOverviewPayload,
@@ -13,6 +14,12 @@ const DEFAULT_GITHUB_USER =
 const DEVTO_USER = "muhammadfiaz";
 const HASHNODE_HOST = "muhammadfiaz.hashnode.dev";
 const GITHUB_CACHE_REVALIDATE_SECONDS = 60 * 60 * 12;
+
+async function getCurrentTimestamp() {
+  "use cache";
+  cacheLife("hours");
+  return Date.now();
+}
 
 function resolveGithubUser(user?: string): string {
   const normalized = (user ?? DEFAULT_GITHUB_USER).trim();
@@ -454,18 +461,26 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
 }
 
 export async function getHackatimeStats(): Promise<HackatimePayload | null> {
-  const hackatimeApiKey = process.env.HACKATIME_API_KEY;
-  const apiKey = hackatimeApiKey;
+  const provider = process.env.CODING_STATS_PROVIDER === "hackatime" ? "hackatime" : "wakatime";
+  const apiKey = provider === "hackatime" ? process.env.HACKATIME_API_KEY : process.env.WAKATIME_API_KEY;
 
   if (!apiKey) return null;
 
-  const hackatimeBaseUrl = (
-    process.env.HACKATIME_API_BASE_URL ?? "https://hackatime.hackclub.com"
-  ).replace(/\/$/, "");
+  const baseUrl = provider === "wakatime"
+    ? "https://wakatime.com"
+    : (process.env.HACKATIME_API_BASE_URL ?? "https://hackatime.hackclub.com").replace(/\/$/, "");
 
-  const sevenDayUrl = `${hackatimeBaseUrl}/api/hackatime/v1/users/current/stats/last_7_days?api_key=${apiKey}`;
-  const allTimeUrl = `${hackatimeBaseUrl}/api/hackatime/v1/users/current/all_time_since_today?api_key=${apiKey}`;
-  const todayStatusUrl = `${hackatimeBaseUrl}/api/hackatime/v1/users/current/statusbar/today?api_key=${apiKey}`;
+  const sevenDayUrl = provider === "wakatime"
+    ? `${baseUrl}/api/v1/users/current/stats/last_7_days?api_key=${apiKey}`
+    : `${baseUrl}/api/hackatime/v1/users/current/stats/last_7_days?api_key=${apiKey}`;
+  
+  const allTimeUrl = provider === "wakatime"
+    ? `${baseUrl}/api/v1/users/current/all_time_since_today?api_key=${apiKey}`
+    : `${baseUrl}/api/hackatime/v1/users/current/all_time_since_today?api_key=${apiKey}`;
+
+  const todayStatusUrl = provider === "wakatime"
+    ? `${baseUrl}/api/v1/users/current/statusbar/today?api_key=${apiKey}`
+    : `${baseUrl}/api/hackatime/v1/users/current/statusbar/today?api_key=${apiKey}`;
 
   const [sevenDayResponse, allTimeResponse, todayStatusResponse] =
     await Promise.all([
@@ -557,7 +572,7 @@ export async function getHackatimeStats(): Promise<HackatimePayload | null> {
   }));
 
   const hackatimeLast7Days = await (async () => {
-    const now = new Date();
+    const now = new Date(await getCurrentTimestamp());
     const requests = Array.from({ length: 7 }, (_, index) => {
       const date = new Date(now);
       date.setUTCDate(date.getUTCDate() - (6 - index));
@@ -566,7 +581,7 @@ export async function getHackatimeStats(): Promise<HackatimePayload | null> {
       const end = `${date.toISOString().slice(0, 10)}T23:59:59Z`;
 
       return fetch(
-        `${hackatimeBaseUrl}/api/v1/my/heartbeats?start_time=${encodeURIComponent(start)}&end_time=${encodeURIComponent(end)}&api_key=${apiKey}`,
+        `${baseUrl}/api/v1/users/current/heartbeats?date=${date.toISOString().slice(0, 10)}&api_key=${apiKey}`,
         {
           cache: "force-cache",
           next: {
@@ -587,12 +602,16 @@ export async function getHackatimeStats(): Promise<HackatimePayload | null> {
           }
 
           const payload = (await response.json()) as {
-            total_seconds?: number;
+            data?: Array<{
+              duration?: number;
+            }>;
           };
+
+          const durationSeconds = payload.data?.reduce((acc, curr) => acc + (curr.duration ?? 0), 0) ?? 0;
 
           return {
             day: date.toLocaleDateString("en-US", { weekday: "short" }),
-            hours: Number(toHours(payload.total_seconds ?? 0).toFixed(2)),
+            hours: Number(toHours(durationSeconds).toFixed(2)),
           };
         })
         .catch(() => ({
@@ -632,9 +651,9 @@ export async function getHackatimeStats(): Promise<HackatimePayload | null> {
     process.env.HACKATIME_USERNAME ||
     DEFAULT_GITHUB_USER;
 
-  if (hackatimeUsername) {
+  if (hackatimeUsername && provider === "hackatime") {
     const allTimeHackclubResponse = await fetch(
-      `${hackatimeBaseUrl}/api/v1/users/${encodeURIComponent(hackatimeUsername)}/stats?api_key=${apiKey}`,
+      `${baseUrl}/api/v1/users/${encodeURIComponent(hackatimeUsername)}/stats?api_key=${apiKey}`,
       {
         cache: "force-cache",
         next: {

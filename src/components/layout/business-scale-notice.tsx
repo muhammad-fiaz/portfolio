@@ -32,12 +32,13 @@ function getCountdownParts(timeLeftMs: number) {
 }
 
 export function BusinessScaleNotice() {
-  const nextShowAt = useBusinessNoticeStore((state) => state.nextShowAt);
+  const dismissed = useBusinessNoticeStore((state) => state.dismissed);
   const cycleStartAt = useBusinessNoticeStore((state) => state.cycleStartAt);
   const hydrated = useBusinessNoticeStore((state) => state.hydrated);
   const dismissNotice = useBusinessNoticeStore((state) => state.dismissNotice);
-  const redeemOffer = useBusinessNoticeStore((state) => state.redeemOffer);
-  const initialize = useBusinessNoticeStore((state) => state.initialize);
+  const ensureCycleStarted = useBusinessNoticeStore(
+    (state) => state.ensureCycleStarted,
+  );
   const syncCycle = useBusinessNoticeStore((state) => state.syncCycle);
   const descriptionId = useId();
 
@@ -47,16 +48,16 @@ export function BusinessScaleNotice() {
     }
 
     const now = Date.now();
-    initialize(now);
+    ensureCycleStarted(now);
     syncCycle(now);
-  }, [hydrated, initialize, syncCycle]);
+  }, [hydrated, ensureCycleStarted, syncCycle]);
 
   const { data: now = Date.now() } = useQuery({
     queryKey: ["business-notice-countdown-now"],
     queryFn: () => Date.now(),
     enabled: hydrated,
     staleTime: 0,
-    refetchInterval: 1000,
+    refetchInterval: dismissed ? 60000 : 1000,
     refetchIntervalInBackground: true,
   });
 
@@ -79,7 +80,7 @@ export function BusinessScaleNotice() {
   }, [cycleStartAt, hydrated, now]);
 
   const countdown = useMemo(() => getCountdownParts(timeLeftMs), [timeLeftMs]);
-  const open = hydrated && nextShowAt !== null && now >= nextShowAt && timeLeftMs > 0;
+  const open = hydrated && !dismissed && timeLeftMs > 0;
 
   if (!hydrated) {
     return null;
@@ -87,12 +88,8 @@ export function BusinessScaleNotice() {
 
   const onOpenChange = (nextOpen: boolean) => {
     if (!nextOpen) {
-      dismissNotice(Date.now());
+      dismissNotice();
     }
-  };
-
-  const handleRedeem = () => {
-    redeemOffer(Date.now());
   };
 
   return (
@@ -131,7 +128,7 @@ export function BusinessScaleNotice() {
 
         <div className="space-y-4 p-4 sm:space-y-5 sm:p-5">
           <p className="text-sm font-semibold leading-relaxed sm:text-base">
-            Limited-time summer offer: get 20% off your growth sprint and launch
+            Limited-time summer offer: book your growth sprint now and launch
             faster with conversion-focused websites, mobile apps, AI workflows,
             and business automations built for revenue.
           </p>
@@ -166,6 +163,9 @@ export function BusinessScaleNotice() {
                 </p>
               </div>
             </div>
+            <p className="mt-3 text-xs font-black uppercase leading-relaxed text-muted-foreground sm:text-sm">
+              This campaign automatically resets every 7 days.
+            </p>
           </div>
 
           <div className="flex flex-col gap-2 sm:flex-row sm:justify-end">
@@ -173,16 +173,15 @@ export function BusinessScaleNotice() {
               type="button"
               variant="secondary"
               className="w-full border-4 border-black uppercase shadow-retro-sm sm:w-auto"
-              onClick={() => dismissNotice(Date.now())}
+              onClick={dismissNotice}
             >
               Not Now
             </Button>
             <Button
               asChild
               className="w-full border-4 border-black uppercase shadow-retro-sm sm:w-auto"
-              onClick={handleRedeem}
             >
-              <Link href="/contact">
+              <Link href="/contact" onClick={dismissNotice}>
                 Claim Summer Offer
               </Link>
             </Button>

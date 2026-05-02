@@ -6,9 +6,9 @@ export const contentType = ogContentType;
 
 export default function Image() {
   return buildOgImage({
-    eyebrow: "Contact",
-    title: "Build With Muhammad Fiaz",
-    subtitle: "Projects | Consulting | Delivery",
+    eyebrow: "Contact Me For Enquiry",
+    title: "Let's Build Together",
+    subtitle: "Projects | Consulting | Collaboration",
     accent: "primary",
   });
 }
