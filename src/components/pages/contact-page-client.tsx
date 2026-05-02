@@ -49,7 +49,7 @@ export function ContactPageClient() {
       >
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h1 className="font-pixel text-3xl uppercase sm:text-4xl md:text-5xl">
-            Contact Me For Enquiry
+            Contact
           </h1>
           <span className="inline-block w-fit px-3 py-1.5 bg-primary text-primary-foreground font-black uppercase text-sm sm:text-base border-2 border-black rotate-[-2deg] shadow-retro-sm">
             20% Off Limited Time Summer Offer

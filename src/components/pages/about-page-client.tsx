@@ -1,17 +1,17 @@
 "use client";
 
 import { animate } from "animejs";
-import { Github, Linkedin, Twitter } from "@/components/retroui/icons";
+import { Github, Instagram, Linkedin, Twitter, Youtube } from "@/components/retroui/icons";
 import Image from "next/image";
-import Link from "next/link";
 import { useEffect, useRef } from "react";
+import Link from "next/link";
 import {
   AboutTimeline,
   type TimelineItem,
 } from "@/components/portfolio/about-timeline";
 import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
-import { githubUrl, linkedinUrl, xUrl } from "@/lib/site-config";
+import { githubUrl, instagramUrl, linkedinUrl, xUrl, youtubeUrl } from "@/lib/site-config";
 
 type AboutPageClientProps = {
   timelineItems: TimelineItem[];
@@ -99,6 +99,24 @@ export function AboutPageClient({ timelineItems }: AboutPageClientProps) {
                 aria-label="LinkedIn profile"
               >
                 <Linkedin className="h-4 w-4" />
+              </Link>
+              <Link
+                href={instagramUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="retro-social-icon"
+                aria-label="Instagram profile"
+              >
+                <Instagram className="h-4 w-4" />
+              </Link>
+              <Link
+                href={youtubeUrl}
+                target="_blank"
+                rel="noreferrer noopener"
+                className="retro-social-icon"
+                aria-label="YouTube profile"
+              >
+                <Youtube className="h-4 w-4" />
               </Link>
             </div>
           </div>
