@@ -92,7 +92,7 @@
     "zustand": "^5.0.12"
   },
   "devDependencies": {
-    "@biomejs/biome": "2.4.14",
+    "@biomejs/biome": "2.4.15",
     "@pandacss/dev": "^1.10.0",
     "@tailwindcss/postcss": "^4.2.4",
     "@types/node": "^25.6.0",
