@@ -27,7 +27,6 @@ export const githubSnakeGraphUrl =
   "https://raw.githubusercontent.com/muhammad-fiaz/muhammad-fiaz/output/github-contribution-grid-snake.svg";
 export const linkedinUrl = "https://www.linkedin.com/in/muhammad-fiaz-";
 export const xUrl = "https://x.com/muhammadfiaz_";
-export const instagramUrl = "https://www.instagram.com/muhammadfiaz.dev";
 export const youtubeUrl = "https://www.youtube.com/@muhammad_fiaz";
 export const hackatimeUrl =
   process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime"

@@ -1,14 +1,14 @@
 "use client";
 
 import { animate } from "animejs";
-import { Github, Instagram, Link2, Linkedin, Twitter, Youtube } from "@/components/retroui/icons";
+import { Github, Link2, Linkedin, Twitter, Youtube } from "@/components/retroui/icons";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import {
   CURRENT_PORTFOLIO_VERSION,
   PORTFOLIO_REPO_URL,
 } from "@/lib/portfolio-version";
-import { githubUrl, instagramUrl, linkHubUrl, linkedinUrl, xUrl, youtubeUrl } from "@/lib/site-config";
+import { githubUrl, linkHubUrl, linkedinUrl, xUrl, youtubeUrl } from "@/lib/site-config";
 
 export function Footer() {
   const footerRef = useRef<HTMLElement>(null);
@@ -106,16 +106,6 @@ export function Footer() {
               data-footer-social
             >
               <Linkedin className="h-4 w-4" />
-            </Link>
-            <Link
-              href={instagramUrl}
-              className="retro-social-icon"
-              target="_blank"
-              rel="noreferrer noopener"
-              aria-label="Instagram"
-              data-footer-social
-            >
-              <Instagram className="h-4 w-4" />
             </Link>
             <Link
               href={youtubeUrl}

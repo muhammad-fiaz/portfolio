@@ -37,11 +37,6 @@ export const links: LinkItem[] = [
     description: "Follow me for updates",
   },
   {
-    href: "https://www.instagram.com/muhammadfiaz.dev",
-    name: "Instagram",
-    description: "Follow my journey on Instagram",
-  },
-  {
     href: "https://www.youtube.com/@muhammad_fiaz",
     name: "YouTube",
     description: "Subscribe to my channel for tech content",
