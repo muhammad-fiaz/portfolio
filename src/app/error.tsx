@@ -1,7 +1,7 @@
 "use client";
 
-import { useEffect } from "react";
 import Link from "next/link";
+import { useEffect } from "react";
 import { SystemStatusPanel } from "@/components/pages/system-status-panel";
 import { Button } from "@/components/retroui/Button";
 
@@ -31,7 +31,8 @@ export default function GlobalError({
             System Failure
           </h1>
           <p className="max-w-3xl text-sm font-semibold leading-relaxed sm:text-base">
-            A critical error occurred while processing your request. Please try again or use the retro navigation below to return to safe bounds.
+            A critical error occurred while processing your request. Please try
+            again or use the retro navigation below to return to safe bounds.
           </p>
           <div className="flex flex-wrap gap-3 pt-2">
             <Button

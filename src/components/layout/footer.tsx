@@ -1,14 +1,26 @@
 "use client";
 
 import { animate } from "animejs";
-import { Github, Link2, Linkedin, Twitter, Youtube } from "@/components/retroui/icons";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
+import {
+  Github,
+  Link2,
+  Linkedin,
+  Twitter,
+  Youtube,
+} from "@/components/retroui/icons";
 import {
   CURRENT_PORTFOLIO_VERSION,
   PORTFOLIO_REPO_URL,
 } from "@/lib/portfolio-version";
-import { githubUrl, linkHubUrl, linkedinUrl, xUrl, youtubeUrl } from "@/lib/site-config";
+import {
+  githubUrl,
+  linkedinUrl,
+  linkHubUrl,
+  xUrl,
+  youtubeUrl,
+} from "@/lib/site-config";
 
 export function Footer() {
   const footerRef = useRef<HTMLElement>(null);

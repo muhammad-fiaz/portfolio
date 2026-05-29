@@ -2,9 +2,9 @@
 
 import { create } from "zustand";
 import {
-  type StateStorage,
   createJSONStorage,
   persist,
+  type StateStorage,
 } from "zustand/middleware";
 
 export const BUSINESS_NOTICE_COOKIE_KEY = "mf-business-scale-notice";
@@ -50,7 +50,7 @@ type BusinessNoticeState = {
   dismissed: boolean;
   cycleStartAt: number | null;
   hydrated: boolean;
-  
+
   initialize: (now?: number) => void;
   dismissNotice: () => void;
   redeemOffer: (now?: number) => void;
@@ -66,43 +66,48 @@ export const useBusinessNoticeStore = create<BusinessNoticeState>()(
       dismissed: false,
       cycleStartAt: null,
       hydrated: false,
-      
-      initialize: (now = Date.now()) => set((state) => {
-        const updates: Partial<BusinessNoticeState> = {};
-        
-        if (state.cycleStartAt === null) {
-          updates.cycleStartAt = now;
-        }
-        
-        if (state.nextShowAt === null && !state.dismissed) {
-          updates.nextShowAt = now + 5000; // Show after 5 seconds initially
-          updates.dismissed = false;
-        }
-        
-        return updates;
-      }),
-      dismissNotice: () => set({
-        nextShowAt: Date.now() + Math.floor(Math.random() * 120000) + 60000,
-        dismissed: true
-      }),
-      redeemOffer: (now = Date.now()) => set({
-        nextShowAt: now + 300000,
-        dismissed: true
-      }),
-      syncCycle: (now) => set((state) => {
-        if (state.cycleStartAt === null) return { cycleStartAt: now };
-        if (now - state.cycleStartAt >= BUSINESS_NOTICE_CYCLE_MS) {
-          return { cycleStartAt: now, dismissed: false };
-        }
-        return state;
-      }),
+
+      initialize: (now = Date.now()) =>
+        set((state) => {
+          const updates: Partial<BusinessNoticeState> = {};
+
+          if (state.cycleStartAt === null) {
+            updates.cycleStartAt = now;
+          }
+
+          if (state.nextShowAt === null && !state.dismissed) {
+            updates.nextShowAt = now + 5000; // Show after 5 seconds initially
+            updates.dismissed = false;
+          }
+
+          return updates;
+        }),
+      dismissNotice: () =>
+        set({
+          nextShowAt: Date.now() + Math.floor(Math.random() * 120000) + 60000,
+          dismissed: true,
+        }),
+      redeemOffer: (now = Date.now()) =>
+        set({
+          nextShowAt: now + 300000,
+          dismissed: true,
+        }),
+      syncCycle: (now) =>
+        set((state) => {
+          if (state.cycleStartAt === null) return { cycleStartAt: now };
+          if (now - state.cycleStartAt >= BUSINESS_NOTICE_CYCLE_MS) {
+            return { cycleStartAt: now, dismissed: false };
+          }
+          return state;
+        }),
       setHydrated: (hydrated) => set({ hydrated }),
-      ensureCycleStarted: (now) => set((state) => {
-        if (state.cycleStartAt === null) {
-          return { cycleStartAt: now };
-        }
-        return state;
-      }),
+      ensureCycleStarted: (now) =>
+        set((state) => {
+          if (state.cycleStartAt === null) {
+            return { cycleStartAt: now };
+          }
+          return state;
+        }),
     }),
     {
       name: BUSINESS_NOTICE_COOKIE_KEY,
@@ -115,6 +120,6 @@ export const useBusinessNoticeStore = create<BusinessNoticeState>()(
       onRehydrateStorage: () => (state) => {
         state?.setHydrated(true);
       },
-    }
-  )
+    },
+  ),
 );

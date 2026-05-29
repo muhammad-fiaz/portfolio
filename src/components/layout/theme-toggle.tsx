@@ -1,10 +1,10 @@
 "use client";
 
-import { Moon, Sun } from "@/components/retroui/icons";
 import { useTheme } from "next-themes";
 import type React from "react";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { flushSync } from "react-dom";
+import { Moon, Sun } from "@/components/retroui/icons";
 
 import { cn } from "@/lib/utils";
 

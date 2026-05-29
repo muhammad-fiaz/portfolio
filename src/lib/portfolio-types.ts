@@ -1,3 +1,14 @@
+export type Web3FormsSubmissionValues = {
+  name: string;
+  email: string;
+  country: string;
+  phone?: string;
+  businessInquiry: string;
+  projectDetails: string;
+  expectedStartDate?: string;
+  expectedEndDate?: string;
+};
+
 export interface GithubRepo {
   id: number;
   name: string;

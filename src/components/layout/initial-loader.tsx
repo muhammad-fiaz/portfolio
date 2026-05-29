@@ -1,7 +1,7 @@
 "use client";
 
 import { animate } from "animejs";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef } from "react";
 
 export function InitialLoader() {
   const barRef = useRef<HTMLDivElement>(null);
@@ -31,7 +31,8 @@ export function InitialLoader() {
           Muhammad Fiaz
         </p>
         <p className="mt-2 text-sm font-black uppercase text-muted-foreground sm:text-base">
-          Loading Workspace<span className="animate-dots" />
+          Loading Workspace
+          <span className="animate-dots" />
         </p>
         <div className="mt-5 h-7 border-4 border-black bg-muted p-1 sm:h-8">
           <div

@@ -1,12 +1,12 @@
 "use client";
 
 import { animate } from "animejs";
-import { Mail, MessageSquare, Users } from "@/components/retroui/icons";
 import Link from "next/link";
 import { useEffect, useRef } from "react";
 import { ContactForm } from "@/components/portfolio/contact-form";
 import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
+import { Mail, MessageSquare, Users } from "@/components/retroui/icons";
 import { linkedinUrl } from "@/lib/site-config";
 
 const contactFaqItems = [
@@ -122,11 +122,7 @@ export function ContactPageClient() {
             variant="secondary"
             className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
           >
-            <Link
-              href={linkedinUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
+            <Link href={linkedinUrl} target="_blank" rel="noreferrer noopener">
               Connect on LinkedIn
             </Link>
           </Button>

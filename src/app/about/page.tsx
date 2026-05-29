@@ -48,7 +48,10 @@ function serializeJsonLd(value: unknown): string {
 function formatPeriod(start: string, end: string): string {
   const startDate = new Date(`${start} 01`);
   // Use a fixed date for prerendering if "Present" is specified
-  const endDate = end.toLowerCase() === "present" ? new Date("2026-05-01") : new Date(`${end} 01`);
+  const endDate =
+    end.toLowerCase() === "present"
+      ? new Date("2026-05-01")
+      : new Date(`${end} 01`);
 
   let months = (endDate.getFullYear() - startDate.getFullYear()) * 12;
   months += endDate.getMonth() - startDate.getMonth();

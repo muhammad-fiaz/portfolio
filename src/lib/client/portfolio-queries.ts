@@ -6,25 +6,15 @@ import type {
   GitHubOverviewPayload,
   GithubRepo,
   HackatimePayload,
+  Web3FormsSubmissionValues,
 } from "@/lib/portfolio-types";
 import { submitContactAction } from "@/lib/server/contact-actions";
 
-export type Web3FormsSubmissionValues = {
-  name: string;
-  email: string;
-  country: string;
-  phone?: string;
-  businessInquiry: string;
-  projectDetails: string;
-  expectedStartDate?: string;
-  expectedEndDate?: string;
-};
+export type { Web3FormsSubmissionValues };
 
 const TWELVE_HOURS_MS = 1000 * 60 * 60 * 12;
 
-async function submitContactForm(
-  values: Web3FormsSubmissionValues,
-) {
+async function submitContactForm(values: Web3FormsSubmissionValues) {
   return submitContactAction(values);
 }
 
@@ -35,7 +25,9 @@ export function usePortfolioReposQuery(
   return useQuery({
     queryKey: ["portfolio", "repos", user ?? "default"],
     queryFn: async (): Promise<GithubRepo[]> => {
-      const url = user ? `/api/portfolio/repos?user=${user}` : "/api/portfolio/repos";
+      const url = user
+        ? `/api/portfolio/repos?user=${user}`
+        : "/api/portfolio/repos";
       const res = await fetch(url);
       if (!res.ok) throw new Error("Failed to fetch repos");
       return res.json() as Promise<GithubRepo[]>;
@@ -86,7 +78,9 @@ export function usePortfolioGitHubOverviewQuery(
   return useQuery({
     queryKey: ["portfolio", "github-overview", user ?? "default"],
     queryFn: async (): Promise<GitHubOverviewPayload | null> => {
-      const url = user ? `/api/portfolio/github-overview?user=${user}` : "/api/portfolio/github-overview";
+      const url = user
+        ? `/api/portfolio/github-overview?user=${user}`
+        : "/api/portfolio/github-overview";
       const res = await fetch(url);
       if (!res.ok) throw new Error("Failed to fetch github overview");
       return res.json() as Promise<GitHubOverviewPayload | null>;

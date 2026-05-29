@@ -33,16 +33,18 @@ export function HackatimeBento({ stats }: { stats: HackatimePayload | null }) {
     setMounted(true);
   }, []);
 
-  const isWakatime = process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER !== "hackatime";
+  const isWakatime =
+    process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER !== "hackatime";
   const providerName = isWakatime ? "Wakatime" : "Hackatime";
-  const providerLink = isWakatime 
-    ? "https://wakatime.com/@muhammadfiaz" 
+  const providerLink = isWakatime
+    ? "https://wakatime.com/@muhammadfiaz"
     : "https://hackatime.hackclub.com/@muhammadfiaz";
 
   if (!stats) {
     return (
       <div className="border-4 border-black bg-card p-6 text-center font-bold uppercase shadow-retro-md">
-        {providerName} data is unavailable right now. Please check server API key.
+        {providerName} data is unavailable right now. Please check server API
+        key.
       </div>
     );
   }
@@ -75,7 +77,9 @@ export function HackatimeBento({ stats }: { stats: HackatimePayload | null }) {
   return (
     <BentoGrid>
       <BentoCard className="sm:col-span-2 lg:col-span-2">
-        <p className="font-display text-2xl uppercase">Today on {providerName}</p>
+        <p className="font-display text-2xl uppercase">
+          Today on {providerName}
+        </p>
         <p className="mt-2 text-xs font-black uppercase text-muted-foreground">
           {stats.todayHours ||
             "Today&apos;s coding time will appear once activity is tracked"}
@@ -178,9 +182,13 @@ export function HackatimeBento({ stats }: { stats: HackatimePayload | null }) {
       </BentoCard>
 
       <BentoCard className="sm:col-span-2 lg:col-span-2">
-        <p className="font-display text-2xl uppercase">{providerName} Profile</p>
+        <p className="font-display text-2xl uppercase">
+          {providerName} Profile
+        </p>
         <p className="mt-2 text-xs font-black uppercase text-muted-foreground">
-          {isWakatime ? "View my public Wakatime profile." : "Live streak heatmap (UTC) from Hackatime user 30609."}
+          {isWakatime
+            ? "View my public Wakatime profile."
+            : "Live streak heatmap (UTC) from Hackatime user 30609."}
         </p>
         {!isWakatime && (
           <Link
@@ -202,11 +210,7 @@ export function HackatimeBento({ stats }: { stats: HackatimePayload | null }) {
           </Link>
         )}
         <Button asChild className="mt-4 w-full border-4 border-black uppercase">
-          <Link
-            href={providerLink}
-            target="_blank"
-            rel="noreferrer noopener"
-          >
+          <Link href={providerLink} target="_blank" rel="noreferrer noopener">
             View {providerName} Profile
           </Link>
         </Button>

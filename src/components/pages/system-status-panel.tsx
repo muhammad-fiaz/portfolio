@@ -1,13 +1,6 @@
 "use client";
 
 import { useMutation, useQuery } from "@tanstack/react-query";
-import {
-  AlertTriangle,
-  Compass,
-  Home,
-  LifeBuoy,
-  RefreshCw,
-} from "@/components/retroui/icons";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useEffect } from "react";
@@ -15,6 +8,13 @@ import { Alert } from "@/components/retroui/Alert";
 import { Badge } from "@/components/retroui/Badge";
 import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
+import {
+  AlertTriangle,
+  Compass,
+  Home,
+  LifeBuoy,
+  RefreshCw,
+} from "@/components/retroui/icons";
 import { useSystemPagesStore } from "@/store/system-pages-store";
 
 type SystemStatusPanelProps = {

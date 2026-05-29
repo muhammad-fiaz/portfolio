@@ -63,13 +63,21 @@ function serializeJsonLd(value: unknown): string {
   return JSON.stringify(value).replace(/</g, "\\u003c");
 }
 
+async function safeFetch<T>(fallback: T, fn: () => Promise<T>): Promise<T> {
+  try {
+    return await fn();
+  } catch {
+    return fallback;
+  }
+}
+
 export default async function HomePage() {
   const [initialRepos, initialPosts, initialHackatime, initialGitHubOverview] =
     await Promise.all([
-      getGithubRepos(),
-      getBlogPosts(),
-      getHackatimeStats(),
-      getGithubOverview(),
+      safeFetch([], () => getGithubRepos()),
+      safeFetch([], () => getBlogPosts()),
+      safeFetch(null, () => getHackatimeStats()),
+      safeFetch(null, () => getGithubOverview()),
     ]);
 
   const homepageJsonLd = {
@@ -136,7 +144,9 @@ export default async function HomePage() {
       {profileStatsJsonLd ? (
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: serializeJsonLd(profileStatsJsonLd) }}
+          dangerouslySetInnerHTML={{
+            __html: serializeJsonLd(profileStatsJsonLd),
+          }}
         />
       ) : null}
       <script

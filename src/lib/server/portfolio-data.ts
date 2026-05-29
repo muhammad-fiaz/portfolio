@@ -7,6 +7,118 @@ import type {
   HackatimePayload,
 } from "@/lib/portfolio-types";
 
+interface GitHubUserResponse {
+  login?: string;
+  followers?: number;
+  following?: number;
+  public_repos?: number;
+  total_private_repos?: number;
+  owned_private_repos?: number;
+}
+
+interface GitHubContributionsResponse {
+  data?: {
+    user?: {
+      contributionsCollection?: {
+        contributionCalendar?: {
+          weeks?: Array<{
+            contributionDays?: Array<{
+              date: string;
+              contributionCount: number;
+            }>;
+          }>;
+        };
+      };
+    };
+  };
+}
+
+interface HashnodeResponse {
+  data?: {
+    publication?: {
+      posts?: {
+        edges?: Array<{
+          node: {
+            id: string;
+            title: string;
+            brief: string;
+            url: string;
+            publishedAt: string;
+            readTimeInMinutes: number;
+            tags: Array<{ name: string }>;
+          };
+        }>;
+      };
+    };
+  };
+}
+
+interface DevToPost {
+  id: number;
+  title: string;
+  description: string;
+  url: string;
+  published_at: string;
+  reading_time_minutes: number;
+  tag_list: string[];
+}
+
+interface HackatimeStatsResponse {
+  data?: {
+    username?: string;
+    human_readable_daily_average_including_other_language?: string;
+    human_readable_total_including_other_language?: string;
+    human_readable_total?: string;
+    human_readable_daily_average?: string;
+    daily_average?: number;
+    languages?: Array<{ name: string; total_seconds: number }>;
+    days?: Array<{
+      date: string;
+      grand_total: {
+        total_seconds: number;
+      };
+    }>;
+    total_seconds?: number;
+  };
+}
+
+interface WakaTimeAllTimeResponse {
+  data?: {
+    total_seconds?: number;
+    text?: string;
+  };
+}
+
+interface WakaTimeTodayResponse {
+  data?: {
+    grand_total?: {
+      total_seconds?: number;
+      text?: string;
+    };
+  };
+}
+
+interface HackatimeClubStatsResponse {
+  data?: {
+    grand_total?: {
+      total_seconds?: number;
+      text?: string;
+    };
+    total_seconds?: number;
+    human_readable_total?: string;
+    text?: string;
+  };
+}
+
+async function safeJsonParse<T>(response: Response): Promise<T | null> {
+  try {
+    const text = await response.text();
+    return JSON.parse(text) as T;
+  } catch {
+    return null;
+  }
+}
+
 const DEFAULT_GITHUB_USER =
   process.env.GITHUB_USER ??
   process.env.NEXT_PUBLIC_GITHUB_USER ??
@@ -59,8 +171,8 @@ async function getAuthenticatedGithubLogin(
     return null;
   }
 
-  const payload = (await response.json()) as { login?: string };
-  return payload.login?.trim() || null;
+  const payload = await safeJsonParse<GitHubUserResponse>(response);
+  return payload?.login?.trim() || null;
 }
 
 function toHours(value: number): number {
@@ -95,7 +207,10 @@ export async function getGithubRepos(user?: string): Promise<GithubRepo[]> {
       break;
     }
 
-    const pageRepos = (await response.json()) as GithubRepo[];
+    const pageRepos = await safeJsonParse<GithubRepo[]>(response);
+    if (!pageRepos) {
+      break;
+    }
     allRepos.push(...pageRepos);
 
     if (pageRepos.length < 100) {
@@ -142,14 +257,7 @@ export async function getGithubOverview(
   );
 
   const profile = userResponse.ok
-    ? ((await userResponse.json()) as {
-        login?: string;
-        followers?: number;
-        following?: number;
-        public_repos?: number;
-        total_private_repos?: number;
-        owned_private_repos?: number;
-      })
+    ? ((await safeJsonParse<GitHubUserResponse>(userResponse)) ?? {})
     : {};
 
   const responseDateHeader = userResponse.headers.get("date");
@@ -210,25 +318,11 @@ export async function getGithubOverview(
     });
 
     if (contributionResponse.ok) {
-      const payload = (await contributionResponse.json()) as {
-        data?: {
-          user?: {
-            contributionsCollection?: {
-              contributionCalendar?: {
-                weeks?: Array<{
-                  contributionDays?: Array<{
-                    date: string;
-                    contributionCount: number;
-                  }>;
-                }>;
-              };
-            };
-          };
-        };
-      };
+      const payload =
+        await safeJsonParse<GitHubContributionsResponse>(contributionResponse);
 
       const days =
-        payload.data?.user?.contributionsCollection?.contributionCalendar?.weeks
+        payload?.data?.user?.contributionsCollection?.contributionCalendar?.weeks
           ?.flatMap((week) => week.contributionDays ?? [])
           .filter((day) => typeof day.date === "string") ?? [];
 
@@ -378,27 +472,9 @@ async function fetchHashnodePosts(): Promise<BlogPost[]> {
 
   if (!response.ok) return [];
 
-  const payload = (await response.json()) as {
-    data?: {
-      publication?: {
-        posts?: {
-          edges?: Array<{
-            node: {
-              id: string;
-              title: string;
-              brief: string;
-              url: string;
-              publishedAt: string;
-              readTimeInMinutes: number;
-              tags: Array<{ name: string }>;
-            };
-          }>;
-        };
-      };
-    };
-  };
+  const payload = await safeJsonParse<HashnodeResponse>(response);
 
-  const edges = payload.data?.publication?.posts?.edges ?? [];
+  const edges = payload?.data?.publication?.posts?.edges ?? [];
   return edges.map(({ node }) => ({
     id: node.id,
     title: node.title,
@@ -422,17 +498,9 @@ async function fetchDevToPosts(): Promise<BlogPost[]> {
 
   if (!response.ok) return [];
 
-  const payload = (await response.json()) as Array<{
-    id: number;
-    title: string;
-    description: string;
-    url: string;
-    published_at: string;
-    reading_time_minutes: number;
-    tag_list: string[];
-  }>;
+  const payload = await safeJsonParse<DevToPost[]>(response);
 
-  return payload.map((post) => ({
+  return (payload ?? []).map((post) => ({
     id: `devto-${post.id}`,
     title: post.title,
     excerpt: post.description,
@@ -461,26 +529,38 @@ export async function getBlogPosts(): Promise<BlogPost[]> {
 }
 
 export async function getHackatimeStats(): Promise<HackatimePayload | null> {
-  const provider = process.env.CODING_STATS_PROVIDER === "hackatime" ? "hackatime" : "wakatime";
-  const apiKey = provider === "hackatime" ? process.env.HACKATIME_API_KEY : process.env.WAKATIME_API_KEY;
+  const provider =
+    process.env.CODING_STATS_PROVIDER === "hackatime"
+      ? "hackatime"
+      : "wakatime";
+  const apiKey =
+    provider === "hackatime"
+      ? process.env.HACKATIME_API_KEY
+      : process.env.WAKATIME_API_KEY;
 
   if (!apiKey) return null;
 
-  const baseUrl = provider === "wakatime"
-    ? "https://wakatime.com"
-    : (process.env.HACKATIME_API_BASE_URL ?? "https://hackatime.hackclub.com").replace(/\/$/, "");
+  const baseUrl =
+    provider === "wakatime"
+      ? "https://wakatime.com"
+      : (
+          process.env.HACKATIME_API_BASE_URL ?? "https://hackatime.hackclub.com"
+        ).replace(/\/$/, "");
 
-  const sevenDayUrl = provider === "wakatime"
-    ? `${baseUrl}/api/v1/users/current/stats/last_7_days?api_key=${apiKey}`
-    : `${baseUrl}/api/hackatime/v1/users/current/stats/last_7_days?api_key=${apiKey}`;
-  
-  const allTimeUrl = provider === "wakatime"
-    ? `${baseUrl}/api/v1/users/current/all_time_since_today?api_key=${apiKey}`
-    : `${baseUrl}/api/hackatime/v1/users/current/all_time_since_today?api_key=${apiKey}`;
+  const sevenDayUrl =
+    provider === "wakatime"
+      ? `${baseUrl}/api/v1/users/current/stats/last_7_days?api_key=${apiKey}`
+      : `${baseUrl}/api/hackatime/v1/users/current/stats/last_7_days?api_key=${apiKey}`;
 
-  const todayStatusUrl = provider === "wakatime"
-    ? `${baseUrl}/api/v1/users/current/statusbar/today?api_key=${apiKey}`
-    : `${baseUrl}/api/hackatime/v1/users/current/statusbar/today?api_key=${apiKey}`;
+  const allTimeUrl =
+    provider === "wakatime"
+      ? `${baseUrl}/api/v1/users/current/all_time_since_today?api_key=${apiKey}`
+      : `${baseUrl}/api/hackatime/v1/users/current/all_time_since_today?api_key=${apiKey}`;
+
+  const todayStatusUrl =
+    provider === "wakatime"
+      ? `${baseUrl}/api/v1/users/current/statusbar/today?api_key=${apiKey}`
+      : `${baseUrl}/api/hackatime/v1/users/current/statusbar/today?api_key=${apiKey}`;
 
   const [sevenDayResponse, allTimeResponse, todayStatusResponse] =
     await Promise.all([
@@ -520,42 +600,27 @@ export async function getHackatimeStats(): Promise<HackatimePayload | null> {
     return null;
   }
 
-  const sevenDay = (await sevenDayResponse.json()) as {
-    data?: {
-      username?: string;
-      human_readable_daily_average_including_other_language?: string;
-      human_readable_total_including_other_language?: string;
-      human_readable_total?: string;
-      human_readable_daily_average?: string;
-      daily_average?: number;
-      languages?: Array<{ name: string; total_seconds: number }>;
-      days?: Array<{
-        date: string;
-        grand_total: {
-          total_seconds: number;
-        };
-      }>;
-      total_seconds?: number;
-    };
-  };
+  const sevenDay =
+    await safeJsonParse<HackatimeStatsResponse>(sevenDayResponse);
+
+  if (!sevenDay) {
+    return null;
+  }
 
   const allTime = allTimeResponse?.ok
-    ? ((await allTimeResponse.json()) as {
-        data?: {
-          total_seconds?: number;
-          text?: string;
-        };
+    ? ((await safeJsonParse<WakaTimeAllTimeResponse>(allTimeResponse)) ?? {
+        data: { total_seconds: undefined },
       })
     : { data: { total_seconds: undefined } };
 
   const todayStatus = todayStatusResponse?.ok
-    ? ((await todayStatusResponse.json()) as {
-        data?: {
-          grand_total?: {
-            total_seconds?: number;
-            text?: string;
-          };
-        };
+    ? ((await safeJsonParse<WakaTimeTodayResponse>(todayStatusResponse)) ?? {
+        data: {
+          grand_total: {
+            total_seconds: 0,
+            text: "0h today",
+          },
+        },
       })
     : {
         data: {
@@ -576,9 +641,6 @@ export async function getHackatimeStats(): Promise<HackatimePayload | null> {
     const requests = Array.from({ length: 7 }, (_, index) => {
       const date = new Date(now);
       date.setUTCDate(date.getUTCDate() - (6 - index));
-
-      const start = `${date.toISOString().slice(0, 10)}T00:00:00Z`;
-      const end = `${date.toISOString().slice(0, 10)}T23:59:59Z`;
 
       return fetch(
         `${baseUrl}/api/v1/users/current/heartbeats?date=${date.toISOString().slice(0, 10)}&api_key=${apiKey}`,
@@ -607,7 +669,11 @@ export async function getHackatimeStats(): Promise<HackatimePayload | null> {
             }>;
           };
 
-          const durationSeconds = payload.data?.reduce((acc, curr) => acc + (curr.duration ?? 0), 0) ?? 0;
+          const durationSeconds =
+            payload.data?.reduce(
+              (acc, curr) => acc + (curr.duration ?? 0),
+              0,
+            ) ?? 0;
 
           return {
             day: date.toLocaleDateString("en-US", { weekday: "short" }),
@@ -667,28 +733,23 @@ export async function getHackatimeStats(): Promise<HackatimePayload | null> {
     ).catch(() => null);
 
     if (allTimeHackclubResponse?.ok) {
-      const allTimeHackclubPayload = (await allTimeHackclubResponse.json()) as {
-        data?: {
-          grand_total?: {
-            total_seconds?: number;
-            text?: string;
-          };
-          total_seconds?: number;
-          human_readable_total?: string;
-          text?: string;
-        };
-      };
+      const allTimeHackclubPayload =
+        await safeJsonParse<HackatimeClubStatsResponse>(
+          allTimeHackclubResponse,
+        );
 
-      const allTimeHackclubSeconds =
-        allTimeHackclubPayload.data?.grand_total?.total_seconds ??
-        allTimeHackclubPayload.data?.total_seconds ??
-        totalSeconds;
-      totalSeconds = allTimeHackclubSeconds;
-      totalHours =
-        allTimeHackclubPayload.data?.human_readable_total ??
-        allTimeHackclubPayload.data?.grand_total?.text ??
-        allTimeHackclubPayload.data?.text ??
-        `${toHours(allTimeHackclubSeconds).toFixed(1)}h`;
+      if (allTimeHackclubPayload) {
+        const allTimeHackclubSeconds =
+          allTimeHackclubPayload.data?.grand_total?.total_seconds ??
+          allTimeHackclubPayload.data?.total_seconds ??
+          totalSeconds;
+        totalSeconds = allTimeHackclubSeconds;
+        totalHours =
+          allTimeHackclubPayload.data?.human_readable_total ??
+          allTimeHackclubPayload.data?.grand_total?.text ??
+          allTimeHackclubPayload.data?.text ??
+          `${toHours(allTimeHackclubSeconds).toFixed(1)}h`;
+      }
     }
   }
 

@@ -1,9 +1,9 @@
 "use client";
 
-import { Github, LogOut } from "@/components/retroui/icons";
 import { useRouter } from "next/navigation";
 import { Avatar } from "@/components/retroui/Avatar";
 import { Button } from "@/components/retroui/Button";
+import { Github, LogOut } from "@/components/retroui/icons";
 import { authClient } from "@/lib/auth-client";
 
 type SessionUser = {

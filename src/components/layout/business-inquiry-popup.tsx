@@ -1,11 +1,11 @@
 "use client";
 
+import { zodResolver } from "@hookform/resolvers/zod";
 import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import { z } from "zod";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { Dialog } from "@/components/retroui/Dialog";
 import { Button } from "@/components/retroui/Button";
+import { Dialog } from "@/components/retroui/Dialog";
 import { Input } from "@/components/retroui/Input";
 import { Textarea } from "@/components/retroui/Textarea";
 import { useContactSubmissionMutation } from "@/lib/client/portfolio-queries";
@@ -43,7 +43,6 @@ export function BusinessInquiryPopup() {
   const {
     register,
     handleSubmit,
-    reset,
     formState: { errors, isSubmitting },
   } = useForm<InquiryFormValues>({
     resolver: zodResolver(inquirySchema),
@@ -81,9 +80,7 @@ export function BusinessInquiryPopup() {
         className="z-130 w-[calc(100%-1rem)] max-w-lg border-4 border-black bg-card p-0 shadow-retro-lg sm:w-full"
         overlay={{ className: "z-[129] bg-black/70" }}
       >
-        <Dialog.Header
-          className="border-b-4 border-black bg-primary px-4 py-3 text-primary-foreground sm:px-5"
-        >
+        <Dialog.Header className="border-b-4 border-black bg-primary px-4 py-3 text-primary-foreground sm:px-5">
           <h2 className="font-display text-xl uppercase leading-tight">
             How can I help you?
           </h2>
@@ -102,11 +99,15 @@ export function BusinessInquiryPopup() {
           ) : (
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <p className="text-sm font-semibold leading-relaxed">
-                Let's build something valuable together. Drop your details below and I'll get back to you shortly.
+                Let's build something valuable together. Drop your details below
+                and I'll get back to you shortly.
               </p>
 
               <div className="space-y-2">
-                <label htmlFor="inq-name" className="text-xs font-black uppercase">
+                <label
+                  htmlFor="inq-name"
+                  className="text-xs font-black uppercase"
+                >
                   Full Name *
                 </label>
                 <Input
@@ -115,12 +116,17 @@ export function BusinessInquiryPopup() {
                   className="border-4 border-black bg-background py-2 shadow-retro"
                 />
                 {errors.name && (
-                  <p className="text-xs font-bold text-destructive">{errors.name.message}</p>
+                  <p className="text-xs font-bold text-destructive">
+                    {errors.name.message}
+                  </p>
                 )}
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="inq-email" className="text-xs font-black uppercase">
+                <label
+                  htmlFor="inq-email"
+                  className="text-xs font-black uppercase"
+                >
                   Email *
                 </label>
                 <Input
@@ -130,12 +136,17 @@ export function BusinessInquiryPopup() {
                   className="border-4 border-black bg-background py-2 shadow-retro"
                 />
                 {errors.email && (
-                  <p className="text-xs font-bold text-destructive">{errors.email.message}</p>
+                  <p className="text-xs font-bold text-destructive">
+                    {errors.email.message}
+                  </p>
                 )}
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="inq-phone" className="text-xs font-black uppercase">
+                <label
+                  htmlFor="inq-phone"
+                  className="text-xs font-black uppercase"
+                >
                   Phone (Optional)
                 </label>
                 <Input
@@ -146,7 +157,10 @@ export function BusinessInquiryPopup() {
               </div>
 
               <div className="space-y-2">
-                <label htmlFor="inq-needs" className="text-xs font-black uppercase">
+                <label
+                  htmlFor="inq-needs"
+                  className="text-xs font-black uppercase"
+                >
                   What are your needs? *
                 </label>
                 <Textarea
@@ -156,7 +170,9 @@ export function BusinessInquiryPopup() {
                   className="border-4 border-black bg-background py-2 shadow-retro"
                 />
                 {errors.businessInquiry && (
-                  <p className="text-xs font-bold text-destructive">{errors.businessInquiry.message}</p>
+                  <p className="text-xs font-bold text-destructive">
+                    {errors.businessInquiry.message}
+                  </p>
                 )}
               </div>
 
@@ -174,7 +190,9 @@ export function BusinessInquiryPopup() {
                   disabled={isSubmitting || mutation.isPending}
                   className="w-full border-4 border-black uppercase shadow-retro-sm sm:w-auto"
                 >
-                  {mutation.isPending || isSubmitting ? "Sending..." : "Submit Inquiry"}
+                  {mutation.isPending || isSubmitting
+                    ? "Sending..."
+                    : "Submit Inquiry"}
                 </Button>
               </div>
             </form>

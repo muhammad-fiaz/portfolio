@@ -143,12 +143,20 @@ export const Globe2 = createIcon("Globe2", "Globe", "GlobeIcon", "Globe02Icon");
 
 export const Home = createIcon("Home", "HomeIcon", "Home01Icon");
 
-export const Info = createIcon("Info", "InformationCircle", "InformationCircleIcon");
+export const Info = createIcon(
+  "Info",
+  "InformationCircle",
+  "InformationCircleIcon",
+);
 export const Instagram = createIcon("Instagram", "InstagramIcon");
 
 export const LifeBuoy = createIcon("LifeBuoy", "Lifebuoy", "LifebuoyIcon");
 export const Link2 = createIcon("Link2", "Link02", "Link02Icon", "Link01Icon");
-export const Linkedin = createIcon("Linkedin", "Linkedin01Icon", "Linkedin02Icon");
+export const Linkedin = createIcon(
+  "Linkedin",
+  "Linkedin01Icon",
+  "Linkedin02Icon",
+);
 export const LogOut = createIcon("LogOut", "Logout", "Logout01Icon");
 
 export const Mail = createIcon("Mail", "Mail01Icon");

@@ -46,8 +46,16 @@ function serializeJsonLd(value: unknown): string {
   return JSON.stringify(value).replace(/</g, "\\u003c");
 }
 
+async function safeFetch<T>(fallback: T, fn: () => Promise<T>): Promise<T> {
+  try {
+    return await fn();
+  } catch {
+    return fallback;
+  }
+}
+
 export default async function BlogPage() {
-  const posts = await getBlogPosts();
+  const posts = await safeFetch([], () => getBlogPosts());
 
   const blogJsonLd = {
     "@context": "https://schema.org",

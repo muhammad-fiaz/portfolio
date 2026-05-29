@@ -3,6 +3,11 @@
 import { zodResolver } from "@hookform/resolvers/zod";
 import { animate } from "animejs";
 import { motion } from "framer-motion";
+import { useEffect, useRef, useState } from "react";
+import { useForm } from "react-hook-form";
+import { z } from "zod";
+import { Button } from "@/components/retroui/Button";
+import { Input } from "@/components/retroui/Input";
 import {
   Briefcase,
   CalendarClock,
@@ -15,11 +20,6 @@ import {
   User,
   XCircle,
 } from "@/components/retroui/icons";
-import { useEffect, useRef, useState } from "react";
-import { useForm } from "react-hook-form";
-import { z } from "zod";
-import { Button } from "@/components/retroui/Button";
-import { Input } from "@/components/retroui/Input";
 import { Textarea } from "@/components/retroui/Textarea";
 import { useContactSubmissionMutation } from "@/lib/client/portfolio-queries";
 import {
@@ -350,7 +350,8 @@ export function ContactForm() {
         ) : null}
 
         <p className="border-4 border-primary bg-primary/10 px-3 py-2 text-xs font-bold uppercase sm:text-sm">
-          🔥 Claim the 20% off limited time summer offer by submitting your inquiry now.
+          🔥 Claim the 20% off limited time summer offer by submitting your
+          inquiry now.
         </p>
 
         <div className="flex flex-col gap-3 sm:flex-row">

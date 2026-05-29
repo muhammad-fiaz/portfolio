@@ -1,10 +1,5 @@
 "use client";
 
-import {
-  ChevronDownIcon,
-  ChevronLeftIcon,
-  ChevronRightIcon,
-} from "@/components/retroui/icons";
 import * as React from "react";
 import {
   type DayButton,
@@ -12,6 +7,11 @@ import {
   getDefaultClassNames,
 } from "react-day-picker";
 import { Button, buttonVariants } from "@/components/retroui/Button";
+import {
+  ChevronDownIcon,
+  ChevronLeftIcon,
+  ChevronRightIcon,
+} from "@/components/retroui/icons";
 import { cn } from "@/lib/utils";
 
 function Calendar({

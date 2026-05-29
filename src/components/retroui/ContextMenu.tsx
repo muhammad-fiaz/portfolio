@@ -1,8 +1,12 @@
 "use client";
 
 import * as ContextMenuPrimitive from "@radix-ui/react-context-menu";
-import { CheckIcon, ChevronRightIcon, CircleIcon } from "@/components/retroui/icons";
 import type * as React from "react";
+import {
+  CheckIcon,
+  ChevronRightIcon,
+  CircleIcon,
+} from "@/components/retroui/icons";
 
 import { cn } from "@/lib/utils";
 

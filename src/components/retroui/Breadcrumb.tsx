@@ -1,6 +1,6 @@
 import { Slot } from "@radix-ui/react-slot";
-import { ChevronRight, MoreHorizontal } from "@/components/retroui/icons";
 import * as React from "react";
+import { ChevronRight, MoreHorizontal } from "@/components/retroui/icons";
 import { cn } from "@/lib/utils";
 
 const BreadcrumbRoot = React.forwardRef<

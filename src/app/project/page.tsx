@@ -46,8 +46,16 @@ function serializeJsonLd(value: unknown): string {
   return JSON.stringify(value).replace(/</g, "\\u003c");
 }
 
+async function safeFetch<T>(fallback: T, fn: () => Promise<T>): Promise<T> {
+  try {
+    return await fn();
+  } catch {
+    return fallback;
+  }
+}
+
 export default async function ProjectPage() {
-  const repos = await getGithubRepos();
+  const repos = await safeFetch([], () => getGithubRepos());
 
   const projectsJsonLd = {
     "@context": "https://schema.org",

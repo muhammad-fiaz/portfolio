@@ -1,28 +1,77 @@
 "use client";
 
-import { Github, Linkedin, Twitter } from "@/components/retroui/icons";
+import dynamic from "next/dynamic";
 import Image from "next/image";
 import Link from "next/link";
-import dynamic from "next/dynamic";
-import { BentoCard, BentoGrid } from "@/components/retroui/Bento";
-import { Button } from "@/components/retroui/Button";
-import { Card } from "@/components/retroui/Card";
-
 // Hero section components — loaded eagerly (above the fold, must render immediately)
 import { HeroFloatingBadges } from "@/components/portfolio/hero-floating-badges";
 import { HyperNameReveal } from "@/components/portfolio/hyper-name-reveal";
 import { StatsMarquee } from "@/components/portfolio/stats-marquee";
+import { BentoCard, BentoGrid } from "@/components/retroui/Bento";
+import { Button } from "@/components/retroui/Button";
+import { Card } from "@/components/retroui/Card";
+import { Github, Linkedin, Twitter } from "@/components/retroui/icons";
 
 // Below-the-fold components — lazy loaded for performance
-const BlogGrid = dynamic(() => import("@/components/portfolio/blog-grid").then(m => m.BlogGrid), { ssr: false });
-const GithubOverviewBento = dynamic(() => import("@/components/portfolio/github-overview-bento").then(m => m.GithubOverviewBento), { ssr: false });
-const HackatimeBento = dynamic(() => import("@/components/portfolio/hackatime-bento").then(m => m.HackatimeBento), { ssr: false });
-const HomeDeliveryProcess = dynamic(() => import("@/components/portfolio/home-delivery-process").then(m => m.HomeDeliveryProcess), { ssr: false });
-const HomeEngagementModel = dynamic(() => import("@/components/portfolio/home-engagement-model").then(m => m.HomeEngagementModel), { ssr: false });
-const MorphScrollShowcase = dynamic(() => import("@/components/portfolio/morph-scroll-showcase").then(m => m.MorphScrollShowcase), { ssr: false });
-const ProjectsGrid = dynamic(() => import("@/components/portfolio/projects-grid").then(m => m.ProjectsGrid), { ssr: false });
-const RetroCodeShowcase = dynamic(() => import("@/components/portfolio/retro-code-showcase").then(m => m.RetroCodeShowcase), { ssr: false });
-const RetroTerminalSection = dynamic(() => import("@/components/portfolio/retro-terminal-section").then(m => m.RetroTerminalSection), { ssr: false });
+const BlogGrid = dynamic(
+  () => import("@/components/portfolio/blog-grid").then((m) => m.BlogGrid),
+  { ssr: false },
+);
+const GithubOverviewBento = dynamic(
+  () =>
+    import("@/components/portfolio/github-overview-bento").then(
+      (m) => m.GithubOverviewBento,
+    ),
+  { ssr: false },
+);
+const HackatimeBento = dynamic(
+  () =>
+    import("@/components/portfolio/hackatime-bento").then(
+      (m) => m.HackatimeBento,
+    ),
+  { ssr: false },
+);
+const HomeDeliveryProcess = dynamic(
+  () =>
+    import("@/components/portfolio/home-delivery-process").then(
+      (m) => m.HomeDeliveryProcess,
+    ),
+  { ssr: false },
+);
+const HomeEngagementModel = dynamic(
+  () =>
+    import("@/components/portfolio/home-engagement-model").then(
+      (m) => m.HomeEngagementModel,
+    ),
+  { ssr: false },
+);
+const MorphScrollShowcase = dynamic(
+  () =>
+    import("@/components/portfolio/morph-scroll-showcase").then(
+      (m) => m.MorphScrollShowcase,
+    ),
+  { ssr: false },
+);
+const ProjectsGrid = dynamic(
+  () =>
+    import("@/components/portfolio/projects-grid").then((m) => m.ProjectsGrid),
+  { ssr: false },
+);
+const RetroCodeShowcase = dynamic(
+  () =>
+    import("@/components/portfolio/retro-code-showcase").then(
+      (m) => m.RetroCodeShowcase,
+    ),
+  { ssr: false },
+);
+const RetroTerminalSection = dynamic(
+  () =>
+    import("@/components/portfolio/retro-terminal-section").then(
+      (m) => m.RetroTerminalSection,
+    ),
+  { ssr: false },
+);
+
 import { links } from "@/lib/link-items";
 import type {
   BlogPost,
@@ -33,8 +82,8 @@ import type {
 import {
   donationUrl,
   githubUrl,
-  linkHubUrl,
   linkedinUrl,
+  linkHubUrl,
   siteHost,
   sponsorUrl,
   xUrl,
@@ -451,11 +500,7 @@ export function HomePageClient({
             variant="secondary"
             className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
           >
-            <Link
-              href={githubUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
+            <Link href={githubUrl} target="_blank" rel="noreferrer noopener">
               View Full GitHub Profile
             </Link>
           </Button>
@@ -470,7 +515,9 @@ export function HomePageClient({
       <section className="space-y-4" data-home-reveal>
         <div className="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
           <h2 className="font-display text-3xl uppercase sm:text-4xl">
-            {process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime" ? "Hackatime Insights" : "Wakatime Insights"}
+            {process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime"
+              ? "Hackatime Insights"
+              : "Wakatime Insights"}
           </h2>
           <Button
             asChild
@@ -478,16 +525,24 @@ export function HomePageClient({
             className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
           >
             <Link
-              href={process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime" ? "https://hackatime.hackclub.com/@muhammadfiaz" : "https://wakatime.com/@muhammadfiaz"}
+              href={
+                process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime"
+                  ? "https://hackatime.hackclub.com/@muhammadfiaz"
+                  : "https://wakatime.com/@muhammadfiaz"
+              }
               target="_blank"
               rel="noreferrer noopener"
             >
-              View {process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime" ? "HackClub" : "Wakatime"} Profile
+              View{" "}
+              {process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime"
+                ? "HackClub"
+                : "Wakatime"}{" "}
+              Profile
             </Link>
           </Button>
         </div>
         <p className="font-bold uppercase text-muted-foreground">
-          {process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime" 
+          {process.env.NEXT_PUBLIC_CODING_STATS_PROVIDER === "hackatime"
             ? "Live coding insights from Hack Club for the last 7 days and total tracked development time."
             : "Live coding insights from Wakatime for the last 7 days and total tracked development time."}
         </p>
@@ -596,11 +651,7 @@ export function HomePageClient({
             variant="secondary"
             className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
           >
-            <Link
-              href={linkHubUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
+            <Link href={linkHubUrl} target="_blank" rel="noreferrer noopener">
               Open Link Hub
             </Link>
           </Button>
@@ -648,8 +699,9 @@ export function HomePageClient({
               Let&apos;s Connect
             </h2>
             <p className="max-w-xl text-sm font-medium leading-relaxed text-primary-foreground/90 sm:text-base">
-              Ready to start your project, discuss an idea, or explore collaboration?
-              Send me your inquiry and I&apos;ll reply with a clear execution plan.
+              Ready to start your project, discuss an idea, or explore
+              collaboration? Send me your inquiry and I&apos;ll reply with a
+              clear execution plan.
             </p>
           </div>
           <div className="flex flex-col gap-3 sm:flex-row">

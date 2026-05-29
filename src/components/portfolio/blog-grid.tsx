@@ -1,7 +1,6 @@
 "use client";
 
 import { AnimatePresence, motion } from "framer-motion";
-import { Search } from "@/components/retroui/icons";
 import Link from "next/link";
 import { useEffect, useMemo, useState } from "react";
 import {
@@ -11,6 +10,7 @@ import {
 import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
 import { Input } from "@/components/retroui/Input";
+import { Search } from "@/components/retroui/icons";
 import { usePortfolioPostsQuery } from "@/lib/client/portfolio-queries";
 import type { BlogPost } from "@/lib/portfolio-types";
 import { useBlogStore } from "@/store/blog-store";

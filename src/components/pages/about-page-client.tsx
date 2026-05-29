@@ -1,16 +1,16 @@
 "use client";
 
 import { animate } from "animejs";
-import { Github, Linkedin, Twitter, Youtube } from "@/components/retroui/icons";
 import Image from "next/image";
-import { useEffect, useRef } from "react";
 import Link from "next/link";
+import { useEffect, useRef } from "react";
 import {
   AboutTimeline,
   type TimelineItem,
 } from "@/components/portfolio/about-timeline";
 import { Button } from "@/components/retroui/Button";
 import { Card } from "@/components/retroui/Card";
+import { Github, Linkedin, Twitter, Youtube } from "@/components/retroui/icons";
 import { githubUrl, linkedinUrl, xUrl, youtubeUrl } from "@/lib/site-config";
 
 type AboutPageClientProps = {
@@ -260,11 +260,7 @@ export function AboutPageClient({ timelineItems }: AboutPageClientProps) {
             variant="secondary"
             className="w-full border-4 border-black shadow-retro-sm sm:w-auto uppercase"
           >
-            <Link
-              href={linkedinUrl}
-              target="_blank"
-              rel="noreferrer noopener"
-            >
+            <Link href={linkedinUrl} target="_blank" rel="noreferrer noopener">
               View it on Linkedin
             </Link>
           </Button>

@@ -139,12 +139,20 @@ export function BusinessScaleNotice() {
             </p>
             <div className="mt-3 grid grid-cols-2 gap-2 sm:grid-cols-4 sm:gap-3">
               <div className="border-2 border-black bg-card px-2 py-2 text-center">
-                <p className="font-pixel text-xl sm:text-2xl">{countdown.days}</p>
-                <p className="text-[10px] font-black uppercase sm:text-xs">Days</p>
+                <p className="font-pixel text-xl sm:text-2xl">
+                  {countdown.days}
+                </p>
+                <p className="text-[10px] font-black uppercase sm:text-xs">
+                  Days
+                </p>
               </div>
               <div className="border-2 border-black bg-card px-2 py-2 text-center">
-                <p className="font-pixel text-xl sm:text-2xl">{countdown.hours}</p>
-                <p className="text-[10px] font-black uppercase sm:text-xs">Hours</p>
+                <p className="font-pixel text-xl sm:text-2xl">
+                  {countdown.hours}
+                </p>
+                <p className="text-[10px] font-black uppercase sm:text-xs">
+                  Hours
+                </p>
               </div>
               <div className="border-2 border-black bg-card px-2 py-2 text-center">
                 <p className="font-pixel text-xl sm:text-2xl">

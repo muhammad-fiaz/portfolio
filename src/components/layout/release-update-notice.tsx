@@ -1,9 +1,9 @@
 "use client";
 
 import { animate } from "animejs";
-import { Rocket, X } from "@/components/retroui/icons";
 import Link from "next/link";
 import { useEffect, useMemo, useRef, useState } from "react";
+import { Rocket, X } from "@/components/retroui/icons";
 import {
   CURRENT_PORTFOLIO_VERSION,
   PORTFOLIO_REPO_URL,

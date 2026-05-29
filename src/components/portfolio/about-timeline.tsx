@@ -1,9 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Card } from "@/components/retroui/Card";
-
 import Link from "next/link";
+import { Card } from "@/components/retroui/Card";
 
 export interface TimelineItem {
   period: string;
