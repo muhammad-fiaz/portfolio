@@ -90,7 +90,6 @@ function Calendar({
             : "rounded-none pl-2 pr-1 flex items-center gap-1 text-sm h-8 [&>svg]:text-muted-foreground [&>svg]:size-3.5",
           defaultClassNames.caption_label,
         ),
-        table: "w-full outline-collapse",
         weekdays: cn("flex", defaultClassNames.weekdays),
         weekday: cn(
           "flex-1 font-normal text-sm select-none",
