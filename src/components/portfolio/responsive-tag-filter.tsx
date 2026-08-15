@@ -78,7 +78,7 @@ export function ResponsiveTagFilter({
     animate(chips, {
       opacity: [0, 1],
       translateY: [8, 0],
-      delay: (_: unknown, index: number) => index * 20,
+      stagger: 20,
       duration: 250,
       ease: "outQuad",
     });
