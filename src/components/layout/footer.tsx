@@ -39,7 +39,7 @@ export function Footer() {
     animate(socialTargets, {
       opacity: [0, 1],
       translateY: [10, 0],
-      delay: (_: unknown, index: number) => index * 45,
+      stagger: 45,
       duration: 280,
       ease: "outQuad",
     });
@@ -47,7 +47,8 @@ export function Footer() {
     animate(policyTargets, {
       opacity: [0, 1],
       translateY: [10, 0],
-      delay: (_: unknown, index: number) => 120 + index * 35,
+      delay: 120,
+      stagger: 35,
       duration: 280,
       ease: "outQuad",
     });

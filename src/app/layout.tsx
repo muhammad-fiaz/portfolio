@@ -300,8 +300,9 @@ export default function RootLayout({
                 {children}
               </main>
               <Footer />
-              <BusinessScaleNotice />
-              <BusinessInquiryPopup />
+              {/* Summer offer popup disabled on root layout: offer is no longer active. */}
+              {/* <BusinessScaleNotice /> */}
+              {/* <BusinessInquiryPopup /> */}
               <CookieNotice />
               <ReleaseUpdateNotice />
             </div>

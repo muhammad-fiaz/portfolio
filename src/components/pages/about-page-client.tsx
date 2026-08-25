@@ -33,7 +33,7 @@ export function AboutPageClient({ timelineItems }: AboutPageClientProps) {
     animate(revealTargets, {
       opacity: [0, 1],
       translateY: [18, 0],
-      delay: (_: unknown, index: number) => index * 70,
+      stagger: 70,
       duration: 320,
       ease: "outQuad",
     });
@@ -41,7 +41,8 @@ export function AboutPageClient({ timelineItems }: AboutPageClientProps) {
     animate(dnaTargets, {
       opacity: [0, 1],
       translateY: [14, 0],
-      delay: (_: unknown, index: number) => 180 + index * 50,
+      delay: 180,
+      stagger: 50,
       duration: 280,
       ease: "outQuad",
     });
@@ -49,7 +50,8 @@ export function AboutPageClient({ timelineItems }: AboutPageClientProps) {
     animate(principleTargets, {
       opacity: [0, 1],
       translateY: [14, 0],
-      delay: (_: unknown, index: number) => 320 + index * 50,
+      delay: 320,
+      stagger: 50,
       duration: 280,
       ease: "outQuad",
     });

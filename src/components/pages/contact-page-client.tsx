@@ -35,7 +35,7 @@ export function ContactPageClient() {
     animate(sections, {
       opacity: [0, 1],
       translateY: [16, 0],
-      delay: (_: unknown, index: number) => index * 80,
+      stagger: 80,
       duration: 300,
       ease: "outQuad",
     });

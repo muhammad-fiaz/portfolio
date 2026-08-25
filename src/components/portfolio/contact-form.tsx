@@ -349,10 +349,11 @@ export function ContactForm() {
           </p>
         ) : null}
 
-        <p className="border-4 border-primary bg-primary/10 px-3 py-2 text-xs font-bold uppercase sm:text-sm">
+        {/* Summer offer promo disabled: the offer has ended. */}
+        {/* <p className="border-4 border-primary bg-primary/10 px-3 py-2 text-xs font-bold uppercase sm:text-sm">
           🔥 Claim the 20% off limited time summer offer by submitting your
           inquiry now.
-        </p>
+        </p> */}
 
         <div className="flex flex-col gap-3 sm:flex-row">
           <motion.div
